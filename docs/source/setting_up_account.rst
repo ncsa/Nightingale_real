@@ -6,7 +6,7 @@ The steps below explain how to get access to Nightingale.
 **1. Create an NCSA Identity**
 -------------------------------
 
-Before requesting Nightingale access, you need an NCSA identity. You can skip this step if you already have an NCSA identity. If you don’t remember your password, you can reset it using this link:* https://identity.ncsa.illinois.edu/.
+Before requesting Nightingale access, you need an NCSA identity. You can skip this step if you already have an NCSA identity. If you don’t remember your password, you can reset it using this link: https://identity.ncsa.illinois.edu/.
 
      To create an NCSA identity, go to this invite link: https://go.ncsa.illinois.edu/ngale_identity.
 

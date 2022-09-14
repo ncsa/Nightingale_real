@@ -1,8 +1,7 @@
-Setting Up Your Account
+Getting Access to Nightingale
 ==============================================
 
-The steps below explain how to request Nightingale access and start
-using the cluster.
+The steps below explain how to get access to Nightingale .
 
 **1. Create an NCSA Identity**
 -------------------------------

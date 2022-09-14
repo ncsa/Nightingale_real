@@ -27,5 +27,5 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
      - access the HIPAA training and submit your completion certificate
      - perform the disk encryption (NCSA personnel will guide you through this process)
 
-     Note: You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
+     **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 

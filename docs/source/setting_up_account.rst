@@ -24,5 +24,5 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 
      **To get added to NCSA's HIPPA-Covered Entity**, follow the instructions in the response to the email you sent in Step 2. These instructions will include information on how to access the HIPAA training and submit your completion certificate and perform the disk encryption. (The instructions will connect you with NCSA personnel who will guide you through the encryption process.)
 
-     **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
+**Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 

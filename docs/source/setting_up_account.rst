@@ -15,7 +15,7 @@ Before requesting Nightingale access, you need an NCSA identity. You can skip th
 **2. Request Nightingale Access**
 ---------------------------------
 
-     To request Nightingale access, send an email to Once you have an NCSA identity, email a request for a login account for Nightingale to  `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ that includes your NCSA identity, your University UIN, and a brief description of why you want the access. Please attach your training certificate if you completed Regulated Sensitive Data training less than a year ago (HIPPA or otherwise).
+     To request Nightingale access, send an email to  `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ that includes your NCSA identity, your University UIN, and a brief description of why you want the access. Please attach your training certificate if you completed Regulated Sensitive Data training less than a year ago (HIPPA or otherwise).
 
 **3. Get Added to NCSA's HIPPA-Covered Entity**
 -----------------------------------------------

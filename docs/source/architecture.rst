@@ -5,46 +5,27 @@ System Architecture
 Introduction
 -------------
 
-The NCSA Nightingale cluster is a HIPAA-capable RedHat Linux OS High-Performance Computing (HPC) environment
-created to support UIUC researchers and collaborators who engage in
-analysis of regulated sensitive data, like electronic Protected Health Information
-(ePHI) or CUI. The cluster resides within a secure environment and follows
-NCSA and University of Illinois security policies and procedures to
-ensure conformance and protection of ePHI, CUI, and other such data types.
-
-ACHE Environment
-------------------
-
-The Nightingale cluster provides a high-performance environment within
-the\ `Advanced Computational Health Enclave
-(ACHE) <https://wiki.ncsa.illinois.edu/display/ACHE/ACHE%3A+NCSA+Internal+Use+Space>`__.
-The ACHE is a special environment with restricted physical and
+Nightingale is a HIPAA-capable RedHat Linux OS High-Performance Computing (HPC) cluster 
+designed to support UIUC researchers and collaborators who analyze 
+regulated sensitive data, like electronic Protected Health Information
+(ePHI) or Controlled Unclassified Information (CUI). It is located within the Advanced Computational Health Enclave
+(ACHE) which is a special environment with restricted physical and
 electronic access within NCSA’s National Petascale Computing Facility.
-It is a physically isolated 1000-square-foot data center that is
-strictly managed to support electronic Protected Health Information. It
-follows HIPAA standards and University of Illinois policies and
-procedures to ensure conformance and protection of ePHI. The ACHE
-undergoes annual security assessments as well as\ `SOC2
-Type2 <https://wiki.ncsa.illinois.edu/display/ACHE/SOC+2+Compliance+Testing+Procedures>`__\ certification.
-ACHE’s controls supporting the security and confidentiality criteria are
-summarized in the table below.
+ACHE is a physically isolated 1000-square-foot data center that is
+strictly managed following HIPAA standards along with NCSA and University of Illinois policies and
+procedures to ensure conformance and protection of the data stored on it. The ACHE
+undergoes annual security assessments as well as SOC 2 Type II certification.
 
-Many of the restrictions that make the ACHE environment possible mean
-that many tasks that users want to do are more complicated than they
-would be on other HPC systems. Installing software, particularly,
-requires interaction with Nightingale staff. The Nightingale
-documentation that you're reading now generally explains this process.
-Please see the User Software documentation page for details. If you have
-further questions that page doesn't answer, please submit a ticket and
-chat with Nightingale support staff.
+
+Many of the restrictions that make the ACHE environment possible mean that some user tasks may be more complicated than other HPC systems. In particular, installing software may require interaction with Nightingale staff. These restrictions are described in the relevant area of this documentation. 
 
 Technical Specification
 ----------------------------
 
 Nightingale provides standard batch computing options and interactive
-compute nodes. The compute nodes are a mix of CPU nodes and nodes with 
-GPUs set up for double precision work (A100) or single precision work (A40).
-These are made available to users as dedicated servers or shared
+compute nodes. The compute nodes are a mix of CPU nodes and GPU nodes  
+set up for double precision (A100) or single precision (A40) work.
+These are available as dedicated servers or shared
 environments based on the needs of each research project. Nightingale
 offers database services to support long-term data storage and
 management with the ability to share and access relational databases on
@@ -71,16 +52,20 @@ Interactive Compute Nodes
 Nightingale Nodes
 ~~~~~~~~~~~~~~~~~~~
 
-Some allocations will have an assigned "interactive" node. If your allocation has
-one of these, you will be told about this. The hostname will be
-something like ng-yourgroup01.ngale.internal.ncsa.edu.
+Some allocations will have an assigned **interactive** node.  The hostname will be
+similar to:
 
-If your group doesn't have an assigned node, then you will log into one
+- <ng-yourgroup01>.ngale.internal.ncsa.edu
+
+where <ng-yourgroup01> is the name of your allocation group. You will be informed if your allocation has an interactive node.
+
+If your allocation doesn't have an assigned node, then you will log into one
 of the general login nodes:
 
--  `ng-login01.ngale.internal.ncsa.edu <http://ng-login01.ngale.internal.ncsa.edu>`__
--  `ng-login02.ngale.internal.ncsa.edu <http://ng-login02.ngale.internal.ncsa.edu>`__
+-  ng-login01.ngale.internal.ncsa.edu
+-  ng-login02.ngale.internal.ncsa.edu
 
-If you need to run batch jobs on Nightingale compute nodes (see the
-batch job documentation page for details) then you'll likely set up and
-queue the jobs from the general login nodes.  **Note** like interactive node access, batch computing is a capability that must be separately configured and added to your allocation.  The "accounts" command on the system will tell you if you have an allocation that allows you to do batch computing.  If running "accounts" while logged into the system produces no output, then your account is not enabled for batch computing.
+If you need to run batch jobs on Nightingale compute nodes then you'll likely set up and
+queue the jobs from the general login nodes. 
+
+**Note:** Like interactive node access, batch computing capability must be separately configured and added to your allocation.  You can run the accounts command on the system to determine if you have access to batch computing. If no output is produced after running the command, then your account is not enabled for batch computing.

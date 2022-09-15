@@ -23,6 +23,7 @@ Contents
 .. toctree::
 
    setting_up_account
+   account_admin
    architecture
    fee_overview
    accessing_the_system/index.rst

@@ -1,5 +1,5 @@
 ===============
-Fee Overview
+Fees Overview
 ===============
 
 All fees below are MONTHLY costs for University of Illinois users and their collaborators that have a university funding account number (CFOP). Contact NCSA for rates applied to account numbers residing outside the University of Illinois. Allocation/access cannot be shorter than 4 months. User decisions to terminate allocation/access must be provided 3 months prior to termination date. Costs are the same across all node-types. Rates are reviewed and recalculated biennially to ensure superior infrastructure and services. Billing will occur monthly for the prior month’s allocation/use. License fees for some software may be passed onto the user. 

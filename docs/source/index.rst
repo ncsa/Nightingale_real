@@ -24,6 +24,7 @@ Contents
 
    setting_up_account
    architecture
+   fee_overview
    accessing_the_system/index.rst
    citizenship
    files_and_data

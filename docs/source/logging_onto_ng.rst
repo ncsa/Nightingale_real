@@ -2,32 +2,42 @@
 Logging Onto Nightingale
 ========================
 
-Once you have completed the steps described in Getting Access to Nightingale, you can log onto Nightingale's login nodes using SSH (Secure Shell). 
+Once you have completed the steps described in Getting Access to Nightingale, you can log onto Nightingale using a SSH (Secure Shell) client
+on your local desktop or laptop. You will log onto Nightingale's secure node to gain access to the general access login nodes or, for groups that have them, specialized interactive nodes. The hostnames for these login nodes are listed below.
 
-Login Node Hostnames
+Hostnames
 ~~~~~~~~~~~~~~~~~~~~
-If your allocation doesn't have an assigned node, you will log into one
-of the general login nodes using one of the following hostnames:
+
+**Secure Node**
+
+- ngale-bastion-1.ncsa.illinois.edu 
+
+**General Access Login Nodes**
 
 -  ng-login01.ngale.internal.ncsa.edu
 -  ng-login02.ngale.internal.ncsa.edu
 
-If your allocation does have an assigned node, your login node's hostname will be
-similar to:
+**Specialized Interactive Nodes**
 
 - <ng-yourgroup01>.ngale.internal.ncsa.edu
 
-where <ng-yourgroup01> is the name of your allocation group. You will be informed if your allocation has an assigned node.
+where <ng-yourgroup01> is the name of your allocation group. 
 
-General Instructions
-~~~~~~~~~~~~~~~~~~~~
+**Note:** You will be informed if your allocation has a Specialized Interactive node.
+All Nightingale users have access to the general access login
+nodes. Please be aware that the general access head nodes are a shared
+resource for all users of the system and their use should be limited to
+editing, compiling and building your programs.
+
+General Instructions 
+~~~~~~~~~~~~~~~~~~~~~
 You can log onto Nightingale by following these steps:
 
-- If not on campus, connect to the campus VPN
-- SSH to your login node using the appropriate hostname (see above)
-- Enter your NCSA username and password
-- Enter '1' to send a push to the Duo app on your smartphone
-- Approve the request on your phone
-- ssh to 'ngale01'
+1. If not on campus, connect to the campus VPN
+2. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu 
+3. Enter your NCSA username and password
+4. Enter '1' to send a push to the Duo app on your smartphone
+5. Approve the request on your phone
+6. SSH to your login node using the appropriate hostname (see above)
 
 **NOW POINT TO PAGES GIVING MORE DETAIL FOR USERS WHO DO NOT KNOW HOW TO SSH, ETC**

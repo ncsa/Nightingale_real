@@ -26,6 +26,7 @@ Contents
    account_admin
    architecture
    fee_overview
+   logging_onto_ng.rst
    accessing_the_system/index.rst
    citizenship
    files_and_data

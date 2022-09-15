@@ -32,21 +32,26 @@ management with the ability to share and access relational databases on
 the system. With 880 TB of high-speed parallel LUSTRE-based storage, the
 system adequately supports the researchers’ needs for sharing data and generating and storing results.
 
-Batch Computing
-~~~~~~~~~~~~~~~~~
-
--  16 dual 64-core AMD systems with 1 TB of RAM
--  2 dual-A100 compute nodes with 32-core AMDs and 512 GB of RAM
-
 Interactive Compute Nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  4 interactive compute/login nodes with dual 64-core AMDs and 512 GB
    of RAM
-
 -  6 interactive nodes with 1 A100, dual 32-core AMDs with 256GB RAM
-
 -  5 interactive nodes with 1 A40 with dual 32-core AMDs and 512GB RAM
+
+Batch Compute System
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  16 dual 64-core AMD systems with 1 TB of RAM
+-  2 dual-A100 compute nodes with 32-core AMDs and 512 GB of RAM
+
+Storage
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  880 TB of high-speed parallel LUSTRE-based storage
+
+**DOES THE TEXT BELOW BELONG HERE? SHOULD IT BE IN ACCESSING THE SYSTEM?**
 
 Nightingale Nodes
 ~~~~~~~~~~~~~~~~~~~

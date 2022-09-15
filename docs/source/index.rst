@@ -23,9 +23,9 @@ Contents
 .. toctree::
 
    architecture
+   fee_overview
    setting_up_account
    account_admin
-   fee_overview
    logging_onto_ng.rst
    accessing_the_system/index.rst
    citizenship

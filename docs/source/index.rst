@@ -22,9 +22,9 @@ Contents
 
 .. toctree::
 
+   architecture
    setting_up_account
    account_admin
-   architecture
    fee_overview
    logging_onto_ng.rst
    accessing_the_system/index.rst

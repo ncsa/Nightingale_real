@@ -25,6 +25,7 @@ Contents
    fee_overview
    accessing_ng
    citizenship
+   filesystem
    files_and_data
    adding_software
    software

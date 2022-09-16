@@ -76,7 +76,7 @@ Below is a sample SSH command line to log into Nightingale's secure node:
 |  ssh <username>@ngale-bastion-1.ncsa.illinois.edu  |
 +----------------------------------------------------+
 
-where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password.
+where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password followed by a prompt to send a push to the Duo app. You may then enter the SSH command using the hostname of your login node.
 
 **Link to SSH tools**
 

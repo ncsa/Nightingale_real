@@ -63,14 +63,14 @@ system users, and their use should be limited to editing, compiling, and buildin
 
 You can log onto Nightingale by following these steps:
 
-1. If not on campus, connect to the campus VPN
-2. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu 
-3. Enter your NCSA username and password
-4. Enter '1' to send a push to the Duo app on your smartphone
-5. Approve the request on your phone
-6. SSH to your login node using the appropriate hostname (see above)
+1. If not on campus, connect to the campus VPN. (`Instructions for installing the campus VPN <https://answers.uillinois.edu/illinois/98773>`_)
+2. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu.
+3. Enter your NCSA username and password.
+4. Enter '1' to send a push to the Duo app on your smartphone.
+5. Approve the request on your phone.
+6. SSH to your login node using the appropriate hostname (see above).
 
-**POINT TO RESOURCES FOR SSH ACCESS HERE**
+**Link to SSH tools**
 
 Account Administration
 ~~~~~~~~~~~~~~~~~~~~~~

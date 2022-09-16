@@ -2,8 +2,7 @@
 Logging Onto Nightingale
 ========================
 
-Once you have completed the steps described in Getting Access to Nightingale, you can log onto Nightingale using a SSH (Secure Shell) client
-on your local desktop or laptop. You will log onto Nightingale's secure node to gain access to the general access login nodes or, for groups that have them, specialized interactive nodes. The hostnames for these login nodes are listed below.
+Once you have completed the steps described in Getting Access to Nightingale, you can log onto Nightingale using an SSH (Secure Shell) client on your local desktop or laptop. You will log onto Nightingale's secure node first and then log onto a general access login node or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
 
 Hostnames
 ~~~~~~~~~~~~~~~~~~~~
@@ -25,9 +24,8 @@ where <ng-yourgroup01> is the name of your allocation group.
 
 **Note:** You will be informed if your allocation has a Specialized Interactive node.
 All Nightingale users have access to the general access login
-nodes. Please be aware that the general access head nodes are a shared
-resource for all users of the system and their use should be limited to
-editing, compiling and building your programs.
+nodes. Please be aware that the general access head nodes are a shared resource for all 
+system users, and their use should be limited to editing, compiling, and building your programs.
 
 General Instructions 
 ~~~~~~~~~~~~~~~~~~~~~

@@ -2,7 +2,7 @@
 Logging Onto Nightingale
 ========================
 
-Once you have completed the steps described in Getting Access to Nightingale, you can log onto Nightingale using an SSH (Secure Shell) client on your local desktop or laptop. You will log onto Nightingale's secure node first and then log onto a general access login node or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
+Once you have completed the steps described in Getting Access to Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. You will log onto Nightingale's secure node first and then log onto a general access login node or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
 
 Hostnames
 ~~~~~~~~~~~~~~~~~~~~

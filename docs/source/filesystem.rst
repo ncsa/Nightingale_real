@@ -1,5 +1,5 @@
 ###########
-File System
+Filesystem
 ###########
 
 Nightingale uses a Lustre shared filesystem on all of its nodes. Lustre is an object-based, parallel distributed filesystem 

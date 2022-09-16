@@ -24,10 +24,7 @@ Contents
 
    architecture
    fee_overview
-   setting_up_account
-   account_admin
-   logging_onto_ng.rst
-   accessing_the_system/index.rst
+   accessing_ng
    citizenship
    files_and_data
    adding_software

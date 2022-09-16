@@ -59,7 +59,7 @@ All Nightingale users have access to the general access login
 nodes. Please be aware that the general access head nodes are a shared resource for all 
 system users, and their use should be limited to editing, compiling, and building your programs.
 
-**General Log in Instructions**
+**General Log in Process**
 
 You can log onto Nightingale by following these steps:
 
@@ -69,6 +69,14 @@ You can log onto Nightingale by following these steps:
 4. Enter '1' to send a push to the Duo app on your smartphone.
 5. Approve the request on your phone.
 6. SSH to your login node using the appropriate hostname (see above).
+
+Below is a sample SSH command line to log into Nightingale's secure node:
+
++----------------------------------------------------+
+|  ssh <username>@ngale-bastion-1.ncsa.illinois.edu  |
++----------------------------------------------------+
+
+where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password.
 
 **Link to SSH tools**
 

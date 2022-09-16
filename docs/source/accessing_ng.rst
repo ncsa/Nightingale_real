@@ -27,10 +27,9 @@ includes your NCSA identity, your University UIN, and a brief description of why
 
 The University of Illinois’ HIPAA Privacy and Security Directive requires that all members of a covered entity complete HIPAA training on an annual basis and perform endpoint disk encryption of portable devices (like laptops) used to access, process, or store HIPAA-regulated sensitive data. Your email request in Step 2 starts the process of getting added to NCSA's HIPAA Covered Entity required to access Nightingale.
 
-- **To get added to NCSA's HIPPA-Covered Entity**, follow the instructions in the response to the email you sent in Step 2. These instructions will include information on how to access the HIPAA training and submit your completion certificate and perform the disk encryption. (The instructions will connect you with NCSA personnel who will guide you through the encryption process.)
+- **To get added to NCSA's HIPPA-Covered Entity**, follow the instructions in the response to the email you sent in Step 2. These instructions will include information on accessing the HIPAA training, submitting your completion certificate, and performing disk encryption. (The instructions will connect you with NCSA personnel, who will guide you through the encryption process.)
 
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
-
 
 Logging Onto Nightingale
 ~~~~~~~~~~~~~~~~~~~~

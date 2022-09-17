@@ -9,6 +9,18 @@ advantageous data storage solution for many scientific computing applications.
 
 The table below describes the storage areas available on Nightingale's filesystem.
 
+.. table:: Truth table for "not"
+   :widths: auto
+
+   =====  ================================================
+     A    not A
+   =====  ================================================
+   False  Backup isn’t currently available on Nightingale, 
+          but will be added in the future and projects can 
+          use it for a fee.
+   True   False
+   =====  ================================================
+
 .. list-table:: Frozen Delights!
    :widths: 15 10 30
    :header-rows: 1
@@ -28,8 +40,9 @@ The table below describes the storage areas available on Nightingale's filesyste
      - On a stick!
      
 .. list-table:: Available Storage Areas on Nithtingale
-   :widths: 15 18 30 30
+   :widths: 15 20 30 30
    :header-rows: 1
+   :class: longtable
 
    * - Purpose
      - Location

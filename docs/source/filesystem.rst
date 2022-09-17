@@ -26,11 +26,11 @@ The following sections give specific information on the purpose of these areas.
  
 **Home**
 
-The /home area of the filesystem is where users land upon logging in to the cluster via SSH, and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of home directory quota. If a user depletes the available space on their home directory, they will be notified and and given the opportunity to remove files from it. At some point the data will be cleared to get below the 5GB threshold.
+The /u area of the filesystem is where users land upon logging on to the cluster via SSH, and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of home directory quota. If a user depletes the available space on their home directory, they will be notified and and given the opportunity to remove files from it. At some point the data will be cleared to get below the 50GB threshold.
 
 **Project**
 
-The /projects area of the filesystem is where members of a group (be they a single faculty member, a lab group, a department, or an entire college) store their project-related files. Users can have access to multiple project subdirectories if they are a member of various groups, and have been granted access to the space by the project's Principal Investigator (PI).
+The /projects area of the filesystem is where members of a group (be they a single faculty member, a lab group, a department, or an entire college) store their project-related files. A user can have access to multiple project subdirectories if they are a member of various groups, and have been granted access to the space by the project's Principal Investigator (PI).
 
 **User Scratch**
 

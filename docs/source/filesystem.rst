@@ -12,51 +12,31 @@ The table below describes the storage areas available on Nightingale's filesyste
 .. table:: Nightingale Storage Areas
    :align: "left"
 
-============= =============== =================================== =============================================
-Purpose       Location        Quota Policy                        Notes  
-============= =============== =================================== =============================================
-datasets      /datasets       | CSA-curated datasets, generally   | Backup isn’t currently available on  
-                              | exported from Postgres. Read-only | Nightingale,but will be added in the  
-                              | for the users.                    | future and projects can use it for a fee.
-home          /u              50GB                                | Contains per-user home folders. Used for 
-                                                                  | software,scripts, job files, etc. NOT 
-                                                                  | intended as a source/destination for I/O 
-                                                                  | during jobs.            
-project       /projects       | 1TB (more can be purchased)       | Contains per-group project folders. Used for 
-                                                                  | shared data for a project, common data sets, 
-                                                                  | software, results, etc.     
-user scratch  /scratch/users  |                                   | Contains per-user scratch folders. Used by  
-                                                                  | running jobs for temporary storage during   
-                                                                  | computations.                                
-local scratch /tmp            |                                   | On compute nodes it is private to a  
-                                                                  | running Slurm job. It is purged when the 
-                                                                  | job completes.
-============= =============== =================================== =============================================
+============= ============== =================================== ====================================
+Purpose       Location       Quota Policy                        Notes  
+============= ============== =================================== ====================================
+datasets      /datasets      | CSA-curated datasets, generally   | Backup isn’t currently available   
+                             | exported from Postgres. Read-only | on Nightingale, but will be added   
+                             | for the users.                    | in thefuture and projects can use 
+                             |                                   | it for a fee.
+home          /u             50GB                                | Contains per-user home folders.  
+                                                                 | Used for software,scripts, job  
+                                                                 | files, etc. NOTintended as a 
+                                                                 | source/destination for I/O during
+                                                                 | jobs.  
+project       /projects      | 1TB (more can be purchased)       | Contains per-group project folders.  
+                                                                 | Used for shared data for a project,  
+                                                                 | such as common data sets, software, 
+                                                                 | results, etc.     
+user scratch  /scratch/users |                                   | Contains per-user scratch folders.   
+                                                                 | Used byrunning jobs for temporary 
+                                                                 | storage during computations.                                
+local scratch /tmp           |                                   | On compute nodes it is private to 
+                                                                 |  a running Slurm job. It is purged 
+                                                                 | when the job completes.
+============= ============== ================================== ====================================
 
 
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| Purpose            | Location       | Quota Policy                             | Notes                                             |
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| datasets           | /datasets      | CSA-curated datasets, generally exported | Backup isn’t currently available on Nightingale,  | 
-|                    |                | from Postgres. Read-only for the users.  | |but will be added in the future and projects can | 
-|                    |                |                                          | |use it for a fee.                                |      
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| home               | /u             | 50GB                                     | Contains per-user home folders. Used for software,|
-|                    |                |                                          | scripts, job files, etc. NOT intended as a        |
-|                    |                |                                          | source/destination for I/O during jobs.           |
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| project            | /projects      | 1TB (more can be purchased)              | Contains per-group project folders. Used for      |
-|                    |                |                                          | shared data for a project, common data sets,      |
-|                    |                |                                          | software, results, etc.                           |
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| user scratch       | /scratch/users |                                          | Contains per-user scratch folders. Used by        |
-|                    |                |                                          | running jobs for temporary storage during         |
-|                    |                |                                          | computations.                                     |
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+
-| local scratch      | /tmp           |                                          | On compute nodes it is private to a running Slurm |
-|                    |                |                                          | job. It is purged when the job completes.         |
-|                    |                |                                          |                                                   |
-+--------------------+----------------+------------------------------------------+---------------------------------------------------+  
  
 **Home**
 

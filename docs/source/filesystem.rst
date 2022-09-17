@@ -9,6 +9,42 @@ advantageous data storage solution for many scientific computing applications.
 
 The table below describes the storage areas available on Nightingale's filesystem.
 
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+     
+.. list-table:: Available Storage Areas on Nithtingale
+   :widths: 15 18 30 30
+   :header-rows: 1
+
+   * - Purpose
+     - Location
+     - Quota Policy
+     - Notes
+   * - datasets
+     - /datasets
+     - CSA-curated datasets, generally exported from Postgres. Read-only for the users.
+     - Backup isn’t currently available on Nightingale, but will be added in the future and projects can use it for a fee.
+   * - home
+     - /u
+     - 50GB
+     - Contains per-user home folders. Used for software, scripts, job files, etc. NOT intended as a source/destination for I/O during jobs.
+  
+
 +--------------------+----------------+------------------------------------------+---------------------------------------------------+
 | Purpose            | Location       | Quota Policy                             | Notes                                             |
 +--------------------+----------------+------------------------------------------+---------------------------------------------------+

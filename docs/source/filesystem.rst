@@ -12,49 +12,37 @@ The table below describes the storage areas available on Nightingale's filesyste
 .. table:: Nightingale Storage Areas
    :align: "left"
 
-============= ============== =================================== ====================================
-Purpose       Location       Quota Policy                        Notes  
-============= ============== =================================== ====================================
-datasets      /datasets      | CSA-curated datasets, generally   | Backup isn’t currently available   
-                             | exported from Postgres. Read-only | on Nightingale, but will be added   
-                             | for the users.                    | in thefuture and projects can use 
-                             |                                   | it for a fee.
-home          /u             50GB                                | Contains per-user home folders.  
-                                                                 | Used for software,scripts, job  
-                                                                 | files, etc. NOTintended as a 
-                                                                 | source/destination for I/O during
-                                                                 | jobs.  
-project       /projects      | 1TB (more can be purchased)       | Contains per-group project folders.  
-                                                                 | Used for shared data for a project,  
-                                                                 | such as common data sets, software, 
-                                                                 | results, etc.     
-user scratch  /scratch/users |                                   | Contains per-user scratch folders.   
-                                                                 | Used byrunning jobs for temporary 
-                                                                 | storage during computations.                                
-local scratch /tmp           |                                   | On compute nodes it is private to 
-                                                                 |  a running Slurm job. It is purged 
-                                                                 | when the job completes.
-============= ============== =================================== ====================================
-
-
+=============== ================ =================================== 
+Location        Purpose          Quota Policy                        
+=============== ================ =================================== 
+ /u              home            50GB                               
+ /projects       projects        | 1TB (more can be purchased)                    
+ /scratch/users  user scratch    |                                    
+ /tmp            local scratch   |                
+ /datasets       datasets        |   
+=============== ================ ===================================                                                                 
+                                                                 
+The following sections give specific information on the purpose of these areas.
  
 **Home**
 
-The /home area of the file system is where users land upon logging in to the cluster via SSH, and is where a user’s $HOME env. variable points. This is meant to contain a user’s configuration files, job output/error files, and smaller software installations. A user’s /home area of the file system is automatically created during the account provisioning process.
+The /home area of the filesystem is where users land upon logging in to the cluster via SSH, and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of home directory quota. If a user depletes the available space on their home directory, they will be notified and and given the opportunity to remove files from it. At some point the data will be cleared to get below the 5GB threshold.
 
 **Project**
 
-The /projects area of the file system is where a group’s (be they a single faculty member, a lab group, a department, or an entire college) storage capacity resides. Users can have access to multiple project subdirectories if they are a member of various groups, and have been granted access to the space by the PI.
+The /projects area of the filesystem is where members of a group (be they a single faculty member, a lab group, a department, or an entire college) store their project-related files. Users can have access to multiple project subdirectories if they are a member of various groups, and have been granted access to the space by the project's Principal Investigator (PI).
 
 **User Scratch**
 
-The /scratch area of the file system is where users can place data while it is under active work.
+The /scratch area of the filesystem is where users can place data temporarily while it is being used by a running job.
 
-**Scratch — Local**
+**Local Scratch**
 
-The /tmp area is a local file system on an individual compute node, it is not part of the shared file system. Data place in /tmp is purged following a job’s completion prior to the next job beginning on the node.
+The /tmp area is a local filesystem on an individual compute node and is not part of the shared file system. Data placed in /tmp is purged when the job completes.
 
+**Datasets**
  
+The /dataset area contains curated datasets typically exported from Postres. This data is read only.
 
 
 

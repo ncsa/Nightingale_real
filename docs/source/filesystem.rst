@@ -34,7 +34,7 @@ user scratch  /scratch/users |                                   | Contains per-
 local scratch /tmp           |                                   | On compute nodes it is private to 
                                                                  |  a running Slurm job. It is purged 
                                                                  | when the job completes.
-============= ============== ================================== ====================================
+============= ============== =================================== ====================================
 
 
  

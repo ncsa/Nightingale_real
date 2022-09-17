@@ -9,17 +9,16 @@ advantageous data storage solution for many scientific computing applications.
 
 The table below describes the storage areas available on Nightingale's filesystem.
 
-.. table:: Truth table for "not"
-   :widths: auto
+.. table:: Nightingale Storage Areas
 
-   ========== ========== =================================================== ===================================================
-    Purpose    Location   Quota Policy                                        Notes
-   ========== ========== =================================================== ===================================================
-    datasets   /datasets | CSA-curated datasets, generally exported          | Backup isn’t currently available on Nightingale,
-                         | from Postgres. Read-only for the users.           | but will be added in the future and projects can
-                                                                             | use it for a fee.
-    home      /u          50GB
-   ========== ========== =================================================== ===================================================
+   ========== ========== ============================================ ============================================
+    Purpose    Location   Quota Policy                                Notes
+   ========== ========== ============================================ ============================================
+   datasets   /datasets  | CSA-curated datasets, generally exported   | Backup isn’t currently available on 
+                         | from Postgres. Read-only for the users.    | Nightingale,but will be added in the 
+                         |                                            | future and projects canuse it for a fee.
+   home       /u         50GB
+   ========== ========== ============================================ ============================================
 
 ===========  ================
 1. Hallo     | blah blah blah

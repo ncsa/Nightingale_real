@@ -47,16 +47,13 @@ The /tmp area is a local filesystem on an individual compute node and is not par
  
 The /dataset area contains curated datasets typically exported from Postres. This data is read only.
 
-Managing Files
-==============
-
 Creating and Editing Files
---------------------------
+==========================
 
 Sometimes it is easiest to create and edit your files directly on the cluster rather than transfer them back and forth. A variety of programs are available on clusters that you can use for working with plain text files. Examples include vi/vim, gedit, nano, and emacs. The vi/vim text editor is one of the most commonly used. However, if you are new to working in the Linux environment the nano editor is recommended because it may be more similar to the way you edit text files on a non-Linux based machine. 
 
 GNU nano
-~~~~~~~~
+--------
 
 GNU nano is an easy to use command line text editor for Linux. To open an existing file or to create a new file, type nano followed by the file name.
 
@@ -65,12 +62,12 @@ nano file_name
 This opens a new editor window in your terminal where you can start editing the file.  At the bottom of the window, you will find a list of shortcuts to use with the nano editor.  The caret symbol (^) represents the Ctrl key (e.g. to exit type Ctrl+X). The letter M represents the Alt key (e.g. to undo type Alt+U).
 
 MobaTextEditor
-~~~~~~~~~~~~~~
+--------------
 
 If you use MobaXterm to log into Nightingale, you will see a file browser in the left pane of the MobaXterm window.  Double-click on a selected file to open it in a separate window.  Please note that a temporary copy of files will be saved on your local machine when you use MobaTextEditor.  The temporary files are saved in the AppData\Roaming folder on Windows and will be removed when you fully close MobaXterm on your machine.
 
 Transferring Files
-------------------
+==================
 
 Coping data to your home directory
 To work on the files, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
@@ -94,7 +91,7 @@ ls
 
 
 File Organization
------------------
+=================
 
 How you organize your files depends somewhat on how the directory structure is set up on your cluster and possibly guidelines set up by your project manager. However, there are some basic goals you should keep in mind.
 

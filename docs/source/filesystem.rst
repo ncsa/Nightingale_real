@@ -80,19 +80,19 @@ Copying data to your home directory
 
 To work on the files, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
 
-Enter the cd command to go your home directory::
+Enter the **cd** command to go your home directory::
 
    cd 
 
-Create a new folder in your home directory called using a name of your choosing::
+Using the **mkdir** command, create a new folder in your home directory using a name of your choosing::
 
    mkdir <folder_name>
 
-Using the name of the folder where the dataset you want to copy is located, enter the following command to copy it to your new folder::
+Using the **cp** command, copy the dataset to the folder you created::
 
    cp -R /<dataset_foldername>/<filename> ~/<your_data_folder_name>
 
-For example, if the dataset was located in /datasets/covid_1 and you want to move it to your directory my_covid_data, you would enter the command::
+For example, if the dataset you want is located in '/datasets/covid_1' and you want to move it to your directory 'my_covid_data,' you would enter the command::
 
    cp -R /datasets/covid_1 ~/my_covid_data
 

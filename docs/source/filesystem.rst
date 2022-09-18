@@ -80,11 +80,9 @@ Copying data to your home directory
 
 To work on the files, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
 
-Enter the cd command to go your home directory:
+Enter the cd command to go your home directory::
 
-::
-
-cd 
+   cd 
 
 Create a new folder in your home directory called using a name of your choosing::
 

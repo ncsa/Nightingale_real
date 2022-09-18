@@ -38,18 +38,18 @@ Once you have obtained an account on Nightingale, you can log on using an SSH (S
 Because of the added security for Nightingale, you will first log onto Nightingale's secure node and then log onto a general access login node 
 or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
 
-**Secure Node Hostname**
+**Secure Node Hostname**::
 
-- ngale-bastion-1.ncsa.illinois.edu 
+   ngale-bastion-1.ncsa.illinois.edu 
 
-**General Access Login Nodes Hostnames**
+**General Access Login Nodes Hostnames**::
 
--  ng-login01.ngale.internal.ncsa.edu
--  ng-login02.ngale.internal.ncsa.edu
+   ng-login01.ngale.internal.ncsa.edu
+   ng-login02.ngale.internal.ncsa.edu
 
-**Specialized Interactive Node Hostname**
+**Specialized Interactive Node Hostname**::
 
-- <ng-yourgroup01>.ngale.internal.ncsa.edu
+   <ng-yourgroup01>.ngale.internal.ncsa.edu
 
 where <ng-yourgroup01> is the name of your allocation group. 
 
@@ -69,11 +69,9 @@ You can log onto Nightingale by following these steps:
 5. Approve the request on your phone.
 6. SSH to your login node using the appropriate hostname (see above).
 
-Below is a sample SSH command line to log into Nightingale's secure node:
+Below is a sample SSH command line to log into Nightingale's secure node::
 
-+----------------------------------------------------+
-|  ssh <username>@ngale-bastion-1.ncsa.illinois.edu  |
-+----------------------------------------------------+
+   ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
 where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
 

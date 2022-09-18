@@ -75,10 +75,10 @@ If you use MobaXterm to log into Nightingale, you will see a file browser in the
 Transferring Files
 ==================
 
-Copying data to your home directory
-----------------------------------
+Copying project data to your home directory
+-------------------------------------------
 
-To work on the files, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
+You will not work directly on your group's curated project data. Rather to work with them, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
 
 Enter the **cd** command to go your home directory::
 

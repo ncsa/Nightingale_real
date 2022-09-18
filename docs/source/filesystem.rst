@@ -26,7 +26,7 @@ More information about these storage areas is described in the following section
  
 **Home**
 
-The /u area of the filesystem is where users land upon logging on to the cluster via SSH, and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of home directory quota. If a user depletes the available space on their home directory, they will be notified and and given the opportunity to remove files from it. At some point the data will be cleared to get below the 50GB threshold.
+The /u area of the filesystem is where users land upon logging on to the cluster via SSH and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. At some point, the data will be cleared to get below the 50GB threshold.
 
 **Project**
 
@@ -108,7 +108,8 @@ How you organize your files depends somewhat on how the directory structure is s
  
 - Use Tar, Winzip, or similar file-bundling software to create a single file from a directory tree, and then store that file. The name of that bundled file should clearly indicate what files are bundled within.
  
-- In an archival storage site, apply meaningful names to files and directories so you, or your colleagues can navigate back to the data when you need it. It is up to you to decide what works best.
+- In an archival storage site, apply meaningful names to files and directories so you or your colleagues can navigate back to the data when needed. It is up to you to decide what works best.
+
 
 
  

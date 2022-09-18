@@ -10,7 +10,7 @@ used for large-scale, high-performance computing clusters. It enables scaling to
 petabytes (PB) of storage, and high aggregate throughput (hundreds of gigabytes per second). These features make Lustre an 
 advantageous data storage solution for many scientific computing applications.
 
-The table below describes the storage areas available on Nightingale's filesystem.
+The table below describes the location, purpose, and quota policy for the storage areas available on Nightingale's filesystem.
 
 .. table:: Nightingale Storage Areas
    :align: "left"
@@ -25,7 +25,7 @@ Location        Purpose          Quota Policy
  /datasets       datasets        |   
 =============== ================ ===================================                                                                 
                                                                  
-The following sections give specific information on the purpose of these areas.
+More information about these storage areas is described in the following sections.
  
 **Home**
 
@@ -45,7 +45,7 @@ The /tmp area is a local filesystem on an individual compute node and is not par
 
 **Datasets**
  
-The /dataset area contains curated datasets typically exported from Postgres. This data is read only.
+The /dataset area contains curated, read-only datasets typically exported from a Postgres database. 
 
 Creating and Editing Files
 ==========================

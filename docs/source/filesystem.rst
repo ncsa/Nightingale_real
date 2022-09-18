@@ -75,25 +75,33 @@ If you use MobaXterm to log into Nightingale, you will see a file browser in the
 Transferring Files
 ==================
 
-Coping data to your home directory
+Copying data to your home directory
+----------------------------------
+
 To work on the files, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
 
-Go to your home directory:
+Enter the cd command to go your home directory:
+
+::
 
 cd 
 
-Create a new folder in your home directory called shield_data_folder (you can pick a different name):
+Create a new folder in your home directory called using a name of your choosing::
 
-mkdir shield_data_folder
+   mkdir <folder_name>
 
-Copy the croc_req_1 folder with the data to your new folder:
+Using the name of the folder where the dataset you want to copy is located, enter the following command to copy it to your new folder::
 
-cp -R /datasets/croc_req_1 ~/shield_data_folder
+   cp -R /<dataset_foldername>/<filename> ~/<your_data_folder_name>
 
-Check if you copied the data successfully:
+For example, if the dataset was located in /datasets/covid_1 and you want to move it to your directory my_covid_data, you would enter the command::
 
-cd ~/shield_data_folder/croc_req_1
-ls
+   cp -R /datasets/covid_1 ~/my_covid_data
+
+To check if you copied the data successfully, enter the commands::
+
+   cd ~/my_covid_data/covid_1
+   ls
 
 
 File Organization

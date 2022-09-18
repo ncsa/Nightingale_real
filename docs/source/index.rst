@@ -26,7 +26,6 @@ Contents
    accessing_ng
    citizenship
    filesystem
-   files_and_data
    adding_software
    software
    launching_applications

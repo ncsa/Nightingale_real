@@ -45,7 +45,7 @@ The /tmp area is a local filesystem on an individual compute node and is not par
 
 **Datasets**
  
-The /dataset area contains curated datasets typically exported from Postres. This data is read only.
+The /dataset area contains curated datasets typically exported from Postgres. This data is read only.
 
 Creating and Editing Files
 ==========================

@@ -85,10 +85,10 @@ Using the **mkdir** command, create a new folder in your home directory using a 
 
    mkdir <folder_name>
 
-Using the **cp** command, copy the dataset to the folder you created::
+Using the **cp** command, copy the dataset to the folder you created. (cp -R command is used for recursive copy of all files and directories in the source directory tree.)::
 
    cp -R /<dataset_foldername>/<filename> ~/<your_data_folder_name>
-
+   
 For example, if the dataset you want is located in '/datasets/covid_1' and you want to move it to your directory 'my_covid_data,' you would enter the command::
 
    cp -R /datasets/covid_1 ~/my_covid_data

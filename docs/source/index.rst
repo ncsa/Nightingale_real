@@ -15,7 +15,7 @@ NCSA Nightingale User Guide
 
 .. note::
 
-   If you are not familiar with using a HPC cluster, we highly recommend taking NCSA's short tutorial
+   If you are unfamiliar with using a HPC cluster, we highly recommend taking NCSA's short tutorial
    `Using an HPC Cluster for Scientific Applications <https://www.hpc-training.org/xsede/moodle/mod/book/view.php?id=4296>`_ 
    before continuing with this user guide.
 

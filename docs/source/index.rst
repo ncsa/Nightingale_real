@@ -34,7 +34,6 @@ Contents
    software
    launching_applications
    running_jobs
-   sample_job_scripts
    visualization
    containers
    protected_data

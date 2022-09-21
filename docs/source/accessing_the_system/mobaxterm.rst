@@ -35,21 +35,7 @@ they're trying to reach out over the network, something fishy is going
 on. The whole point of Moba Xterm is that it connects to another
 computer over the network. That's how it works. Nothing fishy here.)
 
-If necessary install and launch a VPN
----------------------------------------
 
-For security reasons, Nightingale only accepts connections from
-computers on the UIUC campus. If you're going to connect to Nightingale
-from a computer on the UIUC network (in a campus office, for instance)
-then you can skip this section.
-
-If you need to access Nightingale from outside the campus network, you
-need to use a piece of software called a "VPN" ("Virtual Private
-Network") to make your connection to Nightingale come from inside the
-campus network and protects that traffic from being spied on. We will
-link to instructions on how to set up a campus VPN here in the future.
-If you need to set up a VPN and there's no link here, please contact
-Nightingale user support.
 
 Know which nightingale node you want
 ----------------------------------------

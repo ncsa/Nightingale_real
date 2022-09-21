@@ -35,27 +35,6 @@ they're trying to reach out over the network, something fishy is going
 on. The whole point of Moba Xterm is that it connects to another
 computer over the network. That's how it works. Nothing fishy here.)
 
-
-
-Know which nightingale node you want
-----------------------------------------
-
-As mentioned above, nightingale is made up of many different nodes.
-Several of those are "interactive" nodes, which are set up for
-particular groups of users to do their work. There will be software
-installed and any setup specific to that group's (your) needs. If you're
-ready to test logging into an interactive node, you will have been told
-what the name of that node is. The name will come in two forms. One form
-is the hostname, which is just a string of characters, like
-"beatlesGPU02", and the fully-qualified hostname, like
-"rollingstonesGPU02.ncsa.illinois.edu". The hostname might be a word
-that pertains to your project, and might contain something like "GPU",
-and often will contain a number. If you don't know what the hostname of
-the Nightingale node that you need to log into, stop following these
-instructions and go find out. You can find out from your PI (the person
-who invited you to work on Nightingale), or failing that, talk to
-Nightingale user support.
-
 **Initial Moba Xterm test**
 ---------------------------
 

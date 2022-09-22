@@ -59,7 +59,7 @@ The following commands will create an anaconda environment in your scratch direc
 Please note that software installed in scratch space is not permanent and may be removed at any time. 
 We recommend that you install it in your group’s project space instead.
 
-To create a minimal clone anaconda environment type the following::
+To create a minimal clone anaconda environment type::
 
   cd ${HOME}
   module load anaconda/2022-May/3
@@ -71,7 +71,7 @@ To create a minimal clone anaconda environment type the following::
   conda install pytorch
   conda list
  
-To deactivate the anaconda environment just type::
+To deactivate the anaconda environment type::
 
  conda deactivate
 
@@ -88,12 +88,14 @@ Viewing Installed Python Packages
 =================================
 
 After enabling Python in your user environmnet by loading a Python or Anaconda modulefile, you can view a list of the Python packages 
-installed (including your own installed packages) by typing::
+installed (including your own installed packages) by typing the following commands.
+
+If you have loaded a Python modulfile, type::
 
    pip list
 
-if you have loaded a Python modulfile or by typing::
+if you have loaded an Anaconda modulefile, type::
 
    conda list
 
-if you have loaded an Anaconda modulefile.
+

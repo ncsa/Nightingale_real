@@ -1,9 +1,9 @@
-===============================
+
 Adding Software
 ===============================
 
 Software Already Installed
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Before attempting to install a software package (or requesting that it
 be installed for you) you should make sure that it isn’t already
@@ -13,7 +13,7 @@ software that's available on the system but not immediately available
 (loaded). See the page for details.
 
 Where To Install Software
-^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------
 
 | For software that's not installed on the system already, users of the
   Nightingale system can only install software into user space which are
@@ -37,7 +37,7 @@ good long term solution since it is volatile storage and can be deleted
 at any time. [scratch purge policy]
 
 Network Access
-^^^^^^^^^^^^^^
+-----------------
 
 Nightingale nodes don't have access to the outside internet, which the
 above auto-install tools require to work. To run those, you'll generally
@@ -53,14 +53,14 @@ network proxy, which allows connections to limited outside network
 addresses.
 
 Quotas
-^^^^^^
+--------
 
 There currently is no user command that will list your quotas or what
 your storage situation is. We will update this page when those commands
 are implemented.
 
 Auto-installing Tools
-^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 The "Conda" software install tool is available to users on Nightingale.
 You must first load the "anaconda" module. However, due to network
@@ -76,7 +76,7 @@ restrictions in place on Nightingale. We will change the documentation
 on this page once we have a working version of spack on Nightingale.
 
 Conda
-~~~~~
+------
 
 Conda is an open-source, cross-platform, language-agnostic package
 manager and environment management system. It is a popular package
@@ -84,7 +84,7 @@ manager for Python and R. Here is how you can start using Conda on
 Nightingale.
 
 Setting an environment variable
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To be able to install additional python packages via Conda, you will
 need to set the HTTPS_PROXY environment variable. **You will need to set
@@ -135,7 +135,7 @@ List the python packages that are already available on the cluster.
     conda list
 
 Creating your Conda environment
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We recommend you use the locally installed Conda, so that you can
 install the specific packages that you need. You can have multiple
@@ -198,7 +198,7 @@ environment has been deactivated.
 | 
 
 Installing other packages
-^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Activate your Conda environment:
 
@@ -232,13 +232,12 @@ View what python packages are installed:
 
     conda list
 
-**R**
+R
+---
 
-R is a\ `programming
-language <https://en.wikipedia.org/wiki/Programming_language>`__\ for\ `statistical
-computing <https://en.wikipedia.org/wiki/Statistical_computing>`__\ and
-graphics supported by the R Core Team and the R Foundation for
-Statistical Computing.R version 4.2.0 is currently installed on
+`R is a programming language for statistical computing <https://www.r-project.org/>`_ 
+and graphics supported by the R Core Team and the R Foundation for
+Statistical Computing.  R version 4.2.0 is currently installed on
 Nightingale.
 
 To enable (make use of) R on Nightingale, just load the modulefile.
@@ -250,6 +249,7 @@ To enable (make use of) R on Nightingale, just load the modulefile.
 To start R, simply type R in the terminal.
 
 ::
+
     R
 
 The program will open *within* the terminal window. Type 'demo()' for
@@ -271,9 +271,9 @@ the script and then upload the file to the cluster.
 | 
 
 Viewing Installed R Packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Thelibrary()command can be used to view all user and system installed R
+The library() command can be used to view all user and system installed R
 packages (user installed packages are only visible to R when
 the${R_LIBS}environment variable is set).
 
@@ -282,7 +282,7 @@ the${R_LIBS}environment variable is set).
     Rscript -e "library()"`
 
 Installing Additional R Packages
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Additional user specific R packages not listed in Nightingale's system
 installation of R can be installed by any Nightingale
@@ -327,7 +327,7 @@ example above. Users, should use the specific R package
 (https://cran.r-project.org/web/packages/available_packages_by_name.html)
 that they are interested in.
 
-(If the environment variable\ **R_LIBS**\ is not set and a directory is
-  not specified with the "install.packages" function, then R packages
-  will be installed under "${HOME}/R/x86_64-unknown-linux-gnu-library"
-  by default.  This R subdirectory structure is created automatically.)
+(If the environment variable **R_LIBS** is not set and a directory is
+not specified with the "install.packages" function, then R packages
+will be installed under "${HOME}/R/x86_64-unknown-linux-gnu-library"
+by default.  This R subdirectory structure is created automatically.)

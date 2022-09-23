@@ -1,40 +1,46 @@
 .. important::
 
-    This page is soon to be the Nightingale official documentation page, but right now the documentation is undergoing its final revisions before deployemnt.  Users, please refer to the `wiki documentation <https://wiki.ncsa.illinois.edu/display/USSPPRT/Nightingale+Cluster+User+Guide>`_ until we officially transfer the documentation (at which point this notice will disappear).  This documentation will hopefully transition to official in late August, 2022.  
-
-.. note::
-
-   Status notices go here.  There are no upcoming maintenance windows in the immediate future.  
-
-NCSA Nightingale Documentation
-=========================================================
-
-The **Nightingale Cluster** is a high-performance environment within the Advanced Computational Health Enclave (ACHE). The ACHE is a unique environment with restricted physical and electronic access. All electronic Protected Health Information (ePHI) processed or stored at NCSA is done within this environment. The Nightingale Cluster system seeks to expand the ACHE to provide a multi-tenant campus cluster-like environment to meet the needs of researchers who wish to process and store ePHI.
+    This page is soon to be the Nightingale official documentation page, but right now the documentation is undergoing its final revisions before deployemnt. Please refer to the `wiki documentation <https://wiki.ncsa.illinois.edu/display/USSPPRT/Nightingale+Cluster+User+Guide>`_ until it is complete.
+   
+#####################################
+NCSA Nightingale User Guide
+#####################################
 
 .. image:: ACHE_cage_2.jpg
    :scale: 20 %
    :alt: Seven racks of computers in a server room
+   
+**Nightingale** is a high-performance compute cluster for sensitive data. It offers researchers a secure system for data storage and powerful computation. NCSA experts manage the complex requirements surrounding sensitive data, taking the burden off the user so they can focus on their research. The system is compliant with the Health Insurance Portability and Accountability Act (HIPAA) privacy and security rules for using Protected Health Information (PHI). Nightingale is not limited to the health domain and accommodates projects that require this amount of security or less, such as compliance with Controlled Unclassified Information (CUI) policies. It resides in the NCSA National Petascale Facility and is audited yearly by an outside entity to ensure secure operation (SOC 2, Type 2). It is available for a fee to University of Illinois faculty, staff, students and their collaborators through desktop access and encrypted laptop access. Rates are based on a service model that provides flexibility for both short-term and long-term projects. If this level of security is not needed, consider other 
+`NCSA resources <https://www.ncsa.illinois.edu/expertise/compute-resources/computing-systems-and-services>`_.
 
-Please also see the `Nightingale Project Profile <https://www.ncsa.illinois.edu/research/project-highlights/nightingale/>`_ on the NCSA web site.
+.. note::
+
+   If you are unfamiliar with using a HPC cluster, we highly recommend taking NCSA's short tutorial
+   `Using an HPC Cluster for Scientific Applications <https://www.hpc-training.org/xsede/moodle/mod/book/view.php?id=4296>`_ 
+   before continuing with this user guide.
 
 Contents
---------
+===========
 
 .. toctree::
 
-   setting_up_account
+   status_updates
    architecture
-   accessing_system_account_admin
-   accessing_system_from_windows
+   fee_overview
+   accessing_ng
    citizenship
-   files_and_data
+   filesystem
    adding_software
    software
    launching_applications
    running_jobs
-   sample_job_scripts
    visualization
    containers
    protected_data
    help
+
+..  
+   (commented out references; not used at the moment)
    references
+   accessing_system_account_admin
+   accessing_system_from_windows

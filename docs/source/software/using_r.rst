@@ -5,19 +5,17 @@ Using R
 Introduction
 ============
 
-R is a programming language and software environment for statistical computing and graphics. R and its libraries 
-implement a wide variety of statistical and graphical techniques, including linear and non-linear modeling, classical 
-statistical tests, time-series analysis, classification, clustering, and others. R is easily extensible through functions 
-and extensions, and the R community is noted for its active contributions in terms of packages. R is also an interpreted 
-language in which users typically access it through a command-line interpreter.
+R is a programming language and software environment for statistical computing and graphics. It is an interpreted 
+language typically accessed through a command-line interpreter. R and its libraries implement a wide 
+variety of statistical and graphical techniques, such as linear and non-linear modeling, classical 
+statistical tests, time-series analysis, classification, and clustering. 
 
-R and R packages are available via the “Comprehensive R Archive Network” (CRAN), a collection of sites which carry identical 
-material, consisting of the R distribution(s), the contributed extensions, documentation for R, and binaries.
+R is easily extensible through functions and extensions. The R community is noted for its active contributions in developing R packages. R packages contain code, data, and documentation in a standardised collection format that can be installed by R users. R and R packages are available via the `Comprehensive R Archive Network (CRAN) <https://cran.r-project.org>`_, a collection of sites which carry identical material, consisting of the R distribution(s), the contributed extensions, documentation for R, and binaries.
 
 Versions
 ========
 
-The table below lists the versions of R installed on the Nightingale.
+The table below lists the versions of R currently installed on Nightingale.
 
 +---------+
 | Version |
@@ -28,8 +26,8 @@ The table below lists the versions of R installed on the Nightingale.
 Adding R to Your Environment
 ============================
 
-Each R installation on the Nightingale has a module you can use to load a specific version of R into your user environment. 
-You can see the available versions of R by typing on the command line::
+There is a module file you can use to load a specific version of R into your user environment. 
+To see the available versions of R, type the following on the command line::
 
    module avail R
 
@@ -37,10 +35,7 @@ The latest version of R available on the Nightingale can be loaded into your env
 
    module load R
 
-To load a specific version you will need to load the corresponding module. 
-
-.. note:: 
-  NEED TO ADD THIS SECTION AND LINK IT HERE See the section Managing Your Environment for more information about modules.
+To load a specific version you will need to load the corresponding module. (See :doc:`Software Environment Configuration <modules>` to learn how to use modules.
 
 Installing Add-on Packages
 ==========================

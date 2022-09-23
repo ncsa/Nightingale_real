@@ -35,7 +35,7 @@ The latest version of R available on the Nightingale can be loaded into your env
 
    module load R
 
-To load a specific version you will need to load the corresponding module. (See :ref: `Software Environment Configuration`
+To load a specific version you will need to load the corresponding module. (See :doc: `Software Environment Configuration <modules>`
 to learn how to use modules.)
 
 Installing Add-on Packages

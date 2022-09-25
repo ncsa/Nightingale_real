@@ -30,9 +30,7 @@ Contents
    accessing_ng
    citizenship
    filesystem
-   adding_software
    software/index
-   launching_applications
    running_jobs
    visualization
    containers

@@ -1,128 +1,9 @@
-Accessing the System and Account Administration
-============================================================
+***************
+Using MobaXterm
+***************
 
-The page contains information about how to set up your machine to log
-into and use the Nightingale cluster computer at NCSA. This page will
-contain general setup instructions for logging into your interactive
-node on the Nightingale cluster.
-
-**If you are new to Linux OS, here is a page to walk Windows users to set up your computer to log in.**
-
-If you can't find information to help you in this user guide (try searching in the top left search box) please don't hesitate to `submit a help ticket <./help.html>`_ to ask your question.  
-
-Introduction to Nightingale
--------------------------------
-
-Nightingale is a cluster computer running a Linux OS. That is, it is several separate
-computers (called "node"s) connected together by network that share user account information
-and file systems. 
-When you log into Nightingale, you will typically log into a
-particular node that depends on the type of allocation your 
-group has.  Please see the "Nightingale Nodes" section above for specifics.  
-
-Logging onto Nightingale
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-To work on Nightingale, you will "log in" to it. Logging in establishes
-a connection between your computer and a node of Nightingale, so that
-you can use software on Nightingale to manipulate and analyze data on
-Nightingale. To log into Nightingale, user will need at least a ssh client
-available on their local desktop or laptop to make the connection. All
-Nightengale users must use a ssh based connection to go through the
-secure node (`bastion
-host <https://en.wikipedia.org/wiki/Bastion_host>`__) to be able to
-login to the general access head (login) nodes or, for groups that have
-them, their specific interactive specialized nodes.
-
-| 
-
-+----------+-----------------------------------+---------------------------------------+
-| Access   | Secure Node                       | General Access Head Nodes             |
-| Method   |                                   |                                       |
-+----------+-----------------------------------+---------------------------------------+
-| SSH      | ngale-bastion-1.ncsa.illinois.edu | ng-login01.ngale.internal.ncsa.edu    |
-+----------+-----------------------------------+---------------------------------------+
-|          |                                   | ng-login02.ngale.internal.ncsa.edu    |
-+----------+-----------------------------------+---------------------------------------+
-
-**Note:** All Nightingale users have access to the general access login
-nodes. Please be aware that the general access head nodes are a shared
-resource for all users of the system and their use should be limited to
-editing, compiling and building your programs.
-
-| 
-
-+----------+-----------------------------------+--------------------------------------------+
-| Access   | Secure Node                       | General Access Login Nodes                 |
-| Method   |                                   |                                            |
-+----------+-----------------------------------+--------------------------------------------+
-| SSH      | ngale-bastion-1.ncsa.illinois.edu | ng-group_node.ngale.internal.ncsa.edu      |
-+----------+-----------------------------------+--------------------------------------------+
-
-
-**Note:** Certain Nightingale groups have exclusive access to their
-interactive specialized nodes.
-
-Mac OS users
-~~~~~~~~~~~~~~
-
-You will log into Nightingale using the "ssh" command in your Terminal
-program. It's already installed and ready. You will also need an
-application that serves as an "X-windows server". For Mac OS users, we
-recommend XQuartz.
-
-Unix/Linux OS users
-~~~~~~~~~~~~~~~~~~~~~
-
-Will also log into Nightingale using the "ssh" client that is run from
-the command line in the terminal. Generally, the "ssh" client along with
-an "X-Windows" server should be available by default on recent versions
-of Unix/Linux OSes.
-
-Windows users
-~~~~~~~~~~~~~~
-
-We recommend Nightingale users first install a program called MobaXterm
-on their computers and then use that to log into Nightingale. This
-install process is detailed on this separate page.
-
-
-
-Accessing the System for Windows Users (Moba Xterm)
-====================================================
-
-Introduction for Windows Nightingale users:
----------------------------------------------
-
-Nightingale is a Linux-based cluster computer. That means users used to
-only using Windows computers, there will be a lot of things to learn.
-This page is for those people. These instructions will walk you through
-setting up your own computer so that you can log into Nightingale and do
-your work. These instructions are admittedly complicated but you only
-have to do this once. Before starting these instructions, you should
-already have an NCSA identity (username), know your NCSA kerberos
-password, and have Duo hooked up and working with an NCSA ID.  Please go back to
-the parent page of this page and go through the "NCSA Identity" process,
-then come back here once you have that.
-
-Brief overview of Nightingale
---------------------------------
-
-A "cluster" computer is many computers
-connected together in a network such that they work together in some
-cases but work separately in others. Nightingale is the name of the
-cluster as a whole, the individual computers within it are called
-"nodes" (from the mathematical term). Typical Nightingale users (you)
-will log into (connect to) to a specific node of Nightingale where your
-data and software are set up for you to use to do your work. You will
-need one extra piece of software on your Windows computer, called "Moba
-Xterm" to do this. (There are other pieces of software that can
-accomplish this, but this is the simplest way we could find to get
-Windows users set up the way they need to be.)
-
-Install the Moba Xterm application
--------------------------------------
-
+Installing MobaXterm
+---------------------
 The Moba Xterm application runs on your computer and connects it to a
 Nightingale node, and allows you to run software as if your screen,
 mouse, and keyboard were attached directly to that node of Nightingale.
@@ -155,110 +36,6 @@ click the "Allow access" button. (Most applications work locally, so if
 they're trying to reach out over the network, something fishy is going
 on. The whole point of Moba Xterm is that it connects to another
 computer over the network. That's how it works. Nothing fishy here.)
-
-If necessary install and launch a VPN
----------------------------------------
-
-For security reasons, Nightingale only accepts connections from
-computers on the UIUC campus. If you're going to connect to Nightingale
-from a computer on the UIUC network (in a campus office, for instance)
-then you can skip this section.
-
-If you need to access Nightingale from outside the campus network, you
-need to use a piece of software called a "VPN" ("Virtual Private
-Network") to make your connection to Nightingale come from inside the
-campus network and protects that traffic from being spied on. We will
-link to instructions on how to set up a campus VPN here in the future.
-If you need to set up a VPN and there's no link here, please contact
-Nightingale user support.
-
-Know which nightingale node you want
-----------------------------------------
-
-As mentioned above, nightingale is made up of many different nodes.
-Several of those are "interactive" nodes, which are set up for
-particular groups of users to do their work. There will be software
-installed and any setup specific to that group's (your) needs. If you're
-ready to test logging into an interactive node, you will have been told
-what the name of that node is. The name will come in two forms. One form
-is the hostname, which is just a string of characters, like
-"beatlesGPU02", and the fully-qualified hostname, like
-"rollingstonesGPU02.ncsa.illinois.edu". The hostname might be a word
-that pertains to your project, and might contain something like "GPU",
-and often will contain a number. If you don't know what the hostname of
-the Nightingale node that you need to log into, stop following these
-instructions and go find out. You can find out from your PI (the person
-who invited you to work on Nightingale), or failing that, talk to
-Nightingale user support.
-
-**Initial Moba Xterm test**
----------------------------
-
-Before you use these instructions, make sure you know what hostname
-within the Nightingale cluster you need to log into. This is explained
-in the previous section.
-
-Open up the Moba Xterm application. Click the button in the middle of
-the main window called "Start Local Terminal" to open up a new
-connection. You will have a colorful window that has a prompt at the
-bottom that allows you to type commands. The last part of the prompt
-will probably be something like "/home/mobaxterm". To test that
-everything is working, please type the following, all on one line. While
-you're typing, substitute the hostname of **your** nightingale node for
-"XXXXX", and substitute **your** NCSA identity username for "UUUUU".
-
-::
-
-   ssh -J UUUUU@ngale-bastion-1.ncsa.illinois.edu UUUUU@XXXXX.internal.ncsa.edu
-   
-
-so with the proper substitutions, if fictional user Hiro P. were using
-this method to log into (fictional) Nightingale node "beatlesGPU02",
-they would type the following:
-
-::
-
-   ssh -J hirop@ngale-bastion-1.ncsa.illinois.edu hirop@beatlesGPU02.internal.ncsa.edu
-   
-
-The text will ask you for your password. Type in your NCSA kerberos
-password (YOU WILL NOT SEE THE CHARACTERS AS YOU TYPE. JUST TYPE IT
-BLINDLY). Then it will ask you for a Duo code. Type "1", hit return,
-your Duo device (usually your phone) will notify you of the request,
-approve the connection on your Duo device. Then it will ask you for your
-password again. Type it again, and again you won't see the characters.
-
-Then you will be back at a prompt, but unlike before, the prompt will be
-to execute commands on a node of Nightingale (rather than your own
-computer). If it worked, the prompt you see will look something like
-this, with the name of the node you logged into displayed as part of the
-prompt:
-
-::
-
-   [UUUUU@XXXXX ~]$ 
-   
-So if fictional user "Hiro P." logs into the same (fictional) node as
-above, it would look like this:
-
-::
-
-   [hirop@beatlesGPU02 ~]$ 
-   
-
-If you see this, that means you can successfully log into your node on
-Nightingale. However, now you need to test that you can bring an
-application window from Nightingale to your machine. Type "xclock" and
-then hit return. If it immediately complains about something like
-"DISPLAY not set", then something's wrong. In around about 10 seconds or
-so, a square window with a running analog clock should show up on your
-desktop. (Check your window bar if you don't see it; sometimes it hides
-behind other windows.)
-
-If that worked, you're all set. You just need to type that ssh line from
-above to log into Nightingale to work. To make logging in simpler, and
-enable moving files to Nightingale, configure Moba Xterm per the
-following section.
 
 Configuring Moba Xterm
 ------------------------------
@@ -308,8 +85,8 @@ Then click "Ok". Back in the Session settings, now click "OK" at the
 bottom. This should open a new tab in your overall Moba Xterm window
 that will log into your interactive node on Nightingale.
 
-Moving files to Nightingale using Moba Xterm
-------------------------------------------------
+Moving files to Nightingale 
+---------------------------
 
 You may have files on your local system that you want to transfer to
 Nightingale to use. These may be data files, or configuration program
@@ -368,10 +145,8 @@ save it using software on Nightingale.
 
 ..  image:: ./XF_testfile_at_destination.png
 
-Moving files from Nightingale to your local machine (downloading them; see warnings about this)
----------------------------------------------------------------------------------------------------
-
-If you a file on Nightingale that you want to look at locally on your
+Downloading Files
+------------------
 own machine, you can download it, using essentially the reverse process
 of uploading described above. Any files that you download **must**
 legally clear to have on your machine; i.e. no identifying patient
@@ -388,7 +163,3 @@ to a directory on your own computer and right clicking and selecting
 directory folder that exists on your local computer. Either way, the
 file will be copied.
 
-| 
-
-If you have questions: `SUBMIT A TICKET <./help.html>`_!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

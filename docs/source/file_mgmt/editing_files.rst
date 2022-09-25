@@ -15,7 +15,7 @@ Several tutorials are available online if you want to know more about nano or vi
 You can also edit files using MobaXterm's text editor. Brief instructions for using GNU nano and MobaXterm are given below.
 
 GNU nano
---------
+========
 
 GNU nano is an easy-to-use command line text editor for Linux. To open an existing file or create a new one, type nano followed by the file name::
 
@@ -26,7 +26,7 @@ shortcuts to use with the nano editor. The caret symbol (^) represents the Ctrl 
 Alt key (e.g., to undo type Alt+U).
 
 MobaTextEditor
---------------
+==============
 
 If you use MobaXterm to log into Nightingale, you will see a file browser in the left pane of the MobaXterm window.  Double-click on a selected 
 file to open it in a separate window.  Please note that a temporary copy of files will be saved on your local machine when you use MobaTextEditor.  

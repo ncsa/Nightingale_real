@@ -27,9 +27,9 @@ Contents
    status_updates
    architecture
    fee_overview
-   accessing_ng
+   accessing/index
    citizenship
-   filesystem
+   file_mgmt/index
    software/index
    running_jobs
    visualization

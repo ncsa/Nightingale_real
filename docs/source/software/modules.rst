@@ -1,5 +1,5 @@
 ##################################
-Software Environment Configuration
+Manaaging Your Environment
 ##################################
 
 Using Modules

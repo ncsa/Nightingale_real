@@ -85,9 +85,6 @@ Using Rscript
 To run R commands without starting an R session the command Rscript can be used (as we show in the examples on this page). As a scripting front end for R,
 Rscript enables the use of R via shell scripts and scripting applications.
 
-Installation Steps
-------------------
-
 Below are steps with examples of the actual commands that can be run on the Nightingale. In these steps ~/Rlibs is used for the location to install user 
 specific add-on packages (The tilde “~” means the users’ home directory—i.e. $HOME).
 
@@ -123,7 +120,7 @@ to the Nightingale.::
    fi
  
 Warnings and Error Messages
----------------------------
+===========================
 
 R packages that are not available in the current CRAN (Comprehensive R Archive Network) or if the name of the package is misspelled, tend to generate a message 
 similar to the following::
@@ -146,7 +143,7 @@ Some R packages have dependencies and require them to be installed first and wil
 Installing the required R package first and then the desired R package resolves this issue.
 
 Viewing Installed R Packages
-----------------------------
+============================
 
 The library() command can be used to view all user and system installed R packages (user installed packages are only visible to R when the $R_LIBS 
 environment variable is set)::

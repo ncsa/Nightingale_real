@@ -3,7 +3,7 @@ Software
 #########
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     installed_software.rst
     modules.rst

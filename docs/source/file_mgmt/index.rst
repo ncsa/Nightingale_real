@@ -1,7 +1,7 @@
 .. toctree::
     :maxdepth: 1
     
-    filessystem
+    filesystem
     editing_files
     trasfer_files
     organize_files

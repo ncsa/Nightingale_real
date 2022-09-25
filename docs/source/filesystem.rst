@@ -9,18 +9,28 @@ Nightingale uses a Lustre shared filesystem on all of its nodes. Lustre is an ob
 
 The table below describes the location, purpose, and quota policy for the storage areas available on Nightingale's filesystem.
 
-.. table:: Nightingale Storage Areas
-   :align: "left"
+.. list-table:: Nightingale Storage Areas
+   :widths: 15 15 35
+   :header-rows: 1
 
-=============== ================ =================================== 
-Location        Purpose          Quota Policy                        
-=============== ================ =================================== 
- /u              home            50GB                               
- /projects       projects        | 1TB (more can be purchased)                    
- /scratch/users  user scratch    |                                    
- /tmp            local scratch   |                
- /datasets       datasets        |   
-=============== ================ ===================================                                                                 
+   * - Location
+     - Purpose
+     - Quota Policy
+   * -  /u
+     - home
+     - 50GB
+   * - /projects       
+     - projects
+     - 1TB (more can be purchased)                    
+   * - /scratch/users  
+     - user scratch
+     - 
+   * - /tmp 
+     - local scratch
+     - 
+   * - /datasets
+     - datasets
+     - 
                                                                  
 More information about these storage areas is described in the following sections.
  

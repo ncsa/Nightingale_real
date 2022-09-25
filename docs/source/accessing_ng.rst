@@ -31,7 +31,7 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 
 Logging Onto Nightingale
-~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once you have obtained an account on Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log onto Nightingale's secure node and then log onto a general access login node 

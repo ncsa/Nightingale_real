@@ -3,10 +3,9 @@ Accessing the System
 ####################
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
-    installed_software.rst
-    modules.rst
-    conda.rst
-    python.rst
-    using_r.rst
+    getting_acct
+    logging_in
+    ssh_clients
+    acct_admin

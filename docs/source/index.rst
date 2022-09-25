@@ -37,8 +37,4 @@ Contents
    protected_data
    help
 
-..  
-   (commented out references; not used at the moment)
-   references
-   accessing_system_account_admin
-   accessing_system_from_windows
+

@@ -1,5 +1,5 @@
 ##################################
-Manaaging Your Environment
+Managing Your Environment
 ##################################
 
 Using Modules

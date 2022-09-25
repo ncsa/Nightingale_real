@@ -7,5 +7,5 @@ File Management
     
     filesystem
     editing_files
-    trasfer_files
+    transfer_files
     organize_files

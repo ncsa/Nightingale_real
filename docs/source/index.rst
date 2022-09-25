@@ -31,7 +31,7 @@ Contents
    citizenship
    filesystem
    adding_software
-   software/software
+   software/index
    launching_applications
    running_jobs
    visualization

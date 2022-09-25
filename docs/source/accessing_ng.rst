@@ -1,9 +1,9 @@
-=====================
+####################
 Accessing the System
-=====================
+####################
 
 Getting an Account
-~~~~~~~~~~~~~~~~~~
+==================
 To access Nightingale, you must first get an NCSA Identity (username and password) and request access from Nightingale 
 administrators. Once approved, you will be given instructions on how to be added to NCSA's HIPPA-Covered Entity. The three 
 steps below explain this process.
@@ -11,9 +11,9 @@ steps below explain this process.
 **1. Create an NCSA Identity**
 
 Before requesting Nightingale access, you need an NCSA identity. You can skip this step if you already have an NCSA identity. 
-If you don’t remember your password, you can reset it using this link: https://identity.ncsa.illinois.edu/.
+If you don’t remember your password, you can reset it on the `NCSA Identity and Access Management webpage <https://identity.ncsa.illinois.edu/>`_
 
-- **To create an NCSA identity**, go to this invite link: https://go.ncsa.illinois.edu/ngale_identity.
+- **To create an NCSA identity**, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_
 
 **Note:** In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor 
 authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale.
@@ -31,7 +31,7 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 
 Logging Onto Nightingale
-~~~~~~~~~~~~~~~~~~~~~~~~
+========================
 
 Once you have obtained an account on Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log onto Nightingale's secure node and then log onto a general access login node 
@@ -75,7 +75,7 @@ Below is a sample SSH command line to log into Nightingale's secure node::
 where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
 
 SSH Clients
-~~~~~~~~~~~
+===========
 
 A variety of SSH-based clients are available for accessing Nightingale from your local system. Which one you use depends on your workstation's operating system. These are described in the sections below.
 
@@ -92,7 +92,7 @@ Mac OS X comes with a built-in open-source version of SSH called OpenSSH. You ca
 The Linux operating system has SSH built-into it. You use the Linux terminal application to connect via SSH.  `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Linux.
 
 Account Administration
-~~~~~~~~~~~~~~~~~~~~~~
+======================
 
 Account and project administration, such as resetting your password or adding someone to a project, is 
 managed by the NCSA Identity and Group Management tools. Please see the 

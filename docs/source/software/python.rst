@@ -4,21 +4,18 @@ Using Python on Nightingale
 
 Introduction
 ============
-Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via the the `Python Package Index (PyPI) <https://pypi.org/>`_ , which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities.
-
-Anaconda also provides a Python environment with python packages.
+Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via the the `Python Package Index (PyPI) <https://pypi.org/>`_ , which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. Anaconda also provides a Python environment with python packages.
 
 Versions
 ========
-The table below list the versions of Python installed on the Nightingale.
-
-.. list-table:: **Python Versions**
-   :widths: 25 25 
+The table below lists the versions of Python installed on the Nightingale.
+     
+.. list-table:: 
 
    * - Anaconda 2022.05
-     - Python 3.9.12
    * - Miniconda 2022.05
-     - Python 3.9.5
+   * - Python 3.9.5
+   * - Python 3.9.12
 
 Adding Python To Your Environment
 =================================
@@ -32,7 +29,7 @@ and/or::
 
    module avail miniconda3
 
-See `Managing Your Environment <modules>`_ for more information about modules.
+See `Using Modules <modules>`_ for more information about modules.
 
 Installing Python Packages (in user specified locations)
 ========================================================

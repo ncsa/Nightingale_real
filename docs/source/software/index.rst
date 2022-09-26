@@ -15,6 +15,5 @@ When installing any software you should consider the following:
 
     installed_software
     modules
-    conda
     python
     using_r

@@ -33,14 +33,6 @@ See `Using Modules <modules>`_ for more information about modules.
 
 Installing Python Packages (in user specified locations)
 ========================================================
-
-When installing any software there are a few things to consider:
-
- - Home directory disk usage quotas.
- - Will the software be used by multiple users in my group? 
-   (If so, project space is the **recommended** location to install software.)
- - Does the desired software have dependencies/requirements?
- - Is the prerequisite software already installed?
  
 You must install software/libraries into user write-able locations like your home directory, your group’s project space, or your scratch space. Software installed in scratch space is not permanent and may be removed at any time. We recommend that you install it in your group’s project space instead.
 

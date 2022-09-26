@@ -13,9 +13,9 @@ The table below lists the versions of Python installed on the Nightingale.
 .. list-table:: 
 
    * - Anaconda 2022.05
+     - Python 3.9.12
    * - Miniconda 2022.05
-   * - Python 3.9.5
-   * - Python 3.9.12
+     - Python 3.9.5
 
 Adding Python To Your Environment
 =================================

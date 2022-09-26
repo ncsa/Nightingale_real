@@ -5,12 +5,10 @@ Managing Your Environment
 Using Modules
 =============
 
-Nightingale uses a set of module commands that enable users to configure
-their software environment. Essentially, you can turn access to certain 
-software on or off by "loading" or "unloading" a modulefile that adds
-or removes the software's configuration in your user environment). The 
-table below shows the most common module commands you will need on 
-Nightingale.
+Nightingale uses `Environment Modules <https://modules.readthedocs.io/en/stable/index.html>`_, a set of module commands that 
+enable users to dynamically configure their software environment. Essentially, you can turn access to certain 
+software on or off by "loading" or "unloading" a modulefile that adds or removes the software's configuration in your user 
+environment. The table below shows the most common module commands you will need on Nightingale.
 
 +--------------------+-------------------------------------------------+
 | Command            | Description                                     |
@@ -64,12 +62,9 @@ Nightingale.
 |                    | will already be loaded.                         |
 +--------------------+-------------------------------------------------+
 
-These commands will enable you to get started using modules. If you are curious about the additional capabilities of the module command, see the `SourceForge Module Command manpage <http://modules.sourceforge.net/man/module.html>`_.
+These commands will enable you to get started using modules. If you are curious about the additional capabilities of the module command, see the `Environment Modules Documentation <https://modules.readthedocs.io/en/stable/index.html>`_.
 
 **Notes:** 
 
- - Modules are independent of the user’s shell, so any shell (bash,
-   tcsh, ksh, etc ...) can use the same commands to modify the current
-   user environment.
- - Order is important. With each module load, the changes are
-   prepended to your current user environment paths.
+ - Modules are independent of which shell is being used. Therefore, the module commands are the same for all shells (bash, tcsh, ksh, etc.). 
+ - The order in which module commands are issued is important. With each module load, the changes are prepended to the current user environment paths.

@@ -21,10 +21,11 @@ or, for groups that have them, a specialized interactive node. The hostnames for
 
 where <ng-yourgroup01> is the name of your allocation group. 
 
-**Note:** You will be informed if your allocation has a Specialized Interactive node.
-All Nightingale users have access to the general access login
-nodes. Please be aware that the general access head nodes are a shared resource for all 
-system users, and their use should be limited to editing, compiling, and building your programs.
+**Notes:** 
+
+- Your group manager can inform you if your allocation has a Specialized Interactive node and its hostname.
+- All Nightingale users have access to the general access login nodes. Please be aware that these nodes are a shared resource for all 
+  system users, and you should limit your use of them to editing, compiling, and building your programs.
 
 **General Log in Process**
 
@@ -37,8 +38,8 @@ You can log onto Nightingale by following these steps:
 5. Approve the request on your phone.
 6. SSH to your login node using the appropriate hostname (see above).
 
-Below is a sample SSH command line to log into Nightingale's secure node::
+Below is a sample SSH command line to log into Nightingale's secure node where <username> is the username you created for your NCSA identity.::
 
    ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
-where <username> is the username you created for your NCSA identity. After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
+After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.

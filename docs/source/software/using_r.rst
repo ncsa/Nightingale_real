@@ -35,21 +35,12 @@ The latest version of R available on the Nightingale can be loaded into your env
 
    module load R
 
-To load a specific version you will need to load the corresponding module. (See `Software Environment Configuration </software/modules.html>`_ for more on loading modules.)
-
+To load a specific version you will need to load the corresponding module. (See `Using Modules <modules>`_ for more information about modules.)
 
 Installing Add-on Packages
 ==========================
 Any R add-on package not available in the system installation can be installed from the CRAN in a user specified location.
 You must have write access to the location.
-
-When installing any software you should consider the following:
-
- - Home directory disk usage quotas.
- - Will the software be used by multiple users in my group?
-   (Project space is the **recommended** location to install software.)
- - Does the desired software have dependencies/requirements?
- - Is the prerequisite software already installed?
 
 Installation Command Syntax
 ===========================

@@ -16,7 +16,7 @@ Follow the steps below to install MobaXterm and connect to Nightingale.
 
 
 
-1. `Download MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_and install it on your Windows workstation. 
+1. `Download MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ and install it on your Windows workstation. 
 
 You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges to install the Installer edition. The Portable edition does not require admin privileges and to use it just extract the downloaded zip file and click mobaxterm.exe.
 

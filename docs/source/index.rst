@@ -31,7 +31,7 @@ Contents
    citizenship
    file_mgmt/index
    software/index
-   running_jobs
+   running_jobs/index
    visualization
    containers
    protected_data

@@ -4,7 +4,7 @@ Using Python on Nightingale
 
 Introduction
 ============
-Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via the the `Python Package Index (PyPI) <https://pypi.org/>`_ , which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. Anaconda also provides a Python environment with python packages.
+Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via the `Python Package Index (PyPI) <https://pypi.org/>`_ , which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. Anaconda also provides a Python environment with python packages.
 
 Versions
 ========
@@ -34,10 +34,10 @@ See `Using Modules <modules>`_ for more information about modules.
 Installing Python Packages (in user specified locations)
 ========================================================
  
-You must install software/libraries into user write-able locations like your home directory, your group’s project space, or your scratch space. Software installed in scratch space is not permanent and may be removed at any time. We recommend that you install it in your group’s project space instead.
+You must install software/libraries into user-writeable locations like your home directory, your group’s project space, or your scratch space. Software installed in scratch space is not permanent, and system administrators may remove it at any time. We recommend that you install it in your group’s project space instead.
 
 Generally, any Python package not available in the system installation can be 
-installed from the `Python Package Index <https://pypi.org/>`_ (PyPI) in a location you specify. 
+installed from the `Python Package Index <https://pypi.org/>`_ (PyPI)  in your specified location.
 
 The following commands will create a minimal clone anaconda environment in your scratch directory, install pytorch, and list the Python packages 
 installed (including your own installed packages) in your environment::
@@ -67,7 +67,7 @@ with::
 Viewing Installed Python Packages
 =================================
 
-After enabling Python in your user environmnet by loading a Python or Anaconda modulefile, you can view a list of the Python packages 
+After enabling Python in your user environment by loading a Python or Anaconda modulefile, you can view a list of the Python packages 
 installed (including your own installed packages) by typing the following commands.
 
 If you have loaded a Python modulfile, type::

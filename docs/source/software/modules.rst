@@ -64,12 +64,12 @@ Nightingale.
 |                    | will already be loaded.                         |
 +--------------------+-------------------------------------------------+
 
-| 
+These commands will enable you to get started using modules. If you are curious about the additional capabilities of the module command, see the `SourceForge Module Command manpage <http://modules.sourceforge.net/man/module.html>`_.
 
 **Notes:** 
 
  - Modules are independent of the user’s shell, so any shell (bash,
-   tcsh, ksh, etc ...) can use the same commands to modify their current
+   tcsh, ksh, etc ...) can use the same commands to modify the current
    user environment.
  - Order is important. With each module load, the changes are
    prepended to your current user environment paths.

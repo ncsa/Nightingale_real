@@ -23,3 +23,4 @@ Nightingale. Essentially one of the main differences between Anaconda
 and Minconda is the number of packages: Anaconda by default installs
 with over 150 data science packages, whereas Miniconda by default
 installs a subset of the packages installed by default with Anaconda. 
+Anaconda includes Conda which is a package manager and environment management system. It is a popular package manager for Python and R. 

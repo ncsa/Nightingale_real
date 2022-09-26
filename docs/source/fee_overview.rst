@@ -2,7 +2,7 @@
 Fees and Services
 #################
 
-All fees below are MONTHLY costs for University of Illinois users and collaborators with a university funding account number (CFOP). Contact NCSA for rates applied to account numbers residing outside the University of Illinois. Allocation/access cannot be shorter than 4 months. User decisions to terminate allocation/access must be provided 3 months before the termination date. Costs are the same across all node types. Rates are reviewed and recalculated biennially to ensure superior infrastructure and services. Billing will occur monthly for the prior month’s allocation/use. License fees for some software may be passed onto the user. 
+All fees below are MONTHLY costs for University of Illinois users and collaborators with a university funding account number (CFOP). Contact NCSA for rates applied to account numbers outside the University of Illinois. Allocation/access cannot be shorter than four months. Decisions to terminate allocation/access must be provided three months before the termination date. Costs are the same across all node types. Rates are reviewed and recalculated biennially to ensure superior infrastructure and services. Billing will occur monthly for the prior month’s allocation/use. License fees for some software may be passed onto the user. 
 
 Interactive Computing Options
 =============================
@@ -37,7 +37,7 @@ Consultation and Development Services
 
 Per project as needed: cost based on time and materials 
 
-NCSA provides expertise in software development, analytics, and computation for a fee that covers staff time and materials. 
+NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials.
 
 Contact   `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ to discuss project needs and the availability of staff. 
 
@@ -45,8 +45,8 @@ User Support
 ============
 User support is included with all accounts at no additional charge. Types of support include:
 
-- Security administration (e.g., software security vetting, external audits, compliance with University Security and Privacy Directive). 
-- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, IRB approval processes). 
-- Training and onboarding (e.g., management of onboarding protocols, required HIPAA training, access to training materials). 
-- System and security documentation (e.g., for proposals, contracts, agreements, reporting). 
-- Standard system administration (e.g., installs, updates, access management, infrastructure maintenance and testing).
+- Security administration (e.g., software security vetting, external audits, compliance with University Security and Privacy Directive)
+- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, IRB approval processes)
+- Training and onboarding (e.g., management of onboarding protocols, required HIPAA training, access to training materials)
+- System and security documentation (e.g., for proposals, contracts, agreements, reporting)
+- Standard system administration (e.g., installs, updates, access management, infrastructure maintenance, and testing)

@@ -50,13 +50,13 @@ The syntax for the install R packages command is::
  
 Two example installations specifying “Package Name”, “Location”, and “Repository” and the resulting behavior are shown below.
 
-Example 1::
+**Example 1**::
 
    install.packages('package_name', '/path/to/r_libraries', 'Repository URL')
    
 Installs the package downloaded from the specified repository in the specified location
 
-Example 2::
+**Example 2**::
 
   install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
 
@@ -100,14 +100,14 @@ If the environment variable R_LIBS is not set, and a directory is not specified 
 Warnings and Error Messages
 ===========================
 
-R packages that are not available in the current CRAN (Comprehensive R Archive Network) or if the name of the package is misspelled, tend to generate a message 
+R packages that are not available in the current CRAN (Comprehensive R Archive Network) or if the name of the package is misspelled tend to generate a message 
 similar to the following::
 
    [ng-login01 ~]$ Rscript -e "install.packages('phybase','~/Rlibs', 'http://ftp.ussg.iu.edu/CRAN')"
    Warning message:
    package 'phybase' is not available (for R version 3.2.2)
  
-Searching the CRAN site for your desired R package may provide links to archived versions that are not available in the current CRAN. In this case the specific 
+Searching the CRAN site for your desired R package may provide links to archived versions that are not available in the current CRAN. In this case, the specific 
 archived R package can be downloaded and installed from the local file using the same command but omitting the repository URL (specifying NULL).
 Some R packages have dependencies and require them to be installed first and will generate an error message similar to the following::
 
@@ -123,8 +123,7 @@ Installing the required R package first and then the desired R package resolves 
 Viewing Installed R Packages
 ============================
 
-The library() command can be used to view all user and system installed R packages (user installed packages are only visible to R when the $R_LIBS 
-environment variable is set)::
+ou can use the library() command to view all user and system-installed R packages (user-installed packages are only visible to R when the $R_LIBS environment variable is set)::
 
    [ng-login01 ~]$ Rscript -e "library()"
 

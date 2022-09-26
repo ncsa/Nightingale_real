@@ -67,28 +67,25 @@ When the installation location and the repository URL are not specified, R packa
 Using Rscript
 =============
 
-To run R commands without starting an R session the command Rscript can be used (as we show in the examples on this page). As a scripting front end for R,
-Rscript enables the use of R via shell scripts and scripting applications.
+You can use the rscript command to run R commands without starting an R session. As a scripting front end for R, Rscript enables using R via shell scripts and scripting applications.
 
-Below are steps with examples of the actual commands that can be run on the Nightingale. In these steps ~/Rlibs is used for the location to install user 
-specific add-on packages (The tilde “~” means the users’ home directory—i.e. $HOME).
+The examples below show step-by-step the commands you can run on the Nightingale. In these steps, ~/Rlibs is used for the location to install user-specific add-on packages (The tilde "~" means the users' home directory—i.e. $HOME).
 
-**Note:** It is assumed that these steps are being run under the default BASH shell. When using a different shell the syntax for that shell should be 
-used where appropriate.
+**Note:** These examples use the BASH shell. The command syntax may differ when using a different shell.
 
-Create a directory for your R packages::
+**Step 1:** Create a directory for your R packages::
 
    mkdir ~/Rlibs
 
-Load the R modulefile::
+**Step 2:** Load the R modulefile::
  
    module load R/4.2.0
 
-Set the R library environment variable (R_LIBS) to include your R package directory::
+**Step 3:** Set the R library environment variable (R_LIBS) to include your R package directory::
 
   export R_LIBS=~/Rlibs
 
-Use the install.packages command to install your R package::
+**Step 4:** Use the install.packages command to install your R package::
 
   Rscript -e "install.packages('RCurl', '~/Rlibs', 'https://cran.r-project.org')"
 

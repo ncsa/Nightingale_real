@@ -25,7 +25,7 @@ Python into your software environment. To see the available Python versions type
 
    module avail anaconda3
 
-and/or::
+or::
 
    module avail miniconda3
 

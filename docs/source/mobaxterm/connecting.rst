@@ -41,8 +41,8 @@ You can install either the Portable or Installer edition of MobaXterm. You will 
 ..  image:: ./XC_network_settings.png
 
 7. In the configuration window displayed, enter 
-"ngale-bastion-1.ncsa.illinois.edu" in the "Gateway host" box and your NCSA username in the "Username" box. Then click the 'OK' button.
+"ngale-bastion-1.ncsa.illinois.edu" in the "Gateway host" box and your NCSA username in the "Username" box. Then click the 'OK' button. (You may see a warning message saying that your remote host identification has changed. Go ahead and click the Yes button to continue.)
 
 ..  image:: ./XC_jump_host_filled_in.png
 
-8. You should now be back in the Session settings window. Click the 'OK' button to initiate your SSH connection.
+8. You should now be back in the Session settings window. Click the 'OK' button to initiate your SSH connection. A terminal window will be displayed asking for your password. Enter your password and press return.

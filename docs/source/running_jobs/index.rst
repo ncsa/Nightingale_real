@@ -1,6 +1,6 @@
-#########################
-Managing and Running Jobs
-#########################
+#############
+Running Jobs
+#############
 
 **UNDER CONSTRUCTION**
 

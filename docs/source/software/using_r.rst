@@ -5,12 +5,9 @@ Using R on Nightingale
 Introduction
 ============
 
-R is a programming language and software environment for statistical computing and graphics. It is an interpreted 
-language typically accessed through a command-line interpreter. R and its libraries implement a wide 
-variety of statistical and graphical techniques, such as linear and non-linear modeling, classical 
-statistical tests, time-series analysis, classification, and clustering. 
+R is a programming language and software environment for statistical computing and graphics. It is an interpreted language typically accessed through a command-line interpreter. R and its libraries implement a wide variety of statistical and graphical techniques, such as linear and non-linear modeling, classical statistical tests, time-series analysis, classification, and clustering.
 
-R is easily extensible through functions and extensions. The R community is noted for its active contributions in developing R packages. R packages contain code, data, and documentation in a standardised collection format that can be installed by R users. R and R packages are available via the `Comprehensive R Archive Network (CRAN) <https://cran.r-project.org>`_, a collection of sites which carry identical material, consisting of the R distribution(s), the contributed extensions, documentation for R, and binaries.
+R is easily extensible through functions and extensions. The R community is noted for its active contributions to developing R packages. R packages contain code, data, and documentation in a standardized collection format that R users can install. R and R packages are available via the `Comprehensive R Archive Network (CRAN) <https://cran.r-project.org>`_, a collection of sites that carry identical material, consisting of the R distribution(s), the contributed extensions, documentation for R, and binaries.
 
 Versions
 ========
@@ -26,8 +23,7 @@ The table below lists the versions of R currently installed on Nightingale.
 Adding R to Your Environment
 ============================
 
-There is a module file you can use to load a specific version of R into your user environment. 
-To see the available versions of R, type the following on the command line::
+You can use a module file to load a specific R version into your user environment.::
 
    module avail R
 
@@ -35,21 +31,22 @@ The latest version of R available on the Nightingale can be loaded into your env
 
    module load R
 
-To load a specific version you will need to load the corresponding module. (See `Using Modules <modules>`_ for more information about modules.)
+To load a specific version, you will need to load the corresponding module. (See `Using Modules <modules>`_ for more information about modules.)
 
 Installing Add-on Packages
 ==========================
-Any R add-on package not available in the system installation can be installed from the CRAN in a user specified location.
+
+Any R add-on package not available in the system installation can be installed from the CRAN in a user-specified location. 
 You must have write access to the location.
 
 Installation Command Syntax
 ===========================
 
-R package installations for the most part are straight forward. Minimally, all that is needed is
-the name of the package to be installed. Additional information such as installation location and the repository can
-also be specified.
+R package installations are generally straightforward. Minimally, all that is needed is the package's name. You can also specify additional information, such as installation location and the repository.
  
-The syntax for the install R packages command is install.packages()
+The syntax for the install R packages command is::
+
+   install.packages()
  
 Two example installations specifying “Package Name”, “Location”, and “Repository” and the resulting behavior are shown below.
 
@@ -65,10 +62,7 @@ Example 2::
 
 Installs the local package(file) in the specified location specifying no repository(NULL)
 
-When the installation location and the repository URL are not specified, R packages are installed
-in a default location and the R installation process prompts you to choose from a list of repositories.
-R packages downloaded manually from the CRAN can be installed by specifying the local filename and 
-omitting the repository URL (specifying NULL).
+When the installation location and the repository URL are not specified, R packages are installed in a default location, and the R installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local filename and omitting the repository URL (specifying NULL).
 
 Using Rscript
 =============
@@ -98,11 +92,7 @@ Use the install.packages command to install your R package::
 
   Rscript -e "install.packages('RCurl', '~/Rlibs', 'https://cran.r-project.org')"
 
-If the environment variable R_LIBS is not set and a directory is not specified with the install.packages command, then R packages will be installed 
-under ~/R/x86_64-unknown-linux-gnu-library by default. (This R subdirectory structure is created automatically.)
-The R_LIBS environment variable will need to be set every time when logging in to the Nightingale if the your R package location is to be visible to 
-an R session. The following code can be added to your ~/.bashrc file to remove the need to set the R_LIBS environment variable with every login session
-to the Nightingale.::
+If the environment variable R_LIBS is not set, and a directory is not specified with the install.packages command, then R packages will be installed under ~/R/x86_64-unknown-linux-gnu-library by default. (This R subdirectory structure is created automatically.) The R_LIBS environment variable will need to be set every time when logging in to the Nightingale if your R package location is to be visible to an R session. You can add the following code to your ~/.bashrc file to remove the need to set the R_LIBS environment variable with every login session to the Nightingale.::
 
    if [ -n $R_LIBS ]; then
          export R_LIBS=~/Rlibs:$R_LIBS

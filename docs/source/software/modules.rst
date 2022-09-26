@@ -1,9 +1,6 @@
-##################################
-Managing Your Environment
-##################################
-
+#############
 Using Modules
-=============
+#############
 
 Nightingale uses `Environment Modules <https://modules.readthedocs.io/en/stable/index.html>`_, a set of module commands that 
 enable users to dynamically configure their software environment. Essentially, you can turn access to certain 

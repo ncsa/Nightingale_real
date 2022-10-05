@@ -209,7 +209,7 @@ you're typing, substitute the hostname of **your** nightingale node for
 
 ::
 
-   ssh -J UUUUU@ngale-bastion-1.ncsa.illinois.edu UUUUU@XXXXX.internal.ncsa.edu
+   ssh -J UUUUU@ngale-bastion-1.ncsa.illinois.edu UUUUU@XXXXX.ngale.internal.ncsa.edu
    
 
 so with the proper substitutions, if fictional user Hiro P. were using
@@ -218,7 +218,7 @@ they would type the following:
 
 ::
 
-   ssh -J hirop@ngale-bastion-1.ncsa.illinois.edu hirop@beatlesGPU02.internal.ncsa.edu
+   ssh -J hirop@ngale-bastion-1.ncsa.illinois.edu hirop@beatlesGPU02.ngale.internal.ncsa.edu
    
 
 The text will ask you for your password. Type in your NCSA kerberos

@@ -45,9 +45,11 @@ Below is a sample SSH command line to log into Nightingale's secure node where <
 After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
 
 **Note on Duo**
+
 You must have an "NCSA" entry in your Duo app as follows.  A "University of Illinois" Duo entry will not get you into Nightingale.  
 
-..  image:: ./NCSA_duo_versC.gif
+.. image:: ./NCSA_duo_versC.gif
+   :scale: 40 %
 
 **Passwords**
 

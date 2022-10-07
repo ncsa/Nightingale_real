@@ -43,3 +43,16 @@ Below is a sample SSH command line to log into Nightingale's secure node where <
    ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
 After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
+
+**Note on Duo**
+
+You must have an "NCSA" entry in your Duo app as follows.  A "University of Illinois" Duo entry will not get you into Nightingale.  
+
+.. image:: ./NCSA_duo_versC.gif
+   :scale: 40 %
+
+**Passwords**
+
+When typing passwords into terminals, you *will not see you characters*.  That is, you will type your password, and type "1" to send the push to your phone, and you won't see anything on the screen.  This is normal.  You just need to type blindly, and then hit "enter" or "return" to complete the entry. 
+
+Also, when setting up your NCSA ID ("kerberos") password, please use a password that you can easily type with your keyboard.  We have discovered that cutting and pasting passwords from a password manager (or document on your own computer?) is a very error-prone process and produces very inconsistent results and it seems like your password is wrong.  If you can type it with the keyboard, results are much more consistent, so we strongly encourage you to set a password that you can type.

@@ -30,7 +30,7 @@ Per user as needed: $80.71 per month
 
 Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. 
 
-Options for providing “data as a service” to a broad user community are available. Contact `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ for details. 
+Options for providing “data as a service” to a broad user community are available. Contact `help@ncsa.illinois.edu <mailto:help@ncsa.illinois.edu>`_ for details. 
 
 Consultation and Development Services
 ======================================
@@ -39,7 +39,7 @@ Per project as needed: cost based on time and materials
 
 NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials.
 
-Contact   `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ to discuss project needs and the availability of staff. 
+Contact   `help@ncsa.illinois.edu <mailto:help@ncsa.illinois.edu>`_ to discuss project needs and the availability of staff. 
 
 User Support
 ============

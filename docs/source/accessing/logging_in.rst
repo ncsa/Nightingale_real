@@ -23,7 +23,7 @@ where <ng-yourgroup01> is the name of your allocation group.
 
 **Notes:** 
 
-- Your group manager can inform you if your allocation has a Specialized Interactive node and its hostname.
+- Your principal investigator can inform you if your allocation has a specialized interactive node and its hostname.
 - All Nightingale users have access to the general access login nodes. Please be aware that these nodes are a shared resource for all 
   system users, and you should limit your use of them to editing, compiling, and building your programs.
 
@@ -53,6 +53,6 @@ You must have an "NCSA" entry in your Duo app as follows.  A "University of Illi
 
 **Passwords**
 
-When typing passwords into terminals, you *will not see you characters*.  That is, you will type your password, and type "1" to send the push to your phone, and you won't see anything on the screen.  This is normal.  You just need to type blindly, and then hit "enter" or "return" to complete the entry. 
+When typing passwords into terminals, you *will not see the characters you type*.  That is, you will type your password and hit enter then type "1" to send the push to your phone, without seeing what you type on the screen.  
 
-Also, when setting up your NCSA ID ("kerberos") password, please use a password that you can easily type with your keyboard.  We have discovered that cutting and pasting passwords from a password manager (or document on your own computer?) is a very error-prone process and produces very inconsistent results and it seems like your password is wrong.  If you can type it with the keyboard, results are much more consistent, so we strongly encourage you to set a password that you can type.
+Also, when setting up your NCSA ID password (also called kerberos password), you may want to use a password you can easily type. There are sometimes issues with copying and pasting passwords from a password manager (or document on your own computer) making it seem like you have entered the wrong password.

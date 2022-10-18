@@ -45,8 +45,8 @@ User Support
 ============
 User support is included with all accounts at no additional charge. Types of support include:
 
-- Security administration (e.g., software security vetting, external audits, compliance with University Security and Privacy Directive)
-- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, IRB approval processes)
+- Security administration (e.g., software security vetting, external audits, compliance with the University of Illinois HIPAA Privacy and Security Directive)
+- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, approval processes)
 - Training and onboarding (e.g., management of onboarding protocols, required HIPAA training, access to training materials)
 - System and security documentation (e.g., for proposals, contracts, agreements, reporting)
 - Standard system administration (e.g., installs, updates, access management, infrastructure maintenance, and testing)

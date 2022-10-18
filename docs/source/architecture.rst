@@ -4,7 +4,7 @@ System Architecture
 
 Nightingale is a HIPAA-capable RedHat Linux OS High-Performance Computing (HPC) cluster 
 designed to support UIUC researchers and collaborators who analyze 
-regulated sensitive data, like electronic Protected Health Information
+sensitive, regulated data, like electronic Protected Health Information
 (ePHI) or Controlled Unclassified Information (CUI). 
 It provides standard batch computing options and interactive
 compute nodes. The compute nodes are a mix of CPU and GPU nodes. The GPU nodes are  

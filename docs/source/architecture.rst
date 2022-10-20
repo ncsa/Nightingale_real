@@ -28,7 +28,7 @@ Batch Compute System
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  16 dual 64-core AMD systems with 1 TB of RAM
--  2 dual-A100 GPU compute nodes with 32-core AMDs and 512 GB of RAM
+-  2 dual-A100 GPU compute nodes with dual 32-core AMDs and 512 GB of RAM
 
 Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~

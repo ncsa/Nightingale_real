@@ -21,14 +21,16 @@ Interactive Compute Nodes
 
 -  4 interactive compute/login nodes with dual 64-core AMDs and 512 GB
    of RAM
+-  1 interactive node with 2 A100 GPUs, dual 32-core AMDs with 512GB RAM
 -  6 interactive nodes with 1 A100 GPU, dual 32-core AMDs with 256GB RAM
--  5 interactive nodes with 1 A40 GPU, dual 32-core AMDs and 512GB RAM
+-  5 interactive nodes with 1 A40 GPU, dual 32-core AMDs with 512GB RAM
 
 Batch Compute System
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  16 dual 64-core AMD systems with 1 TB of RAM
--  2 dual-A100 GPU compute nodes with dual 32-core AMDs and 512 GB of RAM
+-  15 dual 64-core AMD systems with 1 TB of RAM
+-  1 dual-A100 GPU compute node, dual 32-core AMDs with 512GB RAM
+-  4 single-A100 GPU compute nodes, dual 32-core AMDs with 256GB RAM
 
 Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~

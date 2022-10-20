@@ -17,7 +17,7 @@ or, for groups that have them, a specialized interactive node. The hostnames for
 
 **Specialized Interactive Node Hostname**::
 
-   <ng-yourgroup01>.ngale.internal.ncsa.edu
+   ng-<yourgroup>01.ngale.internal.ncsa.edu
 
 where <ng-yourgroup01> is the name of your allocation group. 
 
@@ -42,7 +42,25 @@ Below is a sample SSH command line to log into Nightingale's secure node where <
 
    ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
-After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app. After you have approved the push, you may enter the SSH command using the hostname of your login node.
+After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app (both of which you will not see on the screen). After you have approved the push, you will be at a prompt on ngale-bastion-1 node that will look something like this: 
+
+.. 
+
+   [csteffen@ngale-bastion-1 ~]$
+
+At that prompt, enter an SSH command using the hostname of your login node:
+
+.. 
+
+   ssh <your_username>@ng-<yourgroup>01
+   
+so for example, if your username is "hirop" and you group name is "biology" then your final ssh command might look like this:
+
+.. 
+
+   ssh hirop@ng-biology03
+   
+In this case, you would been specifically told that "ng-biology03" would be your node to use for your computations.  
 
 **Note on Duo**
 

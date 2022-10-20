@@ -1,5 +1,0 @@
-==================================
-Protected Data
-==================================
-
-All user data on Nightingale is considered protected data.  As such, all user data is protected from being read by other users with unix file systems permissions.  All backups and logs are protected with the same level of security within the ACHE environment.  More details on file systems can be found on the :ref:`data access page <./files_and_data.rst>`.

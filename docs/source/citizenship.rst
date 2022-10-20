@@ -1,46 +1,17 @@
+================
+Good Citizenship
+================
 
-Good User Best Practices (Good Citizenship)
-============================================
+Nightingale is set up differently than a general HPC cluster, making it less likely that your actions on it will impact other users. However, you should still try to be a good citizen of the resource and use it in ways that will not impact others in your group. Some ways you can do this are described below.
 
-As a user on Nightingale, we don't have explicit requirements of what
-you do and don't do. We'd like people to generally use the resources
-carefully and try not to do things that impact other users. Mostly there
-are automatic protections (quotas and so on) but sometimes there aren't.
+**Coordinate with your group members**
 
-Dedicated Interactive Nodes
---------------------------------
+If your group has a dedicated interactive node, then that node is generally dedicated to your use, and you may use as many resources as you like. Though, keep in mind that if you are running a lot of processes, it may fill your node, and someone else in your group won’t be able to use it. It is good practice to let others in your group know when you are doing this so they can plan their runs accordingly.
 
-If you have a dedicated interactive node (if the name of the node you
-log into on Nightingale doesn't have "login" in its name) then that node
-is generally dedicated to your use. You may use as many resources on it
-as you like. You can run lots of process if you want. That may not be
-efficient, but you're not effecting anyone else. Keep in mind, if one
-user in your group fills your interactive node up with processes, and
-someone else in your group wants to run something but can't, you'll need
-to work out within your group who gets to run.
+**Manage your allocation wisely**
 
-Computational Nodes
-------------------------
+Nightingale’s scheduling system is responsible for ensuring you have the resources you need when running jobs on its compute nodes. Therefore, you shouldn’t be able to do anything to impact other user jobs. However, you still must wisely use your allocation on the compute nodes. If you or someone in your group uses a large amount of the allocation, there may not be enough for others to use.
 
-If you run jobs on Nightingale's compute nodes, the job system is
-responsible for making sure you have the resources that you need. If
-you're running jobs and they seem to be running more slowly than they
-should, please let us know by submitting a ticket. You shouldn't be able
-to do anything to harm other users using jobs; the job system should
-keep everyone allocated.
+**Use the login nodes responsibly**
 
-Keep in mind, all users are responsible for using their allocation
-wisely. If someone in your group uses up a ton of allocation, that's the
-responsibility of the PI who's in charge of the allocation.
-
-Login Nodes
---------------
-
-Nightingale has login nodes that are used for compiling codes and
-controlling computational job resources. Login nodes are **shared**
-between users. It's fine to edit files there, it's fine to compile codes
-there. But please don't run any computationally-intensive application on
-the login nodes. It will bog down the nodes for everyone and cause
-delays in others' usage of those nodes.
-
-| 
+Nightingale’s login nodes are a shared resource for all users. You use them to conduct the activities necessary to prepare your applications, such as editing, compiling, building your programs, and short non-intensive runs. This is important to remember. It means that what you do on the login node can impact system performance and affect other users. System administrators may terminate your user processes if you negatively impact the system.

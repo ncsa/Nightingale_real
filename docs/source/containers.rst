@@ -1,7 +1,5 @@
-======================
+==========
 Containers
-======================
+==========
 
-Because of the limited ability Nightingale nodes have to access the outside world (See the software page for more details) and also increased security restrictions compared to other clusters, we don't generally support containers on Nightingale.  We are  working on containers for some very limited use cases. 
-
-If you have a need for container-bases software solution, please submit a ticket to Nightingale user support staff, and we will talk to you about what your options may be.  
+Because of the limitations of Nightingale nodes to access the external sites due to its increased security restrictions, containers are not generally supported on Nightingale. However, they may be used in limited use cases. If you need to use containers, please submit a ticket to Nightingale user support staff by emailing help@ncsa.illinois.edu, and we will talk to you about your options.  

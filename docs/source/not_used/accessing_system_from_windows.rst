@@ -1,93 +1,3 @@
-Accessing the System and Account Administration
-============================================================
-
-The page contains information about how to set up your machine to log
-into and use the Nightingale cluster computer at NCSA. This page will
-contain general setup instructions for logging into your interactive
-node on the Nightingale cluster.
-
-**If you are new to Linux OS, here is a page to walk Windows users to set up your computer to log in.**
-
-If you can't find information to help you in this user guide (try searching in the top left search box) please don't hesitate to `submit a help ticket <./help.html>`_ to ask your question.  
-
-Introduction to Nightingale
--------------------------------
-
-Nightingale is a cluster computer running a Linux OS. That is, it is several separate
-computers (called "node"s) connected together by network that share user account information
-and file systems. 
-When you log into Nightingale, you will typically log into a
-particular node that depends on the type of allocation your 
-group has.  Please see the "Nightingale Nodes" section above for specifics.  
-
-Logging onto Nightingale
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-To work on Nightingale, you will "log in" to it. Logging in establishes
-a connection between your computer and a node of Nightingale, so that
-you can use software on Nightingale to manipulate and analyze data on
-Nightingale. To log into Nightingale, user will need at least a ssh client
-available on their local desktop or laptop to make the connection. All
-Nightengale users must use a ssh based connection to go through the
-secure node (`bastion
-host <https://en.wikipedia.org/wiki/Bastion_host>`__) to be able to
-login to the general access head (login) nodes or, for groups that have
-them, their specific interactive specialized nodes.
-
-| 
-
-+----------+-----------------------------------+---------------------------------------+
-| Access   | Secure Node                       | General Access Head Nodes             |
-| Method   |                                   |                                       |
-+----------+-----------------------------------+---------------------------------------+
-| SSH      | ngale-bastion-1.ncsa.illinois.edu | ng-login01.ngale.internal.ncsa.edu    |
-+----------+-----------------------------------+---------------------------------------+
-|          |                                   | ng-login02.ngale.internal.ncsa.edu    |
-+----------+-----------------------------------+---------------------------------------+
-
-**Note:** All Nightingale users have access to the general access login
-nodes. Please be aware that the general access head nodes are a shared
-resource for all users of the system and their use should be limited to
-editing, compiling and building your programs.
-
-| 
-
-+----------+-----------------------------------+--------------------------------------------+
-| Access   | Secure Node                       | General Access Login Nodes                 |
-| Method   |                                   |                                            |
-+----------+-----------------------------------+--------------------------------------------+
-| SSH      | ngale-bastion-1.ncsa.illinois.edu | ng-group_node.ngale.internal.ncsa.edu      |
-+----------+-----------------------------------+--------------------------------------------+
-
-
-**Note:** Certain Nightingale groups have exclusive access to their
-interactive specialized nodes.
-
-Mac OS users
-~~~~~~~~~~~~~~
-
-You will log into Nightingale using the "ssh" command in your Terminal
-program. It's already installed and ready. You will also need an
-application that serves as an "X-windows server". For Mac OS users, we
-recommend XQuartz.
-
-Unix/Linux OS users
-~~~~~~~~~~~~~~~~~~~~~
-
-Will also log into Nightingale using the "ssh" client that is run from
-the command line in the terminal. Generally, the "ssh" client along with
-an "X-Windows" server should be available by default on recent versions
-of Unix/Linux OSes.
-
-Windows users
-~~~~~~~~~~~~~~
-
-We recommend Nightingale users first install a program called MobaXterm
-on their computers and then use that to log into Nightingale. This
-install process is detailed on this separate page.
-
-
-
 Accessing the System for Windows Users (Moba Xterm)
 ====================================================
 
@@ -209,7 +119,7 @@ you're typing, substitute the hostname of **your** nightingale node for
 
 ::
 
-   ssh -J UUUUU@ngale-bastion-1.ncsa.illinois.edu UUUUU@XXXXX.ngale.internal.ncsa.edu
+   ssh -J UUUUU@ngale-bastion-1.ncsa.illinois.edu UUUUU@XXXXX.internal.ncsa.edu
    
 
 so with the proper substitutions, if fictional user Hiro P. were using
@@ -218,7 +128,7 @@ they would type the following:
 
 ::
 
-   ssh -J hirop@ngale-bastion-1.ncsa.illinois.edu hirop@beatlesGPU02.ngale.internal.ncsa.edu
+   ssh -J hirop@ngale-bastion-1.ncsa.illinois.edu hirop@beatlesGPU02.internal.ncsa.edu
    
 
 The text will ask you for your password. Type in your NCSA kerberos
@@ -269,40 +179,28 @@ follows.
 Click on the "Session" button near the upper left of the Moba Xterm
 window.
 
-..  image:: ./ng_mxt_session_button.gif
-
 This brings up a "Session settings" window. Click "SSH" in the very
 upper left corner of that window.
-
-..  image:: ./XC_01_select_ssh.png
 
 This will populate the lower part of the window. Insert **the name of
 your interactive node** into the "Remote host" blank. Click on "specifiy
 username" as below. The username will have "<default"> in the blank, as
 here:
 
-..  image:: ./XC_specify_host_username.png
-
 Replace <default> with your own username. This is what it looks like,
 using my username "csteffen":
-
-..  image:: ./XC_specify_host_username2.png
 
 In the lower part of the window, click on the "Network settings" tab.
 Once there, click "SSH gateway (jump host" in the middle.
 
-..  image:: ./XC_network_settings.png
+| 
 
 This will bring up yet another configuration window. Put
 "ngale-bastion-1.ncsa.illinois.edu" in the "Gateway host" box (no matter
 what Nightingale host you're logging into; all access goes through the
 bastion host node: Put your NCSA username in the "Username" box.
 
-..  image:: ./XC_jump_host_username.png
-
 so that it looks like this:
-
-..  image:: ./XC_jump_host_filled_in.png
 
 Then click "Ok". Back in the Session settings, now click "OK" at the
 bottom. This should open a new tab in your overall Moba Xterm window
@@ -319,8 +217,6 @@ were copying them around your local machine.
 
 Here, I'm starting with a test file on my local system:
 
-..  image:: ./XF_original_file_in_folder.png
-
 The file is called "testfile.pdf" and it's it' folder "source_folder" on
 my desktop.
 
@@ -332,19 +228,13 @@ list of folders and files, and the pathname of the folder will end with
 below. If you don't see this, then something is configured wrong and
 you'll have to back up.
 
-..  image:: ./XF_logged_in.png
-
 It's often convenient to create a new folder if you're uploading files.
 Click on the icon at the top of the left bar that's a folder with a
 green "+" on it to create a new folder. Then you'll be asked to name it,
 as below. I'm naming it "destination_folder".
 
-..  image:: ./XF_create_destination_folder.png
-
 Once you've created the destination folder, it will show up in the list
 of folders. Here the folder I created is in the list.
-
-..  image:: ./XF_destination_folder_exists.png
 
 Double-click the folder you want to upload files into. Here I've
 double-clicked the folder above ("destination_folder"). To make sure
@@ -352,7 +242,9 @@ you're in the right place, verify that the end of the pathname at the
 top of the left window is the name of the folder where you want to be.
 See the circled pathname here; it ends with "destination_folder".
 
-..  image:: ./XF_in_destination_folder.png
+| 
+
+| 
 
 Now position the two windows so you can see them both. Grab the file on
 your system that you want to move, and drag it to the file area in the
@@ -360,13 +252,11 @@ Moba Xterm window. As you move the file over the Moba Xterm window, if
 it's working, it will light up with "+ Copy". Drop it there, and Moba
 Xterm will take care of copying the file to Nightingale.
 
-..  image:: ./XF_drag_testfile.png
-
 If everything works right, the (or files) will now exist on both
 machines. You can now open the file, read it, and even modify it and
 save it using software on Nightingale.
 
-..  image:: ./XF_testfile_at_destination.png
+| 
 
 Moving files from Nightingale to your local machine (downloading them; see warnings about this)
 ---------------------------------------------------------------------------------------------------
@@ -389,6 +279,3 @@ directory folder that exists on your local computer. Either way, the
 file will be copied.
 
 | 
-
-If you have questions: `SUBMIT A TICKET <./help.html>`_!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

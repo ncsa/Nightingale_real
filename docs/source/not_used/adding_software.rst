@@ -233,7 +233,7 @@ View what python packages are installed:
     conda list
 
 R
-^^^
+---
 
 `R is a programming language for statistical computing <https://www.r-project.org/>`_ 
 and graphics supported by the R Core Team and the R Foundation for
@@ -271,7 +271,7 @@ the script and then upload the file to the cluster.
 | 
 
 Viewing Installed R Packages
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The library() command can be used to view all user and system installed R
 packages (user installed packages are only visible to R when
@@ -282,7 +282,7 @@ the${R_LIBS}environment variable is set).
     Rscript -e "library()"`
 
 Installing Additional R Packages
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Additional user specific R packages not listed in Nightingale's system
 installation of R can be installed by any Nightingale

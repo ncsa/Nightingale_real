@@ -19,7 +19,7 @@ or, for groups that have them, a specialized interactive node. The hostnames for
 
    ng-<yourgroup>01.ngale.internal.ncsa.edu
 
-where <ng-yourgroup01> is the name of your allocation group. 
+where ng-<yourgroup>01 is the name of your allocation group. 
 
 **Notes:** 
 

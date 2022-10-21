@@ -2,7 +2,7 @@
 Installed Software
 ##################
 
-The table below shows the core software and libraries available on Nightingale. You can use `module commands <using modules>`_ to add this software to your
+The table below shows the core software and libraries available on Nightingale. You can use `module commands :doc:<modules>`_ to add this software to your
 software environment.
 
 ===========        ========================

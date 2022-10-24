@@ -2,11 +2,17 @@
 Connecting with Terminal, ssh, and XQuartz (for users connecting from Mac OS machines)
 #######################################################################################
 
+One-time X-windows Software Install
+=======================================
+
 If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system.  You can `download it here <https://www.xquartz.org/>`_.  Most users of Nightingale will want to do this.  
 
-Then open the "Terminal" application on your mac.  That presents a black window to you that you can type commands into.  At the prompt, type "cd ~/.ssh" and then "return" or "enter" (in these instructions, "return" and "enter" are interchangable).  
+One-time Ssh Configuration 
+==============================
 
-Then type "nano config" and hit return.  This will bring you into an editor program that looks like this:
+Open the "Terminal" application on your mac.  That presents a black window to you that you can type commands into.  At the prompt, type "cd ~/.ssh" and then "return" or "enter" (in these instructions, "return" and "enter" are interchangable).  
+
+Type "nano config" and hit return.  This will bring you into an editor program that looks like this:
 
 ::  
 
@@ -62,11 +68,23 @@ So for example, a user with username "hirop" who was assigned node ng-gpu-x07 wo
       ProxyJump ngb1
       User hirop
       
-Once you have finished editing the file, it (Control)-o to write the file.  Hit enter to confirm the file name.  Then hit (Control)-x to exit the editor, and your back at the prompt.  
+Once you have finished editing the file, it *Control*-o to write the file.  Hit enter to confirm the file name.  Then hit *Control*-x to exit the editor, and you're back at the prompt.  
       
+Log Into Nightingale
+============================
       
-With that configuration in place, to log into Nightingale, type the following at the prompt:
+The above are one-time instructions to set up your computer for working on Nightingale.  To log into Nightingale to begin work, type the following at the prompt:
 
-ssh -X YOUR_USERNAME@ng-login01
+ssh -X ng-login01
 
-You may be asked to confirm that you want to continue connecting.  Type Y-E-S-(enter) to confirm.  Then it will ask you for your NCSA/kerberos password.  
+(If you're logging into an interactive node, replace "ng-login01" with the name of that active node.)
+
+You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?".  You may safely type Y-E-S then enter.  
+
+You'll be asked for a password.  Enter your NCSA (kerberos) password.  You **will not see your characters** echoed back to the screen; just type it blindly.  
+
+Then you'll see a duo prompt asing for a passcode or for "option 1".  You may either type "1", then your phone Duo will ask you for login confirmation.  Or instead of 1, you may enter a 6-digit password from the **NCSA** entry of your Duo app.  
+
+Then you'll be asked for your password again; that's again your NCSA password.  You again will not see it echoed to the screen; just type it blindly.  
+
+You should now be at a propmt that reflects that you are on a Nightingale node.  You can load modules and run software and access your files from there.  

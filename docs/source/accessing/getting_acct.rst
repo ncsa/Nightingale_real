@@ -3,7 +3,7 @@ Getting an Account
 ##################
 
 To access Nightingale, you must first get an NCSA Identity (username and password) and request access from Nightingale 
-administrators. Once approved, you will be given instructions on how to be added to NCSA's HIPAA Covered Entity. The three 
+administrators. Once approved, you will be given instructions on how to be added to NCSA's HIPAA Covered Entity. The four 
 steps below explain this process.
 
 **1. Create an NCSA Identity**
@@ -27,3 +27,6 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 - **To get added to NCSA's HIPAA Covered Entity**, follow the instructions in the automated emails from both HIPAA Tools in Savannah and JIRA you will recieve in response to the email you sent in Step 2. These instructions will include information on accessing the HIPAA training, submitting your completion certificate, and performing disk encryption. (The instructions will connect you with NCSA personnel, who will guide you through the encryption process.)
 
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
+
+**4. Get Added to Your Project's LDAP Group**
+At this point NCSA will add you to your project's LDAP group which will give you access to the system. If the group doesn't exist yet it can take a few days for it to be created.

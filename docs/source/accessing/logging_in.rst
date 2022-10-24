@@ -60,7 +60,13 @@ so for example, if your username is "hirop" and you group name is "biology" then
 
    ssh hirop@ng-biology03
    
-In this case, you would been specifically told that "ng-biology03" would be your node to use for your computations.  
+In this case, you would been specifically told that "ng-biology03" would be your node to use for your computations.
+
+The two commands above can be combined into one by specifying the bastion host as a "jump" host. The jump host is used to connect you to your destination node without you needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.
+
+.. 
+
+   ssh test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
 
 **Note on Duo**
 

@@ -1,6 +1,8 @@
 SSH Clients
 ===========
 
+SSH (Secure Shell) is an application that gives users a secure way to access a computer over an unsecured network. It allows them to log in to another computer over a network, execute commands on that machine, and to move files from one computer to another. SSH provides strong authentication to prevent other from using their account, and it encrypts their data between computers connecting over an open network, such as the internet, so that it can’t be read by others.
+
 Several SSH-based clients are available for accessing Nightingale. Which one you use depends on your workstation’s operating 
 system. These are described in the sections below.
 

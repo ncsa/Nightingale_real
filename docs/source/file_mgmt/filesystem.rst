@@ -33,11 +33,11 @@ More information about these storage areas is described in the following section
  
 **Home**
 
-The /u area of the filesystem is where users land upon logging on to the cluster via SSH and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process. It is not possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. At some point, system administrators will clear the data to get below the quota  threshold.
+The /u area of the filesystem is where users land upon logging on to the cluster via SSH and is where a user’s $HOME environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process and there is no additional charge for this storage. It is not possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. At some point, system administrators will clear the data to get below the quota  threshold.
 
 **Project**
 
-The /projects area of the filesystem is where members of a group (be they a single faculty member, a lab group, a department, or an entire college) store their project-related files. A user can have access to multiple project subdirectories if they are a member of various groups and have been granted access to the space by the project's Principal Investigator (PI).
+The /projects area of the filesystem is where members of a group (be they a single faculty member, a lab group, a department, or an entire college) store their project-related files. A user can have access to multiple project subdirectories if they are a member of various groups and have been granted access to the space by the project's Principal Investigator (PI). Projects pay a separate charge for this project space and the minimum allocation is 1 TB. Additional space can be purchased as needed.
 
 **User Scratch**
 
@@ -49,4 +49,4 @@ The /tmp area is a local filesystem on an individual compute node and is not par
 
 **Datasets**
  
-The /dataset area contains curated, read-only datasets typically exported from a Postgres database. 
+The /dataset area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.

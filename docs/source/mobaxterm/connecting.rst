@@ -1,6 +1,6 @@
-#########################
-Connecting with MobaXterm
-#########################
+#########################################################################
+Connecting with MobaXterm (for users connecting from Windows machines)
+#########################################################################
 
 You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your 
 workstation and use it to connect to Nightingale node using SSH. MobaXterm 

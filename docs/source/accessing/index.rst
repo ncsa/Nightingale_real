@@ -8,6 +8,6 @@ Accessing the System
     getting_acct
     logging_in
     ssh_clients
-    mac/connecting
-    mobaxterm/connecting
+    /mac/connecting
+    /mobaxterm/connecting
     acct_admin

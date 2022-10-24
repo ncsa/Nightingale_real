@@ -66,7 +66,7 @@ The two commands above can be combined into one by specifying the bastion host a
 
 .. 
 
-   ssh test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
+   ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
 
 **Note on Duo**
 

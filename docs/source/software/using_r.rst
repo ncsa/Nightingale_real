@@ -123,7 +123,7 @@ Installing the required R package first and then the desired R package resolves 
 Viewing Installed R Packages
 ============================
 
-ou can use the library() command to view all user and system-installed R packages (user-installed packages are only visible to R when the $R_LIBS environment variable is set)::
+You can use the library() command to view all user and system-installed R packages (user-installed packages are only visible to R when the $R_LIBS environment variable is set)::
 
    [ng-login01 ~]$ Rscript -e "library()"
 

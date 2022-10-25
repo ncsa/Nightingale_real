@@ -17,13 +17,13 @@ Managing your jobs with Slurm
 Generally you'll use these commands to run **batch** jobs. Each batch
 job is controlled by a script that you hand off and the compute nodes
 run when there's enough nodes available to run. That is, the job will
-generally run **asynchronously** , so you can log back in and see the
+generally run **asynchronously**, so you can log back in and see the
 output when it's finished.
 
 sbatch <my_job_script>
 ----------------------
 
-submits that script to the job system. It will handle the job according
+Submits that script to the job system. It will handle the job according
 to the #SBATCH directives in the top of the script (see example
 scripts).
 

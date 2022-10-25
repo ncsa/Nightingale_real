@@ -12,6 +12,12 @@ your own interactive node, you have access to the shared pool of
 computational ("compute") nodes that are part of the Nightingale
 cluster, this page tells you how to access them.
 
+The shared pool of computational nodes is called a batch queue. Jobs you
+submit to it wait in a queue until there are resources available to run
+them. Contact your PI to determine if your group has access to the batch 
+queue on Nightingale and to find out what account you should use when 
+submitting the batch jobs.
+
 The computational cluster part of Nightingale is a shared pool of
 individual computers within Nightingale called nodes that are available
 for running your software. Because there are more than one compute node

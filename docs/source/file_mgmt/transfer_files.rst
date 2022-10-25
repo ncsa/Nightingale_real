@@ -50,6 +50,7 @@ In order to use AWS S3 Buckets you must first configure the service. Run the com
 . Default output format
 
 Copy files from the bucket using:
+
 ..
 
    aws s3 cp s3://<bucket-name> <local name on nightingale>

@@ -50,6 +50,7 @@ Users can also view specific configuration information about the compute nodes a
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
     
 The current limits in the Nightingale queues are below:
+
 ================  ==========  ==========  =======   ==============  ============
 Queue(partition)	   CPUs       Memory     Max #        GPUs        Max Walltime
                   (per Node)	(per Node)   Nodes    Type : Count

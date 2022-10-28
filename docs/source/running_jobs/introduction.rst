@@ -41,7 +41,8 @@ before it runs, during its run, after it's finished, and then how to
 retrieve the results. Please see the example scripts page for scripts
 that work on Nightingale that you can use and build from.
 
-## Nightingale Queues
+Nightingale Queues
+##################
 
 Users can view the partitions(queues) that they have the ability to submit batch jobs to, by typing the following command:
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"

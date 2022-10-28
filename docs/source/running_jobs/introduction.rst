@@ -45,22 +45,26 @@ Nightingale Queues
 ##################
 
 Users can view the partitions(queues) that they have the ability to submit batch jobs to, by typing the following command:
+::
+
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
+    
 Users can also view specific configuration information about the compute nodes associated with their primary partition(s), by typing the following command:
+::
+
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
     
 The current limits in the Nightingale queues are below:
 
-================  ==========  ==========  =======   ==============  ============
-Queue(partition)	   CPUs       Memory     Max #        GPUs        Max Walltime
-                  (per Node)	(per Node)   Nodes    Type : Count
-                                                     (per node)
-cpu	              64	        1TB	         16	      n/a	            7 days
-a40	              64	        512GB	       2	      Tesla A40 : 1	  7 days
-a100	            64	        256GB	       5	      Tesla A100 : 1	7 days
-a100x2	          64	        512GB	       1	      Tesla A100 : 2	7 days
-================  ==========  ==========  =======   ==============  ============
-
+================  ==========  ============  =======   ================  ============
+Queue(partition)  CPUs        Memory        Max #     GPUs              Max Walltime
+                  (per Node)  (per Node)    Nodes     Type : Count
+                                                      (per node)
+cpu               64	      1TB           16        n/a               7 days
+a40               64	      512GB         2         Tesla A40 : 1     7 days
+a100              64	      256GB         5         Tesla A100 : 1    7 days
+a100x2            64	      512GB         1         Tesla A100 : 2    7 days
+================  ==========  ============  =======   ================  ============
 
 This page and the example scripts page assume that you have a working
 knowledge of how to write and test a script, and you know at least

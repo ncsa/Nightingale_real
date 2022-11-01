@@ -30,27 +30,24 @@ To check if you copied the data successfully, enter the commands::
 
 Copying Files On To Nightingale Using SCP
 =========================================
-SCP (Secure Copy) is an application that gives users a secure way to copy files between machines over an unsecured network. Its syntax is similar to that of SSH (which is used to log into a remote machine).
+SCP (Secure Copy) is an application that gives users a secure way to copy files between machines over an unsecured network. Its syntax is similar to that of SSH used to log into a remote machine.
 
-SCP requires a source and a destination. It can copy individual files or directories. The source and destination are specified with a file path (if it is on your local machine) and as <login_name>@<machine_name>:<file_name> (if it is on a remote machine).
+SCP requires a source and a destination. IYou can use it to copy individual files or directories. The source and destination are specified with a file path (if it is on your local machine) and as <login_name>@<machine_name>:<file_name> (if it is on a remote machine).
 
-Since Nightingale has a bastion host which all network traffic travels through, you need to specify that the copy will jump through the bastion. For example, if user "test1" copying file "my_data" from their current directory on their local machine to their home directory on the Nightingale login node "login01" this is the command they would use.
+Since Nightingale has a bastion host which all network traffic travels through, you need to specify that the copy will jump through the bastion. For example, if user "test1" is copying file "my_data" from their current directory on their local machine to their home directory on the Nightingale login node "login01" they would use the following command::
 
-.. 
-
-   scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01:.
+   scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01
    
 Copying Files On To Nightingale Using AWS S3 Buckets
 ====================================================
 
 In order to use AWS S3 Buckets you must first configure the service. Run the command “aws configure” and answer its prompts for the following data:
-. AWS Access Key ID
-. AWS Secret Access Key
-. Default region name
-. Default output format
 
-Copy files from the bucket using:
+* AWS Access Key ID
+* AWS Secret Access Key
+* Default region name
+* Default output format
 
-..
+Copy files from the bucket using::
 
    aws s3 cp s3://<bucket-name> <local name on nightingale>

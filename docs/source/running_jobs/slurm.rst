@@ -8,10 +8,6 @@ software <https://slurm.schedmd.com/documentation.html>`__ to run jobs.
 Slurm was developed at California-based DoE labs, and is now perhaps the
 most-used job control system on HPC systems in the world. 
 
-If you want to do something that this page doesn't cover with your jobs, feel free to
-submit a ticket, but you could also google "how X with slurm" and that
-should get you close, as long as you keep in mind the configuration of
-the nodes on Nightingale.
 
 Please be aware that the login node is a shared resource for all users of the system 
 and using it should be limited to editing, compiling and building your programs, 
@@ -19,21 +15,58 @@ and for short non-intensive runs.
 
 To ensure the health of the batch system and scheduler users should refrain from having 
 more than 1,000 batch jobs in the queues at any one time.
-See the document “Running Serial Jobs Efficiently on Nightingale” regarding information 
-on expediting job turnaround time for serial jobs.
-See the Running MATLAB / Mathematica Batch Jobs sections for information on running MATLAB 
-and Mathematica on Nightingale.
+
 
 Running Programs
 ================
 
-If you build your own programs, compiling and linking, an executable is created that is used to run the program. 
-If your program is a serial code, you run it by specifying the name of the executable (./a.out).
+On successful building (compilation and linking) of your program, an executable is created that is used to run the program. The table below describes how to run different types of programs.
 
-If you want to run multiple copies of a program you can use the srun command followed by the name of the executable. 
-Note: The total number of copies is the {number of nodes} x {cores/node} set in the batch job resource specification. (srun ./a.out)
 
-OpenMP programs are run by setting the number of threads and then specifying the name of the executable. The OMP_NUM_THREADS environment variable is set to specify the number of threads used by OpenMP programs. If this variable is not set, the number of threads used defaults to one under the Intel compiler. Under GCC, the default behavior is to use one thread for each core available on the node. (./a.out)
+
+.. role:: raw-html(raw)
+    :format: html
+
+.. list-table:: 
+   :widths: 25 25 50
+   :header-rows: 1
+
+   * - Program Type
+     - How to run the program/executable
+     - Example Command
+   * - :raw-html:`<br />` Serial :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` To run serial code, specify the name of the executable.
+     - :raw-html:`<br />` ``./a.out``
+   * - :raw-html:`<br />` OpenMP :raw-html:`<br />`
+     - :raw-html:`<br />` The *OMP_NUM_THREADS* environment variable can be set to
+       :raw-html:`<br />` specify the number of threads used by OpenMP programs.
+       :raw-html:`<br />` If this variable is not set, the number of threads used
+       :raw-html:`<br />` defaults to number of cores available on the node.
+       
+       To run OpenMP programs, specify the name of the executable.
+     - :raw-html:`<br />` ``export OMP_NUM_THREADS=16``
+       :raw-html:`<br />` :raw-html:`&nbsp`
+       :raw-html:`<br />` :raw-html:`&nbsp`
+       :raw-html:`<br />` :raw-html:`&nbsp`
+ 
+       ``./a.out``
+
+
+
+:raw-html:`<br />` If you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable. 
+:raw-html:`<br />` :raw-html:`&nbsp`
+:raw-html:`<br />` Ex. 
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` :raw-html:`&nbsp` ``srun ./a.out``
+:raw-html:`<br />` :raw-html:`&nbsp`
+:raw-html:`<br />` **Note:** By default the total number of copies run, is equal to number cores specified in the batch job resource specification.
+:raw-html:`<br />` :raw-html:`&nbsp`
+:raw-html:`<br />` Users can use the *-n*  flag/option with the *srun* command to specify the number of copies of a program that they would like to run 
+:raw-html:`<br />` keeping in mind that the value for the *-n*  flag/option must be less than or equal to the number of cores specifed for the batch job.
+:raw-html:`<br />` :raw-html:`&nbsp`
+:raw-html:`<br />` Ex. 
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` :raw-html:`&nbsp` ``srun -n 10 ./a.out``
+:raw-html:`<br />` :raw-html:`&nbsp`
 
 Managing your jobs with Slurm
 =============================
@@ -47,112 +80,192 @@ output when it's finished. For more detailed information, refer to the individua
 sbatch
 ------
 
-Batch jobs are submitted through a job script using the sbatch command. Job scripts generally start with a series of SLURM directives that describe requirements of the job such as number of nodes, wall time required, etc… to the batch system/scheduler (SLURM directives can also be specified as options on the sbatch command line; command line options take precedence over those in the script). The rest of the batch script consists of user commands.
+Batch jobs are submitted through a *job script* using the ``sbatch`` command. Job scripts generally start with a series of SLURM directives that describe requirements of the job such as number of nodes, wall time required, etc… to the batch system/scheduler (SLURM directives can also be specified as options on the sbatch command line; command line options take precedence over those in the script). The rest of the batch script consists of user commands.
 
-Sample batch scripts are available in the directory /path/to/batch_scripts/
+Sample batch scripts are available on Nightingale in the directory ``/sw/apps/NUS/slurm/sample/batchscripts``.
 
-The syntax for sbatch is:
-sbatch [list of sbatch options] script_name
-The main sbatch options are listed below. Also See the sbatch man page for options.
-•	The common resource_names are:
-  time=time
+The syntax for **sbatch** is:
+:raw-html:`<br />` :raw-html:`&nbsp` ``sbatch [list of sbatch options] script_name``
+:raw-html:`<br />` 
+:raw-html:`<br />` The main sbatch options are listed below. Also, see the sbatch man page for options.
+
+:raw-html:`<br />` The common resource_names are:
+:raw-html:`<br />`
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` ``--time=time`` time=maximum wall clock time (d-hh:mm:ss) [default: 30 minutes]
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` ``--nodes=n``  Total number of nodes for the batch job
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` ``--ntasks=p`` Total number of cores for the batch job
+:raw-html:`<br />` :raw-html:`&nbsp` :raw-html:`&nbsp` ``--ntasks-per-node=p`` Number of cores per node
   
-time=maximum wall clock time (d-hh:mm:ss) [default: maximum limit of the queue(partition) submitted to]
+:raw-html:`<br />` n=number of 64-core nodes *[default: 1 node]*
+:raw-html:`<br />` p=how many cores(ntasks) per job or per node(ntasks-per-node) to use (1 through 64) *[default: 1 core]*
 
-  nodes=n
-  ntasks=p Total number of cores for the batch job
-  ntasks-per-node=p Number of cores per node
-  
-n=number of 64-core nodes [default: 1 node]
-p=how many cores(ntasks) per job or per node(ntasks-per-node) to use (1 through 64) [default: 1 core]
-
-Examples:
-  time=00:30:00
-  nodes=2
-  ntasks=32
-
+:raw-html:`<br />` Example:
+  :raw-html:`&nbsp` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks=32``
 or
-
-  time=00:30:00
-  nodes=2
-  ntasks-per-node=16
-
-Memory needs: The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory configurations are specific to the particular Nightingale queues. Please check the table above to determine what memory configurations are available for the compute nodes associated with the specific queue (partition).
-
-Example:
-  time=00:30:00
-  nodes=2
-  ntask=32
-  mem=118000
-
+  :raw-html::raw-html:`<br />` Example:
+  :raw-html:`&nbsp` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks=32``
 or
+  :raw-html:`&nbsp` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks-per-node=16`` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks-per-node=16``
 
-  time=00:30:00
-  nodes=2
-  ntasks-per-node=16
-  mem-per-cpu=7375
+Memory needs: The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory configurations are specific to the particular Nightingale queues.
+
+:raw-html:`<br />` Example:
+  :raw-html:`&nbsp` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks=32``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--mem=118000``
+or
+  :raw-html:`&nbsp` ``--time=00:30:00``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks-per-node=16``
+  :raw-html:`<br />` :raw-html:`&nbsp` ``--mem-per-cpu=7375``
 
 Note: Do not use the memory specification unless absolutely required since it could delay scheduling of the job; also, if nodes with the specified memory are unavailable for the specified queue the job will never run.
 
-Accessing the GPUs: To gain access to the GPUs within the batch job’s environment, add the resource specification tesla_a40 (for Tesla A40) or tesla_a100 (for Tesla A100) to your batch script or on the batch job’s submission line.
+Accessing the GPUs: To gain access to the GPUs within the batch job’s environment, add the resource specification **tesla_a40** (for Tesla A40) or **tesla_a100** (for Tesla A100) to your batch script or on the batch job’s submission line.
 
-Example:
-(in a batch script)
-#SBATCH   gres=gpu:tesla_a40
 
-(on the batch job submission line)
-sbatch … --gres=gpu:tesla_a40 batchscript_name.sbatch
+:raw-html:`<br />` Example:
+  :raw-html:`&nbsp` (in a batch script)
+  :raw-html:`<br />` :raw-html:`&nbsp` ``#SBATCH   gres=gpu:tesla_a40``
+or
+  :raw-html:`&nbsp` (on the batch job submission line)
+  :raw-html:`<br />` :raw-html:`&nbsp` ``sbatch … --gres=gpu:tesla_a40 batchscript_name.sbatch``
+  :raw-html:`<br />` :raw-html:`&nbsp`
+  :raw-html:`<br />` :raw-html:`&nbsp`
+
 
 **Useful Batch Job Environment Variables**
 
-- **$SLURM_JOB_ID**    Job identifier assigned to the job
-- **$SLURM_SUBMIT_DIR**	  By default, jobs start in the directory the job was submitted from.
-- **$SLURM_NODELIST**	 variable name that containins the list of nodes assigned to the batch job
+.. list-table:: 
+   :widths: 25 25 50
+   :header-rows: 1
+   
+   * - Description
+     - SLURM Environment Variable
+     - Detail Description
+   * - :raw-html:`<br />` JobID :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` ``$SLURM_JOB_ID``
+     - :raw-html:`<br />` Job identifier assigned to the job
+   * - :raw-html:`<br />` Job Submission Directory :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` ``$SLURM_SUBMIT_DIR``
+     - :raw-html:`<br />` By default, jobs start in the directory the job was submitted from.
+   * - :raw-html:`<br />` Machine(node) list :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` ``$SLURM_NODELIST``
+     - :raw-html:`<br />` variable name that containins the list of nodes assigned to the batch job
+
 
 See the sbatch man page for additional environment variables available.
 
 srun
 ----
 
-The srun command initiates an interactive job on the compute nodes.
+The srun command initiates an interactive batch job on the compute nodes.
 
 For example, the following command:
 ..
 
-[ng-login01 ~]$ srun --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash
+``[ng-login01 ~]$ srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash``
 
-will run an interactive job in the cpu queue with a wall clock limit of 30 minutes, using one node and 16 cores per node. You can also use other sbatch options such as those documented above.
+(where *ACCT_NAME* is the actual name of your charge account) will run an interactive batch job in the cpu partition (queue) with a wall clock limit of *30 minutes*, using *one node* and *16 cores per node*. You can also use other sbatch options such as those documented above.
 
-After you enter the command, you will have to wait for SLURM to start the job. As with any job, your interactive job will wait in the queue until the specified number of nodes is available. If you specify a small number of nodes for smaller amounts of time, the wait should be shorter because your job will backfill among larger jobs. You will see something like this:
+After you enter the command, you will have to wait for SLURM to start the job. As with any job, your interactive job will wait in the queue until the resources your reqested for your batch job become available.  If you specify a small number of nodes for smaller amounts of time, the wait should be shorter because your job will backfill among larger jobs. You will see output similar to this:
 
-srun: job 123456 queued and waiting for resources
+``srun: job 123456 queued and waiting for resources``
 
 Once the job starts, you will see:
 
-srun: job 123456 has been allocated resources
+``srun: job 123456 has been allocated resources``
 
 and will be presented with an interactive shell prompt on the launch node. At this point, you can use the appropriate command to start your program.
 
-When you are done with your runs, you can use the exit command to end the job.
+When you are done with your runs, you can use the **exit** command to end the job.
 
-Commands that display the status of batch jobs.
------------------------------------------------
+squeue
+------
 
-**squeue -a**    List the status of all jobs on the system.
+The *squeue* command is used to pull up information about the batch jobs submitted
+to the batch system.  By default, the *squeue* command will print out the job ID, 
+partition, username, job status, number of nodes, and name of nodes for all batch
+jobs queued or running within batch system.
 
-**squeue -u $USER**    List the status of all your jobs in the batch system.
+**Commands that display the status of batch jobs**
 
-**squeue -j JobID**    List nodes allocated to a running job in addition to basic information.
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+   
+   * - SLURM Command
+     - Descriptiton
+   * - :raw-html:`<br />` ``squeue -a`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` List the status of all batch jobs in the batch system.
+   * - :raw-html:`<br />` ``squeue -u $USER`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` List the status of all your batch jobs in the batch system.
+   * - :raw-html:`<br />` ``squeue -j JobID`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` List nodes allocated to a specific running batch job in addition to basic information.
+   * - :raw-html:`<br />` ``scontrol show job JobID`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` List detailed information on a particular batch job.
 
-**scontrol show job JobID**    List detailed information on a particular job.
+Run the command ``man squeue`` to see the other available options.
 
-**sinfo -a**    List summary information on all the queues.
 
-See the man page for other options available.
+sinfo
+-----
+
+The *sinfo* command is used to view partition and node information for a system running Slurm.
+
+.. list-table:: 
+   :widths: 25 50
+   :header-rows: 1
+   
+   * - SLURM Command
+     - Descriptiton
+   * - :raw-html:`<br />` ``sinfo -a`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` List summary information on all the partitions (queues).
+
+Run the command ``man sinfo`` to see the other available options.
+
 
 scancel
 -------
 
-The scancel command deletes a queued job or kills a running job.
-•	scancel JobID deletes/kills a job.
+The *scancel* command deletes a queued job or kills a running job.
+
+.. list-table:: 
+   :widths: 35 50
+   :header-rows: 1
+   
+   * - SLURM Command
+     - Descriptiton
+   * - :raw-html:`<br />` ``scancel JobID`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` To delete/kill a specific batch job
+   * - :raw-html:`<br />` ``scancel JobID01, JobID02`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` To delete/kill multiple batch jobs, use a comma-separated list of JobIDs 
+   * - :raw-html:`<br />` ``scancel -u $USER`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` To delete/kill all your batch jobs (removes all of your batch jobs from the batch system regardless of the batch job's state) 
+   * - :raw-html:`<br />` ``scancel --name JobName`` :raw-html:`<br />`
+       :raw-html:`&nbsp`
+     - :raw-html:`<br />` To delete/kill multiple batch jobs based on the batch job's name
+
+Run the command ``man scancel`` to see the other available options.
+
 

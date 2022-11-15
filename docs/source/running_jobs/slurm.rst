@@ -104,14 +104,7 @@ The syntax for **sbatch** is:
   :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
   :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks=32``
 or
-  :raw-html::raw-html:`<br />` Example:
   :raw-html:`&nbsp` ``--time=00:30:00``
-  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
-  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks=32``
-or
-  :raw-html:`&nbsp` ``--time=00:30:00``
-  :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
-  :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks-per-node=16`` ``--time=00:30:00``
   :raw-html:`<br />` :raw-html:`&nbsp` ``--nodes=2``
   :raw-html:`<br />` :raw-html:`&nbsp` ``--ntasks-per-node=16``
 

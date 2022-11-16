@@ -87,4 +87,10 @@ Then you'll see a duo prompt asing for a passcode or for "option 1".  You may ei
 
 Then you'll be asked for your password again; that's again your NCSA password.  You again will not see it echoed to the screen; just type it blindly.  
 
-You should now be at a propmt that reflects that you are on a Nightingale node.  You can load modules and run software and access your files from there.  
+You should now be at a propmt that reflects that you are on a Nightingale node.  You'll know this because the prompt (the bottom line in your termainl or ssh window) will contain the name of the machine you're working on, and that should beging with "ng-" for NightinGale".  It will look something like this: 
+
+::
+
+    [hirop@ng-gpu-m01 ~] $
+
+You can load modules and run software and access your files from there.  

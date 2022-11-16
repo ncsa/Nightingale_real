@@ -12,7 +12,7 @@ Access to an entire dedicated node with the number of users specified by the Pri
 
 **Option 2:** Per User on a Shared Node: $267.50 per month
 
-Access to a shared node with up to 5 users from across the system. Security between users is ensured via Lightweight Directory Access Protocol (LDAP). Users can access the node simultaneously. There is no “speed of service” guarantee, although the powerful nodes should be sufficient for most users. NCSA will consult with users who create a significant high load on the system – options such as reassigning nodes or requiring additional allocation will be determined on a case-by-case basis.
+Access to a shared node with up to 5 users from across the system. Security between a user's files users from other groups is maintained with Unix directory permissions configured by the Lightweight Directory Access Protocol (LDAP). Users can access the node simultaneously. There is no “speed of service” guarantee, although the powerful nodes should be sufficient for most users. NCSA will consult with users who create a significant high load on the system – options such as reassigning nodes or requiring additional allocation will be determined on a case-by-case basis.
 
 Batch Computing Option
 ======================

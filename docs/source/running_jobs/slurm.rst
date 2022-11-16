@@ -167,19 +167,25 @@ srun
 The srun command initiates an interactive batch job on the compute nodes.
 
 For example, the following command:
-..
+::
 
-``[ng-login01 ~]$ srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash``
+  [ng-login01 ~]$ srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash
 
 (where *ACCT_NAME* is the actual name of your charge account) will run an interactive batch job in the cpu partition (queue) with a wall clock limit of *30 minutes*, using *one node* and *16 cores per node*. You can also use other sbatch options such as those documented above.
 
 After you enter the command, you will have to wait for SLURM to start the job. As with any job, your interactive job will wait in the queue until the resources your reqested for your batch job become available.  If you specify a small number of nodes for smaller amounts of time, the wait should be shorter because your job will backfill among larger jobs. You will see output similar to this:
+::
 
-``srun: job 123456 queued and waiting for resources``
+  srun: job 123456 queued and waiting for resources
+
+
+
+
 
 Once the job starts, you will see:
+::
 
-``srun: job 123456 has been allocated resources``
+  srun: job 123456 has been allocated resources
 
 and will be presented with an interactive shell prompt on the launch node. At this point, you can use the appropriate command to start your program.
 

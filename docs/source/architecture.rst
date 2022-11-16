@@ -7,7 +7,9 @@ designed to support UIUC researchers and collaborators who analyze
 sensitive, regulated data, like electronic Protected Health Information
 (ePHI) or Controlled Unclassified Information (CUI). 
 It provides standard batch computing options and interactive
-compute nodes. The compute nodes are a mix of CPU and GPU nodes. The GPU nodes are  
+compute nodes. 
+
+The compute nodes are a mix of CPU and GPU (graphics processor unit) nodes. The GPU nodes are  
 set up for double precision (A100) or single precision (A40) work.
 The nodes are available as dedicated servers or shared
 environments based on the needs of each research project. Nightingale

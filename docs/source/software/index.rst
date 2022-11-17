@@ -3,6 +3,7 @@ Software
 #########
 
 .. note::
+   You are allowed to install software in spaces you have access to (home, project)
    When installing any software you should consider the following:
 
    - Home directory disk usage quotas.

@@ -12,7 +12,7 @@ Access to an entire dedicated node with the number of users specified by the Pri
 
 **Option 2:** Per User on a Shared Node: $267.50 per month
 
-Access to a shared node with up to 5 users from across the system. Security between users is ensured via Lightweight Directory Access Protocol (LDAP). Users can access the node simultaneously. There is no “speed of service” guarantee, although the powerful nodes should be sufficient for most users. NCSA will consult with users who create a significant high load on the system – options such as reassigning nodes or requiring additional allocation will be determined on a case-by-case basis.
+Access to a shared node with up to 5 users from across the system. Security between a user's files users from other groups is maintained with Unix directory permissions configured by the Lightweight Directory Access Protocol (LDAP). Users can access the node simultaneously. There is no “speed of service” guarantee, although the powerful nodes should be sufficient for most users. NCSA will consult with users who create a significant high load on the system – options such as reassigning nodes or requiring additional allocation will be determined on a case-by-case basis.
 
 Batch Computing Option
 ======================
@@ -30,7 +30,7 @@ Per user as needed: $80.71 per month
 
 Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. 
 
-Options for providing “data as a service” to a broad user community are available. Contact `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ for details. 
+Options for providing “data as a service” to a broad user community are available. Contact `help@ncsa.illinois.edu <mailto:help@ncsa.illinois.edu>`_ for details. 
 
 Consultation and Development Services
 ======================================
@@ -39,14 +39,14 @@ Per project as needed: cost based on time and materials
 
 NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials.
 
-Contact   `help+hipaa@ncsa.illinois.edu <mailto:help+hipaa@ncsa.illinois.edu>`_ to discuss project needs and the availability of staff. 
+Contact   `help@ncsa.illinois.edu <mailto:help@ncsa.illinois.edu>`_ to discuss project needs and the availability of staff. 
 
 User Support
 ============
 User support is included with all accounts at no additional charge. Types of support include:
 
-- Security administration (e.g., software security vetting, external audits, compliance with University Security and Privacy Directive)
-- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, IRB approval processes)
+- Security administration (e.g., software security vetting, external audits, compliance with the University of Illinois HIPAA Privacy and Security Directive)
+- Compliance Consulting (e.g., security needs assessment, guidance on data transfer, use agreements, approval processes)
 - Training and onboarding (e.g., management of onboarding protocols, required HIPAA training, access to training materials)
 - System and security documentation (e.g., for proposals, contracts, agreements, reporting)
 - Standard system administration (e.g., installs, updates, access management, infrastructure maintenance, and testing)

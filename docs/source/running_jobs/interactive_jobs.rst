@@ -2,8 +2,14 @@
 Interactive Jobs
 ################
 
-Unlike batch jobs above, you can also ask the scheduler for a compute
-node **now** , and to log you onto it. To launch an interactive job, run
+Rather than queuing up a job to run on the compute nodes, you can request
+that the job scheduler allocate you to a compute node **now**, and to log 
+you onto it. These are called interactive jobs.
+
+Some projects have dedicated interactive nodes, users log into
+those nodes directly, they don't go through the job scheduler to get to them.
+
+To launch an interactive job using the job scheduler, run
 the following command:
 
 ::

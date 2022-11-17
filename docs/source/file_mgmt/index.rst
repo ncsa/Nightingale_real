@@ -6,6 +6,7 @@ File Management
     :maxdepth: 1
     
     filesystem
-    editing_files
     transfer_files
+    globus
+    editing_files
     organize_files

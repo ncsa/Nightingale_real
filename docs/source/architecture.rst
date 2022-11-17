@@ -10,12 +10,12 @@ It provides standard batch computing options and interactive
 compute nodes. 
 
 The compute nodes are a mix of CPU and GPU (graphics processor unit) nodes. The GPU nodes are  
-set up for double precision (A100) or single precision (A40) work.
+set up for double-precision (A100) or single-precision (A40) work.
 The nodes are available as dedicated servers or shared
 environments based on the needs of each research project. Nightingale
 offers database services to support long-term data storage and
 management with the ability to share and access relational databases on
-the system. With 880 TB of high-speed parallel LUSTRE-based storage, the
+the system. With 880 TB of high-speed parallel Lustre-based storage, the
 system supports the researchers’ needs for sharing data and generating and storing results.
 
 Interactive Compute Nodes
@@ -37,4 +37,4 @@ Batch Compute System
 Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
--  880 TB of high-speed parallel LUSTRE-based storage
+-  880 TB of high-speed parallel Lustre-based storage

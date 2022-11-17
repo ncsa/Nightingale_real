@@ -6,7 +6,7 @@
 File Transfers with Globus
 -----------------------------
 
-Globus is a web-based file transfer system that works in the background to move files between systems with "Globus Endpoints".  Nightingale will have a permanent Globus Endpoint named XXXXXXXXXX.  To transfer files to and from your directories using Globus, you will have to authenticate that endpoint, using your already-existing NCSA username, password, and NCSA account on Duo. 
+Globus is a web-based file transfer system that works in the background to move files between systems with "Globus Endpoints".  Nightingale will have a permanent Globus Endpoint (with a name announced at that time).  To transfer files to and from your directories using Globus, you will have to authenticate that endpoint, using your already-existing NCSA username, password, and NCSA account on Duo. 
 
 One-time Setup
 ~~~~~~~~~~~~~~~~
@@ -30,7 +30,7 @@ If prompted click “Allow” when asked to authorized the Globus Web App
 
 Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
 
-Once logged in you should be taken to the File Manager section, on one side search for "NCSA Nightingale" collection and you should see a list of endpoints, click on the “XXXXXXXXXX” endpoint
+Once logged in you should be taken to the File Manager section, on one side search for "NCSA Nightingale" collection and you should see a list of endpoints, click on the "Nightingale" endpoint
 
 .. 
    this will be a link to the endpoint, which we don't know the name of yet.

@@ -29,4 +29,5 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 
 **4. Get Added to Your Project's LDAP Group**
-At this point NCSA will add you to your project's LDAP group which will give you access to the system. If the group doesn't exist yet it can take a few days for it to be created.
+
+After completing Steps 1 - 3, NCSA will add you to your project’s LDAP group, giving you access to the system. If the group doesn’t exist yet, it can take a few days to create it.

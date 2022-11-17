@@ -12,8 +12,10 @@ environment. The table below shows the most common module commands you will need
 +--------------------+-------------------------------------------------+
 | module avail       | Lists the modules that are available. If you    |
 |--------------------+ are looking for a piece of software but typing  |
+|                    |                                                 |
 |                    | the command to run it gets you a "command not   |
 |                    | found" error, then loading the modulefile for   |
+|                    |                                                 |
 |                    | that specific piece of software first is        |
 |                    | probably what you need to do.                   |
 +--------------------+-------------------------------------------------+
@@ -50,9 +52,11 @@ environment. The table below shows the most common module commands you will need
 | module save        | If you have modulefiles that you want to load   |
 |                    | every time you log in, then you can set up your |
 |--------------------+ account so that they are loaded every time you  |
+|                    |                                                 |
 |                    | log in without you having to type the "module   |
 |                    | load" every time. Do this by first loading the  |
 |                    | modulefiles you always want to have loaded.     |
+|                    |                                                 |
 |                    | Then type "module save". The system will save   |
 |                    | your current module list as your default. When  |
 |                    | you log in the next time, these modulesfiles    |

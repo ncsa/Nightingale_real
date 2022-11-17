@@ -33,8 +33,8 @@ You can log onto Nightingale by following these steps:
 
 1. If not on campus, connect to the campus VPN. (`Instructions for installing the campus VPN <https://answers.uillinois.edu/illinois/98773>`_)
 2. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu.
-3. Enter your NCSA username and password.
-4. Enter '1' to send a push to the Duo app on your smartphone.
+3. Enter your NCSA username and password. (you will not see the characters you type for your password)
+4. Enter '1' to send a push to the **NCSA Duo** app on your smartphone.
 5. Approve the request on your phone.
 6. SSH to your login node using the appropriate hostname (see above).
 
@@ -59,16 +59,3 @@ In this case, you would been specifically told that "ng-biology03" would be your
 The two commands above can be combined into one by specifying the bastion host as a "jump" host. The jump host is used to connect you to your destination node without you needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.::
 
    ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
-
-**Note on Duo**
-
-You must have an "NCSA" entry in your Duo app as follows.  A "University of Illinois" Duo entry will not get you into Nightingale.  
-
-.. image:: ./NCSA_duo_versC.gif
-   :scale: 20 %
-
-**Passwords**
-
-When typing passwords into terminals, you *will not see the characters you type*.  That is, you will type your password and hit enter then type "1" to send the push to your phone, without seeing what you type on the screen.  
-
-Also, when setting up your NCSA ID password (also called kerberos password), you may want to use a password you can easily type. There are sometimes issues with copying and pasting passwords from a password manager (or document on your own computer) making it seem like you have entered the wrong password.

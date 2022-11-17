@@ -36,29 +36,34 @@ environment. The table below shows the most common module commands you will need
 +--------------------+-------------------------------------------------+
 | module load        | Loads a modulefile [or modulefiles] into your   |
 | *modulefile (      | current shell environment (see "module avail"   |
-| modulefile2        | above to get a list)                            |
-| modulefile3 ...)*  |                                                 |
+| modulefile2 ...)   |                                                 |
+|                    | above to get a list)                            |
+|                    |                                                 |
 +--------------------+-------------------------------------------------+
 | module unload      | Unloads a modulefile; if you unload a           |
 | *modulefile*       | modulefile you had previously loaded, then the  |
+|                    |                                                 |
 |                    | software is no longer available to you (in your |
 |                    | current shell environment).                     |
 +--------------------+-------------------------------------------------+
 | module swap        | Unloads one *modulefile1* and loads another     |
-| *modulefile1       | *modulefile2*. This is typically used to change |
-| modulefile2*       | the version of a modulefile that you have       |
+| oldmod             | *modulefile2*. This is typically used to change |
+| newmod             |                                                 |
+|                    | the version of a modulefile that you have       |
 |                    | loaded.                                         |
 +--------------------+-------------------------------------------------+
 | module save        | If you have modulefiles that you want to load   |
 |                    | every time you log in, then you can set up your |
-|--------------------+ account so that they are loaded every time you  |
 |                    |                                                 |
+|--------------------+ account so that they are loaded every time you  |
 |                    | log in without you having to type the "module   |
+|                    |                                                 |
 |                    | load" every time. Do this by first loading the  |
 |                    | modulefiles you always want to have loaded.     |
 |                    |                                                 |
 |                    | Then type "module save". The system will save   |
 |                    | your current module list as your default. When  |
+|                    |                                                 |
 |                    | you log in the next time, these modulesfiles    |
 |                    | will already be loaded.                         |
 +--------------------+-------------------------------------------------+

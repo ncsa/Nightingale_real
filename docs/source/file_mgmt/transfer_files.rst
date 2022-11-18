@@ -5,7 +5,7 @@ Transferring Files
 Copying project data to your home directory
 ===========================================
 
-You will not work directly on your group's curated project data which is stored in the /datasets directory. Rather to work with them, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
+You will not work directly on your group's curated project data in the /datasets directory. Instead, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
 
 Enter the **cd** command to go your home directory::
 

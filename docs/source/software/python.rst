@@ -43,8 +43,8 @@ The following commands will create a minimal clone anaconda environment in your 
 installed (including your own installed packages) in your environment::
 
   cd ${HOME}
-  module load anaconda/2022-May/3
-  export ${HOME}/.conda/pkgs
+  module load anaconda3/2022.05
+  export CONDA_PKGS_DIRS="/u/${HOME}/.conda/pkgs"
   conda create -n my.anaconda python
   conda info -e
   source activate my.anaconda

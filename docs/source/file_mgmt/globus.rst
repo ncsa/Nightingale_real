@@ -18,7 +18,7 @@ Using Globus to Transfer Files
 
 Once your identity is linked (above) then do the following to transfer files using Globus.
 
-Navigate to globus.org and cling “Log In” in the upper right corner
+Navigate to globus.org and click “Log In” in the upper right corner
 
 Choose “National Center for Supercomputing Applications” as your Identity Provider and click “Continue”
 

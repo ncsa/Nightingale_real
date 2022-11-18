@@ -2,8 +2,6 @@
 Running Jobs
 #############
 
-**UNDER CONSTRUCTION**
-
 .. toctree::
     :maxdepth: 1
 

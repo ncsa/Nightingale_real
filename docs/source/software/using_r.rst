@@ -69,7 +69,7 @@ Using Rscript
 
 You can use the rscript command to run R commands without starting an R session. As a scripting front end for R, Rscript enables using R via shell scripts and scripting applications.
 
-The examples below show step-by-step the commands you can run on the Nightingale. In these steps, ~/Rlibs is used for the location to install user-specific add-on packages (The tilde "~" means the users' home directory—i.e. $HOME).
+The examples below show step-by-step the commands you can run on Nightingale. In these steps, ~/Rlibs is used for the location to install user-specific add-on packages (The tilde "~" means the users' home directory—i.e. $HOME).
 
 **Note:** These examples use the BASH shell. The command syntax may differ when using a different shell.
 

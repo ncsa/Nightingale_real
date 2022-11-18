@@ -7,6 +7,5 @@ File Management
     
     filesystem
     transfer_files
-    globus
     editing_files
     organize_files

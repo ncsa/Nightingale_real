@@ -36,7 +36,7 @@ SCP requires a source and a destination. You can use it to copy individual files
 
 Since Nightingale has a bastion host which all network traffic travels through, you need to specify that the copy will jump through the bastion. For example, if user "test1" is copying file "my_data" from their current directory on their local machine to their home directory on the Nightingale login node "ng-login01" they would use the following command::
 
-   scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01
+   scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01:.
    
 Copying Files On To Nightingale Using AWS S3 Buckets
 ====================================================

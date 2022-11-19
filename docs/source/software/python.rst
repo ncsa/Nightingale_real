@@ -44,7 +44,7 @@ installed (including your own installed packages) in your environment::
 
   cd ${HOME}
   module load anaconda3/2022.05
-  export CONDA_PKGS_DIRS="/u/${HOME}/.conda/pkgs"
+  export CONDA_PKGS_DIRS="${HOME}/.conda/pkgs"
   conda create -n my.anaconda python
   conda info -e
   source activate my.anaconda
@@ -54,15 +54,15 @@ installed (including your own installed packages) in your environment::
  
 To deactivate the anaconda environment type::
 
- conda deactivate
+  conda deactivate
 
 To create a complete clone anaconda environment replace::
 
- conda create -n my.anaconda python
+  conda create -n my.anaconda python
  
 with::
 
- conda create -n my.anaconda anaconda
+  conda create -n my.anaconda anaconda
 
 Viewing Installed Python Packages
 =================================

@@ -6,6 +6,17 @@ Introduction
 ============
 Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via the `Python Package Index (PyPI) <https://pypi.org/>`_ , which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. Anaconda also provides a Python environment with python packages.
 
+
+Anaconda is a free, open-source distribution of the Python and R programming languages. 
+Anaconda (ver 2022.05) and Miniconda (ver 2022.05) are installed on
+Nightingale. One of the main differences between Anaconda
+and Minconda is the number of packages: Anaconda by default installs
+with over 150 data science packages, whereas Miniconda by default
+installs a subset of the packages installed by default with Anaconda. 
+Anaconda includes Conda, which is a package manager and environment 
+management system. It is a popular package manager for Python and R. 
+
+
 Versions
 ========
 The table below lists the versions of Python installed on the Nightingale.

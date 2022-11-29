@@ -8,4 +8,4 @@ Running Jobs
     introduction
     slurm
     interactive_jobs
-    sample_job_scripts
+  

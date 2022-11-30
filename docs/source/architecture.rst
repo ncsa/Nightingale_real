@@ -18,21 +18,28 @@ management with the ability to share and access relational databases on
 the system. With 880 TB of high-speed parallel Lustre-based storage, the
 system supports the researchers’ needs for sharing data and generating and storing results.
 
-Interactive Compute Nodes
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Interactive Login Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  4 interactive compute/login nodes with dual 64-core AMDs and 512 GB
-   of RAM
--  1 interactive node with 2 A100 GPUs, dual 32-core AMDs with 512GB RAM
--  1 interactive node with 1 A100 GPU, dual 32-core AMDs with 256GB RAM
--  5 interactive nodes with 1 A40 GPU, dual 32-core AMDs with 512GB RAM
+- 2 interactive dual 32-core AMD **login** nodes each with 512GB RAM (*no GPUs*)
 
-Batch Compute System
-~~~~~~~~~~~~~~~~~~~~~~~~
 
--  15 dual 64-core AMD systems with 1 TB of RAM
--  1 GPU compute node with 2 A100 GPUs, dual 32-core AMDs with 512GB RAM
--  4 GPU compute nodes with 1 A100 GPU, dual 32-core AMDs with 256GB RAM
+Interactive Group Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- 2 interactive dual 32-core AMD **group** nodes each with 512GB RAM and 1 NVIDIA A40 GPU
+- 2 interactive dual 32-core AMD **group** nodes each with 512GB RAM and 2 NVIDIA A100 GPUs
+- 1 interactive dual 32-core AMD **group** node with 256GB RAM and 1 NVIDIA A100 GPU
+
+
+Batch/Interactive Compute Nodes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- 16 batch/interactive dual 32-core AMD **compute** nodes each with 1TB RAM (*no GPUs*)
+-  1 batch/interactive dual 32-core AMD **compute** node with 512GB RAM and 2 NVIDIA A100 GPUs
+-  5 batch/interactive dual 32-core AMD **compute** nodes each with 256GB RAM and 1 NVIDIA A100 GPU
+-  2 batch/interactive dual 32-core AMD **compute** nodes each with 512GB RAM and 1 NVIDIA A40 GPU
+
 
 Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~

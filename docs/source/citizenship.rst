@@ -14,4 +14,4 @@ Nightingale’s scheduling system is responsible for ensuring you have the resou
 
 **Use the login nodes responsibly**
 
-Nightingale’s login nodes are a shared resource for all users. You use them to conduct the activities necessary to prepare your applications, such as editing, compiling, building your programs, and short non-intensive runs. This is important to remember. It means that what you do on the login node can impact system performance and affect other users. System administrators may terminate your user processes if you negatively impact the system.
+Nightingale’s login nodes are a shared resource for all users. You use them to conduct the activities necessary to prepare your applications, such as editing, compiling, building your programs, and short non-intensive runs. This is important to remember. What you do on the login node can impact system performance and affect other users. System administrators may terminate your user processes if you negatively impact the system.

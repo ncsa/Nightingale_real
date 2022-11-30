@@ -42,29 +42,21 @@ Below is a sample SSH command line to log into Nightingale's secure node where <
 
    ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
-After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app (both of which you will not see on the screen). After you have approved the push, you will be at a prompt on ngale-bastion-1 node that will look something like this: 
-
-.. 
+After entering the ssh command, you will be prompted to enter your password, followed by a prompt to send a push to the Duo app (both of which you will not see on the screen). After you have approved the push, you will be at a prompt on ngale-bastion-1 node that will look similar to::
 
    [csteffen@ngale-bastion-1 ~]$
 
-At that prompt, enter an SSH command using the hostname of your login node:
-
-.. 
+At the prompt, enter an SSH command using the hostname of your login node following this syntax:: 
 
    ssh <your_username>@ng-<yourgroup>01
    
-so for example, if your username is "hirop" and you group name is "biology" then your final ssh command might look like this:
-
-.. 
+For example, if your username is "hirop" and you group name is "biology" then your ssh command would look like this:: 
 
    ssh hirop@ng-biology03
    
 In this case, you would been specifically told that "ng-biology03" would be your node to use for your computations.
 
-The two commands above can be combined into one by specifying the bastion host as a "jump" host. The jump host is used to connect you to your destination node without you needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.
-
-.. 
+The two commands above can be combined into one by specifying the bastion host as a "jump" host. The jump host is used to connect you to your destination node without you needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.::
 
    ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
 
@@ -73,7 +65,7 @@ The two commands above can be combined into one by specifying the bastion host a
 You must have an "NCSA" entry in your Duo app as follows.  A "University of Illinois" Duo entry will not get you into Nightingale.  
 
 .. image:: ./NCSA_duo_versC.gif
-   :scale: 40 %
+   :scale: 20 %
 
 **Passwords**
 

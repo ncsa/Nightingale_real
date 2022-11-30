@@ -22,8 +22,8 @@ GNU nano is an easy-to-use command line text editor for Linux. To open an existi
    nano file_name
 
 This opens a new editor window in your terminal where you can start editing the file. At the bottom of the window, you will find a list of 
-shortcuts to use with the nano editor. The caret symbol (^) represents the Ctrl key (e.g., to exit, type Ctrl+X). The letter M represents the 
-Alt key (e.g., to undo type Alt+U).
+shortcuts to use with the nano editor. The caret symbol (^) represents the Ctrl key (e.g., to exit, Nano shows ^X, type Ctrl+X). The letter M represents the 
+Alt key (e.g., Nano shows M-U, to undo type Alt+U).
 
 MobaTextEditor
 ==============

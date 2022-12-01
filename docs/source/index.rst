@@ -1,5 +1,5 @@
-.. important::
-
+.. 
+    important::
     This page is soon to be the Nightingale official documentation page, but right now the documentation is undergoing its final revisions before deployemnt. Please refer to the `wiki documentation <https://wiki.ncsa.illinois.edu/display/USSPPRT/Nightingale+Cluster+User+Guide>`_ until it is complete.
    
 #####################################

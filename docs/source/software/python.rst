@@ -50,7 +50,7 @@ You must install software/libraries into user-writeable locations like your home
 Generally, any Python package not available in the system installation can be 
 installed from the `Python Package Index <https://pypi.org/>`_ (PyPI)  in your specified location.
 
-The following commands will create a minimal clone anaconda environment in your scratch directory, install pytorch, and list the Python packages 
+The following commands will create a minimal clone anaconda environment in your home directory, install pytorch, and list the Python packages 
 installed (including your own installed packages) in your environment::
 
   cd ${HOME}

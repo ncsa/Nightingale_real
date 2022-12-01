@@ -7,5 +7,5 @@ Running Jobs
 
     introduction
     slurm
-    interactive_jobs
+
   

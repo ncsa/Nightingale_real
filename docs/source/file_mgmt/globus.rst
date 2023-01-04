@@ -19,15 +19,15 @@ Once your identity is linked (above) then do the following to transfer files usi
 
 Navigate to globus.org and click “Log In” in the upper right corner
 
-Choose “National Center for Supercomputing Applications” as your Identity Provider and click “Continue”
-
-.. image:: 
+We recommend you use an independent password for your globus account.  If you're doing that, on the "Log in to use Globus Web App" screen, click on "Globus ID to sign in" at the very bottom, and sign in with your globus password.  
 
 If prompted click “Allow” when asked to authorized the Globus Web App
 
 .. image:: Screen-Shot-2021-01-19-at-9.22.30-PM-768x506.png
 
 Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
+
+.. image:: ngale_duo_push.png
 
 Once logged in you should be taken to the File Manager section, on one side search for "ngale" and click on the "ncsa#ngale" endpoint from the resulting list:
 

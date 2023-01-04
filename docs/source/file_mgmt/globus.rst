@@ -31,9 +31,7 @@ Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
 
 Once logged in you should be taken to the File Manager section, on one side search for "ngale" and click on the "ncsa#ngale" endpoint from the resulting list:
 
-.. 
-   this will be a link to the endpoint, which we don't know the name of yet.
-    .. image::
+.. image:: ngale_globus_ngale_endpoint.png
 
 The system will prompt you to Authenticate to the endpoint, click continue; Globus may prompt you to link your netid@illinois.edu identity, go ahead and do so
 

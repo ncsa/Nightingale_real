@@ -1,7 +1,6 @@
 .. warning::
 
-   We are in the process of setting up secure Globus (suitable for CUI and HIPAA and other regulated sensitive data) but it is not set up yet.  When Globus is available to move software on and off Nightingale, this warning will be removed.  
-
+   As of January 2023, Globus is now available for use on Nightingale.  However, we have not finished the final contracts and setup for specifically HIPAA-data certified variant of globus, so do not transfer HIPAA data over globus at this time.  When HIPAA-certified Globus is installed, this warning will be removed.  If you have any questions about data movement, please don't hesitate to put in a ticket (:ref:`help`).  
 
 File Transfers with Globus
 -----------------------------
@@ -30,7 +29,7 @@ If prompted click “Allow” when asked to authorized the Globus Web App
 
 Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
 
-Once logged in you should be taken to the File Manager section, on one side search for "NCSA Nightingale" collection and you should see a list of endpoints, click on the "Nightingale" endpoint
+Once logged in you should be taken to the File Manager section, on one side search for "ngale" and click on the "ncsa#ngale" endpoint from the resulting list:
 
 .. 
    this will be a link to the endpoint, which we don't know the name of yet.

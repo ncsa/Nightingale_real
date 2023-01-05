@@ -41,9 +41,9 @@ The system will prompt you to Authenticate to the endpoint, click continue; Glob
 
 .. image:: Screen-Shot-2021-01-19-at-9.52.00-PM-768x657.png
 
-You should then get dropped back into the “File Manger” view and be able to see your home directory in the explorer window
+You should then get dropped back into the “File Manger” view.  You can navigate from there to your home directory (under "/u") or to your project directory under /project.  
 
-.. image:: Screen-Shot-2021-01-19-at-9.24.28-PM-768x381.png
+.. image:: ng_globus_system_dir.png
 
 Then in a similar manner (in the right half of the “File Manger” view) search for and authenticate to the collection you are planning to transfer data to/from, then use the GUI to transfer the data; you can choose transfer settings. Also on the left is a button to view your current transfer activity
 

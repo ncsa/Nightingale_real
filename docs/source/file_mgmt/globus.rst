@@ -41,7 +41,7 @@ The system will prompt you to Authenticate to the endpoint, click continue; Glob
 
 .. image:: Screen-Shot-2021-01-19-at-9.52.00-PM-768x657.png
 
-You should then get dropped back into the “File Manger” view.  You can navigate from there to your home directory (under "/u") or to your project directory under /project.  
+You should then get dropped back into the “File Manger” view.  You can navigate from there to your home directory (under "/u") or to your project directory under /projects.  
 
 .. image:: ng_globus_system_dir.png
 

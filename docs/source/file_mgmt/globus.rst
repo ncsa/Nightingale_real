@@ -25,15 +25,11 @@ If prompted click “Allow” when asked to authorized the Globus Web App
 
 .. image:: Screen-Shot-2021-01-19-at-9.22.30-PM-768x506.png
 
-Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
-
-.. image:: ngale_duo_push.png
-
 Once logged in you should be taken to the File Manager section, on one side search for "ngale" and click on the "ncsa#ngale" endpoint from the resulting list:
 
 .. image:: ngale_globus_ngale_endpoint.png
 
-The system will prompt you to Authenticate to the endpoint, click continue; Globus may prompt you to link your netid@illinois.edu identity, go ahead and do so
+The system will prompt you to Authenticate to the endpoint, click continue; Globus may prompt you to link your netid@illinois.edu identity, go ahead and do so.  You will need provide your NCSA Duo authority here.  
 
 .. image:: Screen-Shot-2021-01-19-at-9.23.26-PM-768x299.png
 

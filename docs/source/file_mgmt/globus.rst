@@ -1,7 +1,6 @@
 .. warning::
 
-   We are in the process of setting up secure Globus (suitable for CUI and HIPAA and other regulated sensitive data) but it is not set up yet.  When Globus is available to move software on and off Nightingale, this warning will be removed.  
-
+   As of January 2023, Globus is now available for use on Nightingale.  However, we have not finished the final contracts and setup for specifically HIPAA-data certified variant of globus, so do not transfer HIPAA data over globus at this time.  When HIPAA-certified Globus is installed, this warning will be removed.  If you have any questions about data movement, please don't hesitate to put in a ticket (:ref:`help`).  
 
 File Transfers with Globus
 -----------------------------
@@ -20,23 +19,17 @@ Once your identity is linked (above) then do the following to transfer files usi
 
 Navigate to globus.org and click “Log In” in the upper right corner
 
-Choose “National Center for Supercomputing Applications” as your Identity Provider and click “Continue”
-
-.. image:: 
+We recommend you use an independent password for your globus account.  If you're doing that, on the "Log in to use Globus Web App" screen, click on "Globus ID to sign in" at the very bottom, and sign in with your globus password.  
 
 If prompted click “Allow” when asked to authorized the Globus Web App
 
 .. image:: Screen-Shot-2021-01-19-at-9.22.30-PM-768x506.png
 
-Login in via the Illinois Shibboleth service, this will be a Duo 2FA prompt
+Once logged in you should be taken to the File Manager section, on one side search for "ngale" and click on the "ncsa#ngale" endpoint from the resulting list:
 
-Once logged in you should be taken to the File Manager section, on one side search for "NCSA Nightingale" collection and you should see a list of endpoints, click on the "Nightingale" endpoint
+.. image:: ngale_globus_ngale_endpoint.png
 
-.. 
-   this will be a link to the endpoint, which we don't know the name of yet.
-    .. image::
-
-The system will prompt you to Authenticate to the endpoint, click continue; Globus may prompt you to link your netid@illinois.edu identity, go ahead and do so
+The system will prompt you to Authenticate to the endpoint, click continue; Globus may prompt you to link your netid@illinois.edu identity, go ahead and do so.  You will need provide your NCSA Duo authority here.  
 
 .. image:: Screen-Shot-2021-01-19-at-9.23.26-PM-768x299.png
 
@@ -44,9 +37,9 @@ The system will prompt you to Authenticate to the endpoint, click continue; Glob
 
 .. image:: Screen-Shot-2021-01-19-at-9.52.00-PM-768x657.png
 
-You should then get dropped back into the “File Manger” view and be able to see your home directory in the explorer window
+You should then get dropped back into the “File Manger” view.  You can navigate from there to your home directory (under "/u") or to your project directory under /projects.  
 
-.. image:: Screen-Shot-2021-01-19-at-9.24.28-PM-768x381.png
+.. image:: ng_globus_system_dir.png
 
 Then in a similar manner (in the right half of the “File Manger” view) search for and authenticate to the collection you are planning to transfer data to/from, then use the GUI to transfer the data; you can choose transfer settings. Also on the left is a button to view your current transfer activity
 

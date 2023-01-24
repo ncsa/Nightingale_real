@@ -55,6 +55,5 @@ Copying Files Off of Nightingale
 
 Any method that can transfer data to Nightingale can also be used to transfer information off of the machine. 
 
-However, before doing so please read about :ref:`Protected Data`.
-
+However, before doing so please read about `protected data <../protected_data.rst>`_.
 Data transfers off of Nightingale are audited and must be accounted for.

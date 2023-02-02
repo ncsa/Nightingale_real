@@ -46,7 +46,7 @@ these tools:
 
 ::
 
-    export https_proxy=\ https://ache-proxy.ncsa.illinois.edu:3128
+    export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
 
 This sets the auto-install tool to access the outside internet through a
 network proxy, which allows connections to limited outside network

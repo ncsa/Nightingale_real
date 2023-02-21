@@ -4,7 +4,7 @@ Programming Environment
 
 
 The GNU compilers (GCC) version 8.4.1 are in the default user environment. Version 12.2.0 is also available — load this version with the command:
-
+::
 module load gcc/12.2.0
 
 
@@ -94,7 +94,7 @@ CUDA
 NVIDIA GPUs are available as part of the Nightingale compute cluster. CUDA is a parallel computing platform and programming model from NVIDIA for use on the GPUs. These GPUs support CUDA compute capability 2.0.
 
 Load the CUDA Toolkit into your environment using the following module command:
-
+::
 module load cuda/11.4.2
 
 

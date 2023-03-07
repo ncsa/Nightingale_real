@@ -73,19 +73,23 @@ The examples below show step-by-step the commands you can run on Nightingale. In
 
 **Note:** These examples use the BASH shell. The command syntax may differ when using a different shell.
 
-**Step 1:** Create a directory for your R packages::
+**Step 1:** Set the HTTPS_PROXY environment variable (if you have not already done so).
+
+  export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
+
+**Step 2:** Create a directory for your R packages::
 
    mkdir ~/Rlibs
 
-**Step 2:** Load the R modulefile::
+**Step 3:** Load the R modulefile::
  
    module load R/4.2.0
 
-**Step 3:** Set the R library environment variable (R_LIBS) to include your R package directory::
+**Step 4:** Set the R library environment variable (R_LIBS) to include your R package directory::
 
-  export R_LIBS=~/Rlibs
+  export R_LIBS=~/Rlibs:$R_LIBS
 
-**Step 4:** Use the install.packages command to install your R package::
+**Step 5:** Use the install.packages command to install your R package::
 
   Rscript -e "install.packages('RCurl', '~/Rlibs', 'https://cran.r-project.org')"
 

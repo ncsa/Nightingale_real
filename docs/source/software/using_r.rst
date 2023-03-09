@@ -73,7 +73,7 @@ The examples below show step-by-step the commands you can run on Nightingale. In
 
 **Note:** These examples use the BASH shell. The command syntax may differ when using a different shell.
 
-**Step 1:** Set the HTTPS_PROXY environment variable (if you have not already done so).
+**Step 1:** Set the HTTPS_PROXY environment variable (if you have not already done so)::
 
   export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
 

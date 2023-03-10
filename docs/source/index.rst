@@ -33,6 +33,7 @@ Contents
    citizenship
    file_mgmt/index
    software/index
+   programming_environment
    running_jobs/index
    visualization
    containers

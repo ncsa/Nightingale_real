@@ -50,4 +50,10 @@ In order to use AWS S3 Buckets you must first configure the service. Run the com
 
 Copy files from the bucket using::
 
-   aws s3 cp s3://<bucket-name> <local name on nightingale>
+Copying Files Off of Nightingale
+=========================================
+
+Any method that can transfer data to Nightingale can also be used to transfer information off of the machine. 
+
+However, before doing so please read about `protected data <../protected_data.rst>`_.
+Data transfers off of Nightingale are audited and must be accounted for.

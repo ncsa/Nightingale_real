@@ -21,13 +21,13 @@ system supports the researchers’ needs for sharing data and generating and sto
 Interactive Login Nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- 2 interactive dual 32-core AMD **login** nodes each with 512GB RAM (*no GPUs*)
+- 2 interactive dual 64-core AMD **login** nodes each with 512GB RAM (*no GPUs*)
 
 
 Interactive Group Nodes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- 2 interactive dual 32-core AMD **group** nodes each with 512GB RAM and 1 NVIDIA A40 GPU
+- 3 interactive dual 32-core AMD **group** nodes each with 512GB RAM and 1 NVIDIA A40 GPU
 - 2 interactive dual 32-core AMD **group** nodes each with 512GB RAM and 2 NVIDIA A100 GPUs
 - 1 interactive dual 32-core AMD **group** node with 256GB RAM and 1 NVIDIA A100 GPU
 
@@ -40,6 +40,7 @@ Batch/Interactive Compute Nodes
 -  5 batch/interactive dual 32-core AMD **compute** nodes each with 256GB RAM and 1 NVIDIA A100 GPU
 -  2 batch/interactive dual 32-core AMD **compute** nodes each with 512GB RAM and 1 NVIDIA A40 GPU
 
+(NOTE: all batch nodes on Nightingale are diskless.  The OS and /tmp/ take up some of the RAM.  So user processes in batch jobs do not have every bit of physical RAM available while running.)
 
 Storage
 ~~~~~~~~~~~~~~~~~~~~~~~~

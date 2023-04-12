@@ -2,7 +2,7 @@
 Getting an Account
 ##################
 
-To access Nightingale, your project needs to have an LDAP group on the machine, you must get an NCSA Identity 
+To access Nightingale, your project needs to have a project group on the machine, you must get an NCSA Identity 
 (username and password), and request access from Nightingale administrators. 
 Once approved, you will be given instructions on how to be added to NCSA's HIPAA Covered Entity. 
 The steps below explain this process.
@@ -17,11 +17,11 @@ If you don’t remember your password, you can reset it on the `NCSA Identity an
 **Note:** In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor 
 authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. (This is not the same as the University of Illnois's Duo.)
 
-**2. Request LDAP Group For Your Project**
+**2. Request Project Group**
 
-If your project hasn't been added to Nightingale yet, your PI needs to make a request for an LDAP group to be created for it. Once the form is completed they should get a response in a couple of days.
+If your project hasn't been added to Nightingale yet, your PI needs to make a request for a project to be created for it. Once the form is completed they should get a response in a couple of days.
 
-- **To create an LDAP group**, use this form `<https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>` (authenticating with your NCSA identity)_
+- **To create a project group**, use this form `<https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>` (authenticating with your NCSA identity)_
 
 **3. Request Nightingale Access**
 
@@ -35,6 +35,6 @@ The University of Illinois’ HIPAA Privacy and Security Directive requires that
 
 **Note:** You may request an exemption from the encryption requirement in cases such as if you plan to use an on-site work desktop.
 
-**5. Get Added to Your Project's LDAP Group**
+**5. Get Added to Your Project's Group**
 
-After completing Steps 1 - 3, NCSA will add you to your project’s LDAP group, giving you access to the system. If the group doesn’t exist yet, it can take a few days to create it.
+After completing Steps 1 - 3, NCSA will add you to your project’s group, giving you access to the system. If the group doesn’t exist yet, it can take a few days to create it.

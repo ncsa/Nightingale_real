@@ -5,8 +5,11 @@ If you log into Nightingale from the University of Illinois campus, you don't ne
 
 There are two VPN services that will allow you to log into Nightingale from off campus.  The first is the University of Illinois VPN, which members of UIUC campus should use by default.  The other is the NCSA VPN, which is available for Nightingale users not associated directly with UIUC.  
 
+If your login method just freezes when you try to log into Nightingale, this may be your problem.  Please try one of these methods.  
+
 University of Illinois VPN
 ----------------------------
+If you're a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and 2FA.  
 
 NCSA VPN
 ------------

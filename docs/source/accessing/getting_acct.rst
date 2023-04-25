@@ -21,7 +21,7 @@ authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into
 
 If your project hasn't been added to Nightingale yet, your PI needs to make a request for a project to be created for it. Once the form is completed they should get a response in a couple of days.
 
-- **To create a project group**, use this form `<https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>` (authenticating with your NCSA identity)_
+- **To create a project group**, use this form `(authenticating with your NCSA identity) <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_
 
 **3. Request Nightingale Access**
 

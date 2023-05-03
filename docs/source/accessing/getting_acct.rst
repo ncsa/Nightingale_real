@@ -20,13 +20,15 @@ authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into
 Discuss Your Project With Nightingale Management
 ----------------------------------------------------
 
-Before getting your project added to the Nightingale system, you will need to discuss your project, its needs, your expectations, and what Nightingale access can get you.  To begin that conversation, please fill out `the NCSA XRAS <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_.  Someone from the Nightingale project will contact you via email within a few days of filling out this form.  That person will begin the process of creating your project group.  During that process, *you* will be responsible for:
+Before getting your project added to the Nightingale system, you will need to discuss your project, its needs, your expectations, and what Nightingale access can get you.  To begin that conversation, please fill out `the NCSA XRAS <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_.  Someone from the Nightingale project will contact you via email within a few days of filling out this form.  That person will begin the process of creating your project group.  
+
+During that process, *you* will be responsible for:
 
 * Becoming part of the NCSA HIPAA Covered Entity
 
-  * this in turn involves taking training specific 
+  * this will involve taking training specific to the type of data that you'll be handling on Nightingale
   
-  * you may need to submit your training certificate to a web for to become part of the covered entity
+  * you may need to submit your training certificate to a web form to become part of the covered entity
 
 * Making sure all devices that you will log into Nightingale from have an encrypted hard drive
 

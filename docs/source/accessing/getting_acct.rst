@@ -15,19 +15,20 @@ If you don’t remember your password, you can reset it on the `NCSA Identity an
 - **To create an NCSA identity**, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_
 
 **Note:** In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor 
-authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. (This is not the same as the University of Illnois's Duo.)
+authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. (This is not the same as the University of Illnois's Duo.).  When you enroll in NCSA Duo, it's **very important** create and save two backup codes to use in case you lose your Duo device.  
 
-Request Project Group
-----------------------------
+Discuss Your Project With Nightingale Management
+----------------------------------------------------
 
-If your project hasn't been added to Nightingale yet, your PI needs to make a request for a project to be created for it. Once the form is completed they should get a response in a couple of days.
+Before getting your project added to the Nightingale system, you will need to discuss your project, its needs, your expectations, and what Nightingale access can get you.  To begin that conversation, please fill out `the NCSA XRAS <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_.  Someone from the Nightingale project will contact you via email within a few days of filling out this form.  That person will begin the process of creating your project group.  During that process, *you* will be responsible for:
+* Becoming part of the NCSA HIPAA Covered Entity
+  * this in turn involves taking training specific 
+  * you may need to submit your training certificate to a web for to become part of the covered entity
+* Making sure all devices that you will log into Nightingale from have an encrypted hard drive
 
-- **To create a project group**, use this form `(authenticating with your NCSA identity) <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_
+The following will be happening on Nightingale on your behalf 
+* Your project group will be created
+* your project may be assigned a node or part of a node (interactive node access)
+* your project may be granted access to the batch computing system (batch system access)
 
-Someone from the Nightingale project will contact you via email within a few days of filling out this form.  They will begin the process.  You will then receive emails pointing you to things like: 
 
-- Taking training appropriate for your project
-- Becoming part of the NCSA HIPAA Covered Entity
-- Having your project group created
-
-After that happens, you (or your PI) will need to create your login account attached to your project group, and then you'll have access to Nightingale.  

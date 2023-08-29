@@ -199,7 +199,7 @@ System Reservations
 --------------------
 
 Please note, the system will periodically be unavailable to start jobs. 
-There are 3 scheduled system maintenance periods every year in January, 
+There are three scheduled system maintenance periods every year in January, 
 May, and August. Other unscheduled, emergency downtimes may occur for 
 important system software security updates or due to a hardware failure.
 If there is a downtime there will be a reservation in SLURM to prevent 

@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'NCSA Nightingale'
+project = 'Nightingale User Documentation'
 copyright = '2022, University of Illinois'
 author = 'NCSA'
 

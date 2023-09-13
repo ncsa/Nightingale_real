@@ -39,7 +39,7 @@ The Nightingale cluster resides in the NCSA National Petascale Facility and is a
    user_guide/file_mgmt
    user_guide/software
    programming_environment
-   running_jobs/index
+   user_guide/running_jobs
    user_guide/visualization
    user_guide/containers
    user_guide/protected_data

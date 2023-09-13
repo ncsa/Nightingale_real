@@ -14,7 +14,7 @@ Software
 Installed Software
 -------------------
 
-The table below shows the core software and libraries available on Nightingale. You can use `module commands <modules>`_ to add this software to your
+The table below shows the core software and libraries available on Nightingale. You can use module commands (see :ref:`modules`) to add this software to your
 software environment.
 
 ===========        ========================
@@ -29,6 +29,8 @@ MATLAB             9.7
 Miniconda          2022.05  (python 3.9.12)
 R                  4.2.0
 ===========        ========================
+
+.. _modules:
 
 Using Modules
 --------------
@@ -149,7 +151,7 @@ or::
 
    module avail miniconda3
 
-See `Using Modules <modules>`_ for more information about modules.
+See :ref:`modules` for more information about modules.
 
 Installing Python Packages (in user specified locations)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -230,7 +232,7 @@ The latest version of R available on the Nightingale can be loaded into your env
 
    module load R
 
-To load a specific version, you will need to load the corresponding module. (See `Using Modules <modules>`_ for more information about modules.)
+To load a specific version, you will need to load the corresponding module. (See :ref:`modules` for more information about modules.)
 
 Installing Add-on Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

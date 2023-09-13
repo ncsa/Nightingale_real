@@ -3,11 +3,11 @@
     This page is soon to be the Nightingale official documentation page, but right now the documentation is undergoing its final revisions before deployemnt. Please refer to the `wiki documentation <https://wiki.ncsa.illinois.edu/display/USSPPRT/Nightingale+Cluster+User+Guide>`_ until it is complete.
    
 #####################################
-NCSA Nightingale User Guide
+Nightingale User Documentation
 #####################################
 
-.. image:: ACHE_cage_2.jpg
-   :scale: 20 %
+.. image:: images/ACHE_cage_2.jpg
+   :width: 700px
    :alt: Seven racks of computers in a server room
    
 **Nightingale** is a high-performance compute cluster for sensitive data offering researchers a secure system for data storage and powerful computation. NCSA experts manage the complex requirements surrounding sensitive data, taking the burden off the user so they can focus on their research. The system complies with the Health Insurance Portability and Accountability Act (HIPAA) privacy and security rules for using Protected Health Information (PHI). Nightingale is not limited to the health domain and accommodates projects that require this amount of security or less, such as compliance with Controlled Unclassified Information (CUI) policies. 

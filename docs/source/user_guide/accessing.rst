@@ -317,3 +317,12 @@ A second window will pop up asking for your 2FA code.  Open your Duo app, click 
 Then the screen will bring up a black window but without a prompt.  You may need to wait 30 seconds or a minute here.  Then it will ask you for your password.  You will type your NCSA password again.  **It will not echo the characters back; you must type it blind**.  
 
 Then you should have a prompt at the bottom, and a file window on the left showing your directories on Nightingale, and you're ready to work.  
+
+Account Administration
+------------------------
+
+On Nightingale there is an approval process for adding users to the system. To start the process, contact `help@ncsa.illinois.edu <mailto:help@ncsa.illinois.edu>`_.
+
+Other account and project administration tasks, such as resetting your password, are 
+managed by the NCSA Identity and Group Management tools. Please see the 
+`NCSA Allocation and Account Management documentation page <https://wiki.ncsa.illinois.edu/display/USSPPRT/NCSA+Allocation+and+Account+Management>`_ for more information.

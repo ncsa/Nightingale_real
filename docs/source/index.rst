@@ -21,23 +21,25 @@ The Nightingale cluster resides in the NCSA National Petascale Facility and is a
    `Using an HPC Cluster for Scientific Applications <https://www.hpc-training.org/xsede/moodle/mod/book/view.php?id=4296>`_ 
    before continuing with this user guide.
 
-Contents
-===========
-
 .. toctree::
+   :maxdepth: 2
+   :hidden:
 
    status_updates
-   architecture
-   fee_overview
+   help
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guide
+
+   user_guide/architecture
+   user_guide/fee_overview
    accessing/index
-   citizenship
+   user_guide/citizenship
    file_mgmt/index
    software/index
    programming_environment
    running_jobs/index
-   visualization
-   containers
-   protected_data
-   help
-
-
+   user_guide/visualization
+   user_guide/containers
+   user_guide/protected_data

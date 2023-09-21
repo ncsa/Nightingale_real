@@ -44,29 +44,29 @@ follows.
 Click on the "Session" button near the upper left of the Moba Xterm
 window.
 
-..  image:: ./ng_mxt_session_button.gif
+..  image:: ../../user_guide/images/accessing/ng_mxt_session_button.gif
 
 This brings up a "Session settings" window. Click "SSH" in the very
 upper left corner of that window.
 
-..  image:: ./XC_01_select_ssh.png
+..  image:: ../../user_guide/images/accessing/XC_01_select_ssh.png
 
 This will populate the lower part of the window. Insert **the name of
 your interactive node** into the "Remote host" blank. Click on "specifiy
 username" as below. The username will have "<default"> in the blank, as
 here:
 
-..  image:: ./XC_specify_host_username.png
+..  image:: ../../user_guide/images/accessing/XC_specify_host_username.png
 
 Replace <default> with your own username. This is what it looks like,
 using my username "csteffen":
 
-..  image:: ./XC_specify_host_username2.png
+..  image:: ../../user_guide/images/accessing/XC_specify_host_username2.png
 
 In the lower part of the window, click on the "Network settings" tab.
 Once there, click "SSH gateway (jump host" in the middle.
 
-..  image:: ./XC_network_settings.png
+..  image:: ../../user_guide/images/accessing/XC_network_settings.png
 
 This will bring up yet another configuration window. Put
 "ngale-bastion-1.ncsa.illinois.edu" in the "Gateway host" box (no matter
@@ -77,7 +77,7 @@ bastion host node: Put your NCSA username in the "Username" box.
 
 so that it looks like this:
 
-..  image:: ./XC_jump_host_filled_in.png
+..  image:: ../../user_guide/images/accessing/XC_jump_host_filled_in.png
 
 Then click "Ok". Back in the Session settings, now click "OK" at the
 bottom. This should open a new tab in your overall Moba Xterm window

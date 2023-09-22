@@ -15,7 +15,7 @@ Create an NCSA Identity
 
 Before requesting Nightingale access, both PIs and individual users need an NCSA identity. **Skip this step if you already have an NCSA identity**; if you don't remember your password, you can reset it on the `NCSA Identity and Access Management webpage <https://identity.ncsa.illinois.edu/>`_.
 
-To create an NCSA identity, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the "Register New User and Join" button.
+To create an NCSA identity, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the **Register New User and Join** button.
 
 In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. **This is not the same as the University of Illinois' Duo**. 
 
@@ -157,7 +157,9 @@ Accessing Nightingale using a VPN
 
 If you log into Nightingale from the University of Illinois campus, you don't need to use a Virtual Private Network (VPN). To access Nightingale from off campus, you will need to set up and activate a VPN first. A VPN sends your network traffic over an encrypted channel to a server on a different network, making your traffic originate within that other network. In this case, traffic will effectively originate inside of the University of Illinois, which adds an additional level of security and protection for your connection.  
 
-There are two VPN services that will allow you to log into Nightingale from off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not associated directly with UIUC. If you have trouble setting up or using either of these VPNs, or have questions, please submit a ticket (:ref:`help`).  
+There are two VPN services that will allow you to log into Nightingale from off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not associated directly with UIUC. 
+
+If you have trouble setting up or using either of these VPNs, or have questions, please submit a ticket (:ref:`help`).  
 
 .. note::
 

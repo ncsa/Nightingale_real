@@ -9,9 +9,9 @@ Nightingale uses a Lustre shared filesystem on all of its nodes. Lustre is an ob
 The table below describes the location, purpose, and quota policy for the storage areas available on Nightingale's filesystem. More information about these storage areas is described in the following sections.
 
 ============== ============= ===========================
-Nightingale Storage Areas
+             Nightingale Storage Areas
 --------------------------------------------------------
-Location       Purpose       Quota Policy
+  Location       Purpose       Quota Policy
 ============== ============= ===========================
 /u             home          50GB
 /projects      projects      1TB (more can be purchased)
@@ -52,7 +52,7 @@ The /dataset area contains curated, read-only datasets typically exported from a
 Transferring Files
 -------------------
 
-Copying project data to your home directory
+Copying Project Data to Your Home Directory
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You will not work directly on your group's curated project data in the /datasets directory. Instead, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
@@ -95,7 +95,7 @@ You will not work directly on your group's curated project data in the /datasets
       cd ~/my_covid_data/covid_1
       ls
 
-Copying files onto Nightingale using SCP
+Copying Files onto Nightingale Using SCP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 SCP (Secure Copy) is an application that gives users a secure way to copy files between machines over an unsecured network. Its syntax is similar to that of SSH used to log into a remote machine.
@@ -108,7 +108,7 @@ Since Nightingale has a bastion host which all network traffic travels through, 
 
    scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01:.
    
-Copying files onto Nightingale using AWS S3 Buckets
+Copying Files onto Nightingale Using AWS S3 Buckets
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To use AWS S3 Buckets you must first configure the service. Run the command ``aws configure`` and answer its prompts for the following data:
@@ -120,7 +120,7 @@ To use AWS S3 Buckets you must first configure the service. Run the command ``aw
 
 Copy files from the bucket using::
 
-Copying files off of Nightingale
+Copying Files off of Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any method that can transfer data onto Nightingale can also be used to transfer information off of the machine. 
@@ -136,7 +136,7 @@ File Transfers with Globus
 
 Globus is a web-based file transfer system that works in the background to move files between systems with "Globus Endpoints". Nightingale will have a permanent Globus Endpoint (with a name announced at that time). To transfer files to and from your directories using Globus, you will have to authenticate that endpoint, using your already-existing NCSA username, password, and NCSA Duo account. 
 
-One-time Setup
+One-Time Setup
 ~~~~~~~~~~~~~~~~
 
 You will need to set up a separate account on globus.org, that will have a username and a separate password. To use Globus to transfer files to and from Nightingale, you will need to "link" your new Globus account with your NCSA identity. 

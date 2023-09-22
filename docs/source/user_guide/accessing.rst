@@ -6,7 +6,7 @@ Accessing the System
 Getting an Account
 -------------------
 
-To access Nightingale, your project needs to have a "project group" set up with access to Nightingale, and associated with the various resources that you need to use. The project's Principal Investigator (PI) sets up the project group, and the PI's user login account will be the first login account attached to the project group. The PI must have an NCSA Identity (username and password) or get one, and request access from Nightingale administrators. This page covers that process.  
+To access Nightingale, your project needs to have a *project group* set up with access to Nightingale, and associated with the various resources that you need to use. The project's Principal Investigator (PI) sets up the project group, and the PI's user login account will be the first login account attached to the project group. The PI must have an NCSA Identity (username and password) or get one, and request access from Nightingale administrators. This page covers that process.  
 
 The project PI will need to follow the process of creating the project group, and themselves go through the training process and be added to the HIPAA Covered Entity. Other users on the project will just need to follow the training and Covered Entity process. This page covers both processes.  
 
@@ -15,16 +15,20 @@ Create an NCSA Identity
 
 Before requesting Nightingale access, both PIs and individual users need an NCSA identity. **Skip this step if you already have an NCSA identity**; if you don't remember your password, you can reset it on the `NCSA Identity and Access Management webpage <https://identity.ncsa.illinois.edu/>`_.
 
-To create an NCSA identity, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the **Register New User and Join** button.
+To create an NCSA identity, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the "Register New User and Join" button.
 
-In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. **This is not the same as the University of Illinois' Duo**. When you enroll in NCSA Duo, it is **very important** to create and save two backup codes to use in case you lose your Duo device.  
+In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. **This is not the same as the University of Illinois' Duo**. 
+
+.. note::
+   
+   When you enroll in NCSA Duo, it is very important to create and save two backup codes to use in case you lose your Duo device.  
 
 Discuss Your Project with Nightingale Management
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **Individual users don't need to follow this step.**  Before getting your project added to the Nightingale system, a PI will need to discuss your project, its needs, your expectations, and what Nightingale access can get you. To begin that conversation, please fill out the `NCSA XRAS <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_. Someone from the Nightingale project will contact you via email within a few days of filling out this form. That person will begin the process of creating your project group.  
 
-After your project group is created, Nightingale administrators will create your data storage directories and project group name. The PI will find out about these steps via email. Your group will be assigned an interactive node (shared or exclusive) to log into, and/or if you have batch system access, you'll be assigned a "charge account" to assign your jobs to.  
+After your project group is created, Nightingale administrators will create your data storage directories and project group name. The PI will find out about these steps via email. Your group will be assigned an interactive node (shared or exclusive) to log into, and/or if you have batch system access, you'll be assigned a *charge account* to assign your jobs to.  
 
 Being Added to Nightingale Access
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,20 +51,26 @@ Logging Onto Nightingale
 Once you have obtained an account on Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you'll first log onto Nightingale's secure node and then log onto a general access login node or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
 
-**Secure Node Hostname**
+Node Hostnames
+~~~~~~~~~~~~~~~
+
+Secure Node Hostname
+$$$$$$$$$$$$$$$$$$$$$$
 
 .. code-block::
 
    ngale-bastion-1.ncsa.illinois.edu 
 
-**General Access Login Nodes Hostnames**
+General Access Login Nodes Hostnames
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 .. code-block::
 
    ng-login01.ngale.internal.ncsa.edu
    ng-login02.ngale.internal.ncsa.edu
 
-**Specialized Interactive Node Hostname**
+Specialized Interactive Node Hostname
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 .. code-block::
 
@@ -78,8 +88,8 @@ General Log in Process
 
 You can log onto Nightingale by following these steps:
 
-#. If not on campus, **connect to the campus VPN**. `Instructions for installing the campus VPN <https://answers.uillinois.edu/illinois/98773>`_.
-#. **SSH to the secure node** ngale-bastion-1.ncsa.illinois.edu.
+#. If not on campus, connect to the campus VPN. `Instructions for installing the campus VPN <https://answers.uillinois.edu/illinois/98773>`_.
+#. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu.
    
    Sample SSH command line to log into the secure node where <username> is the username for your NCSA identity:
    
@@ -87,9 +97,9 @@ You can log onto Nightingale by following these steps:
 
       ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
-#. **Enter your NCSA username and password** (you won't see the characters you type for your password).
-#. Enter '1' to **send a push to the NCSA Duo app** on your smartphone.
-#. **Approve the push request on your phone.**
+#. Enter your NCSA username and password (you won't see the characters you type for your password).
+#. Type ``1`` to send a push to the NCSA Duo app on your smartphone.
+#. Approve the push request on your phone.
 
    After you've approved the push, you'll be at a prompt on the ngale-bastion-1 node that will look similar to:
    
@@ -97,7 +107,7 @@ You can log onto Nightingale by following these steps:
 
       [csteffen@ngale-bastion-1 ~]$
 
-#. **SSH to your login node** using the appropriate hostname (see above) following this syntax:
+#. SSH to your login node using the appropriate hostname (see above) following this syntax:
    
    .. code-block::
 
@@ -111,7 +121,7 @@ You can log onto Nightingale by following these steps:
    
    In this case, you would have been specifically told that "ng-biology03" is the node to use for your computations.
 
-   The two commands above can be combined into one by specifying the bastion host as a "jump" host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.
+   The two commands above can be combined into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.
    
    .. code-block::
 
@@ -151,7 +161,7 @@ There are two VPN services that will allow you to log into Nightingale from off 
 
 .. note::
 
-   If your login method freezes when you try to log into Nightingale, this may be your problem.  Please try one of these VPN methods.  
+   If your login freezes when you try to log into Nightingale, this may be your problem.  Please try one of these VPN methods.  
 
 University of Illinois VPN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -176,7 +186,7 @@ If you want to use an application from Nightingale and have its windows on your 
 One-time SSH Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Open the "Terminal" application on your Mac. That presents a black window to you that you can type commands into. At the prompt, type ``cd ~/.ssh`` and then hit **return** or **enter** (in these instructions, **return** and **enter** are interchangeable).  
+Open the "Terminal" application on your Mac. That presents a black window to you that you can type commands into. At the prompt, type ``cd ~/.ssh`` and then hit **return** or **Enter** (in these instructions, **return** and **Enter** are interchangeable).  
 
 Type ``nano config`` and hit **return**. This will bring you into an editor program that looks like this:
 
@@ -232,7 +242,7 @@ For example, a user with username "hirop" with the assigned node "ng-gpu-x07" wo
       ProxyJump ngb1
       User hirop
       
-Once you have finished editing the file, hit **control-o** to write the file. Hit **enter** to confirm the file name. Then hit **control-x** to exit the editor, and you are back at the prompt.  
+Once you have finished editing the file, hit **control-O** to write the file. Hit **return** to confirm the file name. Then hit **control-X** to exit the editor, and you are back at the prompt.  
       
 Logging Into Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -243,13 +253,13 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
    ``ssh -X ng-login01``
 
-   You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?". You may safely type "yes" then **enter**.  
+   You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?". You may safely type ``yes`` then hit **return**.  
 
 #. You'll be asked for a password. Enter your NCSA (kerberos) password. You **won't see your characters** echoed back to the screen; just type it blindly.  
 
 #. You'll see a Duo prompt asking for a passcode or for "option 1". You may either:
 
-   - Type "1", then your phone Duo will ask you for login confirmation. 
+   - Type ``1``, then your phone Duo will ask you for login confirmation. 
    
    Or 
 
@@ -281,58 +291,56 @@ This section is the one-time setup on your Windows machine so that it can connec
 #. `Download MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ and install it on your Windows workstation. 
 
    You can install either the Portable or Installer edition of MobaXterm. You'll need to have admin privileges to install the Installer edition. 
-   The Portable edition does not require admin privileges, to use it just extract the downloaded zip file and click mobaxterm.exe.
+   The Portable edition does not require admin privileges, to use it just extract the downloaded zip file and click **mobaxterm.exe**.
 
-#. Launch the MobaXterm application and click the "Session" button in the upper left of the window to start an SSH session.
+#. Launch the MobaXterm application and click the **Session** button in the upper left of the window to start an SSH session.
 
    ..  image:: images/accessing/ng_mxt_session_button.gif
        :alt: MobaXterm initial window with Session button circled.
-       :width: 200
 
-#. Select 'SSH' from the session types displayed and click the "OK" button. 
+#. Select **SSH** from the session types displayed and click the **OK** button. 
 
    ..  image:: images/accessing/XC_01_select_ssh.png
        :alt: MobaXterm Session window with SSH button circled.
-       :width: 600
 
    You'll now see an area titled 'Basic SSH Settings.' 
 
    ..  image:: images/accessing/XC_specify_host_username.png
        :alt: MobaXterm Session window with Basic SSH Settings area displayed.
-       :width: 600
 
-#. In the remote host text box, enter the name of the login node you want to access (either a general access or interactive node). Then check the box 'Specify username' and enter your NCSA Identity username as shown in the following example. 
+#. In the **Remote host** text box, enter the name of the login node you want to access (either a general access or interactive node). Then check the **Specify username** box and enter your NCSA Identity username as shown in the following example. 
 
    ..  image:: images/accessing/XC_specify_host_username2.png
        :alt: MobaXterm Session window with Basic SSH Settings filled in.
-       :width: 600
 
-#. Click the 'Network settings' tab and then click the "SSH gateway (jump host)" button.
+#. Click the **Network settings** tab and then click the **SSH gateway (jump host)** button.
 
    ..  image:: images/accessing/XC_network_settings.png
        :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button displayed.
-       :width: 600
 
-#. In the configuration window displayed, enter "ngale-bastion-1.ncsa.illinois.edu" in the 'Gateway host' box and your NCSA username in the 'Username' box. Then click the "OK" button. You may see a warning message saying that your remote host identification has changed; click the "Yes" button to continue.
+#. In the configuration window displayed, enter ``ngale-bastion-1.ncsa.illinois.edu`` in the **Gateway host** box and your NCSA username in the **Username** box. Then click the **OK** button. 
+
+   You may see a warning message saying that your remote host identification has changed; click the **Yes** button to continue.
 
    ..  image:: images/accessing/XC_jump_host_filled_in.png
        :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
-       :width: 800
 
-#. You should now be back in the Session settings window. Click the "OK" button to initiate your SSH connection. A terminal window will be displayed asking for your password; enter your password and hit **enter**.
+#. You should now be back in the Session settings window. Click the **OK** button to initiate your SSH connection. A terminal window will be displayed asking for your password; enter your password and hit **Enter**.
 
 Logging Into Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the above, one-time, steps are complete, follow the below steps each time you want to log into Nightingale to work.
 
-#. Open up MobaXterm. In the left bar, there is a list of 'user sessions'.  Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select "execute". 
+#. Open up MobaXterm. In the left bar, there is a list of 'user sessions'.  Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select **execute**. 
 
-#. A window will pop up, asking for your password. This is your NCSA password. As you type it, you'll see a row of "*********". Hit **enter** or click "OK".
+#. A window will pop up, asking for your password. This is your NCSA password. As you type it, you'll see a row of *************. Hit **Enter** or click **OK**.
 
-#. A second window will pop up asking for your 2FA code. Open your Duo app, click on the "NCSA" entry (not the "University of Illinois" entry) and type the 6-digit code you see into the window.  As with the password above, you'll see it as ******.  
+#. A second window will pop up asking for your 2FA code. Open your Duo app, click on the "NCSA" entry (not the "University of Illinois" entry) and type the 6-digit code you see into the window.  As with the password above, you'll see it as **********.  
 
-#. The screen will bring up a black window but without a prompt. You may need to wait 30 seconds or a minute here. Then it will ask you for your password. You'll type your NCSA password again. You **won't see your characters** echoed back to the screen; just type it blindly.
+#. The screen will bring up a black window without a prompt. You may need to wait 30 seconds or a minute here. 
+
+   Then it will ask you for your password. You'll type your NCSA password again. You **won't see your characters** echoed back to the screen; just type it blindly.
 
 #. You should have a prompt at the bottom, and a file window on the left showing your directories on Nightingale, and you are ready to work.  
 

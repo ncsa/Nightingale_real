@@ -6,7 +6,7 @@ Accessing the System
 Getting an Account
 -------------------
 
-To access Nightingale, your project needs to have a *project group* set up with access to Nightingale, and associated with the various resources that you need to use. The project's Principal Investigator (PI) sets up the project group, and the PI's user login account will be the first login account attached to the project group. The PI must have an NCSA Identity (username and password) or get one, and request access from Nightingale administrators. This page covers that process.  
+To access Nightingale, your project needs to have a *project group* set up with access to Nightingale, and associated with the various resources that you need to use. The project's Principal Investigator (PI) sets up the project group, and the PI's user login account will be the first login account attached to the project group. The PI must have an NCSA Identity (username and password), or get one, and request access from Nightingale administrators. This page covers that process.  
 
 The project PI will need to follow the process of creating the project group, and themselves go through the training process and be added to the HIPAA Covered Entity. Other users on the project will just need to follow the training and Covered Entity process. This page covers both processes.  
 
@@ -51,6 +51,8 @@ Logging Onto Nightingale
 Once you have obtained an account on Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log onto Nightingale's secure node and then log onto a general access login node or, for groups that have them, a specialized interactive node. The hostnames for these login nodes are listed below.
 
+.. _node_hostnames:
+
 Node Hostnames
 ~~~~~~~~~~~~~~~
 
@@ -76,11 +78,11 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
    ng-<yourgroup>01.ngale.internal.ncsa.edu
 
-where ng-<yourgroup>01 is the name of your allocation group. 
+where *ng-<yourgroup>01* is the name of your allocation group. 
 
 .. note::
 
-   - Your principal investigator can inform you if your allocation has a specialized interactive node and its hostname.
+   - Your PI can inform you if your allocation has a specialized interactive node and if so, its hostname.
    - All Nightingale users have access to the general access login nodes. Please be aware that these nodes are a shared resource for all system users, and you should limit your use of them to editing, compiling, and building your programs.
 
 General Log in Process
@@ -88,10 +90,10 @@ General Log in Process
 
 You can log onto Nightingale by following these steps:
 
-#. If you are not on campus, connect to the campus VPN. `Instructions for installing the campus VPN <https://answers.uillinois.edu/illinois/98773>`_.
-#. SSH to the secure node ngale-bastion-1.ncsa.illinois.edu.
+#. If you are not on campus, connect to the University of Illinois VPN or NCSA VPN (see :ref:`access_vpn`).
+#. SSH to the secure node ``ngale-bastion-1.ncsa.illinois.edu``.
    
-   Sample SSH command line to log into the secure node where <username> is the username for your NCSA identity:
+   Sample SSH command line to log into the secure node where *<username>* is your NCSA identity username:
    
    .. code-block::
 
@@ -107,7 +109,7 @@ You can log onto Nightingale by following these steps:
 
       [csteffen@ngale-bastion-1 ~]$
 
-#. SSH to your login node using the appropriate hostname (see above) following this syntax:
+#. SSH to your login node using the appropriate hostname (see :ref:`node_hostnames`) following this syntax:
    
    .. code-block::
 
@@ -138,7 +140,7 @@ Microsoft Windows
 ~~~~~~~~~~~~~~~~~~~
 
 You can use the built-in SSH Client in Windows (version 10 and above) or select from several freely available third-party SSH clients. 
-These typically provide a Graphical User Interface rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice, `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
+These typically provide a graphical user interface (GUI) rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice, `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
 
 Mac OS X
 ~~~~~~~~~
@@ -151,6 +153,8 @@ Linux
 
 The Linux operating system has SSH built into it. You use the Linux terminal application to connect via SSH. 
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Linux.
+
+.. _access_vpn:
 
 Accessing Nightingale using a VPN
 -----------------------------------
@@ -168,7 +172,7 @@ If you have trouble setting up or using either of these VPNs, or have questions,
 University of Illinois VPN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and 2FA.  
+If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and two-factor authentication(2FA).  
 
 NCSA VPN
 ~~~~~~~~~
@@ -186,7 +190,9 @@ If you want to use an application from Nightingale and have its windows on your 
 One-time SSH Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#. Open the "Terminal" application on your Mac. That presents a black window that you can type commands into. At the prompt, type ``cd ~/.ssh`` and then hit **return** or **Enter** (in these instructions, **return** and **Enter** are interchangeable).  
+#. Open the **Terminal** application on your Mac; that presents a black window that you can type commands into. 
+
+#. At the prompt, type ``cd ~/.ssh`` and then hit **return** or **Enter** (in these instructions, **return** and **Enter** are interchangeable).  
 
 #. Type ``nano config`` and hit **return**. This will bring you into an editor program that looks like this:
 
@@ -255,11 +261,11 @@ Logging Into Nightingale
       
 Once the above, one-time, steps are complete, follow the below steps each time you want to log into Nightingale to work.
 
-#. Type the following at the prompt (if you are logging into an interactive node, replace "ng-login01" with the name of that active node):
+#. Type the following at the prompt (if you are logging into an interactive node, replace "ng-login01" with the name of that interactive node):
 
    ``ssh -X ng-login01``
 
-   You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?". You may safely type ``yes`` then hit **return**.  
+   You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?" You may safely type ``yes`` then hit **return**.  
 
 #. Enter your NCSA (kerberos) password at the prompt. You **won't see your characters** echoed back to the screen; just type it blindly.  
 
@@ -271,7 +277,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
    - Enter a 6-digit password from the **NCSA** entry of your Duo app.  
 
-#. Again enter your NCSA password at the prompt. You again won't see it echoed to the screen; just type it blindly.  
+#. Again enter your NCSA password at the prompt. You again **won't see your characters** echoed to the screen; just type it blindly.  
 
 #. You should now be at a prompt that reflects that you are on a Nightingale node. You will know this because the prompt (the bottom line in your terminal or SSH window) will contain the name of the machine you are working on, and that should begin with "ng-" for "NightinGale". It will look something like this: 
 
@@ -284,7 +290,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 Connecting with MobaXterm (for users connecting from Windows machines)
 ------------------------------------------------------------------------
 
-You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale node using SSH. 
+You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
 MobaXterm enables an SSH connection and provides other useful utilities you can use when communicating with a cluster, such as file transfer and editing.
 
 Follow the steps below to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly more complicated than other HPC clusters. The difference involves adding the SSH connection to the secure bastion node; this is described in Steps 5 and 6.
@@ -297,7 +303,7 @@ This section is the one-time setup on your Windows machine so that it can connec
 #. `Download MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ and install it on your Windows workstation. 
 
    You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges to install the Installer edition. 
-   The Portable edition does not require admin privileges, to use it just extract the downloaded zip file and click **mobaxterm.exe**.
+   The Portable edition does not require admin privileges, to use it just **extract** the downloaded zip file and click **mobaxterm.exe**.
 
 #. Launch the MobaXterm application and click the **Session** button in the upper left of the window to start an SSH session.
 
@@ -309,7 +315,7 @@ This section is the one-time setup on your Windows machine so that it can connec
    ..  image:: images/accessing/XC_01_select_ssh.png
        :alt: MobaXterm Session window with SSH button circled.
 
-   You will now see an area titled 'Basic SSH Settings.' 
+   You will now see an area titled **Basic SSH Settings**. 
 
    ..  image:: images/accessing/XC_specify_host_username.png
        :alt: MobaXterm Session window with Basic SSH Settings area displayed.
@@ -331,14 +337,14 @@ This section is the one-time setup on your Windows machine so that it can connec
    ..  image:: images/accessing/XC_jump_host_filled_in.png
        :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
 
-#. You should now be back in the **Session settings** window. Click the **OK** button to initiate your SSH connection. A terminal window will be displayed asking for your password; enter your password and hit **Enter**.
+#. You should now be back in the **Session settings** window. Click the **OK** button to initiate your SSH connection. A terminal window will be displayed asking for your password; enter your NCSA (kerberos) password and hit **Enter**.
 
 Logging Into Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Once the above, one-time, steps are complete, follow the below steps each time you want to log into Nightingale to work.
 
-#. Open up MobaXterm. In the left bar, there is a list of 'user sessions'. Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select **execute**. 
+#. Open up MobaXterm. In the left bar, there is a list of **User sessions**. Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select **execute**. 
 
 #. A window will pop up, asking for your password. Enter your NCSA password. As you type it, you will see a row of *************. Hit **Enter** or click **OK**.
 

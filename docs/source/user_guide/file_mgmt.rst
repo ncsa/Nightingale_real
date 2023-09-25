@@ -92,7 +92,7 @@ You will not work directly on your group's curated project data in the /datasets
 
       cp -R /datasets/covid_1 ~/my_covid_data
 
-#. To check if you copied the data successfully, enter the commands
+#. To check if you copied the data successfully, enter the commands:
 
    .. code-block::
 
@@ -129,7 +129,11 @@ To use AWS S3 Buckets you must first configure the service. Run the command ``aw
 * Default region name
 * Default output format
 
-Copy files from the bucket using::
+Copy files from the bucket using:
+
+.. code-block::
+
+   aws s3 cp s3://<bucket-name> <local name on nightingale>
 
 Copying Files off of Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

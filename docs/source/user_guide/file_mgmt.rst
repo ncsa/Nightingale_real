@@ -25,14 +25,14 @@ Home
 
 The /u area of the filesystem is where users land upon logging on to the cluster and is where a user’s **$HOME** environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process and there is no additional charge for this storage. 
 
-It is not possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. You will need to delete files to get below the threshold and will not be able to store additional data.
+It is *not* possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. You will need to delete files to get below the threshold and will not be able to store additional data.
 
 Project
 ~~~~~~~~
 
 The /projects area of the filesystem is where group members (whether a single faculty member, a lab group, a department, or an entire college) store their project-related files. A user can have access to multiple project subdirectories if they are a member of multiple groups and have been granted access to the space by the project's Principal Investigator (PI). 
 
-Projects pay a separate charge for this project space and the minimum allocation is 1 TB. Additional space can be purchased as needed.
+Projects pay a separate charge for this project space and the *minimum* allocation is 1 TB. Additional space can be purchased as needed.
 
 User Scratch
 ~~~~~~~~~~~~~
@@ -85,7 +85,7 @@ You will not work directly on your group's curated project data in the /datasets
 
    .. code-block::
 
-      cd ~/<your_data_folder_name>
+      cd ~/<your_data_folder_name>/<filename>
       ls
 
    Using the example in the previous step, the commands would be:
@@ -169,7 +169,7 @@ Once your identity is linked (above), then do the following to transfer files us
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.23.26-PM-768x299.png
       :alt: Globus authentication/consent required prompt.
 
-#. If Globus prompts you to link your netid@illinois.edu identity, go ahead and do so. You will need provide your NCSA Duo authority here.  
+#. If Globus prompts you to link your netid@illinois.edu identity, go ahead and do so. You will need to provide your NCSA Duo authority here.  
 
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.51.47-PM-768x280.png
       :alt: Globus link your @illinois.edu identity prompt.
@@ -177,12 +177,12 @@ Once your identity is linked (above), then do the following to transfer files us
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.52.00-PM-768x657.png
       :alt: Globus Web App authorization prompt
 
-#. You should then be returned to the **File Manger** view. You can navigate from there to your home directory, under /u, or to your project directory, under /projects.  
+#. You should then be returned to the **File Manger** view. You can navigate from there to your home directory, under **/u**, or to your project directory, under **/projects**.  
 
    .. image:: images/file_mgmt/ng_globus_system_dir.png
       :alt: Globus file manager view showing home and project directories.
 
-#. In a similar manner (in the right half of the **File Manger** view), search for and authenticate to the collection you are planning to transfer data to/from. Then use the GUI to transfer the data; you can choose transfer settings. Also on the left is a button to view your current transfer activity
+#. In a similar manner (in the right half of the **File Manger** view), search for and authenticate to the collection you are planning to transfer data to/from. Then use the GUI to transfer the data; you can choose transfer settings. You can click on the **Activity* button on the left to view your current transfer activity.
 
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.39.22-PM-1024x141.png
       :alt: Globus file manager tansfer window.
@@ -191,9 +191,9 @@ Creating and Editing Files
 ---------------------------
 
 Sometimes, it is easiest to create and edit your files directly on the cluster rather than transfer them back and forth. 
-You can use various programs on clusters for working with plain text files. Examples include vi/vim, gedit, nano, and emacs. 
+You can use various programs on clusters for working with plain text files; examples include vi/vim, gedit, nano, and emacs. 
 The vi/vim text editor is one of the most commonly used. However, if you are new to working in the Linux environment, the nano editor is recommended because it may be more similar to how you edit text files on a non-Linux-based machine. 
-Several tutorials are available online if you want to know more about nano or vi. A couple of suggestions are listed below.
+Several tutorials are available online if you want to know more about nano or vi; a couple of suggestions are listed below.
 
 - `How-to-Geek: The Beginner’s Guide to Nano, the Linux Command-Line Text Editor <https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/>`_
 
@@ -227,10 +227,10 @@ Organizing Files
 ------------------
 
 How you organize your files depends on how the directory structure is set up on your cluster and possibly guidelines set up by your project manager. 
-However, there are some basic goals you should keep in mind.
+However, there are some basic goals you should keep in mind:
 
 - File names should be logical so that you can find them a week from now, a month from now, and a year from now. Data that cannot be found later is not worth nearly as much as data you can quickly locate. When storing your files to an archive, organize them with this goal in mind so they are stored logically and can be accessed easily. 
  
-- Use Tar, Winzip, or similar file-bundling software to create a single file from a directory tree, and then store that file. The name of that bundled file should clearly indicate what files are bundled within.
+- Use Tar, Winzip, or a similar file-bundling software to create a single file from a directory tree, and then store that file. The name of that bundled file should clearly indicate what files are bundled within.
  
 - In an archival storage site, apply meaningful names to files and directories so you or your colleagues can navigate back to the data when needed. It is up to you to decide what works best.

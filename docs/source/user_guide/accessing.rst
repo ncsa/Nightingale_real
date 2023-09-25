@@ -172,7 +172,7 @@ If you have trouble setting up or using either of these VPNs, or have questions,
 University of Illinois VPN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and two-factor authentication(2FA).  
+If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and two-factor authentication (2FA).  
 
 NCSA VPN
 ~~~~~~~~~
@@ -182,7 +182,7 @@ If you don't have a University of Illinois NetID, you will need to use the `NCSA
 Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS machines)
 ----------------------------------------------------------------------------------------
 
-One-time X-windows Software Install
+One-time X Window Software Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download it here <https://www.xquartz.org/>`_. Most users of Nightingale will want to do this.  
@@ -344,15 +344,15 @@ Logging Into Nightingale
 
 Once the above, one-time, steps are complete, follow the below steps each time you want to log into Nightingale to work.
 
-#. Open up MobaXterm. In the left bar, there is a list of **User sessions**. Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select **execute**. 
+#. Open **MobaXterm**. 
+
+#. In the left bar, there is a list of **User sessions**. Each one is a node that you configured above for logging in. Mouse over the Nightingale node you want to log into, right click, and in the resulting menu, select **execute**. 
 
 #. A window will pop up, asking for your password. Enter your NCSA password. As you type it, you will see a row of *************. Hit **Enter** or click **OK**.
 
-#. A second window will pop up asking for your 2FA code. Open your Duo app, click on the "NCSA" entry (not the "University of Illinois" entry) and type the 6-digit code you see into the window.  As with the password above, you will see it as **********.  
+#. A second window will pop up asking for your 2FA code. Open your **Duo app**, click on the **NCSA** entry (not the *University of Illinois* entry), and type the 6-digit code displayed in the Duo app into the window. As with the password, you will see it as **********.  
 
-#. The screen will bring up a black window without a prompt. You may need to wait 30 seconds or a minute here. 
-
-   Then it will ask for your password. Enter your NCSA password again. You **won't see your characters** echoed back to the screen; just type it blindly.
+#. The screen will bring up a black window without a prompt. **You may need to wait 30 seconds or a minute here.** Then it will ask for your password. Enter your NCSA password. You **won't see your characters** echoed back to the screen; just type it blindly.
 
 #. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale. You are now ready to work.  
 

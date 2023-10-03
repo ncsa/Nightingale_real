@@ -76,14 +76,14 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 .. code-block::
 
-   ng-<yourgroup>01.ngale.internal.ncsa.edu
+   NODENAME.ngale.internal.ncsa.edu
 
-where *ng-<yourgroup>01* is the name of your allocation group. 
+where NODENAME will be something of the form *ng-ai22* or *ng-gpu-h35* or *ng-gpu-m37*. 
 
 .. note::
 
    - Your PI can inform you if your allocation has a specialized interactive node and if so, its hostname.
-   - All Nightingale users have access to the general access login nodes. Please be aware that these nodes are a shared resource for all system users, and you should limit your use of them to editing, compiling, and building your programs.
+   - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). Please be aware that these nodes are a shared resource for all system users, and you should limit your use of them to editing, compiling, and building your programs.
 
 General Log in Process
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -123,11 +123,11 @@ You can log onto Nightingale by following these steps:
    
    In this case, you would have been specifically told that "ng-biology03" is the node to use for your computations.
 
-   The two commands above can be combined into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "login01" directly without logging into the bastion host first.
+   The two commands above can be combined into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "astro07" directly without logging into the bastion host first.
    
    .. code-block::
 
-      ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-login01
+      ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-astro07
 
 SSH Clients
 ------------

@@ -28,7 +28,7 @@ Discuss Your Project with Nightingale Management
 
 **Individual users don't need to follow this step.**  Before getting your project added to the Nightingale system, a PI will need to discuss your project, its needs, your expectations, and what Nightingale access can get you. To begin that conversation, please fill out the `NCSA XRAS <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_. Someone from the Nightingale project will contact you via email within a few days of filling out this form. That person will begin the process of creating your project group.  
 
-After your project group is created, Nightingale administrators will create your data storage directories and project group name. The PI will find out about these steps via email. Your group will be assigned an *interactive node* (shared or exclusive) to log into, and/or if you have batch system access, you will be assigned a *charge account* to assign your jobs to.  
+After your project group is created, Nightingale administrators will create your data storage directories and project group name. The PI will find out about these steps via email. Your group will be assigned an *interactive node* (shared or exclusive) to log into in the informational email to the PI, and/or if you have batch system access, you will be assigned a *charge account* to assign your jobs to.  
 
 Being Added to Nightingale Access
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,9 +113,9 @@ You can log onto Nightingale by following these steps:
    
    .. code-block::
 
-      ssh <your_username>@ng-<yourgroup>01
+      ssh <your_username>@ng-<node_type><node_number>
 
-   For example, if your username is "hirop" and your group name is "biology", then your SSH command would be:
+   For example, if your username is "hirop" and your group name is "biology", then your SSH command might be:
    
    .. code-block::
 

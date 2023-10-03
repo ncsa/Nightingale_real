@@ -115,13 +115,13 @@ You can log onto Nightingale by following these steps:
 
       ssh <your_username>@ng-<node_type><node_number>
 
-   For example, if your username is "hirop" and your group name is "biology", then your SSH command might be:
+   For example, if your username is "hirop" and the node name is "CPU", then your SSH command might be:
    
    .. code-block::
 
-      ssh hirop@ng-biology03
+      ssh hirop@ng-CPU03
    
-   In this case, you would have been specifically told that "ng-biology03" is the node to use for your computations.
+   In this case, you would have been specifically told that "ng-CPU03" is the node to use for your computations.
 
    The two commands above can be combined into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "astro07" directly without logging into the bastion host first.
    

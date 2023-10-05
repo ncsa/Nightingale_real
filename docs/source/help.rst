@@ -5,7 +5,7 @@ Getting Help
 =============
 
 If you have questions or need help with using Nightingale, please email help@ncsa.illinois.edu. Start the subject
-line with "NIGHTINGALE" and then a few words about what you need. For example, "NIGHTINGALE: SPSS package isn't working." 
+line with "NIGHTINGALE" and then a few words about what you need. For example, "NIGHTINGALE: SPSS application isn't working." 
 
 In your message body, provide as much information as you can to help us understand your problem. 
 You will receive a reply saying a ticket has been created.

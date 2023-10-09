@@ -38,7 +38,7 @@ The /u area of the filesystem is where users land upon logging on to the cluster
 
 It is *not* possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. You will need to delete files to get below the threshold and will not be able to store additional data.
 
-Project
+Projects
 ~~~~~~~~
 
 The /projects area of the filesystem is where group members (whether a single faculty member, a lab group, a department, or an entire college) store their project-related files. A user can have access to multiple project subdirectories if they are a member of multiple groups and have been granted access to the space by the project's Principal Investigator (PI). 
@@ -58,15 +58,15 @@ The /tmp area is a local filesystem on an individual compute node and is not par
 Datasets
 ~~~~~~~~~~
  
-The /dataset area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.
+The /datasets area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.
 
 Transferring Files
 -------------------
 
-Copying Project Data to Your Home Directory
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Copying Project Data to Home, Scratch, or Projects 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You will not work directly on your group's curated project data in the /datasets directory. Instead, you will need to copy the data from the original directory to your home directory.  Follow the steps below.
+You will not work directly on your group's curated project data in the /datasets directory. Instead, you will need to copy the data from the original directory to your home, scratch, or projects directory.  Follow the steps below to copy a dataset to your home directory:
 
 #. Enter the ``cd`` command to go your home directory.
 
@@ -105,6 +105,11 @@ You will not work directly on your group's curated project data in the /datasets
 
       cd ~/my_covid_data/covid_1
       ls
+
+Use the steps above to copy a dataset to your scratch or projects directory with the below modifications:
+
+- In step 1 above, navigate to your scratch or projects directory using the ``cd`` command.
+- In steps 3 and 4 above, replace the ``~`` with the path to your scratch or projects directory.
 
 Copying Files onto Nightingale Using SCP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

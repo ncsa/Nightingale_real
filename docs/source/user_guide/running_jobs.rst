@@ -201,47 +201,30 @@ See the ``sbatch`` man page for additional environment variables available.
 System Reservations
 $$$$$$$$$$$$$$$$$$$$$
 
-Please note, the system will periodically be unavailable to start jobs. 
-There are three scheduled system maintenance periods every year in January, 
-May, and August. Other unscheduled, emergency downtimes may occur for 
-important system software security updates or due to a hardware failure.
-If there is a downtime there will be a reservation in SLURM to prevent 
-jobs from starting if they would not be complete before the interruption 
-begins.
+The system will periodically be unavailable to start jobs. 
+**When you log into Nightingale any upcoming system interruptions are listed in the message of the day.**
+There are three *scheduled* system maintenance periods every year in January, May, and August. 
+Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure.
+For a downtime, there will be a reservation in Slurm to prevent jobs from starting if the jobs would not be complete before the downtime begins.
 
-If a reservation is blocking your job from starting the squeue command 
-will show a message like (ReqNodeNotAvail, Reserved for maintenance) 
-for your job. You can shorten the runtime of your job to fit in before 
-the reservation starts to avoid the reservation.
-
-When you log into Nightingale any upcoming system interruptions are 
-listed in the message of the day.
+If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like **ReqNodeNotAvail, Reserved for maintenance** for your job. 
+You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
 
 Sample Batch Scripts
 $$$$$$$$$$$$$$$$$$$$$$
 
-When using Slurm to run your software on the Nightingale compute
-nodes, job instructions and run commands are organized into a
-"batch script". This page gives you hints about composing your own batch
-scripts for Slurm on Nightingale, and it also has some basic batch scripts
-you may copy and use as templates for your own batch scripts. To use the
-examples on this page, we assume that you generally know how to write a
-shell scripts and how they work.
+When using Slurm to run your software on the Nightingale compute nodes, job instructions and run commands are organized into a "batch script". The below example scripts will give you hints about composing your own batch scripts for Slurm on Nightingale. You can copy and use the examples as templates for your own batch scripts.
 
-By default, when your batch script is run, it has copies of all the
-environment variables that existed in your shell when you submit (sbatch-ed)
-the batch script to the SLURM batch system. You can control the job behavior
-this way.
+By default, when your batch script is run, it has copies of all the environment variables that existed in your shell when you submitted the batch script to the Slurm batch system. You can control the job behavior this way.
 
-Below is a sample batch script that just runs a single serial application
-(hostname). Hostname is not an application that you'd normally run; it's
-here because it's a harmless example that does something very quickly
-and then exits. If you run this script, though, and it works, then you
-know that you have a working script and you can build from there.
-Typically you'd replace "hostname" which some application code that you
-wanted to run to do work on the compute node.
+Below is a sample batch script that runs a single serial application (hostname). Hostname is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits. If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Typically you would replace "hostname" with some application code that you wanted to run to do work on the compute node.
 
-::
+.. raw:: html
+
+   <details>
+   <summary><a><b>Sample Serial Job Batch Script</b> <i>(click to expand/collapse)</i></a></summary>
+
+.. code-block::
 
    #!/bin/bash                                                                                                                                                                                               
    ###############################################################################                                                                                                                           
@@ -292,12 +275,19 @@ wanted to run to do work on the compute node.
    # Run the serial code                                                                                                                                                                                     
    hostname
 
-| 
+.. raw:: html
 
-The following is a batch script that runs a code in parallel, with a couple of other
-features that are useful in batch jobs:
+   </details>
+|
 
-::
+The following is a batch script that runs a code in parallel, with a couple of other features that are useful in batch jobs:
+
+.. raw:: html
+
+   <details>
+   <summary><a><b>Sample Parallel Job Batch Script</b> <i>(click to expand/collapse)</i></a></summary>
+
+.. code-block::
 
    #!/bin/bash
    ###############################################################################
@@ -362,197 +352,143 @@ features that are useful in batch jobs:
    # set end time stamp
    touch application_end_time
 
+.. raw:: html
+
+   </details>
 | 
 
-
-
 Additional sample batch scripts are available on Nightingale in the following directory:
-::
+
+.. code-block::
 
   /sw/apps/NUS/slurm/sample/batchscripts
 
-
+.. _interactive:
 
 srun (command line)
 $$$$$$$$$$$$$$$$$$$$$
 
-.. _interactive:
+Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**.
 
-interactive batch job
-$$$$$$$$$$$$$$$$$$$$$$
+Projects that have dedicated interactive nodes, do not need to go through the scheduler. Members of these projects just log in directly to thier nodes.
 
-Rather than queuing up a batch job to run on the compute nodes, you can request
-that the job scheduler allocate you to a compute node **now**, and to log 
-you onto it. These are called interactive batch jobs.
+To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing ``ALL_ACCT``, with the name of your allocation account:
 
-Projects that have dedicated interactive nodes, do not need to go through
-the scheduler. Members of these projects just login directly to thier nodes.
+.. code-block::
 
-To launch an interactive batch job using the job scheduler with the default
-values for the job resources(nodes,cores,memory,etc ...), run
-the following command:
+   srun -A ALL_ACCT --pty bash 
 
-::
+.. warning::
+   End the interactive job as soon as you're done, by typing ``exit``. If you leave the job running, even if you are not running any processes, your allocation account is being charged for the time.
 
-   srun -A usrsvc --pty bash 
+To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing ``ACCT_NAME`` with the name of your charge account:
 
-(You'll need change "usrsvc" in that command to the name of your
-allocation account.)
-
-**Warning**: be sure to end the interactive job as soon as you're done (by typing 
-*exit*). If you leave the job running, even if you're not running any processes, 
-your allocation account is being charged for the time.
-
-
-To specify resources for your interactive batch job the 
-srun command syntax should look similar to the following:
-::
+.. code-block::
 
   srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash
 
-(where *ACCT_NAME* is the actual name of your charge account) will run an
-interactive batch job in the cpu partition (queue) with a wall clock limit
-of *30 minutes*, using *one node* and *16 cores per node*. You can also use
-other sbatch options such as those documented above.
+This example will run an interactive batch job in the cpu partition (queue) with a wall clock limit of **30 minutes**, using **one node** and **16 cores per node**. You can also use other ``sbatch`` options, such as those documented above.
 
-After you enter the command, you will have to wait for SLURM to start the
-job.  You will see output similar to this:
-::
+After you enter the command, you will have to wait for Slurm to start the job. You will see output similar to this:
 
-  srun: job 123456 queued and waiting for resources
+.. code-block::
 
-
-
-
+   srun: job 123456 queued and waiting for resources
 
 Once the job starts, you will see:
-::
 
-  srun: job 123456 has been allocated resources
+.. code-block::
+
+   srun: job 123456 has been allocated resources
 
 and will be presented with an interactive shell prompt on the launch node. At this point, you can use the appropriate command(s) to start your program.
 
-Again, when you are done with your interactive batch job session, you can use the **exit** command to end the job.
-
+When you are done with your interactive batch job session, you can use the ``exit`` command to end the job.
 
 srun (batch script)
 $$$$$$$$$$$$$$$$$$$$
 
-:raw-html:`<br />` Inside a batch script if you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable. 
-:raw-html:`<br />` :raw-html:`&nbsp`
-:raw-html:`<br />` Ex.
-::
+Inside a batch script if you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable: 
 
-  srun ./a.out
+.. code-block::
 
-:raw-html:`<br />` :raw-html:`&nbsp`
-:raw-html:`<br />` **Note:** By default the total number of copies run, is equal to number cores specified in the batch job resource specification.
-:raw-html:`<br />` :raw-html:`&nbsp`
-:raw-html:`<br />` Users can use the *-n*  flag/option with the *srun* command to specify the number of copies of a program that they would like to run 
-:raw-html:`<br />` keeping in mind that the value for the *-n*  flag/option must be less than or equal to the number of cores specifed for the batch job.
-:raw-html:`<br />` :raw-html:`&nbsp`
-:raw-html:`<br />` Ex. 
-::
+   srun ./a.out
 
-  srun -n 10 ./a.out
+By default, the total number of copies run is equal to number of cores specified in the batch job resource specification.
+You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run keeping in mind that the value for the ``-n``  flag/option must be less than or equal to the number of cores specifed for the batch job.
 
-:raw-html:`<br />` :raw-html:`&nbsp`
+.. code-block::
 
-
-
+   srun -n 10 ./a.out
 
 squeue
 $$$$$$$
 
-The *squeue* command is used to pull up information about the batch jobs submitted
-to the batch system.  By default, the *squeue* command will print out the job ID, 
-partition, username, job status, number of nodes, and name of nodes for all batch
-jobs queued or running within batch system.
+The ``squeue`` command is used to pull up information about the batch jobs submitted to the batch system. By default, the ``squeue`` command will print out the JobID,  partition, username, job status, number of nodes, and name of nodes for all batch jobs queued or running within batch system.
 
-**Commands that display the status of batch jobs**
+Commands that display the status of batch jobs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table:: 
-   :widths: 25 50
-   :header-rows: 1
-   
-   * - SLURM Command
-     - Descriptiton
-   * - :raw-html:`<br />` ``squeue -a`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` List the status of all batch jobs in the batch system.
-   * - :raw-html:`<br />` ``squeue -u $USER`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` List the status of all your batch jobs in the batch system.
-   * - :raw-html:`<br />` ``squeue -j JobID`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` List nodes allocated to a specific running batch job in addition to basic information.
-   * - :raw-html:`<br />` ``scontrol show job JobID`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` List detailed information on a particular batch job.
+============================ ============
+Slurm Command                Description
+============================ ============
+``squeue -a``                List the status of all batch jobs in the batch system.
+``squeue -u $USER``          List the status of all your batch jobs in the batch system.
+``squeue -j JobID``          List nodes allocated to a specific running batch job in addition to basic information.
+``scontrol show job JobID``  List detailed information on a particular batch job.
+============================ ============
 
-Run the command ``man squeue`` to see the other available options.
+See the `squeue` man page for other available options (``man squeue``).
 
 
 sinfo
 $$$$$$
 
-The *sinfo* command is used to view partition and node information for a system running Slurm.
+The ``sinfo`` command is used to view partition and node information for a system running Slurm.
 
-.. list-table:: 
-   :widths: 25 50
-   :header-rows: 1
-   
-   * - SLURM Command
-     - Descriptiton
-   * - :raw-html:`<br />` ``sinfo -a`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` List summary information on all the partitions (queues).
-   * - :raw-html:`<br />` ``sinfo -p PRTN_NAME`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` Print information only about the specified partition(s). Multiple partitions are separated by commas.
++------------------------+----------------------------------------------------------+
+| Slurm Command          | Description                                              |
++========================+==========================================================+
+| ``sinfo -a``           | List summary information on all the partitions (queues). |
++------------------------+----------------------------------------------------------+
+| ``sinfo -p PRTN_NAME`` | Print information only about the specified partition(s). |
+|                        |                                                          |
+|                        | Multiple partitions are separated by commas.             |
++------------------------+----------------------------------------------------------+
 
-
-:raw-html:`<br />` :raw-html:`&nbsp`
 Users can view the partitions(queues) that they have the ability to submit batch jobs to, by typing the following command:
-::
+
+.. code-block::
 
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
     
 Users can also view specific configuration information about the compute nodes associated with their primary partition(s), by typing the following command:
-::
+
+.. code-block::
 
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
 
-
-:raw-html:`<br />` :raw-html:`&nbsp`
-Run the command ``man sinfo`` to see the other available options.
-
-:raw-html:`<br />` :raw-html:`&nbsp`
+See the `sinfo` man page for other available options (``man sinfo``).
 
 scancel
 $$$$$$$
 
-The *scancel* command deletes a queued job or kills a running job.
+The ``scancel`` command deletes a queued job or kills a running job.
 
-.. list-table:: 
-   :widths: 35 50
-   :header-rows: 1
-   
-   * - SLURM Command
-     - Descriptiton
-   * - :raw-html:`<br />` ``scancel JobID`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` To delete/kill a specific batch job
-   * - :raw-html:`<br />` ``scancel JobID01, JobID02`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` To delete/kill multiple batch jobs, use a comma-separated list of JobIDs 
-   * - :raw-html:`<br />` ``scancel -u $USER`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` To delete/kill all your batch jobs (removes all of your batch jobs from the batch system regardless of the batch job's state) 
-   * - :raw-html:`<br />` ``scancel --name JobName`` :raw-html:`<br />`
-       :raw-html:`&nbsp`
-     - :raw-html:`<br />` To delete/kill multiple batch jobs based on the batch job's name
++------------------------------+--------------------------------------------------------------------------+
+| Slurm Command                | Description                                                              |
++==============================+==========================================================================+
+| ``scancel JobID``            | To delete/kill a specific batch job                                      |
++------------------------------+--------------------------------------------------------------------------+
+| ``scancel JobID01, JobID02`` | To delete/kill multiple batch jobs, use a comma-separated list of JobIDs |
++------------------------------+--------------------------------------------------------------------------+
+| ``scancel -u $USER``         | To delete/kill all your batch jobs (removes all of your batch jobs from  |
+|                              |                                                                          |
+|                              | the batch system regardless of the batch job’s state)                    |
++------------------------------+--------------------------------------------------------------------------+
+| ``scancel --name JobName``   | To delete/kill multiple batch jobs based on the batch job’s name         |
++------------------------------+--------------------------------------------------------------------------+
 
-Run the command ``man scancel`` to see the other available options.
+See the `scancel` man page for other available options (``man scancel``).
 
 

@@ -1,47 +1,36 @@
 Running Jobs
 ==============
 
-Introduction
---------------
-
 Many researchers on Nightingale will have access to their own node(s), often called *interactive* nodes. 
 Those specially-dedicated nodes are for that group's use. 
 **If that's the case for you, then you will have specific instructions on how to log into your own interactive node in the Nightingale cluster, and you don't have to worry about the instructions on this page.** 
-If instead of (or in addition to) access to your own *interactive* node, you have access to the shared pool of computational (*compute*) nodes that are part of the Nightingale cluster, this page tells you how to access them.
+If instead of (or in addition to) access to your own interactive node, you have access to the shared pool of computational (*compute*) nodes that are part of the Nightingale cluster, this page describes how to access them.
 
-Batch Queue
-~~~~~~~~~~~~
-
-The shared pool of *compute* nodes is called a batch queue. 
+The shared pool of compute nodes is called a *batch queue*. 
 Jobs you submit to the batch queue wait until there are resources available to run them. 
 Contact your principal investigator (PI) to determine if your group has access to the batch queue on Nightingale and find out what account you should use when submitting batch jobs.
 
-Computational Cluster Benefits
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The computational cluster part of Nightingale is a shared pool of individual computers within Nightingale called nodes that are available for running your software. 
-Because there is more than one compute node on Nightingale, if your application can run on more than one computer at a time, it can potentially run faster. 
-Also, the batch system can run your application as part of a "job", which is a block of instructions that it will execute when there are compute nodes available to do the work. 
-That is, when you have submitted a job to be done, it will execute the instructions in the job without you having to be logged into Nightingale. 
-You can queue up a bunch of jobs, each running a useful calculation, and they will run sometime while you're away. 
-This makes the cluster very efficient at running software that can be broken down into chunks that can each be done by a job. 
-Jobs are typically configured to write their results to a location on disk, and so you can retrieve the results and read them when you next log into Nightingale.
+The compute *cluster* part of Nightingale is a shared pool of nodes available for running your software. Because there is more than one compute node on Nightingale, if your application can run on more than one computer at a time, it can potentially run faster. 
+The batch system can also run your application as part of a *job*, which is a block of instructions that the system will execute when there are compute nodes available to do the work. 
+When you have submitted a job, the system will execute the instructions in the job without you having to be logged into Nightingale. 
+You can queue up multiple jobs, each running a useful calculation, and they will run sometime while you're away. 
+This makes the cluster very efficient at running software that can be broken down into chunks that can each be executed by a job. 
+Jobs are typically configured to write their results to a location on disk, so you can retrieve the results and read them when you next log into Nightingale.
 
 Using Slurm
-------------
+==============
 
-Users access compute nodes for running their work using batch or interactive jobs. 
+Access compute nodes for running your work using *batch* or *interactive* jobs. 
 Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. 
 
 Please be aware that the login node is a shared resource for *all* users of the system and using it should be limited to editing, compiling and building your programs, and for short non-intensive runs.
 
-To ensure the health of the batch system and scheduler, users should refrain from having more than **1,000 batch jobs** in the queues at any one time.
+To ensure the health of the batch system and scheduler, refrain from having more than **1,000 batch jobs** in the queues at any one time.
 
 This section will teach you how to put together a job on Nightingale, submit it to the Nightingale job system, monitor the job, and retrieve the results. 
-The batch scripts below are working examples that can be submitted on Nightingale; they can be copied and modified to suit your specific needs.
 
 Running Programs
-~~~~~~~~~~~~~~~~~
+------------------
 
 On successful building (compilation and linking) of your program, an executable is created that is used to run the program. The table below describes how to run different types of programs.
 
@@ -62,9 +51,9 @@ On successful building (compilation and linking) of your program, an executable 
 +--------------+------------------------------------------------------------+------------------------------+
 
 Nightingale Queues
-~~~~~~~~~~~~~~~~~~~
+--------------------
     
-The current limits in the Nightingale queues are below:
+The current limits of the Nightingale queues are below:
 
 +------------------+----------------+------------------+------------+------------------------+-------------+
 | Queue (partition)| CPUs (per node)| Memory (per node)| Max # Nodes| GPUs                   | Max Walltime|
@@ -81,21 +70,21 @@ The current limits in the Nightingale queues are below:
 +------------------+----------------+------------------+------------+------------------------+-------------+
 
 
-Managing your jobs with Slurm
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Managing Your Jobs with Slurm
+------------------------------
 
 .. note::
-   If you don't have a working knowledge of how to write and test a script, and have a general understanding of how jobs work, but you want to run software on compute nodes, the safest place to start is :ref:`interactive`. If you need help, please submit a support request (:ref:`help`).
+   If you are new to writing and testing scripts, and new to jobs, we recommend starting with :ref:`interactive`. If you need help, please submit a support request (:ref:`help`).
 
 Generally, you will use the below commands to run *batch* jobs. 
 Each batch job is controlled by a script that the compute nodes run when there are enough nodes available. 
-That is, the job will generally run **asynchronously**, so you can log back in and see the output when it's finished. 
+That is, the job will generally run *asynchronously*, so you can log back in and see the output when it's finished. 
 For more detailed information, refer to the individual command man pages.
 
 sbatch
-$$$$$$$
+~~~~~~~
 
-Batch jobs are submitted through a batch script using the ``sbatch`` command. Batch scripts generally start with a series of Slurm directives that describe requirements of the job, such as number of nodes and wall time required, to the batch system/scheduler. Slurm directives can also be specified as options on the sbatch command line; command line options take precedence over those in the script. The rest of the batch script consists of user commands.
+Batch jobs are submitted through a batch script using the ``sbatch`` command. Batch scripts generally start with a series of Slurm directives that describe requirements of the job, such as number of nodes and walltime, to the batch system/scheduler. Slurm directives can also be specified as options on the ``sbatch`` command line; command line options take precedence over those in the script. The rest of the batch script consists of user commands.
 
 The syntax for submitting a batch job with ``sbatch`` is:
 
@@ -103,25 +92,25 @@ The syntax for submitting a batch job with ``sbatch`` is:
 
   sbatch [list of sbatch options] script_name
 
-The main ``sbatch`` options are listed below (also, see the ``sbatch`` man page):
+The main ``sbatch`` options are listed below. See the ``sbatch`` man page for additional information (``man sbatch``).
 
-+-------------------------+----------------------------------------------------------------+
-| Option                  | Description                                                    |
-+=========================+================================================================+
-| ``--time=time``         | time=maximum wall clock time (d-hh:mm:ss) [default: 30 minutes]|
-+-------------------------+----------------------------------------------------------------+
-| ``--nodes=n``           | Total number of nodes for the batch job                        |
-|                         |                                                                |
-|                         | n = number of 64-core nodes *[default: 1 node]                 |
-+-------------------------+----------------------------------------------------------------+
-| ``--ntasks=p``          | Total number of cores for the batch job                        |
-|                         |                                                                |
-|                         | p = number of cores per job to use (1 - 64) [default: 1 core]  |
-+-------------------------+----------------------------------------------------------------+
-| ``--ntasks-per-node=p`` | Number of cores per node                                       |
-|                         |                                                                |
-|                         | p = number of cores per node to use (1 - 64) [default: 1 core] |
-+-------------------------+----------------------------------------------------------------+
++-------------------------+------------------------------------------------------------------+
+| Option                  | Description                                                      |
++=========================+==================================================================+
+| ``--time=time``         | time = maximum wall clock time (d-hh:mm:ss) [default: 30 minutes]|
++-------------------------+------------------------------------------------------------------+
+| ``--nodes=n``           | Total number of nodes for the batch job                          |
+|                         |                                                                  |
+|                         | n = number of 64-core nodes *[default: 1 node]                   |
++-------------------------+------------------------------------------------------------------+
+| ``--ntasks=p``          | Total number of cores for the batch job                          |
+|                         |                                                                  |
+|                         | p = number of cores per job to use (1 - 64) [default: 1 core]    |
++-------------------------+------------------------------------------------------------------+
+| ``--ntasks-per-node=p`` | Number of cores per node                                         |
+|                         |                                                                  |
+|                         | p = number of cores per node to use (1 - 64) [default: 1 core]   |
++-------------------------+------------------------------------------------------------------+
 
 **Example:**
 
@@ -140,7 +129,7 @@ or
    --ntasks-per-node=16
 
 Memory needs
-^^^^^^^^^^^^^^
+$$$$$$$$$$$$$
 
 .. warning::
    Do not use the memory specification unless absolutely required because it could delay scheduling of the job; if nodes with the specified memory are unavailable for the specified queue, the job will **never** run.
@@ -166,7 +155,7 @@ or
    --mem-per-cpu=7375
 
 Accessing the GPUs 
-^^^^^^^^^^^^^^^^^^^
+$$$$$$$$$$$$$$$$$$$$
 
 To gain access to the GPUs within the batch job’s environment, add the resource specification **tesla_a40** (for Tesla A40) or **tesla_a100** (for Tesla A100) to your batch script or on the batch job’s submission line.
 
@@ -186,7 +175,7 @@ In the batch job submission line:
    sbatch … --gres=gpu:tesla_a40 batchscript_name.sbatch
 
 Useful Batch Job Environment Variables
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 ========================= =========================== ===================
 Description               SLURM Environment Variable  Detail Description
@@ -199,7 +188,7 @@ Machine (node) list       ``$SLURM_NODELIST``         Variable name that contain
 See the ``sbatch`` man page for additional environment variables available.
 
 System Reservations
-$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~
 
 The system will periodically be unavailable to start jobs. 
 **When you log into Nightingale any upcoming system interruptions are listed in the message of the day.**
@@ -211,7 +200,7 @@ If a downtime reservation is blocking your job from starting, the ``squeue`` com
 You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
 
 Sample Batch Scripts
-$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~
 
 When using Slurm to run your software on the Nightingale compute nodes, job instructions and run commands are organized into a "batch script". The below example scripts will give you hints about composing your own batch scripts for Slurm on Nightingale. You can copy and use the examples as templates for your own batch scripts.
 
@@ -366,7 +355,7 @@ Additional sample batch scripts are available on Nightingale in the following di
 .. _interactive:
 
 srun (command line)
-$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~
 
 Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**.
 
@@ -406,7 +395,7 @@ and will be presented with an interactive shell prompt on the launch node. At th
 When you are done with your interactive batch job session, you can use the ``exit`` command to end the job.
 
 srun (batch script)
-$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~
 
 Inside a batch script if you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable: 
 
@@ -422,12 +411,12 @@ You can use the ``-n``  flag/option with the ``srun`` command to specify the num
    srun -n 10 ./a.out
 
 squeue
-$$$$$$$
+~~~~~~~
 
 The ``squeue`` command is used to pull up information about the batch jobs submitted to the batch system. By default, the ``squeue`` command will print out the JobID,  partition, username, job status, number of nodes, and name of nodes for all batch jobs queued or running within batch system.
 
 Commands that display the status of batch jobs
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 ============================ ============
 Slurm Command                Description
@@ -438,11 +427,11 @@ Slurm Command                Description
 ``scontrol show job JobID``  List detailed information on a particular batch job.
 ============================ ============
 
-See the `squeue` man page for other available options (``man squeue``).
+See the ``squeue`` man page for other available options (``man squeue``).
 
 
 sinfo
-$$$$$$
+~~~~~~
 
 The ``sinfo`` command is used to view partition and node information for a system running Slurm.
 
@@ -468,10 +457,10 @@ Users can also view specific configuration information about the compute nodes a
 
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
 
-See the `sinfo` man page for other available options (``man sinfo``).
+See the ``sinfo`` man page for other available options (``man sinfo``).
 
 scancel
-$$$$$$$
+~~~~~~~~
 
 The ``scancel`` command deletes a queued job or kills a running job.
 
@@ -489,6 +478,6 @@ The ``scancel`` command deletes a queued job or kills a running job.
 | ``scancel --name JobName``   | To delete/kill multiple batch jobs based on the batch job’s name         |
 +------------------------------+--------------------------------------------------------------------------+
 
-See the `scancel` man page for other available options (``man scancel``).
+See the ``scancel`` man page for other available options (``man scancel``).
 
 

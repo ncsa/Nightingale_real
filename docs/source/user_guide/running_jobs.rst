@@ -20,17 +20,24 @@ You can queue up multiple jobs, each running a useful calculation, and they will
 This makes the cluster very efficient at running software that can be broken down into chunks that can each be executed by a job. 
 Jobs are typically configured to write their results to a location on disk, so you can retrieve the results and read them when you next log into Nightingale.
 
-Slurm
-------------
+Accessing the Compute Nodes
+-----------------------------
 
 Access compute nodes for running your work using *batch* or *interactive* jobs. 
-Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. 
+Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. The `Slurm quick start user guide <https://slurm.schedmd.com/quickstart.html>`_ provides a brief overview for new users.
 
 Please be aware that the login node is a shared resource for *all* users of the system and using it should be limited to editing, compiling and building your programs, and for short non-intensive runs.
 
-To ensure the health of the batch system and scheduler, refrain from having more than **1,000 batch jobs** in the queues at any one time.
+.. note::
+   To ensure the health of the batch system and scheduler, refrain from having more than **1,000 batch jobs** in the queues at any one time.
 
-This page will describe how to put together a job on Nightingale, submit it to the Nightingale job system, monitor the job, and retrieve the results. 
+Batch scripts (sbatch) or Interactive (srun), which is right for you?
+
+- :ref:`sbatch` - Use batch scripts for jobs that are debugged, ready to run, and don't require interaction.
+  Sample Slurm batch job scripts are provided in the :ref:`examples` section.
+  Slurm also supports `job arrays <https://slurm.schedmd.com/job_array.html>`_ for easy management of a set of similar jobs.
+
+- :ref:`srun` - For interactive use of a compute node, srun will run a single command through Slurm on a compute node. srun blocks, it will wait until Slurm has scheduled compute resources, and when it returns, the job is complete.
 
 Running Programs
 ------------------
@@ -72,6 +79,17 @@ The current limits of the Nightingale queues are below:
 | a100x2           | 64             | 512GB            | 1          | Tesla A100 : 2         | 7 days      |
 +------------------+----------------+------------------+------------+------------------------+-------------+
 
+System Reservations
+---------------------
+
+The system will periodically be unavailable to start jobs. 
+**When you log into Nightingale any upcoming system interruptions are listed in the message of the day.**
+There are three *scheduled* system maintenance periods every year in January, May, and August. 
+Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure.
+For a downtime, there will be a reservation in Slurm to prevent jobs from starting if the jobs would not be complete before the downtime begins.
+
+If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like **ReqNodeNotAvail, Reserved for maintenance** for your job. 
+You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
 
 Managing Your Jobs with Slurm
 ------------------------------
@@ -83,6 +101,8 @@ Generally, you will use the below commands to run *batch* jobs.
 Each batch job is controlled by a script that the compute nodes run when there are enough nodes available. 
 That is, the job will generally run *asynchronously*, so you can log back in and see the output when it's finished. 
 For more detailed information, refer to the individual command man pages.
+
+.. _sbatch:
 
 sbatch
 ~~~~~~~
@@ -190,22 +210,15 @@ Machine (node) list       ``$SLURM_NODELIST``         Variable name that contain
 
 See the ``sbatch`` man page for additional environment variables available.
 
-System Reservations
-~~~~~~~~~~~~~~~~~~~~
+.. _srun:
 
-The system will periodically be unavailable to start jobs. 
-**When you log into Nightingale any upcoming system interruptions are listed in the message of the day.**
-There are three *scheduled* system maintenance periods every year in January, May, and August. 
-Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure.
-For a downtime, there will be a reservation in Slurm to prevent jobs from starting if the jobs would not be complete before the downtime begins.
-
-If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like **ReqNodeNotAvail, Reserved for maintenance** for your job. 
-You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
+srun
+~~~~~~
 
 .. _interactive:
 
-srun (command line)
-~~~~~~~~~~~~~~~~~~~~~
+command line
+$$$$$$$$$$$$$$$
 
 Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**.
 
@@ -244,8 +257,8 @@ and will be presented with an interactive shell prompt on the launch node. At th
 
 When you are done with your interactive batch job session, you can use the ``exit`` command to end the job.
 
-srun (batch script)
-~~~~~~~~~~~~~~~~~~~~~
+batch script
+$$$$$$$$$$$$$$
 
 Inside a batch script if you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable: 
 
@@ -327,8 +340,10 @@ The ``scancel`` command deletes a queued job or kills a running job.
 
 See the ``scancel`` man page for other available options (``man scancel``).
 
+.. _examples:
+
 Sample Batch Scripts
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 When using Slurm to run your software on the Nightingale compute nodes, job instructions and run commands are organized into a "batch script". The below example scripts will give you hints about composing your own batch scripts for Slurm on Nightingale. You can copy and use the examples as templates for your own batch scripts.
 

@@ -2,15 +2,17 @@ Software
 ==========
 
 .. note::
-   You are allowed to install software in spaces you have access to (home, projects).
+   You are allowed to install software in spaces you have write-access to (home, projects).
    When installing any software you should consider the following:
 
    - Home directory disk usage quotas.
    - Will the software be used by multiple users in my group?
-     Project space is the **recommended** location to install software.
+     Project space is the *recommended* location to install software.
    - Does the desired software have dependencies/requirements?
    - Is the prerequisite software installed?
- 
+
+.. _installed:
+
 Installed Software
 -------------------
 
@@ -20,13 +22,13 @@ You can use module commands (:ref:`modules`) to add this software to your softwa
 ===========        ========================
 Software           Version
 ===========        ========================
-Anaconda           2022.05  (python 3.9.12)
+Anaconda           2022.05  (Python 3.9.12)
 awscli             2.4.16
 Cuda               11.4.2
 GCC                12.2.0
 Julia              4.3.2
 MATLAB             9.7
-Miniconda          2022.05  (python 3.9.12)
+Miniconda          2022.05  (Python 3.9.12)
 R                  4.2.0
 ===========        ========================
 
@@ -114,7 +116,7 @@ Introduction
 Python is an interpreted, high-level, general-purpose programming language. Python and Python packages are available via `Python Package Index (PyPI) <https://pypi.org/>`_, which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. 
 
 Anaconda also provides a Python environment with python packages. Anaconda is a free, open-source distribution of the Python and R programming languages. 
-Anaconda (ver 2022.05) and Miniconda (ver 2022.05) are installed on Nightingale. 
+Anaconda and Miniconda are installed on Nightingale. 
 One of the main differences between Anaconda and Minconda is the number of packages: 
 
 - Anaconda, by default, installs with over 150 data science packages. 
@@ -126,14 +128,7 @@ Anaconda and Miniconda include Conda, which is a package manager and environment
 Versions
 ~~~~~~~~~
 
-The table below lists the versions of Python installed on Nightingale.
-     
-.. list-table:: 
-
-   * - Anaconda 2022.05:
-     - Python 3.9.12
-   * - Miniconda 2022.05: 
-     - Python 3.9.5
+See :ref:`installed` for the versions Anaconda, Miniconda, and Python installed on Nightingale.
 
 Adding Python To Your Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -225,13 +220,7 @@ R is easily extensible through functions and extensions. The R community is note
 Versions
 ~~~~~~~~~
 
-The table below lists the versions of R currently installed on Nightingale.
-
-+---------+
-| Version |
-+=========+
-| R 4.2.0 |
-+---------+
+See :ref:`installed` for the versions of R installed on Nightingale.
 
 Adding R to Your Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

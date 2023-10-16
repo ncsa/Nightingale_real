@@ -87,11 +87,11 @@ The table below shows the most common module commands you will use on Nightingal
 |                    |                                                                               |
 |                    | can set up your account so that they are loaded every time you log in without |
 |                    |                                                                               |
-|                    | having to use the ``module load`` command each time.                          |
+|                    | having to use the ``module load`` command each time:                          |
 |                    |                                                                               |
-|                    | First load the modulefiles you always want to have loaded.                    |
+|                    | #. Load the modulefiles you always want to have loaded.                       |
 |                    |                                                                               |
-|                    | Then type ``module save``.                                                    |
+|                    | #. Type ``module save``.                                                      |
 |                    |                                                                               |
 |                    | The system will save your current module list as your default. When you log   |
 |                    |                                                                               |
@@ -181,7 +181,9 @@ To deactivate the anaconda environment type:
 
   conda deactivate
 
-To create a complete clone anaconda environment, replace:
+To create a complete clone anaconda environment, 
+
+   replace:
 
    .. code-block::
 
@@ -283,8 +285,7 @@ Install the local package (``'package_name.tar.gz'``) into the specified locatio
 
   install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
 
-.. note::
-   When the installation location and the repository URL are not specified, R packages are installed in a default location, and the R installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local filename and omitting the repository URL (specifying NULL).
+When the installation location and the repository URL are not specified, R packages are installed in a default location, and the R installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local filename and omitting the repository URL (specifying NULL).
 
 Using Rscript
 ~~~~~~~~~~~~~~
@@ -294,7 +295,7 @@ You can use the ``rscript`` command to run R commands without starting an R sess
 The example below shows step-by-step the commands you can run on Nightingale. In these steps, **~/Rlibs** is used for the location to install user-specific add-on packages. The tilde **~** means the user's home directory (**$HOME**).
 
 .. note::
-   These examples use the BASH shell. The command syntax may differ when using a different shell.
+   This example use the BASH shell. The command syntax may differ when using a different shell.
 
 #. Set the HTTPS_PROXY environment variable (if you have not already done so):
 

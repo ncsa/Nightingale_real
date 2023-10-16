@@ -22,15 +22,25 @@ You can use module commands (:ref:`modules`) to add this software to your softwa
 ===========        ========================
 Software           Version
 ===========        ========================
-Anaconda           2022.05  (Python 3.9.12)
-awscli             2.4.16
-Cuda               11.4.2
-GCC                12.2.0
-Julia              4.3.2
-MATLAB             9.7
-Miniconda          2022.05  (Python 3.9.12)
-R                  4.2.0
+Anaconda_          2022.05  (Python 3.9.12)
+awscli_            2.4.16
+Cuda_              11.4.2
+GCC_               12.2.0
+Julia_             4.3.2
+MATLAB_            9.7
+Miniconda_         2022.05  (Python 3.9.12)
+R_                 4.2.0
 ===========        ========================
+
+
+.. _awscli: https://aws.amazon.com/cli/
+.. _Cuda: https://docs.nvidia.com/cuda/archive/11.4.2/
+.. _GCC: https://gcc.gnu.org/onlinedocs/12.2.0/
+.. _Julia: https://juliahub.com/ui/Packages/General/RegistryCI/4.3.2
+.. _MATLAB: https://www.mathworks.com/help/?s_tid=gn_supp
+.. _Anaconda: https://docs.anaconda.com/free/anaconda/reference/release-notes/#anaconda-2022-05-may-10-2022
+.. _Miniconda: https://docs.conda.io/projects/miniconda/en/latest/index.html
+.. _R: https://cran.r-project.org/bin/windows/base/old/4.2.0/NEWS.R-4.2.0.html
 
 .. _modules:
 

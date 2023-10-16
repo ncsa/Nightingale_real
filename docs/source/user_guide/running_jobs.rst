@@ -1,5 +1,5 @@
-Running Jobs
-==============
+Running Jobs with Slurm
+=========================
 
 Many researchers on Nightingale will have access to their own node(s), often called *interactive* nodes. 
 Those specially-dedicated nodes are for that group's use. 
@@ -18,7 +18,7 @@ This makes the cluster very efficient at running software that can be broken dow
 Jobs are typically configured to write their results to a location on disk, so you can retrieve the results and read them when you next log into Nightingale.
 
 Using Slurm
-==============
+------------
 
 Access compute nodes for running your work using *batch* or *interactive* jobs. 
 Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. 
@@ -27,7 +27,7 @@ Please be aware that the login node is a shared resource for *all* users of the 
 
 To ensure the health of the batch system and scheduler, refrain from having more than **1,000 batch jobs** in the queues at any one time.
 
-This section will teach you how to put together a job on Nightingale, submit it to the Nightingale job system, monitor the job, and retrieve the results. 
+This page will describe how to put together a job on Nightingale, submit it to the Nightingale job system, monitor the job, and retrieve the results. 
 
 Running Programs
 ------------------

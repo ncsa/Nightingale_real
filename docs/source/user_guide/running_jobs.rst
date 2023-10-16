@@ -1,4 +1,4 @@
-Running Jobs with Slurm
+Running Jobs
 =========================
 
 Many researchers on Nightingale will have access to their own node(s), often called *interactive* nodes. 
@@ -17,7 +17,7 @@ You can queue up multiple jobs, each running a useful calculation, and they will
 This makes the cluster very efficient at running software that can be broken down into chunks that can each be executed by a job. 
 Jobs are typically configured to write their results to a location on disk, so you can retrieve the results and read them when you next log into Nightingale.
 
-Using Slurm
+Slurm
 ------------
 
 Access compute nodes for running your work using *batch* or *interactive* jobs. 

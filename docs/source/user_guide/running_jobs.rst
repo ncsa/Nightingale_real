@@ -354,8 +354,8 @@ Additional sample batch scripts are available on Nightingale in the following di
 
   /sw/apps/NUS/slurm/sample/batchscripts
 
-Sample Serial Job Batch Script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Serial Job
+~~~~~~~~~~~~~
 
 Below is a sample batch script that runs a single serial application (**hostname**). Hostname is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits. If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Replace **hostname** with some application code that you wanted to run to do work on the compute node.
 
@@ -420,8 +420,8 @@ Below is a sample batch script that runs a single serial application (**hostname
    </details>
 |
 
-Sample Parallel Job Batch Script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Parallel Job 
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following is a batch script that runs a code in parallel, with a couple of other features that are useful in batch jobs:
 

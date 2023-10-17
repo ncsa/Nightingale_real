@@ -4,10 +4,10 @@ Running Jobs
 Introduction
 -------------
 
-Many researchers on Nightingale will have access to their own node(s), often called *interactive* nodes. 
-Those specially-dedicated nodes are for that group's use. 
-**If that's the case for you, then you will have specific instructions on how to log into your own interactive node in the Nightingale cluster, and you don't have to worry about the instructions on this page.** 
-If instead of (or in addition to) access to your own interactive node, you have access to the shared pool of computational (*compute*) nodes that are part of the Nightingale cluster, this page describes how to access them.
+.. note::
+   Many researchers on Nightingale have access to their own node(s), often called *interactive* nodes, specially dedicated for a group's use. 
+   **If that's the case for you, then you will have specific instructions on how to log into your own interactive node in the Nightingale cluster, and you don't have to worry about the instructions on this page.** 
+   If instead of (or in addition to) access to your own interactive node, you have access to the shared pool of computational (*compute*) nodes that are part of the Nightingale cluster, this page describes how to access them.
 
 The shared pool of compute nodes is called a *batch queue*. 
 Jobs you submit to the batch queue wait until there are resources available to run them. 
@@ -16,49 +16,46 @@ Contact your principal investigator (PI) to determine if your group has access t
 The compute *cluster* part of Nightingale is a shared pool of nodes available for running your software. Because there is more than one compute node on Nightingale, if your application can run on more than one computer at a time, it can potentially run faster. 
 The batch system can also run your application as part of a *job*, which is a block of instructions that the system will execute when there are compute nodes available to do the work. 
 When you have submitted a job, the system will execute the instructions in the job without you having to be logged into Nightingale. 
-You can queue up multiple jobs, each running a useful calculation, and they will run sometime while you're away. 
+You can queue up multiple jobs, and they will run sometime while you're away. 
 This makes the cluster very efficient at running software that can be broken down into chunks that can each be executed by a job. 
-Jobs are typically configured to write their results to a location on disk, so you can retrieve the results and read them when you next log into Nightingale.
+Jobs are typically configured to write their results to a location on disk, so you can retrieve the results when you next log into Nightingale.
 
 Accessing the Compute Nodes
 -----------------------------
 
-Access compute nodes for running your work using *batch* or *interactive* jobs. 
+The *login* node is a shared resource for all users and login node use should be limited to editing, compiling and building your programs, and for short *non-intensive* runs.
+Access *compute* nodes for running your work using *batch* or *interactive* jobs. 
 Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. The `Slurm quick start user guide <https://slurm.schedmd.com/quickstart.html>`_ provides a brief overview for new users.
 
-Please be aware that the login node is a shared resource for *all* users of the system and using it should be limited to editing, compiling and building your programs, and for short non-intensive runs.
-
 .. note::
-   To ensure the health of the batch system and scheduler, refrain from having more than **1,000 batch jobs** in the queues at any one time.
+   To ensure the health of the batch system and scheduler, avoid having more than **1,000 batch jobs** in the queues at any one time.
 
-Batch scripts (sbatch) or Interactive (srun), which is right for you?
+Batch scripts (``sbatch``) or Interactive (``srun``), which is right for you?
 
 - :ref:`sbatch` - Use batch scripts for jobs that are debugged, ready to run, and don't require interaction.
   Sample Slurm batch job scripts are provided in the :ref:`examples` section.
   Slurm also supports `job arrays <https://slurm.schedmd.com/job_array.html>`_ for easy management of a set of similar jobs.
 
-- :ref:`srun` - For interactive use of a compute node, srun will run a single command through Slurm on a compute node. srun blocks, it will wait until Slurm has scheduled compute resources, and when it returns, the job is complete.
+- :ref:`srun` - For interactive use of a compute node, srun will run a single command through Slurm on a compute node. srun blocks; it will wait until Slurm has scheduled compute resources and when it returns, the job is complete.
 
 Running Programs
 ------------------
 
-On successful building (compilation and linking) of your program, an executable is created that is used to run the program. The table below describes how to run different types of programs.
+On successful building (compilation and linking) of your program, an executable is created that is used to run the program. The table below describes how to run different program types.
 
-+--------------+------------------------------------------------------------+------------------------------+
-| Program Type | How to Run the Program/Executable                          | Example Command              |
-+==============+============================================================+==============================+
-| Serial       | To run serial code, specify the name of the executable.    | ``./a.out``                  |
-+--------------+------------------------------------------------------------+------------------------------+
-| OpenMP       | The **OMP_NUM_THREADS** environment variable can be set    | ``export OMP_NUM_THREADS=16``|
-|              |                                                            |                              |
-|              | to specify the number of threads used by OpenMP programs.  |                              |
-|              |                                                            |                              |
-|              | If this variable is not set, the number of threads used    |                              |
-|              |                                                            |                              |
-|              | defaults to the number of cores available on the node.     |                              |
-+              +------------------------------------------------------------+------------------------------+
-|              | To run OpenMP programs, specify the name of the executable.| ``./a.out``                  |
-+--------------+------------------------------------------------------------+------------------------------+
++--------------+------------------------------------------------------------------------------+------------------------------+
+| Program Type | How to Run the Program/Executable                                            | Example Command              |
++==============+==============================================================================+==============================+
+| Serial       | To run serial code, specify the name of the executable.                      | ``./a.out``                  |
++--------------+------------------------------------------------------------------------------+------------------------------+
+| OpenMP       | The **OMP_NUM_THREADS** environment variable can be set to specify the       | ``export OMP_NUM_THREADS=16``|
+|              |                                                                              |                              |
+|              | number of threads used by OpenMP programs. If this variable is not set, the  |                              |
+|              |                                                                              |                              |
+|              | number of threads used defaults to the number of cores available on the node.|                              |
++              +------------------------------------------------------------------------------+------------------------------+
+|              | To run OpenMP programs, specify the name of the executable.                  | ``./a.out``                  |
++--------------+------------------------------------------------------------------------------+------------------------------+
 
 Nightingale Queues
 --------------------
@@ -95,19 +92,22 @@ Managing Your Jobs with Slurm
 ------------------------------
 
 .. note::
-   If you are new to writing and testing scripts, and new to jobs, we recommend starting with :ref:`interactive`. If you need help, please submit a support request (:ref:`help`).
+   If you are new to writing and testing scripts, and new to jobs, we recommend starting with interactive batch jobs (see :ref:`interactive`). If you need help, please submit a support request (:ref:`help`).
 
 Generally, you will use the below commands to run *batch* jobs. 
 Each batch job is controlled by a script that the compute nodes run when there are enough nodes available. 
 That is, the job will generally run *asynchronously*, so you can log back in and see the output when it's finished. 
-For more detailed information, refer to the individual command man pages.
+For more detailed information, refer to the individual command `man pages <https://en.wikipedia.org/wiki/Man_page>`_.
 
 .. _sbatch:
 
 sbatch
 ~~~~~~~
 
-Batch jobs are submitted through a batch script using the ``sbatch`` command. Batch scripts generally start with a series of Slurm directives that describe requirements of the job, such as number of nodes and walltime, to the batch system/scheduler. Slurm directives can also be specified as options on the ``sbatch`` command line; command line options take precedence over those in the script. The rest of the batch script consists of user commands.
+Batch jobs are submitted through a batch script using the ``sbatch`` command. 
+Batch scripts generally start with a series of Slurm directives that describe requirements of the job to the batch system/scheduler, such as number of nodes and walltime. 
+Slurm directives can also be specified as options on the ``sbatch`` command line; command line options take precedence over those in the script. 
+The rest of the batch script consists of user commands.
 
 The syntax for submitting a batch job with ``sbatch`` is:
 
@@ -115,22 +115,22 @@ The syntax for submitting a batch job with ``sbatch`` is:
 
   sbatch [list of sbatch options] script_name
 
-The main ``sbatch`` options are listed below. See the ``sbatch`` man page for additional information (``man sbatch``).
+The main ``sbatch`` options are listed below. 
 
 +-------------------------+------------------------------------------------------------------+
 | Option                  | Description                                                      |
 +=========================+==================================================================+
 | ``--time=time``         | time = maximum wall clock time (d-hh:mm:ss) [default: 30 minutes]|
 +-------------------------+------------------------------------------------------------------+
-| ``--nodes=n``           | Total number of nodes for the batch job                          |
+| ``--nodes=n``           | Total number of nodes for the batch job.                         |
 |                         |                                                                  |
-|                         | n = number of 64-core nodes *[default: 1 node]                   |
+|                         | n = number of 64-core nodes [default: 1 node]                    |
 +-------------------------+------------------------------------------------------------------+
-| ``--ntasks=p``          | Total number of cores for the batch job                          |
+| ``--ntasks=p``          | Total number of cores for the batch job.                         |
 |                         |                                                                  |
 |                         | p = number of cores per job to use (1 - 64) [default: 1 core]    |
 +-------------------------+------------------------------------------------------------------+
-| ``--ntasks-per-node=p`` | Number of cores per node                                         |
+| ``--ntasks-per-node=p`` | Number of cores per node.                                        |
 |                         |                                                                  |
 |                         | p = number of cores per node to use (1 - 64) [default: 1 core]   |
 +-------------------------+------------------------------------------------------------------+
@@ -150,6 +150,8 @@ or
    --time=00:30:00 
    --nodes=2 
    --ntasks-per-node=16
+
+See the ``sbatch`` man page for additional information.
 
 Memory needs
 $$$$$$$$$$$$$
@@ -208,7 +210,7 @@ Job Submission Directory  ``$SLURM_SUBMIT_DIR``       By default, jobs start in 
 Machine (node) list       ``$SLURM_NODELIST``         Variable name that containins the list of nodes assigned to the batch job
 ========================= =========================== ===================
 
-See the ``sbatch`` man page for additional environment variables available.
+See the ``sbatch`` man page for additional environment variables.
 
 .. _srun:
 
@@ -220,26 +222,24 @@ srun
 command line
 $$$$$$$$$$$$$$$
 
-Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**.
+Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to thier nodes.
 
-Projects that have dedicated interactive nodes, do not need to go through the scheduler. Members of these projects just log in directly to thier nodes.
-
-To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing ``ALL_ACCT``, with the name of your allocation account:
+To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing **ALL_ACCT**, with the name of your allocation account:
 
 .. code-block::
 
    srun -A ALL_ACCT --pty bash 
 
 .. warning::
-   End the interactive job as soon as you're done, by typing ``exit``. If you leave the job running, even if you are not running any processes, your allocation account is being charged for the time.
+   End the interactive job **as soon as you're done**, by typing ``exit``. If you leave the job running, even if you are not running any processes, your allocation account is being charged for the time.
 
-To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing ``ACCT_NAME`` with the name of your charge account:
+To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing **ACCT_NAME** with the name of your charge account:
 
 .. code-block::
 
   srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash
 
-This example will run an interactive batch job in the cpu partition (queue) with a wall clock limit of **30 minutes**, using **one node** and **16 cores per node**. You can also use other ``sbatch`` options, such as those documented above.
+This example will run an interactive batch job in the CPU partition (queue) with a wall clock limit of **30 minutes**, using **one node** and **16 cores per node**. You can also use other ``sbatch`` options.
 
 After you enter the command, you will have to wait for Slurm to start the job. You will see output similar to this:
 
@@ -255,19 +255,19 @@ Once the job starts, you will see:
 
 and will be presented with an interactive shell prompt on the launch node. At this point, you can use the appropriate command(s) to start your program.
 
-When you are done with your interactive batch job session, you can use the ``exit`` command to end the job.
+When you are done with your interactive batch job session, use the ``exit`` command to end the job.
 
 batch script
 $$$$$$$$$$$$$$
 
-Inside a batch script if you want to run multiple copies of a program you can use the *srun* command followed by the name of the executable: 
+Inside a batch script if you want to run multiple copies of a program you can use the ``srun`` command followed by the name of the executable: 
 
 .. code-block::
 
    srun ./a.out
 
 By default, the total number of copies run is equal to number of cores specified in the batch job resource specification.
-You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run keeping in mind that the value for the ``-n``  flag/option must be less than or equal to the number of cores specifed for the batch job.
+You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run; the value for the ``-n`` flag/option must be less than or equal to the number of cores specifed for the batch job.
 
 .. code-block::
 
@@ -276,7 +276,7 @@ You can use the ``-n``  flag/option with the ``srun`` command to specify the num
 squeue
 ~~~~~~~
 
-The ``squeue`` command is used to pull up information about the batch jobs submitted to the batch system. By default, the ``squeue`` command will print out the JobID,  partition, username, job status, number of nodes, and name of nodes for all batch jobs queued or running within batch system.
+The ``squeue`` command is used to pull up information about batch jobs submitted to the batch system. By default, the ``squeue`` command will print out the JobID,  partition, username, job status, number of nodes, and name of nodes for all batch jobs queued or running within batch system.
 
 ============================ ============
 Slurm Command                Description
@@ -287,8 +287,7 @@ Slurm Command                Description
 ``scontrol show job JobID``  List detailed information on a particular batch job.
 ============================ ============
 
-See the ``squeue`` man page for other available options (``man squeue``).
-
+See the ``squeue`` man page for other available options.
 
 sinfo
 ~~~~~~
@@ -305,13 +304,13 @@ The ``sinfo`` command is used to view partition and node information for a syste
 |                        | Multiple partitions are separated by commas.             |
 +------------------------+----------------------------------------------------------+
 
-Users can view the partitions(queues) that they have the ability to submit batch jobs to, by typing the following command:
+You can view the partitions (queues) that you have the ability to submit batch jobs to, by typing the following command:
 
 .. code-block::
 
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
     
-Users can also view specific configuration information about the compute nodes associated with their primary partition(s), by typing the following command:
+You can also view specific configuration information about the compute nodes associated with your primary partition(s), by typing the following command:
 
 .. code-block::
 
@@ -338,18 +337,27 @@ The ``scancel`` command deletes a queued job or kills a running job.
 | ``scancel --name JobName``   | To delete/kill multiple batch jobs based on the batch job’s name         |
 +------------------------------+--------------------------------------------------------------------------+
 
-See the ``scancel`` man page for other available options (``man scancel``).
+See the ``scancel`` man page for other available options.
 
 .. _examples:
 
 Sample Batch Scripts
 ----------------------
 
-When using Slurm to run your software on the Nightingale compute nodes, job instructions and run commands are organized into a "batch script". The below example scripts will give you hints about composing your own batch scripts for Slurm on Nightingale. You can copy and use the examples as templates for your own batch scripts.
+The below example scripts will give you hints about composing your own batch scripts for Slurm on Nightingale. You can copy and use the examples as templates for your own batch scripts.
 
 By default, when your batch script is run, it has copies of all the environment variables that existed in your shell when you submitted the batch script to the Slurm batch system. You can control the job behavior this way.
 
-Below is a sample batch script that runs a single serial application (hostname). Hostname is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits. If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Typically you would replace "hostname" with some application code that you wanted to run to do work on the compute node.
+Additional sample batch scripts are available on Nightingale in the following directory:
+
+.. code-block::
+
+  /sw/apps/NUS/slurm/sample/batchscripts
+
+Sample Serial Job Batch Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Below is a sample batch script that runs a single serial application (**hostname**). Hostname is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits. If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Replace **hostname** with some application code that you wanted to run to do work on the compute node.
 
 .. raw:: html
 
@@ -411,6 +419,9 @@ Below is a sample batch script that runs a single serial application (hostname).
 
    </details>
 |
+
+Sample Parallel Job Batch Script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The following is a batch script that runs a code in parallel, with a couple of other features that are useful in batch jobs:
 
@@ -488,10 +499,4 @@ The following is a batch script that runs a code in parallel, with a couple of o
 
    </details>
 | 
-
-Additional sample batch scripts are available on Nightingale in the following directory:
-
-.. code-block::
-
-  /sw/apps/NUS/slurm/sample/batchscripts
 

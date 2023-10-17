@@ -19,28 +19,22 @@ Installed Software
 The table below shows the core software and libraries available on Nightingale. 
 You can use module commands (see :ref:`modules`) to add this software to your software environment.
 
-===========        ========================
-Software           Version
-===========        ========================
-Anaconda_          2022.05  (Python 3.9.12)
-awscli_            2.4.16
-Cuda_              11.4.2
-GCC_               12.2.0
-Julia_             4.3.2
-MATLAB_            9.7
-Miniconda_         2022.05  (Python 3.9.12)
-`R`_               4.2.0
-===========        ========================
-
-
-.. _awscli: https://aws.amazon.com/cli/
-.. _Cuda: https://docs.nvidia.com/cuda/archive/11.4.2/
-.. _GCC: https://gcc.gnu.org/onlinedocs/12.2.0/
-.. _Julia: https://juliahub.com/ui/Packages/General/RegistryCI/4.3.2
-.. _MATLAB: https://www.mathworks.com/help/?s_tid=gn_supp
+==============================================================================   ========================
+Software                                                                         Version
+==============================================================================   ========================
+Anaconda_                                                                        2022.05  (Python 3.9.12)
+`awscli <https://aws.amazon.com/cli/>`_                                          2.4.16
+`Cuda <https://docs.nvidia.com/cuda/archive/11.4.2/>`_                           11.4.2
+`GCC <https://gcc.gnu.org/onlinedocs/12.2.0/>`_                                  12.2.0
+`Julia <https://juliahub.com/ui/Packages/General/RegistryCI/4.3.2>`_             4.3.2
+`MATLAB <https://www.mathworks.com/help/?s_tid=gn_supp>`_                        9.7
+`Miniconda <https://docs.conda.io/projects/miniconda/en/latest/index.html>`_     2022.05  (Python 3.9.12)
+`R <https://cran.r-project.org/bin/windows/base/old/4.2.0/NEWS.R-4.2.0.html>`_   4.2.0
+==============================================================================   ========================
+ 
 .. _Anaconda: https://docs.anaconda.com/free/anaconda/reference/release-notes/#anaconda-2022-05-may-10-2022
-.. _Miniconda: https://docs.conda.io/projects/miniconda/en/latest/index.html
-.. _R: https://cran.r-project.org/bin/windows/base/old/4.2.0/NEWS.R-4.2.0.html
+
+
 
 .. _modules:
 

@@ -17,7 +17,7 @@ Installed Software
 -------------------
 
 The table below shows the core software and libraries available on Nightingale. 
-You can use module commands (:ref:`modules`) to add this software to your software environment.
+You can use module commands (see :ref:`modules`) to add this software to your software environment.
 
 ===========        ========================
 Software           Version
@@ -29,7 +29,7 @@ GCC_               12.2.0
 Julia_             4.3.2
 MATLAB_            9.7
 Miniconda_         2022.05  (Python 3.9.12)
-R_                 4.2.0
+`R`_               4.2.0
 ===========        ========================
 
 
@@ -48,7 +48,7 @@ Using Modules
 --------------
 
 Nightingale uses `Environment Modules <https://modules.readthedocs.io/en/stable/index.html>`_. 
-Turn access to software on or off by **loading** (or **unloading**) a modulefile; this adds (or removes) the software's configuration in your user environment. 
+Turn access to software on or off by **loading** or **unloading** a modulefile; this adds or removes the software's configuration in your user environment. 
 The table below shows the most common module commands you will use on Nightingale.
 
 .. note::
@@ -111,19 +111,19 @@ Introduction
 
 Anaconda and Miniconda also provide a Python environment with Python packages.
 Anaconda and Miniconda are installed on Nightingale. 
-One of the main differences between Anaconda and Minconda is the number of default packages: 
+One of the main differences between Anaconda and Miniconda is the number of default packages: 
 
 - Anaconda, by default, installs with over 150 data science packages. 
 - Miniconda, by default, installs with a subset of the packages installed with Anaconda. 
 
-Anaconda and Miniconda include Conda, which is a package manager and environment management system popular for Python and R. More information on whether to Anaconda or Miniconda is best for your needs is available in the `Anaconda documentation <https://docs.anaconda.com/free/anaconda/getting-started/distro-or-miniconda.html>`_
+Anaconda and Miniconda include `Conda <https://docs.conda.io/en/latest/>`_, which is a package manager and environment management system popular for Python and R. More information on whether to Anaconda or Miniconda is best for your needs is available in the `Anaconda documentation <https://docs.anaconda.com/free/anaconda/getting-started/distro-or-miniconda.html>`_
 
 Versions
 ~~~~~~~~~
 
 See :ref:`installed` for the versions Anaconda, Miniconda, and Python installed on Nightingale.
 
-Adding Python To Your Environment
+Adding Python to Your Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Each Python installation on Nightingale has a corresponding modulefile for loading a specific version of Python into your software environment. 
@@ -148,7 +148,7 @@ You must install software/libraries into user-writeable locations like your home
 
 Generally, any Python package not available in the system installation can be installed from the `PyPI <https://pypi.org/>`_ in your specified location.
 
-The following commands will create a minimal clone anaconda environment in your home directory, install `pytorch <https://pytorch.org/docs/stable/index.html>`_, and list the Python packages installed in your environment (including your own installed packages):
+The following commands will create a minimal clone anaconda environment in your home directory, install `PyTorch <https://pytorch.org/docs/stable/index.html>`_, and list the Python packages installed in your environment (including your own installed packages):
 
 .. code-block::
 
@@ -187,7 +187,7 @@ Viewing Installed Python Packages
 
 After enabling Python in your user environment (by loading a Python or Anaconda modulefile), you can view a list of the Python packages installed by typing the following commands.
 
-If you have loaded a Python modulfile:
+If you have loaded a Python modulefile:
 
 .. code-block::
 
@@ -223,7 +223,7 @@ You can use a modulefile to load a specific R version into your user environment
 
    module avail R
 
-Load the *lastest* version of R available on Nightingale:
+Load the *latest* version of R available on Nightingale:
 
 .. code-block::
 
@@ -252,7 +252,7 @@ Two example installations specifying **Package Name**, **Location**, and **Repos
 
 **Example 1**
 
-Install the package downloaded (``'package name'``) from the specified repository (``'Repository URL'``) into the specified location (``'/path/to/r_libraries'``):
+Install the package downloaded (**package name**) from the specified repository (**Repository URL**) into the specified location (**/path/to/r_libraries**):
 
 .. code-block::
 
@@ -260,7 +260,7 @@ Install the package downloaded (``'package name'``) from the specified repositor
 
 **Example 2**
 
-Install the local package (``'package_name.tar.gz'``) into the specified location (``'/path/to/r_libraries'``), specifying no repository (``repos = NULL``):
+Install the local package (**package_name.tar.gz**) into the specified location (**/path/to/r_libraries**), specifying no repository (**repos = NULL**):
 
 .. code-block::
 
@@ -276,7 +276,7 @@ You can use the ``rscript`` command to run R commands without starting an R sess
 The example below shows step-by-step the commands you can run on Nightingale. In these steps, **~/Rlibs** is used for the location to install user-specific add-on packages. The tilde **~** means the user's home directory (**$HOME**).
 
 .. note::
-   This example use the BASH shell. The command syntax may differ when using a different shell.
+   This example uses the BASH shell. The command syntax may differ when using a different shell.
 
 #. Set the **HTTPS_PROXY** environment variable (if you have not already done so):
 
@@ -332,7 +332,7 @@ If the name of a package is misspelled or the R package is not available in the 
 Searching the CRAN site for your desired R package may provide links to archived versions that are not available in the current CRAN. 
 In this case, the specific archived R package can be downloaded and installed from the local file using the same command but omitting the repository URL (specifying NULL).
 
-Some R packages have dependencies that are required to be installed first, and will generate an error message similar to the following:
+Some R packages have dependencies that are required to be installed first, and will generate an error message similar to:
 
 .. code-block::
 

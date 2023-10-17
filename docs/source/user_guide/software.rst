@@ -53,8 +53,9 @@ The table below shows the most common module commands you will use on Nightingal
 
 .. note::
    
-   - The module commands are the same for all shells (bash, tcsh, ksh, and others). 
-   - The order that module commands are executed is important. Changes are *prepended* to the current user environment paths with each module load.
+   - Module commands are the same for all shells (bash, tcsh, ksh, and others). 
+   - The order that module commands are executed in is important. Changes are *prepended* to the current user environment paths with each module load.
+   - In the module commands below, replace **modulefile**, **modulefile2**, **oldmod**, and **newmod** with the names of the modulefile(s) you are running the command on.
 
 +--------------------+-------------------------------------------------------------------------------+
 | Command            | Description                                                                   |
@@ -66,46 +67,30 @@ The table below shows the most common module commands you will use on Nightingal
 | ``module help      | Provides general information on what the modulefile does to your current user |
 | modulefile``       |                                                                               |
 |                    | environment, when loaded.                                                     |
-|                    |                                                                               |
-|                    | |                                                                             |
-|                    |                                                                               |
-|                    | Replace ``modulefile`` with the name of the modulefile.                       |
 +--------------------+-------------------------------------------------------------------------------+
 | ``module display   | Displays (or shows) the changes that loading the modulefile will make to your |
 | modulefile``       |                                                                               |
 |                    | current user environment.                                                     |
 | or                 |                                                                               |
-|                    | |                                                                             |
+|                    |                                                                               |
 | ``module show      |                                                                               |
-| modulefile``       | Replace ``modulefile`` with the name of the modulefile.                       |
+| modulefile``       |                                                                               |
 +--------------------+-------------------------------------------------------------------------------+
 | ``module load      | Loads a modulefile(s) into your current shell environment.                    |
 | modulefile (       |                                                                               |
-| modulefile2 ...)`` | |                                                                             |
-|                    |                                                                               |
-|                    | Replace ``modulefile (modulefile2 ...)`` with the name of the modulefile(s).  |
+| modulefile2 ...)`` |                                                                               |
 +--------------------+-------------------------------------------------------------------------------+
 | ``module unload    | Unloads a modulefile. If you unload a modulefile you had previously loaded,   |
 | modulefile``       |                                                                               |
 |                    | then the software is no longer available in your current shell environment.   |
-|                    |                                                                               |   
-|                    | |                                                                             |             
-|                    |                                                                               |   
-|                    | Replace ``modulefile`` with the name of the modulefile.                       |   
 +--------------------+-------------------------------------------------------------------------------+
 | ``module swap      | Unloads the oldmod and loads the newmod. This is typically used to change the |
 | oldmod newmod``    |                                                                               |
 |                    | version of a modulefile that you have loaded.                                 | 
-|                    |                                                                               |
-|                    | |                                                                             |
-|                    |                                                                               |
-|                    | Replace ``oldmod`` and ``newmod`` with the name of the modulefiles.           |
 +--------------------+-------------------------------------------------------------------------------+
 | ``module save``    | If you have modulefiles that you want to load every time you log in, without  |
 |                    |                                                                               |
 |                    | having to use the ``module load`` command each time:                          |
-|                    |                                                                               |
-|                    | |                                                                             |
 |                    |                                                                               |
 |                    | #. Load the modulefiles you always want to have loaded.                       |
 |                    |                                                                               |
@@ -122,7 +107,7 @@ Using Python on Nightingale
 Introduction
 ~~~~~~~~~~~~~~~
 
-Python and Python packages are available via `Python Package Index (PyPI) <https://pypi.org/>`_, which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. 
+`Python <https://en.wikipedia.org/wiki/Python_(programming_language)>`_ is a general-purpose programming language. Python and Python packages are available via `Python Package Index (PyPI) <https://pypi.org/>`_, which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. 
 
 Anaconda and Miniconda also provide a Python environment with Python packages.
 Anaconda and Miniconda are installed on Nightingale. 
@@ -177,12 +162,6 @@ The following commands will create a minimal clone anaconda environment in your 
   conda install pytorch
   conda list
  
-To deactivate the anaconda environment:
-
-.. code-block::
-
-   conda deactivate
-
 To create a complete clone anaconda environment, 
 
    replace:
@@ -196,6 +175,12 @@ To create a complete clone anaconda environment,
    .. code-block::
 
       conda create -n my.anaconda anaconda
+
+To deactivate the anaconda environment:
+
+.. code-block::
+
+   conda deactivate
 
 Viewing Installed Python Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -220,7 +205,7 @@ Using R on Nightingale
 Introduction
 ~~~~~~~~~~~~~~
 
-R is a programming language and software environment for statistical computing and graphics. R and its libraries implement a wide variety of statistical and graphical techniques, such as linear and non-linear modeling, classical statistical tests, time-series analysis, classification, and clustering.
+`R <https://en.wikipedia.org/wiki/R_(programming_language)>`_ is a programming language and software environment for statistical computing and graphics. R and its libraries implement a wide variety of statistical and graphical techniques, such as linear and non-linear modeling, classical statistical tests, time-series analysis, classification, and clustering.
 
 R is easily extensible through functions and extensions. The R community is noted for its active contributions to developing R packages. R packages contain code, data, and documentation in a standardized collection format that R users can install. R and R packages are available via the `Comprehensive R Archive Network (CRAN) <https://cran.r-project.org>`_, a collection of sites that carry the R distribution(s), the contributed extensions, documentation for R, and binaries.
 
@@ -390,3 +375,4 @@ You can use the ``library()`` command to view all user and system-installed R pa
    tools                   Tools for Package Development
    utils                   The R Utils Package
 
+|

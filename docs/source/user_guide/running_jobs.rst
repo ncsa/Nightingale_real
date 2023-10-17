@@ -23,7 +23,7 @@ Jobs are typically configured to write their results to a location on disk, so y
 Accessing the Compute Nodes
 -----------------------------
 
-The *login* node is a shared resource for all users and login node use should be limited to editing, compiling and building your programs, and for short *non-intensive* runs.
+The *login* node is a shared resource for all users and login node use should be limited to editing, compiling, and building your programs, and for short *non-intensive* runs.
 Access *compute* nodes for running your work using *batch* or *interactive* jobs. 
 Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs. The `Slurm quick start user guide <https://slurm.schedmd.com/quickstart.html>`_ provides a brief overview for new users.
 
@@ -207,7 +207,7 @@ Description               SLURM Environment Variable  Detail Description
 ========================= =========================== ===================
 JobID                     ``$SLURM_JOB_ID``           Job identifier assigned to the job 
 Job Submission Directory  ``$SLURM_SUBMIT_DIR``       By default, jobs start in the directory the job was submitted from.
-Machine (node) list       ``$SLURM_NODELIST``         Variable name that containins the list of nodes assigned to the batch job
+Machine (node) list       ``$SLURM_NODELIST``         Variable name that contains the list of nodes assigned to the batch job
 ========================= =========================== ===================
 
 See the ``sbatch`` man page for additional environment variables.
@@ -222,7 +222,7 @@ srun
 command line
 $$$$$$$$$$$$$$$
 
-Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now**, and log you onto it. These are called **interactive batch jobs**. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to thier nodes.
+Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now** and log you onto it. These are called **interactive batch jobs**. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to their nodes.
 
 To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing **ALL_ACCT**, with the name of your allocation account:
 
@@ -241,7 +241,7 @@ To specify resources for your interactive batch job the ``srun`` command syntax 
 
 This example will run an interactive batch job in the CPU partition (queue) with a wall clock limit of **30 minutes**, using **one node** and **16 cores per node**. You can also use other ``sbatch`` options.
 
-After you enter the command, you will have to wait for Slurm to start the job. You will see output similar to this:
+After you enter the command, you will have to wait for Slurm to start the job. You will see output similar to:
 
 .. code-block::
 
@@ -267,7 +267,7 @@ Inside a batch script if you want to run multiple copies of a program you can us
    srun ./a.out
 
 By default, the total number of copies run is equal to number of cores specified in the batch job resource specification.
-You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run; the value for the ``-n`` flag/option must be less than or equal to the number of cores specifed for the batch job.
+You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run; the value for the ``-n`` flag/option must be less than or equal to the number of cores specified for the batch job.
 
 .. code-block::
 
@@ -304,7 +304,7 @@ The ``sinfo`` command is used to view partition and node information for a syste
 |                        | Multiple partitions are separated by commas.             |
 +------------------------+----------------------------------------------------------+
 
-You can view the partitions (queues) that you have the ability to submit batch jobs to, by typing the following command:
+You can view the partitions (queues) that you can submit batch jobs to, by typing the following command:
 
 .. code-block::
 
@@ -330,7 +330,7 @@ The ``scancel`` command deletes a queued job or kills a running job.
 +------------------------------+--------------------------------------------------------------------------+
 | ``scancel JobID01, JobID02`` | To delete/kill multiple batch jobs, use a comma-separated list of JobIDs |
 +------------------------------+--------------------------------------------------------------------------+
-| ``scancel -u $USER``         | To delete/kill all your batch jobs (removes all of your batch jobs from  |
+| ``scancel -u $USER``         | To delete/kill all your batch jobs (removes all your batch jobs from     |
 |                              |                                                                          |
 |                              | the batch system regardless of the batch job’s state)                    |
 +------------------------------+--------------------------------------------------------------------------+

@@ -47,7 +47,7 @@ The table below shows the most common module commands you will use on Nightingal
 
 .. note::
    
-   - Module commands are the same for all shells (bash, tcsh, ksh, and others). 
+   - Module commands are the same for all shells (Bash, tcsh, ksh, and others). 
    - The order that module commands are executed in is important. Changes are *prepended* to the current user environment paths with each module load.
    - In the module commands below, replace **modulefile**, **modulefile2**, **oldmod**, and **newmod** with the names of the modulefile(s) you are running the command on.
 
@@ -88,9 +88,9 @@ The table below shows the most common module commands you will use on Nightingal
 |                    |                                                                               |
 |                    | #. Load the modulefiles you always want to have loaded.                       |
 |                    |                                                                               |
-|                    | #. Type ``module save``.                                                      |
+|                    | #. Type ``module save``. When you log in next time, these modulefiles will    |
 |                    |                                                                               |
-|                    | When you log in the next time, these modulefiles will already be loaded.      |
+|                    |    already be loaded.                                                         |
 +--------------------+-------------------------------------------------------------------------------+
 
 For more information on module commands, see the `Environment Modules Documentation <https://modules.readthedocs.io/en/stable/index.html>`_.
@@ -110,12 +110,12 @@ One of the main differences between Anaconda and Miniconda is the number of defa
 - Anaconda, by default, installs with over 150 data science packages. 
 - Miniconda, by default, installs with a subset of the packages installed with Anaconda. 
 
-Anaconda and Miniconda include `Conda <https://docs.conda.io/en/latest/>`_, which is a package manager and environment management system popular for Python and R. More information on whether to Anaconda or Miniconda is best for your needs is available in the `Anaconda documentation <https://docs.anaconda.com/free/anaconda/getting-started/distro-or-miniconda.html>`_
+Anaconda and Miniconda include `Conda <https://docs.conda.io/en/latest/>`_, which is a package manager and environment management system popular for Python and R. More information on whether Anaconda or Miniconda is best for your needs is available in the `Anaconda documentation <https://docs.anaconda.com/free/anaconda/getting-started/distro-or-miniconda.html>`_
 
 Versions
 ~~~~~~~~~
 
-See :ref:`installed` for the versions Anaconda, Miniconda, and Python installed on Nightingale.
+See :ref:`installed` for the versions of Anaconda, Miniconda, and Python installed on Nightingale.
 
 Adding Python to Your Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -133,12 +133,10 @@ or
 
    module avail miniconda3
 
-See :ref:`modules` for more information about modules.
-
 Installing Python Packages (in User-Specified Locations)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  
-You must install software/libraries into user-writeable locations like your home directory, your group’s project space (**recommended**), or your scratch space. Software installed in scratch space is not permanent and system administrators may remove it at **any time**. 
+You must install software/libraries in spaces you have write-access to (user-writeable) like your home directory, your group’s project space (**recommended**), or your scratch space. Software installed in scratch space is **not permanent** and system administrators may remove it at **any time**. 
 
 Generally, any Python package not available in the system installation can be installed from the `PyPI <https://pypi.org/>`_ in your specified location.
 
@@ -211,19 +209,19 @@ See :ref:`installed` for the versions of R installed on Nightingale.
 Adding R to Your Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use a modulefile to load a specific R version into your user environment.
+You can use a modulefile to load a specific R version into your user environment. 
 
 .. code-block::
 
    module avail R
+
+To load a specific version, you will need to load the corresponding module. See :ref:`modules` for more information about modules.
 
 Load the *latest* version of R available on Nightingale:
 
 .. code-block::
 
    module load R
-
-To load a specific version, you will need to load the corresponding module. See :ref:`modules` for more information about modules.
 
 Installing Add-on Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -235,12 +233,7 @@ Installation Command Syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To install R packages, all that is needed is the package name; you can also specify additional information, such as installation location and the repository.
- 
-The syntax for the install R packages command is:
-
-.. code-block::
-
-   install.packages()
+The install R packages commands is ``install.packages()``.
  
 Two example installations specifying **Package Name**, **Location**, and **Repository** are shown below.
 
@@ -267,10 +260,10 @@ Using Rscript
 
 You can use the ``rscript`` command to run R commands without starting an R session. As a scripting frontend for R, Rscript enables using R via shell scripts and scripting applications.
 
-The example below shows step-by-step the commands you can run on Nightingale. In these steps, **~/Rlibs** is used for the location to install user-specific add-on packages. The tilde **~** means the user's home directory (**$HOME**).
+The example below shows step-by-step the commands you can run on Nightingale. In these steps, **~/Rlibs** is used for the location to install your user-specific add-on packages and the tilde **~** means your home directory (**$HOME**).
 
 .. note::
-   This example uses the BASH shell. The command syntax may differ when using a different shell.
+   This example uses the Bash shell. The command syntax may differ when using a different shell.
 
 #. Set the **HTTPS_PROXY** environment variable (if you have not already done so):
 
@@ -296,13 +289,13 @@ The example below shows step-by-step the commands you can run on Nightingale. In
 
       export R_LIBS=~/Rlibs:$R_LIBS
 
-#. Use the ``install.packages`` command to install your R package:
+#. Use the ``install.packages()`` command to install your R package:
 
    .. code-block::
 
       Rscript -e "install.packages('RCurl', '~/Rlibs', 'https://cran.r-project.org')"
 
-If the environment variable **R_LIBS** is not set and a directory is not specified with the ``install.packages`` command, then R packages will be installed under **~/R/x86_64-unknown-linux-gnu-library** by default (this R subdirectory structure is created automatically). The **R_LIBS** environment variable will need to be set every time when logging into Nightingale if your R package location is to be visible to an R session. You can add the following code to your **~/.bashrc** file to remove the need to set the **R_LIBS** environment variable with every login session to Nightingale:
+If the environment variable **R_LIBS** is not set and a directory is not specified with the ``install.packages()`` command, then R packages will be installed under **~/R/x86_64-unknown-linux-gnu-library** by default (this R subdirectory structure is created automatically). The **R_LIBS** environment variable will need to be set every time when logging into Nightingale if your R package location is to be visible to an R session. You can add the following code to your **~/.bashrc** file to remove the need to set the **R_LIBS** environment variable with every login session to Nightingale:
 
 .. code-block::
 
@@ -342,7 +335,7 @@ Installing the dependency first and then the desired R package resolves this iss
 Viewing Installed R Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the ``library()`` command to view all user and system-installed R packages (user-installed packages are only visible to R when the **$R_LIBS** environment variable is set):
+You can use the ``library()`` command to view all your user and system-installed R packages (user-installed packages are only visible to R when the **$R_LIBS** environment variable is set):
 
 .. code-block::
 

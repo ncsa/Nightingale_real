@@ -219,7 +219,7 @@ srun
 
 .. _interactive:
 
-command line
+Command Line
 $$$$$$$$$$$$$$$
 
 Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now** and log you onto it. These are called **interactive batch jobs**. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to their nodes.
@@ -257,7 +257,7 @@ and will be presented with an interactive shell prompt on the launch node. At th
 
 When you are done with your interactive batch job session, use the ``exit`` command to end the job.
 
-batch script
+Batch Script
 $$$$$$$$$$$$$$
 
 Inside a batch script if you want to run multiple copies of a program you can use the ``srun`` command followed by the name of the executable: 

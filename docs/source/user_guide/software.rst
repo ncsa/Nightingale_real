@@ -1,7 +1,7 @@
 Software
 ==========
 
-You can install software in spaces you have write-access to (home, projects [**recommended**], scratch). Consider the following when installing any software:
+You can install software in spaces you have write-access to (home, projects, scratch). Project space is the **recommended** location to install software. Consider the following when installing any software:
 
 - Home directory disk usage quotas.
 - Will the software be used by multiple users in my group?
@@ -86,8 +86,8 @@ The table below shows the most common module commands you will use on Nightingal
 |                    | #. Load the modulefiles you always want to have loaded.                       |
 |                    |                                                                               |
 |                    | #. Type ``module save``. When you log in next time, these modulefiles will    |
-|                    |                                                                               |
 |                    |    already be loaded.                                                         |
+|                    |                                                                               |
 +--------------------+-------------------------------------------------------------------------------+
 
 For more information on module commands, see the `Environment Modules Documentation <https://modules.readthedocs.io/en/stable/index.html>`_.
@@ -230,11 +230,7 @@ Installation Command Syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To install R packages, all that is needed is the package name; you can also specify additional information, such as installation location and the repository.
-The install R packages commands is ``install.packages()``.
- 
-Two example installations specifying **Package Name**, **Location**, and **Repository** are shown below.
-
-**Example 1**
+The install R packages commands is ``install.packages()``. Two example installations specifying **Package Name**, **Location**, and **Repository** are shown below.
 
 Install the package downloaded (**package name**) from the specified repository (**Repository URL**) into the specified location (**/path/to/r_libraries**):
 
@@ -242,13 +238,11 @@ Install the package downloaded (**package name**) from the specified repository 
 
    install.packages('package_name', '/path/to/r_libraries', 'Repository URL')
 
-**Example 2**
-
 Install the local package (**package_name.tar.gz**) into the specified location (**/path/to/r_libraries**), specifying no repository (**repos = NULL**):
 
 .. code-block::
 
-  install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
+   install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
 
 When the installation location and the repository URL are not specified, R packages are installed in a default location, and the R installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local file name and omitting the repository URL (specifying NULL).
 

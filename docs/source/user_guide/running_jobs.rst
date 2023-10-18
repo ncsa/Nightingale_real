@@ -6,7 +6,7 @@ Introduction
 
 .. note::
    Many researchers on Nightingale have access to their own node(s), often called *interactive* nodes, specially dedicated for a group's use. 
-   **If that's the case for you, then you will have specific instructions on how to log into your own interactive node in the Nightingale cluster, and you don't have to worry about the instructions on this page.** 
+   If that's the case for you, then you will be given specific instructions on how to log into your own interactive node in the Nightingale cluster.
    If instead of (or in addition to) access to your own interactive node, you have access to the shared pool of computational (*compute*) nodes that are part of the Nightingale cluster, this page describes how to access them.
 
 The shared pool of compute nodes is called a *batch queue*. 

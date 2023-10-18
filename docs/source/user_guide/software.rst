@@ -1,13 +1,7 @@
 Software
 ==========
 
-You can install software in spaces you have write-access to:
-   
-- home
-- projects (**recommended**)
-- scratch
-
-Consider the following when installing any software:
+You can install software in spaces you have write-access to (home, projects [**recommended**], scratch). Consider the following when installing any software:
 
 - Home directory disk usage quotas.
 - Will the software be used by multiple users in my group?

@@ -85,9 +85,7 @@ The table below shows the most common module commands you will use on Nightingal
 |                    |                                                                               |
 |                    | #. Load the modulefiles you always want to have loaded.                       |
 |                    |                                                                               |
-|                    | #. Type ``module save``. When you log in next time, these modulefiles will    |
-|                    |                                                                               |
-|                    | already be loaded.                                                            |
+|                    | #. Type ``module save``.                                                      |
 +--------------------+-------------------------------------------------------------------------------+
 
 For more information on module commands, see the `Environment Modules Documentation <https://modules.readthedocs.io/en/stable/index.html>`_.

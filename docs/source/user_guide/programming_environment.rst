@@ -14,6 +14,7 @@ Serial
 ~~~~~~~~~~~
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
+..table:: Compiling Serial Code With GCC
 +--------------------------+
 | **GCC**                  |
 +==========================+
@@ -40,56 +41,55 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 |                     |                               |                                     |
 |                     |                               | ``Fortran 90:  mpif90 myprog.f90``  |
 |                     |                               |                                     |
-|                     |                               | ``|_| `` ``C:  mpicc myprog.c``     |
+|                     |                               | ``C:           mpicc myprog.c``     |
 |                     |                               |                                     |
-|                     |                               | ``|_|`` ``C++:  mpicxx myprog.cc``  |
+|                     |                               | ``C++:         mpicxx myprog.cc``   |
 +---------------------+-------------------------------+-------------------------------------+
 
 OpenMP
+~~~~~~~~
 To build an OpenMP program, use the -fopenmp / -qopenmp option:
 
-.. role:: raw-html(raw)
-    :format: html
-
-.. list-table:: 
-   :widths: 25 25 50
-   :header-rows: 1
-
-
-   * - GCC
-   * - :raw-html:`<br />` ``gfortran -fopenmp myprog.f``   :raw-html:`<br />`
-       :raw-html:`<br />` ``gfortran -fopenmp myprog.f90`` :raw-html:`<br />`
-       :raw-html:`<br />` ``     gcc -fopenmp myprog.c``    :raw-html:`<br />`
-       :raw-html:`<br />` ``     g++ -fopenmp myprog.cc``  :raw-html:`<br />`
- 
+..table::Compiling OpenMP Code
++---------------------------------------------+
+|        **GCC**                              |
++=============================================+
+| ``gfortran -fopenmp myprog.f``              |
+|                                             |
+| ``gfortran -fopenmp myprog.f90``            |
+|                                             |
+| ``gcc      -fopenmp myprog.c``              |
+|                                             |
+| ``g++      -fopenmp myprog.cc``             |
++---------------------------------------------+
 
 
 Hybrid MPI/OpenMP
+~~~~~~~~~~~~~~~~~~~~~
 To build an MPI/OpenMP hybrid program, use the -fopenmp / -qopenmp option with the MPI compiling commands:
 
-.. role:: raw-html(raw)
-    :format: html
-
-.. list-table:: 
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - GCC
-   * - OpenMPI
-   * - :raw-html:`<br />` ``mpif77 -fopenmp myprog.f``   :raw-html:`<br />`
-       :raw-html:`<br />` ``mpif90 -fopenmp myprog.f90`` :raw-html:`<br />`
-       :raw-html:`<br />` `` mpicc -fopenmp myprog.c``   :raw-html:`<br />`
-       :raw-html:`<br />` ``mpicxx -fopenmp myprog.cc``  :raw-html:`<br />`
- 
-
-
+..table::Compiling Hybrid MPI/OpenMP Code
++---------------------------------------------+
+|  **GCC**                                    |
++=============================================+
+|   OpenMPI                                   |
++---------------------------------------------+
+| ``mpif77 -fopenmp myprog.f``                |
+|                                             |
+| ``mpif90 -fopenmp myprog.f90``              |
+|                                             |
+| `` mpicc -fopenmp myprog.c``                |
+|                                             |
+| ``mpicxx -fopenmp myprog.cc``               |
++---------------------------------------------+
 
 CUDA
+~~~~~~
 NVIDIA GPUs are available as part of the Nightingale compute cluster. CUDA is a parallel computing platform and programming model from NVIDIA for use on the GPUs. These GPUs support CUDA compute capability 2.0.
 
 Load the CUDA Toolkit into your environment using the following module command:
 ::
-module load cuda/11.4.2
+``module load cuda/11.4.2``
 
 
-
++

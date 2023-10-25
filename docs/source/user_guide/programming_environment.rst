@@ -38,6 +38,7 @@ To build (compile and link) a serial program in Fortran, C, and C++ enter:
 | **GCC**             |
 +---------------------+
 | .. code:: bash      |
+|                     |
 |   gfortran myprog.f |
 |                     |
 | gfortran myprog.f90 |

@@ -40,9 +40,9 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 |                     |                               |                                     |
 |                     |                               | ``Fortran 90:  mpif90 myprog.f90``  |
 |                     |                               |                                     |
-|                     |                               | `` |_| `` ``C:  mpicc myprog.c``     |
+|                     |                               | ``|_| `` ``C:  mpicc myprog.c``     |
 |                     |                               |                                     |
-|                     |                               | ``|_|`` ``C++:  mpicxx myprog.cc``   |
+|                     |                               | ``|_|`` ``C++:  mpicxx myprog.cc``  |
 +---------------------+-------------------------------+-------------------------------------+
 
 OpenMP

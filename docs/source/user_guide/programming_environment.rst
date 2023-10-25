@@ -34,17 +34,17 @@ Serial
 ~~~~~~~~~~~
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
-======================
-GCC
-======================
-gfortran myprog.f
-
-gfortran myprog.f90
-
-gcc myprog.c
-
-g++ myprog.cc
-======================
++---------------------+
+| GCC                 |
++---------------------+
+| gfortran myprog.f   |
+|                     |
+| gfortran myprog.f90 |
+|                     |
+| gcc myprog.c        |
+|                     |
+| g++ myprog.cc       |
++---------------------+
 
 
 MPI

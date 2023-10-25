@@ -14,7 +14,7 @@ Serial
 ~~~~~~~~~~~
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
-..table:: Compiling Serial Code With GCC
+.. table:: Compiling Serial Code With GCC
 +--------------------------+
 | **GCC**                  |
 +==========================+
@@ -50,7 +50,7 @@ OpenMP
 ~~~~~~~~
 To build an OpenMP program, use the -fopenmp / -qopenmp option:
 
-..table::Compiling OpenMP Code
+.. table::Compiling OpenMP Code
 +---------------------------------------------+
 |        **GCC**                              |
 +=============================================+
@@ -68,7 +68,7 @@ Hybrid MPI/OpenMP
 ~~~~~~~~~~~~~~~~~~~~~
 To build an MPI/OpenMP hybrid program, use the -fopenmp / -qopenmp option with the MPI compiling commands:
 
-..table::Compiling Hybrid MPI/OpenMP Code
+.. table::Compiling Hybrid MPI/OpenMP Code
 +---------------------------------------------+
 |  **GCC**                                    |
 +=============================================+

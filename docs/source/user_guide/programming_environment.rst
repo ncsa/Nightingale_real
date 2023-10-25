@@ -35,7 +35,7 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 
 .. table::Compiling With OpenMPI
 +---------------------+-------------------------------+-------------------------------------+
-| MPI Implementation  | modulefile for MPI/Compiler   | Build Commands                      +
+| MPI Implementation  | modulefile for MPI/Compiler   | Build Commands                      |
 +=====================+===============================+=====================================+
 | Open MPI            | openmpi/4.1.4-gcc             | ``Fortran 77:  mpif77 myprog.f``    |
 |                     |                               |                                     |

@@ -78,7 +78,7 @@ To build an MPI/OpenMP hybrid program, use the -fopenmp / -qopenmp option with t
 |                                             |
 | ``mpif90 -fopenmp myprog.f90``              |
 |                                             |
-| `` mpicc -fopenmp myprog.c``                |
+| ``mpicc  -fopenmp myprog.c``                |
 |                                             |
 | ``mpicxx -fopenmp myprog.cc``               |
 +---------------------------------------------+

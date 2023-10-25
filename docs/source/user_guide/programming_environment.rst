@@ -11,32 +11,12 @@ Compiler Commands
 -------------------
 
 Serial
-~~~~~~~~~~
-
-To build (compile and link) a serial program in Fortran, C, and C++ enter:
-
-.. role:: raw-html(raw)
-    :format: html
-
-.. list-table:: 
-   :widths: 25 25 50
-   :header-rows: 1
-
-
-   * - GCC
-   * - :raw-html:`<br />` ``gfortran myprog.f``   :raw-html:`<br />`
-       :raw-html:`<br />` ``gfortran myprog.f90`` :raw-html:`<br />`
-       :raw-html:`<br />` ``     gcc myprog.c``    :raw-html:`<br />`
-       :raw-html:`<br />` ``     g++ myprog.cc``  :raw-html:`<br />`
-
-
-Serial
 ~~~~~~~~~~~
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
 +--------------------------+
 | **GCC**                  |
-+--------------------------+
++==========================+
 | ``gfortran myprog.f``    |
 |                          |
 | ``gfortran myprog.f90``  |
@@ -52,25 +32,18 @@ MPI
 
 To build (compile and link) a MPI program in Fortran, C, and C++:
 
-.. role:: raw-html(raw)
-    :format: html
-
-.. list-table:: 
-   :widths: 25 25 50
-   :header-rows: 1
-
-   * - MPI Implementation
-     - modulefile for MPI/Compiler
-     - Build Commands
-   * - :raw-html:`<br />` Open MPI :raw-html:`<br />`
-       :raw-html:`&nbsp` (Home Page / Documentation) :raw-html:`<br />`
-     - :raw-html:`<br />` openmpi/4.1.4-gcc
-     - :raw-html:`<br />` ``Fortran 77:  mpif77 myprog.f``   :raw-html:`<br />`
-       :raw-html:`<br />` ``Fortran 90:  mpif90 myprog.f90`` :raw-html:`<br />`
-       :raw-html:`<br />` ``         C:  mpicc myprog.c``    :raw-html:`<br />`
-       :raw-html:`<br />` ``       C++:  mpicxx myprog.cc``  :raw-html:`<br />`
-
-
+.. table::Compiling With OpenMPI
++---------------------+-------------------------------+-------------------------------------+
+| MPI Implementation  | modulefile for MPI/Compiler   | Build Commands                      +
++=====================+===============================+=====================================+
+| Open MPI            | openmpi/4.1.4-gcc             | ``Fortran 77:  mpif77 myprog.f``    |
+|                     |                               |                                     |
+|                     |                               | ``Fortran 90:  mpif90 myprog.f90``  |
+|                     |                               |                                     |
+|                     |                               | ``         C:  mpicc myprog.c``     |
+|                     |                               |                                     |
+|                     |                               | ``       C++:  mpicxx myprog.cc``   |
++---------------------+-------------------------------+-------------------------------------+
 
 OpenMP
 To build an OpenMP program, use the -fopenmp / -qopenmp option:

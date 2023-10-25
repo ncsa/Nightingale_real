@@ -1,7 +1,6 @@
-#######################
-Programming Environment
-#######################
 
+Programming Environment
+===============================
 
 The GNU compilers (GCC) version 8.4.1 are in the default user environment. Version 12.2.0 is also available — load this version with the command:
 ::
@@ -9,8 +8,11 @@ module load gcc/12.2.0
 
 
 Compiler Commands
+-------------------
 
 Serial
+~~~~~~~~~~
+
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
 .. role:: raw-html(raw)
@@ -28,7 +30,26 @@ To build (compile and link) a serial program in Fortran, C, and C++ enter:
        :raw-html:`<br />` ``     g++ myprog.cc``  :raw-html:`<br />`
 
 
+Serial
+~~~~~~~~~~~
+To build (compile and link) a serial program in Fortran, C, and C++ enter:
+
+======================
+GCC
+======================
+gfortran myprog.f
+
+gfortran myprog.f90
+
+gcc myprog.c
+
+g++ myprog.cc
+======================
+
+
 MPI
+~~~~~~~
+
 To build (compile and link) a MPI program in Fortran, C, and C++:
 
 .. role:: raw-html(raw)

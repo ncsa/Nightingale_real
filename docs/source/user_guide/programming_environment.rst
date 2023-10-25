@@ -39,11 +39,11 @@ To build (compile and link) a serial program in Fortran, C, and C++ enter:
 +--------------------------+
 | ``gfortran myprog.f``    |
 |                          |
-| ``gfortran myprog.f90''  |
+| ``gfortran myprog.f90``  |
 |                          |
-| gcc           myprog.c   |
+| ``gcc      myprog.c``    |
 |                          |
-| g++           myprog.cc  |
+| ``g++      myprog.cc``   |
 +--------------------------+
 
 

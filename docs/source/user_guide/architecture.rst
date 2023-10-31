@@ -29,13 +29,13 @@ Interactive Group Nodes
 Batch/Interactive Compute Nodes
 ---------------------------------
 
-.. note::
-   The batch nodes on Nightingale are diskless. The OS and /tmp/ take up some of the RAM; user processes in batch jobs do not have every bit of physical RAM available while running.
-
 - 16 batch/interactive dual 32-core AMD **compute** nodes, each with 1TB RAM (*no GPUs*)
 - 1 batch/interactive dual 32-core AMD **compute** node with 512GB RAM and 2 NVIDIA A100 GPUs
 - 5 batch/interactive dual 32-core AMD **compute** nodes, each with 256GB RAM and 1 NVIDIA A100 GPU
 - 2 batch/interactive dual 32-core AMD **compute** nodes, each with 512GB RAM and 1 NVIDIA A40 GPU
+
+.. note::
+   The batch nodes on Nightingale are diskless. The OS and /tmp/ take up some of the RAM; user processes in batch jobs do not have every bit of physical RAM available while running.
 
 Storage
 ---------

@@ -35,7 +35,7 @@ Batch/Interactive Compute Nodes
 - 2 batch/interactive dual 32-core AMD **compute** nodes, each with 512GB RAM and 1 NVIDIA A40 GPU
 
 .. note::
-   The batch nodes on Nightingale are diskless. The OS and /tmp/ take up some of the RAM; user processes in batch jobs do not have every bit of physical RAM available while running.
+   The batch nodes on Nightingale are diskless; the OS and /tmp/ take up some of the RAM. User processes in batch jobs do not have every bit of physical RAM available while running.
 
 Storage
 ---------

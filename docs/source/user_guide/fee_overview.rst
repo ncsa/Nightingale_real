@@ -11,48 +11,40 @@ Interactive Computing
 Option 1 (Dedicated Node)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Per Dedicated Node: $1,337.50 per month 
-
-$1,337.50 per dedicated node per month
+**Per Dedicated Node**: $1,337.50 per month 
 
 Access to a dedicated node with the number of users specified by the Principal Investigator.
-
-- Per Dedicated Node: $1,337.50 per month 
-
-- $1,337.50 per dedicated node per month
-
-- Access to a dedicated node with the number of users specified by the Principal Investigator.
 
 Option 2 (Shared Node)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Per User on a Shared Node: $267.50 per month
+**Per User on a Shared Node**: $267.50 per month
 
 Access to a shared node with up to 5 users from across the system. Security between a user's files and users from other groups is maintained with Unix directory permissions configured by the Lightweight Directory Access Protocol (LDAP). Users can access the node simultaneously. There is no “speed of service” guarantee, although the powerful nodes should be sufficient for most users. NCSA will consult with users who create a significant high load on the system – options such as reassigning nodes or requiring additional allocation will be determined on a case-by-case basis.
 
 Batch Computing
 ------------------------
 
-Per core hour used: $0.027
+**Per core hour used**: $0.027
 
 Billed monthly for the *prior* month’s use. For consistent billing, users can pay for a set threshold of core hours per month, regardless of whether they use all the core hours they anticipated. 
 
 Storage
 ---------
 
-Per 1 Terabyte allocated: $10.54 per month 
+**Per 1 Terabyte allocated**: $10.54 per month 
 
 Database Setup and Management Services
 ---------------------------------------
 
-Per user as needed: $80.71 per month 
+**Per user as needed**: $80.71 per month 
 
 Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. Options for providing “data as a service” to a broad user community are available; submit a support request (:ref:`help`) for details. 
 
 Consultation and Development Services
 -----------------------------------------
 
-Per project as needed: cost based on time and materials 
+**Per project as needed**: cost based on time and materials 
 
 NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials. Submit a support request (:ref:`help`) to discuss project needs and staff availability. 
 

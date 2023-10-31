@@ -8,15 +8,13 @@ All of the fees below are the costs for University of Illinois users and collabo
 Interactive Computing
 -----------------------------
 
-Option 1 (Dedicated Node)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Option 1 (Dedicated Node)
 
   **Per Dedicated Node**: $1,337.50 per month 
 
   Access to a dedicated node with the number of users specified by the Principal Investigator.
 
-Option 2 (Shared Node)
-~~~~~~~~~~~~~~~~~~~~~~~
+- Option 2 (Shared Node)
 
   **Per User on a Shared Node**: $267.50 per month
 

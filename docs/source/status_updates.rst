@@ -3,7 +3,7 @@
 Status Updates and Notices
 =============================
 
-Nightingale users are notified of upcoming system maintenance through:
+There are three *scheduled* system maintenance periods every year in January, May, and August. Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure. Nightingale users are notified of upcoming system maintenance through:
 
 - Email
 - Message of the Day when you log into the system

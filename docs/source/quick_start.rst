@@ -9,10 +9,10 @@ This information is for users who are adept at using an HPC system and are only 
 
 **Protected data:** Data stored on Nightingale may contain sensitive, regulated information. While Nightingale is set up to protect this data, users (you) are directly responsible for protecting it. Please read the :ref:`protected` information before using Nightingale.
 
-**Log into Nightingale:** You log into Nightingale using an Secure Shell (SSH) client on your local desktop or laptop. See :ref:`node_hostnames` for the hostnames and step-by-step login instructions.
+**Log into Nightingale:** You log into Nightingale using a Secure Shell (SSH) client on your local desktop or laptop. See :ref:`node_hostnames` for the hostnames and step-by-step login instructions.
 
 **Queues:** See :ref:`queues` for the current limits of the Nightingale queues.
 
 **Slurm:** Nightingale uses Slurm for job management. For information on how to submit batch jobs and interactive batch jobs, see :ref:`slurm`. :ref:`examples` are also available for reference.
 
-**Tranfer data into correct directory:** You will not work directly on your group’s curated project data in the /datasets directory. Instructions on how to transfer data from /datasets to your home, scratch, or projects directory can be found in :ref:`transfer`. If you ever need to transfer data **off of Nightingale**, read and follow the :ref:`protected` guidelines **before** transferring.
+**Transfer data into correct directory:** You will not work directly on your group’s curated project data in the /datasets directory. Instructions on how to transfer data from /datasets to your home, scratch, or projects directory can be found in :ref:`transfer`. If you ever need to transfer data **off Nightingale**, read and follow the :ref:`protected` guidelines **before** transferring.

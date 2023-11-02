@@ -12,3 +12,10 @@ Why does my login freeze when I'm trying to log into Nightingale?
 ----------------------------------------------------------------------
 
 If you are trying to log in from outside the University of Illinois campus (not on the U of I network), you must be connected to either the University of Illinois VPN or the NCSA VPN; failing to connect through a VPN can cause your login to freeze (see :ref:`access_vpn`).
+
+How should I acknowledge the use of Nightingale in my research?
+------------------------------------------------------------------
+
+Suggested text to use to acknowledge use of Nightingale for your research: 
+
+"This research used resources of the National Center for Supercomputing Applications (NCSA) which is supported by funds from the University of Illinois Urbana-Champaign."

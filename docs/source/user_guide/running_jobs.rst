@@ -57,6 +57,8 @@ On successful building (compilation and linking) of your program, an executable 
 |              | To run OpenMP programs, specify the name of the executable.                  | ``./a.out``                  |
 +--------------+------------------------------------------------------------------------------+------------------------------+
 
+.. _queues:
+
 Nightingale Queues
 --------------------
     
@@ -87,6 +89,8 @@ For a downtime, there will be a reservation in Slurm to prevent jobs from starti
 
 If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like **ReqNodeNotAvail, Reserved for maintenance** for your job. 
 You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
+
+.. _slurm:
 
 Managing Your Jobs with Slurm
 ------------------------------

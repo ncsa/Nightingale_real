@@ -3,7 +3,7 @@
 Fees and Services
 =====================
 
-All of the fees below are the costs for University of Illinois users and collaborators with a university funding account number (CFOP). Contact NCSA for rates applied to account numbers outside the University of Illinois (:ref:`help`). 
+All the fees below are the costs for University of Illinois users and collaborators with a university funding account number (CFOP). Contact NCSA for rates applied to account numbers outside the University of Illinois (:ref:`help`). 
 
 Allocation/access cannot be shorter than **four months**. Decisions to terminate allocation/access must be provided **three months** before the termination date. Costs are the same across all node types. Rates are reviewed and recalculated biennially to ensure superior infrastructure and services. Billing will occur monthly for the **prior** month’s allocation/use. License fees for some software may be passed on to the user. 
 

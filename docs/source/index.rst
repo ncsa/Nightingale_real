@@ -3,7 +3,7 @@ Nightingale User Documentation
 #####################################
 
 .. image:: images/ACHE_cage_3.jpg
-   :width: 500px
+   :width: 600px
    :alt: Seven racks of computers in a server room
 
 Introduction

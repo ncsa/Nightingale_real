@@ -91,5 +91,3 @@ Load the CUDA Toolkit into your environment using the following module command:
 ::
 ``module load cuda/11.4.2``
 
-
-+

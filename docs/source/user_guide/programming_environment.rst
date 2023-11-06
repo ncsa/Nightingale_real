@@ -4,7 +4,7 @@ Programming Environment
 
 The GNU compilers (GCC) version 8.4.1 are in the default user environment. Version 12.2.0 is also available — load this version with the command:
 ::
-module load gcc/12.2.0
+``module load gcc/12.2.0``
 
 
 Compiler Commands
@@ -15,21 +15,23 @@ Serial
 To build (compile and link) a serial program in Fortran, C, and C++ enter:
 
 .. table:: Compiling Serial Code With GCC
-+--------------------------+
-| **GCC**                  |
-+==========================+
-| ``gfortran myprog.f``    |
-|                          |
-| ``gfortran myprog.f90``  |
-|                          |
-| ``gcc      myprog.c``    |
-|                          |
-| ``g++      myprog.cc``   |
-+--------------------------+
++---------------------+---------------------------+
+| **GCC**             |  Build Commands           |
++=====================+===========================+
+| Fortran 77          | ``gfortran myprog.f``     |
+|                     |                           |
+| Fortran 90          | ``gfortran myprog.f900``  |
+|                     |                           |
+| C                   | ``gcc myprog.c``          |
+|                     |                           |
+| C++                 | ``g++ myprog.cc``         |
++---------------------+---------------------------+
+
 
 
 MPI
 ~~~~~~~
+*(coming soon)*
 
 To build (compile and link) a MPI program in Fortran, C, and C++:
 
@@ -48,40 +50,42 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 
 OpenMP
 ~~~~~~~~
-To build an OpenMP program, use the -fopenmp / -qopenmp option:
+To build an OpenMP program, use the -fopenmp option:
 
 .. table::Compiling OpenMP Code
-+---------------------------------------------+
-|        **GCC**                              |
-+=============================================+
-| ``gfortran -fopenmp myprog.f``              |
-|                                             |
-| ``gfortran -fopenmp myprog.f90``            |
-|                                             |
-| ``gcc      -fopenmp myprog.c``              |
-|                                             |
-| ``g++      -fopenmp myprog.cc``             |
-+---------------------------------------------+
++---------------------+-----------------------------------+
+| **GCC**             |  Build Commands                   |
++=====================+===================================+
+| Fortran 77          | ``gfortran -fopenmp myprog.f``    |
+|                     |                                   |
+| Fortran 90          | ``gfortran -fopenmp myprog.f900`` |
+|                     |                                   |
+| C                   | ``gcc -fopenmp myprog.c``         |
+|                     |                                   |
+| C++                 | ``g++ -fopenmp myprog.cc``        |
++---------------------+-----------------------------------+
+
 
 
 Hybrid MPI/OpenMP
 ~~~~~~~~~~~~~~~~~~~~~
-To build an MPI/OpenMP hybrid program, use the -fopenmp / -qopenmp option with the MPI compiling commands:
+*(coming soon)*
+
+To build an MPI/OpenMP hybrid program, use the -fopenmp option with the MPI compiling commands:
 
 .. table::Compiling Hybrid MPI/OpenMP Code
-+---------------------------------------------+
-|  **GCC**                                    |
-+=============================================+
-|   OpenMPI                                   |
-+---------------------------------------------+
-| ``mpif77 -fopenmp myprog.f``                |
-|                                             |
-| ``mpif90 -fopenmp myprog.f90``              |
-|                                             |
-| ``mpicc  -fopenmp myprog.c``                |
-|                                             |
-| ``mpicxx -fopenmp myprog.cc``               |
-+---------------------------------------------+
++---------------------+-------------------------------+----------------------------------------------+
+| MPI Implementation  | modulefile for MPI/Compiler   | Build Commands                               |
++=====================+===============================+==============================================+
+| Open MPI            | openmpi/4.1.4-gcc             | ``Fortran 77:  mpif77 -fopenmp myprog.f``    |
+|                     |                               |                                              |
+|                     |                               | ``Fortran 90:  mpif90 -fopenmp myprog.f90``  |
+|                     |                               |                                              |
+|                     |                               | ``C:           mpicc -fopenmp myprog.c``     |
+|                     |                               |                                              |
+|                     |                               | ``C++:         mpicxx -fopenmp myprog.cc``   |
++---------------------+-------------------------------+----------------------------------------------+
+
 
 CUDA
 ~~~~~~

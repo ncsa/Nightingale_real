@@ -96,106 +96,17 @@ Using Python on Nightingale
 Introduction
 ~~~~~~~~~~~~~~~
 
-`Python <https://en.wikipedia.org/wiki/Python_(programming_language)>`_ is a general-purpose programming language. Python and Python packages are available via `Python Package Index (PyPI) <https://pypi.org/>`_, which hosts thousands of third-party modules for Python. Both Python’s standard library and the community-contributed modules allow for endless possibilities. 
-
-Anaconda and Miniconda also provide a Python environment with Python packages.
-Anaconda and Miniconda are installed on Nightingale. 
-One of the main differences between Anaconda and Miniconda is the number of default packages: 
-
-- Anaconda, by default, installs with over 150 data science packages. 
-- Miniconda, by default, installs with a subset of the packages installed with Anaconda. 
-
-Anaconda and Miniconda include `Conda <https://docs.conda.io/en/latest/>`_, which is a package manager and environment management system popular for Python and R. More information on whether Anaconda or Miniconda is best for your needs is available in the `Anaconda documentation <https://docs.anaconda.com/free/anaconda/getting-started/distro-or-miniconda.html>`_
+`Anaconda/Miniconda <https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)>`_ is a specilized distribution 
+of the Python and R programing languages for scientific computing. Anaconda/Miniconda include `Conda <https://en.wikipedia.org/wiki/Conda_(package_manager)>`_ a package and environment management system which allow users to create numerous environmnets to suit their specific needs.
 
 Versions
 ~~~~~~~~~
 
-See :ref:`installed` for the versions of Anaconda, Miniconda, and Python installed on Nightingale.
+See :ref:`installed` for the versions of Anaconda, and Miniconda installed on Nightingale.
 
-Adding Python to Your Environment
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Each Python installation on Nightingale has a corresponding modulefile for loading a specific version of Python into your software environment. 
-To see the available Python versions type the following in the command line:
-
-.. code-block::
-
-   module avail anaconda3
-
-or
-
-.. code-block::
-
-   module avail miniconda3
-
-Installing Python Packages (in User-Specified Locations)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- 
-You must install software/libraries in spaces you have write-access to (user-writeable) like your home directory, your group’s project space (**recommended**), or your scratch space. Software installed in scratch space is **not permanent** and system administrators may remove it at **any time**. 
-
-Generally, any Python package not available in the system installation can be installed from the `PyPI <https://pypi.org/>`_ in your specified location.
-
-The following commands will create a minimal clone anaconda environment in your home directory, install `PyTorch <https://pytorch.org/docs/stable/index.html>`_, and list the Python packages installed in your environment (including your own installed packages):
-
-.. code-block::
-
-  cd ${HOME}
-  module load anaconda3/2022.05
-  export CONDA_PKGS_DIRS="${HOME}/.conda/pkgs"
-  conda create -n my.anaconda python
-  conda info -e
-  source activate my.anaconda
-  conda info -e
-  conda install pytorch
-  conda list
- 
-To create a complete clone anaconda environment, 
-
-   replace:
-
-   .. code-block::
-
-      conda create -n my.anaconda python
- 
-   with:
-
-   .. code-block::
-
-      conda create -n my.anaconda anaconda
-
-To deactivate the anaconda environment:
-
-.. code-block::
-
-   conda deactivate
-
-Viewing Installed Python Packages
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-After enabling Python in your user environment (by loading a Python or Anaconda modulefile), you can view a list of the Python packages installed by typing the following commands.
-
-If you have loaded a Python modulefile:
-
-.. code-block::
-
-   pip list
-
-If you have loaded an Anaconda modulefile:
-
-.. code-block::
-
-   conda list
-
-Conda
-~~~~~~~~~
-
-Conda is an open-source, cross-platform, language-agnostic package
-manager and environment management system. It is a popular package
-manager for Python and R. Here is how you can start using Conda on
-Nightingale.
 
 Setting an environment variable
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To be able to install additional python packages via Conda, you will
 need to set the HTTPS_PROXY environment variable. **You will need to set
@@ -215,10 +126,8 @@ to output the value of the environment variable.
 
     echo ${HTTPS_PROXY}
 
-As long as the variable has a value it will be echoed out. If no value
-is set, then an empty line will be displayed instead.
 
-Anaconda (ver 2022.05) and Miniconda (ver 2022.05) are installed on
+Anaconda and Miniconda are installed on
 Nightingale. Essentially one of the main differences between Anaconda
 and Minconda is the number of packages: Anaconda by default installs
 with over 150 data science packages, whereas Miniconda by default
@@ -239,21 +148,25 @@ or
 **Note:** Do not load both modulefiles. Use either Anaconda or
 Miniconda.
 
-List the python packages that are already available on the cluster.
+Viewing Installed Python Packages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+After enabling Python in your user environment (by loading a Anaconda or Miniconda modulefile), you can view a list of the Python packages installed by typing the following command:
 
-    conda list
+.. code-block::
+
+   conda list
+
 
 Creating your Conda environment
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We recommend you use the locally installed Conda, so that you can
 install the specific packages that you need. You can have multiple
 environments with different packages for testing purposes.
 
-Users can use the following command to create their ownconda environment
-called 'my.conda_env'. If you wish, you can set a different name.
+Users can use the following command to create their own conda environment
+called 'my.conda_env'.
 
 ::
 
@@ -295,7 +208,7 @@ install Python using the conda-forge channel.
 
 ::
 
-    conda install] python --channel conda-forge
+    conda install python --channel conda-forge
 
 To exit you conda environment type the following command:
 
@@ -305,6 +218,26 @@ To exit you conda environment type the following command:
 
 You should now see your default prompt, which indicates that your conda
 environment has been deactivated.
+
+Complete example of creating a conda environment  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The following list of commands will create conda environment built around the package `PyTorch <https://pytorch.org/docs/stable/index.html>`_, in your home directory.
+
+
+.. code-block::
+
+  export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
+  cd ${HOME}
+  module load anaconda3/2022.05
+  export CONDA_PKGS_DIRS="${HOME}/.conda/pkgs"
+  conda create -n my.pytorch pytorch
+  conda info -e
+  source activate my.pytorch
+  conda info -e
+  conda list
+ 
+and running the command **conda deactivate**, will deactivate the conda environment created by example listed above. 
+
 
 Using R on Nightingale
 -----------------------

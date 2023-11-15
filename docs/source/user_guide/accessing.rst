@@ -15,9 +15,9 @@ Create an NCSA Identity
 
 Before requesting Nightingale access, both PIs and individual users need an NCSA identity. **Skip this step if you already have an NCSA identity**; if you don't remember your password, you can reset it on the `NCSA Identity and Access Management webpage <https://identity.ncsa.illinois.edu/>`_.
 
-To create an NCSA identity, go to this `invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the **Register New User and Join** button.
+To create an NCSA identity, go to this `Nightingale invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click the **Register New User and Join** button.
 
-In addition to creating a new account, this process will automatically enroll you into NCSA's Duo multi-factor authentication (https://go.ncsa.illinois.edu/2fa), which is required to log into Nightingale. **This is not the same as the University of Illinois' Duo**. 
+In addition to creating a new account, this process will automatically enroll you into `NCSA's Duo multi-factor authentication <https://go.ncsa.illinois.edu/2fa>`_, which is required to log into Nightingale. **This is not the same as the University of Illinois' Duo**. 
 
 .. note::
    
@@ -129,8 +129,8 @@ You can log onto Nightingale by following these steps:
 
       ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-astro07
 
-SSH Clients
-------------
+Command-line SSH Clients
+--------------------------
 
 SSH (Secure Shell) is a client-server architecture that provides a secure channel over an unsecured network. An SSH client is a program for logging securely into and executing commands on a remote machine. SSH encrypts the data sent over an open network, such as the internet, so that it can't be read by others.
 

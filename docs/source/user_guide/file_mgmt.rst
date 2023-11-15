@@ -60,6 +60,8 @@ Datasets
  
 The /datasets area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.
 
+.. _transfer:
+
 Transferring Files
 -------------------
 

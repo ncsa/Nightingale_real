@@ -15,14 +15,14 @@ To build (compile and link) a serial program in Fortran, C, and C++ enter:
 .. table:: Compiling Serial Code With GCC
    
    +---------------------+---------------------------+
-   | **GCC**             |  Build Commands           |
+   | GCC                 |  Build Commands           |
    +=====================+===========================+
    | Fortran 77          | ``gfortran myprog.f``     |
-   |                     |                           |
+   +---------------------+---------------------------+
    | Fortran 90          | ``gfortran myprog.f900``  |
-   |                     |                           |
+   +---------------------+---------------------------+
    | C                   | ``gcc myprog.c``          |
-   |                     |                           |
+   +---------------------+---------------------------+
    | C++                 | ``g++ myprog.cc``         |
    +---------------------+---------------------------+
 
@@ -50,19 +50,19 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 
 OpenMP
 ~~~~~~~~
-To build an OpenMP program, use the -fopenmp option:
+To build an OpenMP program, use the **-fopenmp** option:
 
 .. table:: Compiling OpenMP Code
 
    +---------------------+-----------------------------------+
-   | **GCC**             |  Build Commands                   |
+   | GCC                 |  Build Commands                   |
    +=====================+===================================+
    | Fortran 77          | ``gfortran -fopenmp myprog.f``    |
-   |                     |                                   |
+   +---------------------+-----------------------------------+
    | Fortran 90          | ``gfortran -fopenmp myprog.f900`` |
-   |                     |                                   |
+   +---------------------+-----------------------------------+
    | C                   | ``gcc -fopenmp myprog.c``         |
-   |                     |                                   |
+   +---------------------+-----------------------------------+
    | C++                 | ``g++ -fopenmp myprog.cc``        |
    +---------------------+-----------------------------------+
 
@@ -72,7 +72,7 @@ Hybrid MPI/OpenMP
 ~~~~~~~~~~~~~~~~~~~~~
 *(coming soon)*
 
-To build an MPI/OpenMP hybrid program, use the -fopenmp option with the MPI compiling commands:
+To build an MPI/OpenMP hybrid program, use the **-fopenmp** option with the MPI compiling commands:
 
 .. table:: Compiling Hybrid MPI/OpenMP Code
 

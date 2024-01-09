@@ -78,6 +78,8 @@ The current limits of the Nightingale queues are below:
 | a100x2           | 64             | 512GB            | 1          | Tesla A100 : 2         | 7 days      |
 +------------------+----------------+------------------+------------+------------------------+-------------+
 
+.. _system-reservations:
+
 System Reservations
 ---------------------
 

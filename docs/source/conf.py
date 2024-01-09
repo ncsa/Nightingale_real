@@ -46,3 +46,6 @@ html_theme_options = {
      'logo_only': False,
      'display_version': False,
  }
+
+# -- Page Title
+html_title = 'UIUC NCSA Nightingale User Guide'

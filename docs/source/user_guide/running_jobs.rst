@@ -87,7 +87,7 @@ There are three *scheduled* system maintenance periods every year in January, Ma
 Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure.
 For a downtime, there will be a reservation in Slurm to prevent jobs from starting if the jobs would not be complete before the downtime begins.
 
-If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like **ReqNodeNotAvail, Reserved for maintenance** for your job. 
+If a downtime reservation is blocking your job from starting, the ``squeue`` command will show a message like ``ReqNodeNotAvail, Reserved for maintenance`` for your job. 
 You may be able to shorten the runtime of your job to fit in before the downtime reservation starts.
 
 .. _slurm:

@@ -98,7 +98,7 @@ Managing Your Jobs with Slurm
 ------------------------------
 
 .. note::
-   If you are new to writing and testing scripts, and new to jobs, we recommend starting with interactive batch jobs (see :ref:`interactive`). If you need help, please submit a support request (:ref:`help`).
+   If you are new to writing and testing scripts, and new to jobs, we recommend starting with :ref:`interactive batch jobs <interactive>`. If you need help, please :ref:`submit a support request <help>`.
 
 Generally, you will use the below commands to run *batch* jobs. 
 Each batch job is controlled by a script that the compute nodes run when there are enough nodes available. 

@@ -109,7 +109,7 @@ You can log onto Nightingale by following these steps:
 
       [csteffen@ngale-bastion-1 ~]$
 
-#. SSH to your login node using the appropriate :ref:`hostname <node_hostnames>` following this syntax:
+#. SSH to your login node, using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
    
    .. code-block::
 

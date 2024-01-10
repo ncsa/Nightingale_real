@@ -147,14 +147,14 @@ Copying Files off of Nightingale
 
 Any method that can transfer data onto Nightingale can also be used to transfer information off of the machine. 
 
-Before transferring data off of Nightingale, please read about :ref:`protected`. Data transfers off of Nightingale are audited and must be accounted for.
+Before transferring data off of Nightingale, please read about :ref:`protected data <protected>`. Data transfers off of Nightingale are audited and must be accounted for.
 
 File Transfers with Globus
 -----------------------------
 
 .. warning::
 
-   As of January 2023, Globus is available for use on Nightingale. However, we have not finished the final contracts and setup for specifically HIPAA-data certified variant of Globus, so **do not transfer HIPAA data over Globus** at this time. When HIPAA-certified Globus is installed, this warning will be removed. If you have any questions about data movement, please don't hesitate to submit a ticket (:ref:`help`).  
+   As of January 2023, Globus is available for use on Nightingale. However, we have not finished the final contracts and setup for specifically HIPAA-data certified variant of Globus, so **do not transfer HIPAA data over Globus** at this time. When HIPAA-certified Globus is installed, this warning will be removed. If you have any questions about data movement, please don't hesitate to :ref:`submit a ticket <help>`.  
 
 Globus is a web-based file transfer system that works in the background to move files between systems with "Globus Endpoints". Nightingale will have a permanent Globus Endpoint (with a name announced at that time). To transfer files to and from your directories using Globus, you will have to authenticate that endpoint, using your already-existing NCSA username, password, and NCSA Duo account. 
 
@@ -217,7 +217,7 @@ You can use various programs on clusters for working with plain text files; exam
 The vi/vim text editor is one of the most commonly used. However, if you are new to working in the Linux environment, the nano editor is recommended because it may be more similar to how you edit text files on a non-Linux-based machine. 
 Several tutorials are available online if you want to know more about nano or vi; a couple of suggestions are listed below.
 
-- `How-to-Geek: The Beginner’s Guide to Nano, the Linux Command-Line Text Editor <https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/>`_
+- `How-to-Geek: The Beginner’s Guide to Nano, the Linux Command-Line Text Editor <https://www.howtogeek.com/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/>`_
 
 - `Wikibooks: Learning the vi Editor <https://upload.wikimedia.org/wikipedia/commons/d/d2/Learning_the_vi_Editor.pdf>`_ 
 

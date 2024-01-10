@@ -217,7 +217,7 @@ You can use various programs on clusters for working with plain text files; exam
 The vi/vim text editor is one of the most commonly used. However, if you are new to working in the Linux environment, the nano editor is recommended because it may be more similar to how you edit text files on a non-Linux-based machine. 
 Several tutorials are available online if you want to know more about nano or vi; a couple of suggestions are listed below.
 
-- `How-to-Geek: The Beginner’s Guide to Nano, the Linux Command-Line Text Editor <https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/>`_
+- `How-to-Geek: The Beginner’s Guide to Nano, the Linux Command-Line Text Editor <https://www.howtogeek.com/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/>`_
 
 - `Wikibooks: Learning the vi Editor <https://upload.wikimedia.org/wikipedia/commons/d/d2/Learning_the_vi_Editor.pdf>`_ 
 

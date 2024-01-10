@@ -21,7 +21,7 @@ Software                                                                        
 ==============================================================================   ========================
 Anaconda_                                                                        2022.05  (Python 3.9.12)
 `awscli <https://aws.amazon.com/cli/>`_                                          2.4.16
-`Cuda <https://docs.nvidia.com/cuda/archive/11.4.2/>`_                           11.4.2
+`CUDA <https://docs.nvidia.com/cuda/archive/11.4.2/>`_                           11.4.2
 `GCC <https://gcc.gnu.org/onlinedocs/12.2.0/>`_                                  12.2.0
 `Julia <https://juliahub.com/ui/Packages/General/RegistryCI/4.3.2>`_             4.3.2
 `MATLAB <https://www.mathworks.com/help/?s_tid=gn_supp>`_                        9.7

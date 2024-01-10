@@ -109,7 +109,7 @@ You can log onto Nightingale by following these steps:
 
       [csteffen@ngale-bastion-1 ~]$
 
-#. SSH to your login node using the appropriate hostname (see :ref:`node_hostnames`) following this syntax:
+#. SSH to your login node using the appropriate :ref:`hostname <node_hostnames>` following this syntax:
    
    .. code-block::
 
@@ -163,7 +163,7 @@ If you log into Nightingale from the University of Illinois campus, you don't ne
 
 There are two VPN services that will allow you to log into Nightingale from off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not associated directly with UIUC. 
 
-If you have trouble setting up or using either of these VPNs, or have questions, please submit a ticket (:ref:`help`).  
+If you have trouble setting up or using either of these VPNs, or have questions, please :ref:`submit a support request <help>`.  
 
 .. note::
 
@@ -185,7 +185,7 @@ Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS mac
 One-time X Window Software Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download it here <https://www.xquartz.org/>`_. Most users of Nightingale will want to do this.  
+If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download XQuartz here <https://www.xquartz.org/>`_. Most users of Nightingale will want to do this.  
 
 One-time SSH Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -359,7 +359,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 Account Administration
 ------------------------
 
-On Nightingale there is an approval process for adding users to the system. To start the process, submit a ticket (:ref:`help`).
+On Nightingale there is an approval process for adding users to the system. To start the process, :ref:`submit a support request <help>`.
 
 Other account and project administration tasks, such as resetting your password, are managed by the NCSA Identity and Group Management tools. 
 See the `NCSA Allocation and Account Management documentation page <https://wiki.ncsa.illinois.edu/display/USSPPRT/NCSA+Allocation+and+Account+Management>`_ for more information.

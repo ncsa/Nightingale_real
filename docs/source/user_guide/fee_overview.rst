@@ -39,14 +39,14 @@ Database Setup and Management Services
 
 Per user, as needed: $80.71 per month 
 
-Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. Options for providing “data as a service” to a broad user community are available; submit a support request (:ref:`help`) for details. 
+Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. Options for providing “data as a service” to a broad user community are available; :ref:`submit a support request <help>` for details. 
 
 Consultation and Development Services
 -----------------------------------------
 
 Per project as needed: cost based on time and materials 
 
-NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials. Submit a support request (:ref:`help`) to discuss project needs and staff availability. 
+NCSA provides software development, analytics, and computation expertise for a fee that covers staff time and materials. :ref:`Submit a support request <help>` to discuss project needs and staff availability. 
 
 User Support
 --------------

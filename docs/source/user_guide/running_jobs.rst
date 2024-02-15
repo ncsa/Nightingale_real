@@ -84,7 +84,7 @@ System Reservations
 ---------------------
 
 The system will periodically be unavailable to start jobs. 
-**When you log into Nightingale, any upcoming system interruptions are listed in the message of the day.**
+**When you log into Nightingale any upcoming system interruptions are listed in the message of the day.**
 There are three *scheduled* system maintenance periods every year in January, May, and August. 
 Other *unscheduled*, emergency downtimes may occur for important system software security updates or due to a hardware failure.
 For a downtime, there will be a reservation in Slurm to prevent jobs from starting if the jobs would not be complete before the downtime begins.

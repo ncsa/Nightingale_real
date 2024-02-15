@@ -310,13 +310,13 @@ The ``sinfo`` command is used to view partition and node information for a syste
 |                        | Multiple partitions are separated by commas.             |
 +------------------------+----------------------------------------------------------+
 
-You can view the partitions (queues) that you can submit batch jobs to, with the following command:
+View the partitions (queues) that you can submit batch jobs to with the following command:
 
 .. code-block::
 
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
     
-You can also view specific configuration information about the compute nodes associated with your primary partition(s), with the following command:
+View specific configuration information about the compute nodes associated with your primary partition(s) with the following command:
 
 .. code-block::
 
@@ -429,7 +429,7 @@ Below is a sample batch script that runs a single serial application, ``hostname
 Parallel Job 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following is a batch script that runs a code in parallel, with a couple of other features that are useful in batch jobs:
+The following is a batch script that runs a code in parallel with a couple of other features that are useful in batch jobs:
 
 .. raw:: html
 

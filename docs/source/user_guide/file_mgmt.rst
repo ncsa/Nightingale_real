@@ -212,6 +212,11 @@ Once your identity is linked (above), then do the following to transfer files us
 Creating and Editing Files
 ---------------------------
 
+.. warning::
+   When you create files on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. You can set "owner" and "group" permissions to meet your needs. For more information on Linux file permissions, review `Linux file permissions explained <https://www.redhat.com/sysadmin/linux-file-permissions-explained>`_.
+
+   File permissions on Nightingale are monitored by the security group to maintain the integrity of protected data on the system. If you grant file permissions to "others", the security system will be alerted and you will be contacted to investigate.
+
 Sometimes, it is easiest to create and edit your files directly on the cluster rather than transfer them back and forth. 
 You can use various programs on clusters for working with plain text files; examples include vi/vim, gedit, nano, and emacs. 
 The vi/vim text editor is one of the most commonly used. However, if you are new to working in the Linux environment, the nano editor is recommended because it may be more similar to how you edit text files on a non-Linux-based machine. 

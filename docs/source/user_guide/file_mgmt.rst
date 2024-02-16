@@ -60,6 +60,13 @@ Datasets
  
 The /datasets area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.
 
+File and Directory Permissions
+--------------------------------
+
+When you create files or directories on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. You can set "owner" and "group" permissions to meet your needs. For more information on Linux file permissions, review `Linux file permissions explained <https://www.redhat.com/sysadmin/linux-file-permissions-explained>`_.
+
+File and directory permissions on Nightingale are monitored by the security group to maintain the integrity of protected data on the system. If you grant file permissions to "others", the security system will be alerted and you will be contacted to investigate.
+
 .. _transfer:
 
 Transferring Files
@@ -213,9 +220,9 @@ Creating and Editing Files
 ---------------------------
 
 .. warning::
-   When you create files on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. You can set "owner" and "group" permissions to meet your needs. For more information on Linux file permissions, review `Linux file permissions explained <https://www.redhat.com/sysadmin/linux-file-permissions-explained>`_.
+   When you create files or directories on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. You can set "owner" and "group" permissions to meet your needs. For more information on Linux file permissions, review `Linux file permissions explained <https://www.redhat.com/sysadmin/linux-file-permissions-explained>`_.
 
-   File permissions on Nightingale are monitored by the security group to maintain the integrity of protected data on the system. If you grant file permissions to "others", the security system will be alerted and you will be contacted to investigate.
+   File and directory permissions on Nightingale are monitored by the security group to maintain the integrity of protected data on the system. If you grant file permissions to "others", the security system will be alerted and you will be contacted to investigate.
 
 Sometimes, it is easiest to create and edit your files directly on the cluster rather than transfer them back and forth. 
 You can use various programs on clusters for working with plain text files; examples include vi/vim, gedit, nano, and emacs. 

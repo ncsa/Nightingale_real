@@ -171,7 +171,7 @@ You can have multiple environments with different packages for testing purposes.
 
    .. code-block::
 
-       my.conda_env\ [username@ng-login01 ~]$
+       (my.conda_env)\ [username@ng-login01 ~]$
     
 #. Use the following command to display all known Conda environments:
 

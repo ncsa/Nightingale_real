@@ -198,7 +198,7 @@ You can have multiple environments with different packages for testing purposes.
 Complete Example of Creating a Conda Environment  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following list of commands will create conda environment built around the package `PyTorch <https://pytorch.org/docs/stable/index.html>`_, in your home directory.
+The following list of commands will create a conda environment, built around the package `PyTorch <https://pytorch.org/docs/stable/index.html>`_, in your home directory.
 
 .. code-block::
 
@@ -212,7 +212,7 @@ The following list of commands will create conda environment built around the pa
    conda info -e
    conda list
  
-Running the command ``conda deactivate``, will deactivate the conda environment created by example listed above. 
+Running the command ``conda deactivate``, will deactivate the conda environment created by the above example. 
 
 Using R on Nightingale
 -----------------------

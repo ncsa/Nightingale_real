@@ -36,7 +36,7 @@ Batch scripts (``sbatch``) or Interactive (``srun``), which is right for you?
   Sample Slurm batch job scripts are provided in the :ref:`examples` section.
   Slurm also supports `job arrays <https://slurm.schedmd.com/job_array.html>`_ for easy management of a set of similar jobs.
 
-- :ref:`srun` - For interactive use of a compute node, srun will run a single command through Slurm on a compute node. srun blocks; it will wait until Slurm has scheduled compute resources and when it returns, the job is complete.
+- :ref:`srun` - For interactive use of a compute node, ``srun`` will run a single command through Slurm on a compute node. ``srun`` blocks; it will wait until Slurm has scheduled compute resources and when it returns, the job is complete.
 
 Running Programs
 ------------------
@@ -48,7 +48,7 @@ On successful building (compilation and linking) of your program, an executable 
 +==============+==============================================================================+==============================+
 | Serial       | To run serial code, specify the name of the executable.                      | ``./a.out``                  |
 +--------------+------------------------------------------------------------------------------+------------------------------+
-| OpenMP       | The **OMP_NUM_THREADS** environment variable can be set to specify the       | ``export OMP_NUM_THREADS=16``|
+| OpenMP       | The ``OMP_NUM_THREADS`` environment variable can be set to specify the       | ``export OMP_NUM_THREADS=16``|
 |              |                                                                              |                              |
 |              | number of threads used by OpenMP programs. If this variable is not set, the  |                              |
 |              |                                                                              |                              |
@@ -163,9 +163,9 @@ Memory needs
 $$$$$$$$$$$$$
 
 .. warning::
-   Do not use the memory specification unless absolutely required because it could delay scheduling of the job; if nodes with the specified memory are unavailable for the specified queue, the job will **never** run.
+   Do not use the memory specification unless absolutely required because it could delay scheduling of the job; if nodes with the specified memory are unavailable for the specified queue, the job will *never* run.
 
-The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory configurations are specific to the particular Nightingale queues.
+The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory configurations are specific to the particular :ref:`Nightingale queues <queues>`.
 
 **Example:**
 
@@ -188,7 +188,7 @@ or
 Accessing the GPUs 
 $$$$$$$$$$$$$$$$$$$$
 
-To gain access to the GPUs within the batch job’s environment, add the resource specification **tesla_a40** (for Tesla A40) or **tesla_a100** (for Tesla A100) to your batch script or on the batch job’s submission line.
+To gain access to the GPUs within the batch job’s environment, add the resource specification ``tesla_a40`` (for Tesla A40) or ``tesla_a100`` (for Tesla A100) to your batch script or on the batch job’s submission line.
 
 
 **Example:**
@@ -228,9 +228,9 @@ srun
 Command Line
 $$$$$$$$$$$$$$$
 
-Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node **now** and log you onto it. These are called **interactive batch jobs**. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to their nodes.
+Instead of queuing up a batch job to run on the compute nodes, you can request that the job scheduler allocate you to a compute node *now* and log you onto it. These are called *interactive batch jobs*. Projects that have dedicated interactive nodes, do not need to go through the scheduler; members of these projects just log in directly to their nodes.
 
-To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing **ALL_ACCT**, with the name of your allocation account:
+To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing ``ALL_ACCT``, with the name of your allocation account:
 
 .. code-block::
 
@@ -239,7 +239,7 @@ To launch an interactive batch job using the job scheduler with the default valu
 .. warning::
    End the interactive job **as soon as you're done**, by typing ``exit``. If you leave the job running, even if you are not running any processes, your allocation account is being charged for the time.
 
-To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing **ACCT_NAME** with the name of your charge account:
+To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing ``ACCT_NAME`` with the name of your charge account:
 
 .. code-block::
 
@@ -310,19 +310,19 @@ The ``sinfo`` command is used to view partition and node information for a syste
 |                        | Multiple partitions are separated by commas.             |
 +------------------------+----------------------------------------------------------+
 
-You can view the partitions (queues) that you can submit batch jobs to, by typing the following command:
+View the partitions (queues) that you can submit batch jobs to with the following command:
 
 .. code-block::
 
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
     
-You can also view specific configuration information about the compute nodes associated with your primary partition(s), by typing the following command:
+View specific configuration information about the compute nodes associated with your primary partition(s) with the following command:
 
 .. code-block::
 
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
 
-See the ``sinfo`` man page for other available options (``man sinfo``).
+See the ``sinfo`` man page for other available options.
 
 scancel
 ~~~~~~~~
@@ -363,7 +363,7 @@ Additional sample batch scripts are available on Nightingale in the following di
 Serial Job
 ~~~~~~~~~~~~~
 
-Below is a sample batch script that runs a single serial application (**hostname**). Hostname is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits. If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Replace **hostname** with some application code that you wanted to run to do work on the compute node.
+Below is a sample batch script that runs a single serial application, ``hostname``. (``hostname`` is not an application that you would normally run; we are using it in this example because it's a harmless example that does something very quickly and then exits.) If you run this script, and it works, then you know that you have a working script and you can build/modify from there. Replace ``hostname`` with some application code that you wanted to run to do work on the compute node.
 
 .. raw:: html
 
@@ -429,7 +429,7 @@ Below is a sample batch script that runs a single serial application (**hostname
 Parallel Job 
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The following is a batch script that runs a code in parallel, with a couple of other features that are useful in batch jobs:
+The following is a batch script that runs a code in parallel with a couple of other features that are useful in batch jobs:
 
 .. raw:: html
 

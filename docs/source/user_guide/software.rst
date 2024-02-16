@@ -31,8 +31,6 @@ Anaconda_                                                                       
  
 .. _Anaconda: https://docs.anaconda.com/free/anaconda/reference/release-notes/#anaconda-2022-05-may-10-2022
 
-
-
 .. _modules:
 
 Using Modules
@@ -46,7 +44,7 @@ The table below shows the most common module commands you will use on Nightingal
    
    - Module commands are the same for all shells (Bash, tcsh, ksh, and others). 
    - The order that module commands are executed in is important. Changes are *prepended* to the current user environment paths with each module load.
-   - In the module commands below, replace **modulefile**, **modulefile2**, **oldmod**, and **newmod** with the names of the modulefile(s) you are running the command on.
+   - In the module commands below, replace ``modulefile``, ``modulefile2``, ``oldmod``, and ``newmod`` with the names of the modulefile(s) you are running the command on.
 
 +--------------------+-------------------------------------------------------------------------------+
 | Command            | Description                                                                   |
@@ -104,140 +102,117 @@ Versions
 
 See :ref:`installed` for the versions of Anaconda, and Miniconda installed on Nightingale.
 
-
-Setting an environment variable
+Setting an Environment Variable
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To be able to install additional python packages via Conda, you will
-need to set the HTTPS_PROXY environment variable. **You will need to set
-the "HTTPS_PROXY" environment variable every time you log in to the
-cluster using the following command:**
+To be able to install additional python packages via Conda, you will need to set the ``HTTPS_PROXY`` environment variable. 
+**You will need to set the "HTTPS_PROXY" environment variable every time you log in to the cluster using the following command:**
 
-:: 
+.. code-block:: 
 
-    export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
+   export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
 
+To verify that this environment variable is set use the ``echo`` command to output the value of the environment variable.
 
+.. code-block:: 
 
-To verify that this environment variable is set use the "echo" command
-to output the value of the environment variable.
+   echo ${HTTPS_PROXY}
 
-:: 
+Anaconda and Miniconda are installed on Nightingale. 
+One of the main differences between Anaconda and Minconda is the number of packages: 
+Anaconda by default installs with over 150 data science packages, and Miniconda by default installs a *subset* of the packages installed by default with Anaconda. 
 
-    echo ${HTTPS_PROXY}
+To enable (use) Anaconda or Miniconda on Nightingale, load the appropriate modulefile. Do not load *both* modulefiles, use *either* Anaconda or Miniconda.
 
+.. code-block::
 
-Anaconda and Miniconda are installed on
-Nightingale. Essentially one of the main differences between Anaconda
-and Minconda is the number of packages: Anaconda by default installs
-with over 150 data science packages, whereas Miniconda by default
-installs a subset of the packages installed by default with Anaconda. To
-enable (make use of) Anaconda or Miniconda on Nightingale, just load the
-appropriate modulefile.
-
-::
-
-    module load anaconda3/2022.05
+   module load anaconda3/2022.05
 
 or
 
-::
+.. code-block::
 
-    module load miniconda3/2022.05
-
-**Note:** Do not load both modulefiles. Use either Anaconda or
-Miniconda.
+   module load miniconda3/2022.05
 
 Viewing Installed Python Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After enabling Python in your user environment (by loading a Anaconda or Miniconda modulefile), you can view a list of the Python packages installed by typing the following command:
+After enabling Python in your user environment (by loading a Anaconda or Miniconda modulefile), you can view a list of the Python packages installed with the following command:
 
 .. code-block::
 
    conda list
 
-
-Creating your Conda environment
+Creating your Conda Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-We recommend you use the locally installed Conda, so that you can
-install the specific packages that you need. You can have multiple
-environments with different packages for testing purposes.
+We recommend you use the locally installed Conda, so that you can install the specific packages that you need. 
+You can have multiple environments with different packages for testing purposes.
 
-Users can use the following command to create their own conda environment
-called 'my.conda_env'.
+#. Create your own conda environment called ``my.conda_env`` with the following command:
 
-::
+   .. code-block::
 
-    conda create -n my.conda_env <package_name>
+      conda create -n my.conda_env <package_name>
     
-For example, to create a Conda environment (that intalls python and all
-of its dependencies):
+   For example, to create a Conda environment that intalls python and all of its dependencies:
 
-::
+   .. code-block::
 
-    conda create -n my.conda_env python
+      conda create -n my.conda_env python
     
+#. To start running Python, you need to activate your Conda environment.
 
-To start running Python, you need to activate your Conda environment.
+   .. code-block::
 
-::
+      source activate my.conda_env
 
-    source activate my.conda_env
+   When your Conda environment is activated, your prompt should start with:
 
-Now, you should be in your Conda environment, and your prompt should
-start with:
+   .. code-block::
 
-::
-
-    **(my.conda_env)**\ [username@ng-login01 ~]$
+       (my.conda_env)\ [username@ng-login01 ~]$
     
+#. Use the following command to display all known Conda environments:
 
-Use the following command to display all known Conda environments:
+   .. code-block::
 
-::
+      conda info -e
 
-    conda info -e
+   An asterisk (*) will appear on the line of the Conda environment that is currently active.
 
-An asterisk (*) will appear on the line of the Conda environment
-that is currently active.
+#. To make sure you have the latest version of Python in your environment, install Python using the ``conda-forge`` channel.
 
-To make sure you have the latest version of Python in your environment,
-install Python using the conda-forge channel.
+   .. code-block::
 
-::
+      conda install python --channel conda-forge
 
-    conda install python --channel conda-forge
+#. When you're ready, **exit** your conda environment with the following command:
 
-To exit you conda environment type the following command:
+   .. code-block::
 
-::
+      conda deactivate
 
-    conda deactivate
+   You should now see your default prompt, which indicates that your conda environment has been deactivated.
 
-You should now see your default prompt, which indicates that your conda
-environment has been deactivated.
-
-Complete example of creating a conda environment  
+Complete Example of Creating a Conda Environment  
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-The following list of commands will create conda environment built around the package `PyTorch <https://pytorch.org/docs/stable/index.html>`_, in your home directory.
 
+The following list of commands will create a conda environment, built around the package `PyTorch <https://pytorch.org/docs/stable/index.html>`_, in your home directory.
 
 .. code-block::
 
-  export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
-  cd ${HOME}
-  module load anaconda3/2022.05
-  export CONDA_PKGS_DIRS="${HOME}/.conda/pkgs"
-  conda create -n my.pytorch pytorch
-  conda info -e
-  source activate my.pytorch
-  conda info -e
-  conda list
+   export HTTPS_PROXY=http://ache-proxy.ncsa.illinois.edu:3128
+   cd ${HOME}
+   module load anaconda3/2022.05
+   export CONDA_PKGS_DIRS="${HOME}/.conda/pkgs"
+   conda create -n my.pytorch pytorch
+   conda info -e
+   source activate my.pytorch
+   conda info -e
+   conda list
  
-and running the command **conda deactivate**, will deactivate the conda environment created by example listed above. 
-
+Running the command ``conda deactivate``, will deactivate the conda environment created by the above example. 
 
 Using R on Nightingale
 -----------------------
@@ -265,7 +240,7 @@ You can use a modulefile to load a specific R version into your user environment
 
 To load a specific version, you will need to load the corresponding module. See :ref:`modules` for more information about modules.
 
-Load the *latest* version of R available on Nightingale:
+Load the *latest* version of R available on Nightingale with the following command:
 
 .. code-block::
 
@@ -280,34 +255,34 @@ You must have write access to the location.
 Installation Command Syntax
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To install R packages, all that is needed is the package name; you can also specify additional information, such as installation location and the repository.
+To install R packages, you only need the package name; you can also specify additional information, such as installation location and the repository.
 The install R packages commands is ``install.packages()``. Two example installations specifying **Package Name**, **Location**, and **Repository** are shown below.
 
-Install the package downloaded (**package name**) from the specified repository (**Repository URL**) into the specified location (**/path/to/r_libraries**):
+- Install the package downloaded (``package name``) from the specified repository (``Repository URL``) into the specified location (``/path/to/r_libraries``):
 
-.. code-block::
+  .. code-block::
 
-   install.packages('package_name', '/path/to/r_libraries', 'Repository URL')
+     install.packages('package_name', '/path/to/r_libraries', 'Repository URL')
 
-Install the local package (**package_name.tar.gz**) into the specified location (**/path/to/r_libraries**), specifying no repository (**repos = NULL**):
+- Install the local package (``package_name.tar.gz``) into the specified location (``/path/to/r_libraries``), specifying no repository (``repos = NULL``):
 
-.. code-block::
+  .. code-block::
 
-   install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
+     install.packages('package_name.tar.gz', '/path/to/r_libraries', repos = NULL)
 
-When the installation location and the repository URL are not specified, R packages are installed in a default location, and the R installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local file name and omitting the repository URL (specifying NULL).
+When the installation location and repository URL are not specified, R packages are installed in a default location, and the installation process prompts you to choose from a list of repositories. R packages downloaded manually from the CRAN can be installed by specifying the local file name and omitting the repository URL (specifying ``NULL``).
 
 Using Rscript
 ~~~~~~~~~~~~~~
 
 You can use the ``rscript`` command to run R commands without starting an R session. As a scripting frontend for R, Rscript enables using R via shell scripts and scripting applications.
 
-The example below shows step-by-step the commands you can run on Nightingale. In these steps, **~/Rlibs** is used for the location to install your user-specific add-on packages and the tilde **~** means your home directory (**$HOME**).
+The example below shows step-by-step the commands you can run on Nightingale. In these steps, ``~/Rlibs`` is used for the location to install your user-specific add-on packages and the tilde ``~`` means your home directory (``$HOME``).
 
 .. note::
    This example uses the Bash shell. The command syntax may differ when using a different shell.
 
-#. Set the **HTTPS_PROXY** environment variable (if you have not already done so):
+#. Set the ``HTTPS_PROXY`` environment variable (if you have not already done so):
 
    .. code-block::
 
@@ -325,7 +300,7 @@ The example below shows step-by-step the commands you can run on Nightingale. In
  
       module load R/4.2.0
 
-#. Set the R library environment variable (**R_LIBS**) to include your R package directory:
+#. Set the R library environment variable (``R_LIBS``) to include your R package directory:
 
    .. code-block::
 
@@ -337,7 +312,7 @@ The example below shows step-by-step the commands you can run on Nightingale. In
 
       Rscript -e "install.packages('RCurl', '~/Rlibs', 'https://cran.r-project.org')"
 
-If the environment variable **R_LIBS** is not set and a directory is not specified with the ``install.packages()`` command, then R packages will be installed under **~/R/x86_64-unknown-linux-gnu-library** by default (this R subdirectory structure is created automatically). The **R_LIBS** environment variable will need to be set every time when logging into Nightingale if your R package location is to be visible to an R session. You can add the following code to your **~/.bashrc** file to remove the need to set the **R_LIBS** environment variable with every login session to Nightingale:
+If the environment variable ``R_LIBS`` is not set and a directory is not specified with the ``install.packages()`` command, then R packages will be installed under ``~/R/x86_64-unknown-linux-gnu-library`` by default (this R subdirectory structure is created automatically). The ``R_LIBS`` environment variable will need to be set every time when logging into Nightingale if your R package location is to be visible to an R session. You can add the following code to your ``~/.bashrc`` file to remove the need to set the ``R_LIBS`` environment variable with every login session to Nightingale:
 
 .. code-block::
 
@@ -359,7 +334,7 @@ If the name of a package is misspelled or the R package is not available in the 
    package 'phybase' is not available (for R version 3.2.2)
  
 Searching the CRAN site for your desired R package may provide links to archived versions that are not available in the current CRAN. 
-In this case, the specific archived R package can be downloaded and installed from the local file using the same command but omitting the repository URL (specifying NULL).
+In this case, the specific archived R package can be downloaded and installed from the local file using the same command but omitting the repository URL (specifying ``NULL``).
 
 Some R packages have dependencies that are required to be installed first, and will generate an error message similar to:
 
@@ -377,7 +352,7 @@ Installing the dependency first and then the desired R package resolves this iss
 Viewing Installed R Packages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the ``library()`` command to view all your user and system-installed R packages (user-installed packages are only visible to R when the **$R_LIBS** environment variable is set):
+You can use the ``library()`` command to view all your user and system-installed R packages (user-installed packages are only visible to R when the ``$R_LIBS`` environment variable is set):
 
 .. code-block::
 

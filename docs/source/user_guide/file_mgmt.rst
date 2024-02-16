@@ -191,7 +191,7 @@ Once your identity is linked (above), then do the following to transfer files us
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.23.26-PM-768x299.png
       :alt: Globus authentication/consent required prompt.
 
-#. If Globus prompts you to link your netid@illinois.edu identity, go ahead and do so. You will need to provide your NCSA Duo authority here.  
+#. If Globus prompts you to link your **\<netid>@illinois.edu** identity, go ahead and do so. You will need to provide your NCSA Duo authority here.  
 
    .. image:: images/file_mgmt/Screen-Shot-2021-01-19-at-9.51.47-PM-768x280.png
       :alt: Globus link your @illinois.edu identity prompt.

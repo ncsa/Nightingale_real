@@ -2,7 +2,11 @@
 Programming Environment
 ===============================
 
-The GNU compilers (GCC) version 8.4.1 are in the default user environment. Version 12.2.0 is also available — load this version with the command: ``module load gcc/12.2.0``
+GNU Compiler Collection (GCC) `version 8.4.1 <https://gcc.gnu.org/gcc-8/>`_ is in the default user environment. `Version 12.2.0 <https://gcc.gnu.org/gcc-12/>`_ is also available; load version 12.2.0 with the command: 
+
+.. code-block::
+
+   module load gcc/12.2.0
 
 
 Compiler Commands
@@ -50,7 +54,7 @@ To build (compile and link) a MPI program in Fortran, C, and C++:
 
 OpenMP
 ~~~~~~~~
-To build an OpenMP program, use the **-fopenmp** option:
+To build an OpenMP program, use the ``-fopenmp`` option:
 
 .. table:: Compiling OpenMP Code
 
@@ -72,7 +76,7 @@ Hybrid MPI/OpenMP
 ~~~~~~~~~~~~~~~~~~~~~
 *(coming soon)*
 
-To build an MPI/OpenMP hybrid program, use the **-fopenmp** option with the MPI compiling commands:
+To build an MPI/OpenMP hybrid program, use the ``-fopenmp`` option with the MPI compiling commands:
 
 .. table:: Compiling Hybrid MPI/OpenMP Code
 
@@ -91,7 +95,11 @@ To build an MPI/OpenMP hybrid program, use the **-fopenmp** option with the MPI 
 
 CUDA
 ~~~~~~
-NVIDIA GPUs are available as part of the Nightingale compute cluster. CUDA is a parallel computing platform and programming model from NVIDIA for use on the GPUs. These GPUs support CUDA compute capability 2.0.
+NVIDIA GPUs are available as part of the Nightingale compute cluster. `CUDA <https://developer.nvidia.com/cuda-toolkit-archive>`_ is a parallel computing platform and programming model from NVIDIA for use on the GPUs. These GPUs support CUDA compute capability 2.0.
 
-Load the CUDA Toolkit into your environment using the following module command: ``module load cuda/11.4.2``
+Load the CUDA Toolkit into your environment using the following module command: 
+
+.. code-block:: 
+
+   module load cuda/11.4.2
 

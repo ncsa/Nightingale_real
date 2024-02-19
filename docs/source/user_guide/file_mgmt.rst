@@ -60,6 +60,15 @@ Datasets
  
 The /datasets area contains curated, read-only datasets typically exported from a Postgres database. Projects will be informed when data is placed here for them.
 
+.. _permissions:
+
+File and Directory Permissions
+--------------------------------
+
+When you create files or directories on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. You can set "owner" and "group" permissions to meet your needs. For more information on Linux file permissions, review `Linux file permissions explained <https://www.redhat.com/sysadmin/linux-file-permissions-explained>`_.
+
+File and directory permissions on Nightingale are monitored to maintain the integrity of protected data on the system. If you grant file permissions to "others", system admins will be alerted, and you will be contacted to investigate.
+
 .. _transfer:
 
 Transferring Files
@@ -211,6 +220,9 @@ Once your identity is linked (above), then do the following to transfer files us
 
 Creating and Editing Files
 ---------------------------
+
+.. warning::
+   When you create files or directories on Nightingale, **do not grant permissions to "others"**; this includes read, write, *or* execute. See :ref:`permissions` for more information.
 
 Sometimes, it is easiest to create and edit your files directly on the cluster rather than transfer them back and forth. 
 You can use various programs on clusters for working with plain text files; examples include vi/vim, gedit, nano, and emacs. 

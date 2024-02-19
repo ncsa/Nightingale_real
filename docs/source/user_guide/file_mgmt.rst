@@ -36,7 +36,7 @@ Home
 
 The /u area of the filesystem is where users land upon logging on to the cluster and is where a user’s **$HOME** environment variable points. This area has a fairly small quota and is meant to contain a user’s configuration files, job output/error files, and smaller software installations. This area is automatically set up during the account provisioning process and there is no additional charge for this storage. 
 
-It is *not* possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. You will need to delete files to get below the threshold and will not be able to store additional data.
+It is *not* possible to request an expansion of the home directory quota. If a user depletes the available space on their home directory, they will be notified and given the opportunity to remove files from it. You will need to delete files to get below the threshold and will not be able to store additional data until you do so.
 
 Projects
 ~~~~~~~~

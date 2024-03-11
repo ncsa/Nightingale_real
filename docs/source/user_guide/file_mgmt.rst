@@ -158,16 +158,20 @@ Any method that can transfer data onto Nightingale can also be used to transfer 
 
 Before transferring data off of Nightingale, please read about :ref:`protected data <protected>`. Data transfers off of Nightingale are audited and must be accounted for.
 
+.. _transfer-globus:
+
 File Transfers with Globus
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. warning::
 
    As of January 2023, Globus is available for use on Nightingale. However, we have not finished the final contracts and setup for specifically HIPAA-data certified variant of Globus, so **do not transfer HIPAA data over Globus** at this time. When HIPAA-certified Globus is installed, this warning will be removed. If you have any questions about data movement, please don't hesitate to :ref:`submit a ticket <help>`.  
 
-Globus is a web-based file transfer system that works in the background to move files between systems with "Globus endpoints". See `Transferring Files - Globus <https://docs.ncsa.illinois.edu/en/latest/common/transfer.html#globus>`_ for complete instructions on using Globus with NCSA computing resources. 
+Use Globus for large data transfers. Globus is a web-based file transfer system that works in the background to move files between systems with "Globus endpoints". 
 
-The Nightingale endpoint collection name is: **ncsa#ngale**
+Go to `Transferring Files - Globus <https://docs.ncsa.illinois.edu/en/latest/common/transfer.html#globus>`_ for complete instructions on using Globus with NCSA computing resources. 
+
+The **Nightingale endpoint collection** name is: "ncsa#ngale"
 
 Creating and Editing Files
 ---------------------------

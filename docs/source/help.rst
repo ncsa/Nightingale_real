@@ -3,9 +3,27 @@
 Getting Help 
 =============
 
+Search the Docs
+-----------------
+
+Use the search bar in the upper-left to perform keyword searches of the documentation.
+
+Expert Consulting Services
+-----------------------------
+
+The Illinois Computes program includes research consulting services from NCSA experts; these services are available to Illinois researchers at **no cost**. 
+These services can be requested for things such as optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! 
+
+Refer to the technical support and specialized expertise sections of the `Illinois Computes user support <https://computes.illinois.edu/expertise-user-support/>`_ page for more details.
+
+Follow the `Illinois Computes submit a request <https://computes.illinois.edu/submit-a-request/>`_ instructions to submit an NCSA consulting services request.
+
+General Resource Support
+---------------------------
+
 .. raw:: html
    
-   <p>For any questions or issues not answered by the documentation, please <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
+   <p>For general questions or issues you encounter while using Nightingale, <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
 
 **To help NCSA staff efficiently address your request, in your initial email, please include:**
 

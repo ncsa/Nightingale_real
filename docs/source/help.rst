@@ -3,11 +3,6 @@
 Getting Help 
 =============
 
-Search the Docs
------------------
-
-Use the search bar in the upper-left to perform keyword searches of the documentation.
-
 Consulting Services
 ------------------------
 

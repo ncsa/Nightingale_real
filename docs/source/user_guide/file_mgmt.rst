@@ -164,6 +164,7 @@ Transferring Files with Globus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
 Use Globus for large data transfers. Globus is a web-based file transfer system that works in the background to move files between systems with Globus `endpoints <https://docs.globus.org/faq/globus-connect-endpoints/#what_is_an_endpoint>`_. 
+
 Go to `Transferring Files - Globus <https://docs.ncsa.illinois.edu/en/latest/common/transfer.html#globus>`_ for instructions on using Globus with NCSA computing resources. 
 
 The **Nightingale endpoint collection** name is "ncsa#ngale".

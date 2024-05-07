@@ -6,10 +6,10 @@ Getting Help
 Consulting Services
 ------------------------
 
-The Illinois Computes program includes research consulting services from NCSA experts; these services are available to Illinois researchers at **no cost**. 
+The Illinois Computes program offers research consulting services from NCSA experts, available to Illinois researchers at **no cost**. 
 These services can be requested for things such as optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! 
 
-Refer to the technical support and specialized expertise sections of the `Illinois Computes user support <https://computes.illinois.edu/expertise-user-support/>`_ page for more details.
+Refer to the `Illinois Computes user support <https://computes.illinois.edu/expertise-user-support/>`_ page for more details.
 
 Follow the `Illinois Computes submit a request <https://computes.illinois.edu/submit-a-request/>`_ instructions to submit an NCSA consulting services request.
 

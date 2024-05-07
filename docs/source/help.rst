@@ -8,8 +8,8 @@ Search the Docs
 
 Use the search bar in the upper-left to perform keyword searches of the documentation.
 
-Expert Consulting Services
------------------------------
+Consulting Services
+------------------------
 
 The Illinois Computes program includes research consulting services from NCSA experts; these services are available to Illinois researchers at **no cost**. 
 These services can be requested for things such as optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! 

@@ -3,12 +3,6 @@
 Getting Help 
 =============
 
-Consulting Services
-------------------------
-
-Illinois researchers can `request research consulting services <https://computes.illinois.edu/submit-a-request/>`_ from NCSA experts through the Illinois Computes program. 
-These services can be requested for things such as optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! Refer to the `Illinois Computes user support <https://computes.illinois.edu/expertise-user-support/>`_ page for more details.
-
 General Resource Support
 ---------------------------
 
@@ -35,5 +29,11 @@ General Resource Support
 **If you have multiple, unrelated issues, please create a separate ticket for each by sending separate emails.**
 
 You will receive email correspondence as your ticket is worked on, please respond to any questions that are asked.
+
+Consulting Services
+------------------------
+
+Illinois researchers can `request research consulting services <https://computes.illinois.edu/submit-a-request/>`_ from NCSA experts through the Illinois Computes program. 
+These services can be requested for things such as optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! Refer to the `Illinois Computes user support <https://computes.illinois.edu/expertise-user-support/>`_ page for more details.
 
 |

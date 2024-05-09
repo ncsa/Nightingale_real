@@ -8,7 +8,7 @@ General Resource Support
 
 .. raw:: html
    
-   <p>For general questions or issues you encounter while using Nightingale, <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
+   <p>For questions or issues you encounter while using Nightingale, <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
 
 **To help NCSA staff efficiently address your request, in your initial email, please include:**
 

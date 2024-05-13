@@ -94,8 +94,7 @@ Using Python on Nightingale
 Introduction
 ~~~~~~~~~~~~~~~
 
-`Anaconda/Miniconda <https://en.wikipedia.org/wiki/Anaconda_(Python_distribution)>`_ is a specilized distribution 
-of the Python and R programing languages for scientific computing. Anaconda/Miniconda include `Conda <https://en.wikipedia.org/wiki/Conda_(package_manager)>`_ a package and environment management system which allow users to create numerous environmnets to suit their specific needs.
+Anaconda and Miniconda are specilized distributions of the Python and R programing languages for scientific computing. Anaconda and Miniconda include `Conda <https://en.wikipedia.org/wiki/Conda_(package_manager)>`_, a package and environment management system; this allows you to create numerous environmnets to suit your specific needs.
 
 Versions
 ~~~~~~~~~

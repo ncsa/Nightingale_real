@@ -3,9 +3,12 @@
 Getting Help 
 =============
 
+General Resource Support
+---------------------------
+
 .. raw:: html
    
-   <p>For any questions or issues not answered by the documentation, please <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
+   <p>For questions or issues you encounter while using Nightingale, <b>submit a support request</b> by emailing <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a>. Your email will initiate a ticket that NCSA staff will use to help you.</p>
 
 **To help NCSA staff efficiently address your request, in your initial email, please include:**
 
@@ -26,5 +29,11 @@ Getting Help
 **If you have multiple, unrelated issues, please create a separate ticket for each by sending separate emails.**
 
 You will receive email correspondence as your ticket is worked on, please respond to any questions that are asked.
+
+Consulting Services
+------------------------
+
+Illinois researchers can `request research consulting services <https://computes.illinois.edu/submit-a-request/>`_ from NCSA experts through the Illinois Computes program. 
+These services can help with things like optimizing and modernizing existing code, visual data analysis, finding research solutions to complex questions, and much more! For more details, visit the `Illinois Computes Expertise & User Support <https://computes.illinois.edu/expertise-user-support/>`_ page.
 
 |

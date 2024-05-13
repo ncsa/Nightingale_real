@@ -59,14 +59,14 @@ Node Hostnames
 Secure Node Hostname
 $$$$$$$$$$$$$$$$$$$$$$
 
-.. code-block::
+.. code-block:: terminal
 
    ngale-bastion-1.ncsa.illinois.edu 
 
 General Access Login Nodes Hostnames
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. code-block::
+.. code-block:: terminal
 
    ng-login01.ngale.internal.ncsa.edu
    ng-login02.ngale.internal.ncsa.edu
@@ -74,7 +74,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Specialized Interactive Node Hostname
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. code-block::
+.. code-block:: terminal
 
    NODENAME.ngale.internal.ncsa.edu
 
@@ -95,7 +95,7 @@ You can log onto Nightingale by following these steps:
    
    Sample SSH command line to log into the secure node where *<username>* is your NCSA identity username:
    
-   .. code-block::
+   .. code-block:: terminal
 
       ssh <username>@ngale-bastion-1.ncsa.illinois.edu
 
@@ -105,19 +105,19 @@ You can log onto Nightingale by following these steps:
 
    After you have approved the push, you will be at a prompt on the ngale-bastion-1 node that will look similar to:
    
-   .. code-block::
+   .. code-block:: terminal
 
       [csteffen@ngale-bastion-1 ~]$
 
 #. SSH to your login node, using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
    
-   .. code-block::
+   .. code-block:: terminal
 
       ssh <your_username>@ng-<node_type><node_number>
 
    For example, if your username is "hirop" and the node name is "CPU", then your SSH command might be:
    
-   .. code-block::
+   .. code-block:: terminal
 
       ssh hirop@ng-CPU03
    
@@ -125,7 +125,7 @@ You can log onto Nightingale by following these steps:
 
    The two commands above can be combined into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. In this example, user "test1" can log into the Nightingale login node "astro07" directly without logging into the bastion host first.
    
-   .. code-block::
+   .. code-block:: terminal
 
       ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-astro07
 
@@ -140,18 +140,18 @@ Microsoft Windows
 ~~~~~~~~~~~~~~~~~~~
 
 You can use the built-in SSH Client in Windows (version 10 and above) or select from several freely available third-party SSH clients. 
-These typically provide a graphical user interface (GUI) rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice, `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
+These typically provide a graphical user interface (GUI) rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice; `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
 
 Mac OS X
 ~~~~~~~~~
 
-Mac OS X comes with a built-in open-source version of SSH called OpenSSH. You can access it via the Terminal application. 
+Mac OS X comes with a built-in open-source version of SSH called OpenSSH; access it via the Terminal application. 
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Mac OS X.
 
 Linux
 ~~~~~~~
 
-The Linux operating system has SSH built into it. You use the Linux terminal application to connect via SSH. 
+The Linux operating system has SSH built into it, use the Linux terminal application to connect via SSH. 
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Linux.
 
 .. _access_vpn:
@@ -177,7 +177,7 @@ If you are a member of the University of Illinois, you can use the `University o
 NCSA VPN
 ~~~~~~~~~
 
-If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/cybersec/Virtual+Private+Network+%28VPN%29+Service>`_.  
+If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/NetEng/Virtual+Private+Network+%28VPN%29+Service>`_.  
 
 Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS machines)
 ----------------------------------------------------------------------------------------
@@ -196,7 +196,7 @@ One-time SSH Configuration
 
 #. Type ``nano config`` and hit **return**. This will bring you into an editor program that looks like this:
 
-   .. code-block::  
+   .. code-block:: terminal
 
        UW PICO 5.09                            File: config                               
 
@@ -213,7 +213,7 @@ One-time SSH Configuration
 
 #. Copy the lines from the below code block, you will modify them in your window per the next steps. 
 
-   .. code-block::
+   .. code-block:: terminal
 
       Host ngb1
         HostName ngale-bastion-1.ncsa.illinois.edu
@@ -231,7 +231,7 @@ One-time SSH Configuration
 
    For example, a user with username "hirop" with the assigned node "ng-gpu-x07" would have the below configuration file.  
 
-   .. code-block::
+   .. code-block:: terminal
 
       Host ngb1
         HostName ngale-bastion-1.ncsa.illinois.edu
@@ -281,7 +281,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
 #. You should now be at a prompt that reflects that you are on a Nightingale node. You will know this because the prompt (the bottom line in your terminal or SSH window) will contain the name of the machine you are working on, and that should begin with "ng-" for "NightinGale". It will look something like this: 
 
-   .. code-block::
+   .. code-block:: terminal
 
       [hirop@ng-gpu-m01 ~] $
 

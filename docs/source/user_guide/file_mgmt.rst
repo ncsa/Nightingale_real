@@ -81,38 +81,38 @@ You will not work directly on your group's curated project data in the /datasets
 
 #. Enter the ``cd`` command to go your home directory.
 
-   .. code-block::
+   .. code-block:: terminal
 
       cd 
 
 #. Use the ``mkdir`` command to create a new folder in your home directory using a name of your choosing.
 
-   .. code-block::
+   .. code-block:: terminal
 
       mkdir <folder_name>
 
 #. Use the ``cp`` command to copy the dataset to the folder you created. The ``cp -R`` command is used for recursive copy of all files and directories in the source directory tree.
 
-   .. code-block::
+   .. code-block:: terminal
 
       cp -R /<dataset_foldername>/<filename> ~/<your_data_folder_name>
    
    For example, if the dataset you want is located in '/datasets/covid_1' and you want to move it to your directory 'my_covid_data,' you would enter the command:
 
-   .. code-block::
+   .. code-block:: terminal
 
       cp -R /datasets/covid_1 ~/my_covid_data
 
 #. To check if you copied the data successfully, enter the commands:
 
-   .. code-block::
+   .. code-block:: terminal
 
       cd ~/<your_data_folder_name>/<filename>
       ls
 
    Using the example in the previous step, the commands would be:
 
-   .. code-block::
+   .. code-block:: terminal
 
       cd ~/my_covid_data/covid_1
       ls
@@ -131,7 +131,7 @@ SCP requires a source and a destination. You can use it to copy individual files
 
 Since Nightingale has a bastion host which all network traffic travels through, you need to specify that the copy will jump through the bastion. For example, a user, "test1", copying the file "my_data" from their current directory on their local machine to their home directory on the Nightingale login node "ng-login01" would use the following command:
 
-.. code-block::
+.. code-block:: terminal
 
    scp -J test1@ngale-bastion-1.ncsa.illinois.edu my_data test1@ng-login01:.
    
@@ -147,7 +147,7 @@ To use AWS S3 Buckets you must first configure the service. Run the command ``aw
 
 Copy files from the bucket using:
 
-.. code-block::
+.. code-block:: terminal
 
    aws s3 cp s3://<bucket-name> <local name on nightingale>
 
@@ -192,7 +192,7 @@ GNU nano
 GNU nano is an easy-to-use command line text editor for Linux. To open an existing file or create a new one, type nano followed by the file name.
 This opens a new editor window in your terminal where you can start editing the file.
 
-.. code-block::
+.. code-block:: terminal
 
    nano file_name
 

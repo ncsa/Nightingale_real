@@ -177,7 +177,7 @@ If you are a member of the University of Illinois, you can use the `University o
 NCSA VPN
 ~~~~~~~~~
 
-If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/cybersec/Virtual+Private+Network+%28VPN%29+Service>`_.  
+If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/NetEng/Virtual+Private+Network+%28VPN%29+Service>`_.  
 
 Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS machines)
 ----------------------------------------------------------------------------------------

@@ -117,7 +117,7 @@ The rest of the batch script consists of user commands.
 
 The syntax for submitting a batch job with ``sbatch`` is:
 
-.. code-block::
+.. code-block:: terminal
 
   sbatch [list of sbatch options] script_name
 
@@ -143,7 +143,7 @@ The main ``sbatch`` options are listed below.
 
 **Example:**
 
-.. code-block::
+.. code-block:: terminal
 
    --time=00:30:00 
    --nodes=2 
@@ -151,7 +151,7 @@ The main ``sbatch`` options are listed below.
 
 or 
 
-.. code-block::
+.. code-block:: terminal
 
    --time=00:30:00 
    --nodes=2 
@@ -169,7 +169,7 @@ The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory
 
 **Example:**
 
-.. code-block::
+.. code-block:: terminal
 
    --time=00:30:00 
    --nodes=2 
@@ -178,7 +178,7 @@ The compute nodes have memory configurations of 256GB, 512GB or 1TB.  The memory
 
 or
 
-.. code-block::
+.. code-block:: terminal
 
    --time=00:30:00 
    --nodes=2 
@@ -195,13 +195,13 @@ To gain access to the GPUs within the batch job’s environment, add the resourc
 
 In the batch script:
 
-.. code-block::
+.. code-block:: terminal
 
    #SBATCH   --gres=gpu:tesla_a40
 
 In the batch job submission line:
 
-.. code-block::
+.. code-block:: terminal
 
    sbatch … --gres=gpu:tesla_a40 batchscript_name.sbatch
 
@@ -232,7 +232,7 @@ Instead of queuing up a batch job to run on the compute nodes, you can request t
 
 To launch an interactive batch job using the job scheduler with the default values for the job resources (nodes,cores,memory, and so on), run the following command, replacing ``ALL_ACCT``, with the name of your allocation account:
 
-.. code-block::
+.. code-block:: terminal
 
    srun -A ALL_ACCT --pty bash 
 
@@ -241,7 +241,7 @@ To launch an interactive batch job using the job scheduler with the default valu
 
 To specify resources for your interactive batch job the ``srun`` command syntax should look similar to the following, replacing ``ACCT_NAME`` with the name of your charge account:
 
-.. code-block::
+.. code-block:: terminal
 
   srun --account=ACCT_NAME --partition=cpu --time=00:30:00 --nodes=1 --ntasks-per-node=16 --pty /bin/bash
 
@@ -249,13 +249,13 @@ This example will run an interactive batch job in the CPU partition (queue) with
 
 After you enter the command, you will have to wait for Slurm to start the job. You will see output similar to:
 
-.. code-block::
+.. code-block:: terminal
 
    srun: job 123456 queued and waiting for resources
 
 Once the job starts, you will see:
 
-.. code-block::
+.. code-block:: terminal
 
    srun: job 123456 has been allocated resources
 
@@ -268,14 +268,14 @@ $$$$$$$$$$$$$$
 
 Inside a batch script if you want to run multiple copies of a program you can use the ``srun`` command followed by the name of the executable: 
 
-.. code-block::
+.. code-block:: terminal
 
    srun ./a.out
 
 By default, the total number of copies run is equal to number of cores specified in the batch job resource specification.
 You can use the ``-n``  flag/option with the ``srun`` command to specify the number of copies of a program that you would like to run; the value for the ``-n`` flag/option must be less than or equal to the number of cores specified for the batch job.
 
-.. code-block::
+.. code-block:: terminal
 
    srun -n 10 ./a.out
 
@@ -312,13 +312,13 @@ The ``sinfo`` command is used to view partition and node information for a syste
 
 View the partitions (queues) that you can submit batch jobs to with the following command:
 
-.. code-block::
+.. code-block:: terminal
 
     [ng-login01 ~]$ sinfo -s -o "%.14R %.12l %.12L %.5D"
     
 View specific configuration information about the compute nodes associated with your primary partition(s) with the following command:
 
-.. code-block::
+.. code-block:: terminal
 
     [ng-login01 ~]$ sinfo -p queue(partition)_name -N -o "%.8N %.4c %.16P %.9m %.12l %.12L %G"
 
@@ -356,7 +356,7 @@ By default, when your batch script is run, it has copies of all the environment 
 
 Additional sample batch scripts are available on Nightingale in the following directory:
 
-.. code-block::
+.. code-block:: terminal
 
   /sw/apps/NUS/slurm/sample/batchscripts
 
@@ -370,7 +370,7 @@ Below is a sample batch script that runs a single serial application, ``hostname
    <details>
    <summary><a><b>Sample Serial Job Batch Script</b> <i>(click to expand/collapse)</i></a></summary>
 
-.. code-block::
+.. code-block:: terminal
 
    #!/bin/bash                                                                                                                                                                                               
    ###############################################################################                                                                                                                           
@@ -436,7 +436,7 @@ The following is a batch script that runs a code in parallel with a couple of ot
    <details>
    <summary><a><b>Sample Parallel Job Batch Script</b> <i>(click to expand/collapse)</i></a></summary>
 
-.. code-block::
+.. code-block:: terminal
 
    #!/bin/bash
    ###############################################################################

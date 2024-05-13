@@ -2,7 +2,7 @@
 Programming Environment
 ===============================
 
-GNU Compiler Collection (GCC) `version 8.4.1 <https://gcc.gnu.org/gcc-8/>`_ is in the default user environment. `Version 12.2.0 <https://gcc.gnu.org/gcc-12/>`_ is also available; load version 12.2.0 with the command: 
+GNU Compiler Collection `(GCC) version 8.4.1 <https://gcc.gnu.org/gcc-8/>`_ is in the default user environment. `GCC version 12.2.0 <https://gcc.gnu.org/gcc-12/>`_ is also available; load version 12.2.0 with the command: 
 
 .. code-block::
 

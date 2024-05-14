@@ -267,7 +267,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
    You may see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?" You may safely type ``yes`` then hit **return**.  
 
-#. Enter your NCSA (kerberos) password at the prompt. You **won't see your characters** echoed back to the screen; just type it blindly.  
+#. Enter your NCSA (kerberos) password at the prompt. Note, the window will not show your password (or placeholder symbols such as asterisks [*]) as you type.  
 
 #. There will be a Duo prompt asking for a passcode or for "option 1". You may either:
 
@@ -277,7 +277,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
    - Enter a 6-digit password from the **NCSA** entry of your Duo app.  
 
-#. Again enter your NCSA password at the prompt. You again **won't see your characters** echoed to the screen; just type it blindly.  
+#. Again enter your NCSA password at the prompt. Note, the window will not show your password (or placeholder symbols such as asterisks [*]) as you type.  
 
 #. You should now be at a prompt that reflects that you are on a Nightingale node. You will know this because the prompt (the bottom line in your terminal or SSH window) will contain the name of the machine you are working on, and that should begin with "ng-" for "NightinGale". It will look something like this: 
 
@@ -352,7 +352,7 @@ Once the above, one-time, steps are complete, follow the below steps each time y
 
 #. A second window will pop up asking for your 2FA code. Open your **Duo app**, click on the **NCSA** entry (not the *University of Illinois* entry), and type the 6-digit code displayed in the Duo app into the window. As with the password, you will see it as **********.  
 
-#. The screen will bring up a black window without a prompt. **You may need to wait 30 seconds or a minute here.** Then it will ask for your password. Enter your NCSA password. You **won't see your characters** echoed back to the screen; just type it blindly.
+#. The screen will bring up a black window without a prompt. **You may need to wait 30 seconds or a minute here.** Then it will ask for your password. Enter your NCSA password. Note, the window will not show your password (or placeholder symbols such as asterisks [*]) as you type.
 
 #. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale. You are now ready to work.  
 

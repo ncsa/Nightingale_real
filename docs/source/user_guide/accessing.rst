@@ -113,13 +113,13 @@ You can log into Nightingale by following these steps:
 
       ssh <username>@ng-<node_type><node_number>
 
-   For example, if your username is ``hirop`` and the node name is ``CPU``, then your SSH command might be:
+   For example this is the SSH command for a user with the username ``hirop`` and the node name ``CPU``:
    
    .. code-block:: terminal
 
       ssh hirop@ng-CPU03
    
-   In this case, you would have been specifically told that ``ng-CPU03`` is the node to use for your computations.
+   In this case, the user was specifically told that ``ng-CPU03`` is the node to use for computations.
 
 Jump Host Login Method
 $$$$$$$$$$$$$$$$$$$$$$$$$
@@ -186,7 +186,7 @@ Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS mac
 One-time X Window Software Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download XQuartz here <https://www.xquartz.org/>`_. Most users of Nightingale will want to do this.  
+If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download XQuartz here <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
 
 One-time SSH Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -220,7 +220,7 @@ One-time SSH Configuration
        ^G Get Help   ^O WriteOut   ^R Read File  ^Y Prev Pg    ^K Cut Text   ^C Cur Pos    
        ^X Exit       ^J Justify    ^W Where is   ^V Next Pg    ^U UnCut Text ^T To Spell   
 
-   This allows you to edit a configuration file that sets up connections to the outside world, so you don't have to type as much all the time. 
+   The editor allows you to edit a configuration file that sets up connections to the outside world so you don't have to type as much all the time. 
 
 #. Copy and paste the following configuration file code block into your terminal. Before you run it, you will modify the code in the next steps. 
 
@@ -238,11 +238,13 @@ One-time SSH Configuration
         ProxyJump ngb1
         User YOUR_USERNAME
 
-#. Use the arrow keys to position your cursor and replace ``YOUR_USERNAME`` with your NCSA identity username. 
+#. Use the arrow keys to position your cursor make the following modifications:
 
-   If you have an interactive node assigned to you, you can add another copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your login node.  
+   a. Replace ``YOUR_USERNAME`` with your NCSA identity username. 
 
-   For example, a user with username ``hirop`` with the assigned node ``ng-gpu-x07`` would have the following configuration file:  
+   b. If you have an interactive node assigned to you, you can add another copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your login node.  
+
+   For example, a user with username ``hirop`` and the assigned node ``ng-gpu-x07`` would have the following configuration file:  
 
    .. code-block:: terminal
 
@@ -267,7 +269,7 @@ One-time SSH Configuration
 
 #. Press **return** (or **Enter**) to confirm the file name. 
 
-#. Press **Control+X** to exit the editor, and you are back at the prompt.  
+#. Press **Control+X** to exit the editor and you are back at the prompt.  
       
 Logging Into Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -322,15 +324,15 @@ This section is the one-time setup on your Windows machine so that it can connec
 
 #. Launch the MobaXterm application and click **Session** in the upper left of the window to start an SSH session.
 
-   ..  image:: images/accessing/mobaxterm-terminal-session.png
-       :alt: MobaXterm initial window with Session button circled.
-       :width: 150
+   .. figure:: images/accessing/mobaxterm-terminal-session.png
+      :alt: MobaXterm initial window with Session button circled.
+      :width: 150
 
 #. Select **SSH** from the session types and click **OK**. 
 
-   ..  image:: images/accessing/mobaxterm-session-ssh.png
-       :alt: MobaXterm Session window with SSH button circled.
-       :width: 600
+   .. figure:: images/accessing/mobaxterm-session-ssh.png
+      :alt: MobaXterm Session window with SSH button circled.
+      :width: 600
 
 #. In the **Basic SSH Settings** tab:
 
@@ -338,15 +340,15 @@ This section is the one-time setup on your Windows machine so that it can connec
 
    b. Select the **Specify username** checkbox and enter your NCSA Identity username.
 
-   ..  image:: images/accessing/mobaxterm-basic-ssh-username.png
-       :alt: MobaXterm Session window with Basic SSH Settings filled in.
-       :width: 700
+   .. figure:: images/accessing/mobaxterm-basic-ssh-username.png
+      :alt: MobaXterm Session window with Basic SSH Settings filled in.
+      :width: 750
 
 #. In the **Network settings** tab, click **SSH gateway (jump host)**.
 
-   ..  image:: images/accessing/mobaxterm-network-settings.png
-       :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button highlighted.
-       :width: 700
+   .. figure:: images/accessing/mobaxterm-network-settings.png
+      :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button highlighted.
+      :width: 750
 
 #. In the **jump hosts configuration** window:
 
@@ -358,9 +360,9 @@ This section is the one-time setup on your Windows machine so that it can connec
 
    You may see a warning message saying that your remote host identification has changed; click **Yes** to continue.
 
-   ..  image:: images/accessing/mobaxterm-jump-host-config.png
-       :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
-       :width: 600
+   .. figure:: images/accessing/mobaxterm-jump-host-config.png
+      :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
+      :width: 600
 
 #. You should now be back in the **Session settings** window. Click **OK** to initiate your SSH connection. 
 

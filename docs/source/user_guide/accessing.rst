@@ -122,9 +122,9 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
 Jump Host Login Method
 $$$$$$$$$$$$$$$$$$$$$$$$$
 
-You can combine the secure and login node SSH commands in to one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. 
+You can combine the secure and login node SSH commands into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. 
 
-.. code-block::
+.. code-block:: terminal
 
    ssh -J <your_username>@ngale-bastion-1.ncsa.illinois.edu <your_username>@ng-<login_node>
 
@@ -197,19 +197,19 @@ One-time SSH Configuration
 
 #. Open the **Terminal** application on your Mac. 
 
-#. Enter the following into the terminal:
+#. Enter the following command into the terminal:
 
    .. code-block:: terminal
 
       cd ~/.ssh 
 
-#. Enter the following into the terminal:
+#. Enter the following command into the terminal:
 
    .. code-block:: terminal
 
       nano config
 
-   This will bring you in to an editor program that looks like this:
+   This will bring you into an editor program that looks like this:
 
    .. code-block:: terminal
 
@@ -400,7 +400,7 @@ After the preceding one-time steps are complete, follow these steps each time yo
 Account Administration
 ------------------------
 
-There is an approval process for adding users to Nightingale. To start the process, :ref:`submit a support request <help>`.
+After you have a project group set up on Nightingale, there is an approval process to add new users to the system. To start the process, :ref:`submit a support request <help>`.
 
 Other account and project administration tasks, such as resetting your password, are managed by the NCSA Identity and Group Management tools. 
 See the `NCSA Allocation and Account Management documentation page <https://wiki.ncsa.illinois.edu/display/USSPPRT/NCSA+Allocation+and+Account+Management>`_ for more information.

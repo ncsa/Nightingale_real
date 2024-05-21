@@ -111,7 +111,7 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
 
       ssh <your_username>@ng-<node_type><node_number>
 
-   For example, this is the SSH command for a user with the username ``hirop`` and the node name ``CPU``:
+   For example, this is the ``ssh`` command for a user with the username ``hirop`` and the node name ``CPU``:
    
    .. code-block:: terminal
 
@@ -122,13 +122,13 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
 Jump Host Login Method
 $$$$$$$$$$$$$$$$$$$$$$$$$
 
-You can combine the secure and login node SSH commands into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to interact with it. 
+You can combine the secure and login node ``ssh`` commands into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to execute the ``ssh`` command twice. 
 
 .. code-block:: terminal
 
    ssh -J <your_username>@ngale-bastion-1.ncsa.illinois.edu <your_username>@ng-<login_node>
 
-For example, user ``test1`` can log in to the Nightingale login node ``astro07`` without logging in to the bastion host first with the following SSH command:
+For example, user ``test1`` can log in to the Nightingale login node ``astro07`` without logging in to the bastion host first with the following ``ssh`` command:
    
 .. code-block:: terminal
 

@@ -1,68 +1,25 @@
 .. _access:
 
-Accessing the System
-=========================
-
-Getting an Account
--------------------
-
-To access Nightingale, your project needs to have a *project group* set up with access to Nightingale, and associated with the various resources that you need to use. The project's Principal Investigator (PI) sets up the project group, and the PI's user login account will be the first login account attached to the project group. The PI must have an NCSA Identity (username and password), or get one, and request access from Nightingale administrators. This page covers that process.  
-
-The project PI will need to follow the process of creating the project group, and themselves go through the training process and be added to the HIPAA Covered Entity. Other users on the project will just need to follow the training and Covered Entity process. This page covers both processes.  
-
-Create an NCSA Identity
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Before requesting Nightingale access, both PIs and individual users need an NCSA identity. **Skip this step if you already have an NCSA identity**; if you don't remember your password, you can reset it on the `NCSA Identity and Access Management webpage <https://identity.ncsa.illinois.edu/>`_.
-
-To create an NCSA identity, go to this `Nightingale invite link <https://go.ncsa.illinois.edu/ngale_identity>`_ and click **Register New User and Join**.
-
-In addition to creating a new account, this process will automatically enroll you into `NCSA's Duo multi-factor authentication <https://go.ncsa.illinois.edu/2fa>`_, which is required to log in to Nightingale. **This is not the same as the University of Illinois Duo**. 
-
-.. note::
-   
-   When you enroll in NCSA Duo, it is very important to create and save two backup codes to use in case you lose your Duo device.  
-
-Discuss Your Project with Nightingale Management
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-**Individual users don't need to follow this step.**  Before getting your project added to the Nightingale system, a PI will need to discuss your project, its needs, your expectations, and what Nightingale access can get you. To begin that conversation, please fill out and the `NCSA XRAS form <https://xras-submit.ncsa.illinois.edu/opportunities/531957/requests/new>`_. Someone from the Nightingale project will contact you via email within a few days of submitting this form and begin the process of creating your project group.  
-
-After your project group is created, Nightingale administrators will create your data storage directories and project group name. The PI will find out about these steps via email. In the informational email to the PI, your group will be assigned an *interactive node* (shared or exclusive) to log in to and/or if you have batch system access, you will be assigned a *charge account* to assign your jobs to.  
-
-Being Added to Nightingale Access
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-PIs creating a new project and individual users joining a project will need to follow these steps to get a user login account to access the Nightingale system.  
-
-During this process, *you* are responsible for:
-
-  - Becoming part of the NCSA HIPAA Covered Entity. This will involve taking training specific to the type of data that you will be handling on Nightingale. You may need to submit your training certificate to a web form to become part of the covered entity.
-
-  \
-
-  - Making sure all devices that you will log in to Nightingale from have an encrypted hard drive.
-
 Logging in to Nightingale
---------------------------
+==========================
 
-Once you have obtained an account on Nightingale, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
+Once you have an :ref:`account on Nightingale <allocations>`, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node. The following are the hostnames for these login nodes.
 
 .. _node_hostnames:
 
 Node Hostnames
-~~~~~~~~~~~~~~~
+----------------
 
 Secure Node Hostname
-$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: terminal
 
    ngale-bastion-1.ncsa.illinois.edu 
 
 General Access Login Nodes Hostnames
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: terminal
 
@@ -70,7 +27,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
    ng-login02.ngale.internal.ncsa.edu
 
 Specialized Interactive Node Hostname
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: terminal
 
@@ -84,7 +41,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
    - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). Please be aware that these nodes are a shared resource for all system users, and you should limit your use of them to editing, compiling, and building your programs.
 
 General Log in Process
-~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 To log in to Nightingale, you first SSH to the secure node and then SSH to your login node. These are the steps:
 
@@ -120,7 +77,7 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
    In this case, the user was specifically told that ``ng-CPU03`` is the node to use for their computations.
 
 Jump Host Login Method
-$$$$$$$$$$$$$$$$$$$$$$$$$
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can combine the secure and login node ``ssh`` commands into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to execute the ``ssh`` command twice. 
 
@@ -397,10 +354,4 @@ After the preceding one-time steps are complete, follow these steps each time yo
 
 #. You are now ready to work. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale.  
 
-Account Administration
-------------------------
-
-After you have a project group set up on Nightingale, there is an approval process to add new users to the system. To start the process, :ref:`submit a support request <help>`.
-
-Other account and project administration tasks, such as resetting your password, are managed by the NCSA Identity and Group Management tools. 
-See the `NCSA Allocation and Account Management documentation page <https://wiki.ncsa.illinois.edu/display/USSPPRT/NCSA+Allocation+and+Account+Management>`_ for more information.
+|

@@ -3,16 +3,15 @@
 Allocation Adminstration
 ==========================
 
-How to Get a Project Group (Allocation) - For PIs
+To access Nightingale, a project needs to have a *project group* (allocation) set up on the system. 
+You must be the project's **Principal Investigator (PI)** to set up the project group.
+
+If you are not a project PI and want to be added to an existing Nightingale project group, jump to :ref:`get-added`.
+
+How to Get a Project Group (Allocation) - PIs
 --------------------------------------------------
 
-.. note:: 
-   If you are not a project PI and want to be added to an existing Nightingale project group, jump to :ref:`get-added`.
-
-To access Nightingale, your project needs to have a *project group* set up with access to the system. 
-You must be the project's **Principal Investigator (PI)** to set up the project group. As the PI, your user login account will be the first login account attached to the project group on Nightingale. 
-
-As the PI, you will need to follow the process of creating the project group, go through the training process, and be added to the HIPAA Covered Entity. Other users on the project will just need to follow the training and Covered Entity process.
+As the PI, your user login account will be the first login account attached to the project group on Nightingale. You will need to follow the process of creating the project group, go through the training process, and be added to the HIPAA Covered Entity. Other users on the project will just need to follow the training and Covered Entity process.
 
 Create an NCSA Identity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -52,7 +51,7 @@ To get a user login account to access the Nightingale system, *you* are responsi
 
 .. _get-added:
 
-How to Get Added to a Project Group (Allocation) - For Non-PIs
+How to Get Added to a Project Group (Allocation) - Non-PIs
 ----------------------------------------------------------------
 
 Create an NCSA Identity

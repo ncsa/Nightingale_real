@@ -1,7 +1,7 @@
 .. _allocations:
 
-Get Project Groups and User Accounts
-======================================
+Set Up Project Groups and User Accounts
+========================================
 
 To access Nightingale, a project needs to have a **project group** (allocation) set up on the system. 
 You must be the project's **Principal Investigator (PI)** to set up the project group.

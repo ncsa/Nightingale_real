@@ -1,7 +1,7 @@
 .. _allocations:
 
-Getting an Account
-=====================
+Setting Up User Accounts and Groups
+======================================
 
 To access Nightingale, a project needs to have a *project group* (allocation) set up on the system. 
 You must be the project's **Principal Investigator (PI)** to set up the project group.
@@ -51,7 +51,7 @@ To get a user login account to access the Nightingale system, *you* are responsi
 
 .. _get-added:
 
-How to Get Added to a Project Group (Allocation) - Non-PIs
+How to Get Added to a Project Group - Non-PIs
 ----------------------------------------------------------------
 
 Create an NCSA Identity

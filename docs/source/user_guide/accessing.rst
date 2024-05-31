@@ -1,9 +1,9 @@
 .. _access:
 
-Logging in to Nightingale
+Log in to Nightingale
 ==========================
 
-Once you have an :ref:`account on Nightingale <allocations>`, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
+After you have an :ref:`account on Nightingale <allocations>`, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node. The following are the hostnames for these login nodes.
 
 .. _node_hostnames:
@@ -37,16 +37,16 @@ Specialized Interactive Node Hostname
 
 .. note::
 
-   - Your PI can inform you if your allocation has a specialized interactive node and if so, its hostname.
-   - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). Please be aware that these nodes are a shared resource for all system users, and you should limit your use of them to editing, compiling, and building your programs.
+   - Your PI can tell you if your allocation has a specialized interactive node and if so, its hostname.
+   - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). Please be aware that these nodes are a shared resource for all system users; you should limit your use of them to editing, compiling, and building your programs.
 
 General Log in Process
 ------------------------
 
-To log in to Nightingale, you first SSH to the secure node and then SSH to your login node. These are the steps:
+To log in to Nightingale, you first establish an SSH connection to the secure node and then establish an SSH connection to your login node. These are the steps:
 
 #. If you are not on campus, connect to the University of Illinois VPN or NCSA VPN (see :ref:`access_vpn`).
-#. SSH to the secure node ``ngale-bastion-1.ncsa.illinois.edu``. Replace ``<your_username>`` with your NCSA identity username.
+#. ``ssh`` to the secure node ``ngale-bastion-1.ncsa.illinois.edu``. Replace ``<your_username>`` with your NCSA identity username.
    
    .. code-block:: terminal
 
@@ -62,13 +62,13 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
 
       [<your_username>@ngale-bastion-1 ~]$
 
-#. SSH to your login node using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
+#. ``ssh`` to your login node using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
    
    .. code-block:: terminal
 
       ssh <your_username>@ng-<node_type><node_number>
 
-   For example, this is the ``ssh`` command for a user with the username ``hirop`` and the node name ``CPU``:
+   For example, this is the command for a user with the username ``hirop`` and the node name ``CPU``:
    
    .. code-block:: terminal
 
@@ -76,16 +76,16 @@ To log in to Nightingale, you first SSH to the secure node and then SSH to your 
    
    In this case, the user was specifically told that ``ng-CPU03`` is the node to use for their computations.
 
-Jump Host Login Method
+Jump Host Log in Method
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can combine the secure and login node ``ssh`` commands into one by specifying the bastion host as a *jump* host. The jump host is used to connect to your destination node without needing to execute the ``ssh`` command twice. 
+You can combine the secure and login node ``ssh`` commands into one by specifying the bastion host as a *jump host*. The jump host is used to connect to your destination node without needing to execute the ``ssh`` command twice. 
 
 .. code-block:: terminal
 
    ssh -J <your_username>@ngale-bastion-1.ncsa.illinois.edu <your_username>@ng-<login_node>
 
-For example, user ``test1`` can log in to the Nightingale login node ``astro07`` without logging in to the bastion host first with the following ``ssh`` command:
+For example, user ``test1`` can log in to the Nightingale login node ``astro07`` with the following command:
    
 .. code-block:: terminal
 
@@ -102,7 +102,7 @@ Microsoft Windows
 ~~~~~~~~~~~~~~~~~~~
 
 You can use the built-in SSH Client in Windows (version 10 and later) or select from several freely available third-party SSH clients. 
-These typically provide a graphical user interface (GUI) rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice; `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
+Third-party clients typically provide a graphical user interface (GUI) rather than a command-line interface. `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is a popular choice; `MobaXterm <http://mobaxterm.mobatek.net/>`_ is another one.
 
 Mac OS X
 ~~~~~~~~~
@@ -118,12 +118,12 @@ The Linux operating system has SSH built into it, use the Linux terminal applica
 
 .. _access_vpn:
 
-Accessing Nightingale using a VPN
+Access Nightingale using a VPN
 -----------------------------------
 
-If you log in to Nightingale from the University of Illinois campus, you don't need to use a Virtual Private Network (VPN). To access Nightingale from off campus, you will need to set up and activate a VPN first. A VPN sends your network traffic over an encrypted channel to a server on a different network, making your traffic originate within that other network. In this case, traffic will effectively originate inside of the University of Illinois, which adds an additional level of security and protection for your connection.  
+If you log in to Nightingale from the University of Illinois campus, you don't need to use a VPN. To access Nightingale off campus, you will first need to set up and activate a VPN. A VPN sends your network traffic over an encrypted channel to a server on a different network, making your traffic originate within that other network. In this case, traffic will effectively originate inside of the University of Illinois, which adds an additional level of security and protection for your connection.  
 
-There are two VPN services that will allow you to log in to Nightingale from off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not associated directly with UIUC. 
+There are two VPN services that will allow you to log in to Nightingale off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not directly associated with UIUC. 
 
 If you have trouble setting up or using either of these VPNs, or have questions, please :ref:`submit a support request <help>`.  
 
@@ -141,8 +141,8 @@ NCSA VPN
 
 If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/NetEng/Virtual+Private+Network+%28VPN%29+Service>`_.  
 
-Connecting with Terminal, SSH, and XQuartz (for users connecting from Mac OS machines)
-----------------------------------------------------------------------------------------
+Connect with Terminal, SSH, and XQuartz (for Mac OS users)
+------------------------------------------------------------
 
 One-time X Window Software Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -205,7 +205,7 @@ One-time SSH Configuration
 
    b. If you have an interactive node assigned to you, you can add another copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your login node.  
 
-   For example, a user with username ``hirop`` and the assigned node ``ng-gpu-x07`` would have the following configuration file:  
+   For example, a user with username ``hirop`` and the assigned interactive node ``ng-gpu-x07`` would have the following configuration file:  
 
    .. code-block:: terminal
 
@@ -232,7 +232,7 @@ One-time SSH Configuration
 
 #. Press **Control+X** to exit the editor and you are back at the prompt.  
       
-Logging in to Nightingale
+Log in to Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
       
 After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale:
@@ -245,7 +245,7 @@ After the preceding one-time steps are complete, follow these steps each time yo
 
    If you see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?", enter ``yes``.  
 
-#. Enter your NCSA (Kerberos) password at the prompt. Note, the terminal will not show your password (or placeholder symbols such as asterisks [*]) as you type.  
+#. Enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
 
 #. There will be a Duo prompt asking for a passcode or for "option 1". You may either:
 
@@ -255,7 +255,7 @@ After the preceding one-time steps are complete, follow these steps each time yo
 
    - Enter a 6-digit passcode from the **NCSA** entry of your Duo app.  
 
-#. Again, enter your NCSA (Kerberos) password at the prompt. Note, the terminal will not show your password (or placeholder symbols such as asterisks [*]) as you type.  
+#. Again, enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
 
 #. You should have a prompt that reflects that you are on a Nightingale node. It will include ``@ng-`` and look similar to this example for user ``hirop`` on node ``ng-gpu-m01``: 
 
@@ -265,8 +265,8 @@ After the preceding one-time steps are complete, follow these steps each time yo
 
    You can load modules, run software, and access your files from here.  
 
-Connecting with MobaXterm (for users connecting from Windows machines)
-------------------------------------------------------------------------
+Connect with MobaXterm (for Windows users)
+--------------------------------------------
 
 You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
 MobaXterm enables an SSH connection and provides other useful utilities you can use when communicating with a cluster, such as file transfer and editing.
@@ -281,7 +281,7 @@ One-time setup
    You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges to install the Installer edition. 
    The Portable edition does not require admin privileges, to use it **extract** the downloaded zip file and click **mobaxterm.exe**.
 
-#. Launch the MobaXterm application and click **Session** in the upper left of the window to start an SSH session.
+#. Launch the MobaXterm application and click **Session** in the upper left to start an SSH session.
 
    .. figure:: images/accessing/mobaxterm-terminal-session.png
       :alt: MobaXterm initial window with Session button circled.
@@ -313,7 +313,7 @@ One-time setup
 
    a. In the **Gateway host** box, enter ``ngale-bastion-1.ncsa.illinois.edu``. 
 
-   b. In the **Username** box, enter your NCSA username. 
+   b. In the **Username** box, enter your NCSA identity username. 
 
    c. Click **OK**. 
 
@@ -327,7 +327,7 @@ One-time setup
 
 #. A terminal window will be displayed asking for your password; enter your NCSA (Kerberos) password and press **Enter**.
 
-Logging in to Nightingale
+Log in to Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale:
@@ -350,7 +350,7 @@ After the preceding one-time steps are complete, follow these steps each time yo
 
 #. A black window without a prompt will appear. **You may need to wait 30 seconds or a minute here.** 
 
-   When it asks for your password, enter your NCSA (Kerberos) password. Note, the window will not show your password (or placeholder symbols such as asterisks [*]) as you type.
+   When it asks for your password, enter your NCSA (Kerberos) password. Note, the window will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
 
 #. You are now ready to work. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale.  
 

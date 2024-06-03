@@ -4,7 +4,7 @@ Log in to Nightingale
 ==========================
 
 After you have an :ref:`account on Nightingale <allocations>`, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
-Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node. The following are the hostnames for these login nodes.
+Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node.
 
 .. _node_hostnames:
 

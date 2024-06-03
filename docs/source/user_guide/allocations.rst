@@ -3,10 +3,8 @@
 Project Groups and User Accounts
 ====================================
 
-To access Nightingale, a project needs to have a **project group** (allocation) set up on the system. 
-You must be the project's **Principal Investigator (PI)** to set up the project group.
-
-If you are not a project PI and want to be added to an existing Nightingale project group, jump to :ref:`get-added`.
+To access Nightingale, a project needs to have a project group (allocation) set up on the system. 
+You must be the project's **Principal Investigator (PI)** to set up the project group. If you are *not* a project PI and want to be added to an existing Nightingale project group, jump to :ref:`get-added`.
 
 Get a Project Group (for PIs)
 --------------------------------

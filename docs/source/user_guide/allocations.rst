@@ -6,7 +6,7 @@ Project Groups and User Accounts
 To access Nightingale, a project needs to have a project group (allocation) set up on the system. 
 You must be the project's **Principal Investigator (PI)** to set up the project group. If you are *not* a project PI and want to be added to an existing Nightingale project group, jump to :ref:`get-added`.
 
-Get a Project Group (for PIs)
+Set Up a Project Group (for PIs)
 --------------------------------
 
 As the PI, your user login account will be the first login account attached to the project group on Nightingale. You will need to follow the process to create the project group, complete the training process, and be added to the HIPAA Covered Entity. Other users on the project will only need to complete the training and Covered Entity processes.

@@ -3,7 +3,7 @@
 Log in to Nightingale
 ==========================
 
-After you have an :ref:`account on Nightingale <allocations>`, you can log on using an SSH (Secure Shell) client on your local desktop or laptop. 
+After you have an :ref:`account on Nightingale <allocations>`, log in to the system using an SSH (Secure Shell) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node.
 
 .. _node_hostnames:
@@ -38,43 +38,41 @@ Specialized Interactive Node Hostname
 .. note::
 
    - Your PI can tell you if your allocation has a specialized interactive node and if so, its hostname.
-   - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). Please be aware that these nodes are a shared resource for all system users; you should limit your use of them to editing, compiling, and building your programs.
+   - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). These nodes are a shared resource for all system users, limit your use of them to editing, compiling, and building your programs.
 
 General Log in Process
 ------------------------
 
-To log in to Nightingale, you first establish an SSH connection to the secure node and then establish an SSH connection to your login node. These are the steps:
+To log in to Nightingale, establish an SSH connection to the secure node and then establish an SSH connection to your login or interactive node. These are the steps:
 
 #. If you are not on campus, connect to the University of Illinois VPN or NCSA VPN (see :ref:`access_vpn`).
-#. ``ssh`` to the secure node ``ngale-bastion-1.ncsa.illinois.edu``. Replace ``<your_username>`` with your NCSA identity username.
+#. ``ssh`` to the secure node ``ngale-bastion-1.ncsa.illinois.edu``. (Replace ``<your_username>`` with your NCSA identity username.)
    
    .. code-block:: terminal
 
       ssh <your_username>@ngale-bastion-1.ncsa.illinois.edu
 
-#. Enter your NCSA username and password. Note, the terminal will not show your password (or placeholder symbols such as asterisks [*]) as you type.
-#. Enter ``1`` to send a push to the NCSA Duo app on your smartphone.
+#. Enter your NCSA username and password. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
+#. Enter ``1`` to send a push to the NCSA Duo app on your phone.
 #. Approve the push request on your phone.
 
-   After you have approved the push, you will be at a prompt on the ``ngale-bastion-1`` node that will look similar to:
+   After you approve the push, you will be at a prompt on the ``ngale-bastion-1`` node that will look similar to:
    
    .. code-block:: terminal
 
       [<your_username>@ngale-bastion-1 ~]$
 
-#. ``ssh`` to your login node using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
+#. ``ssh`` to your login or interactive node using the appropriate :ref:`hostname <node_hostnames>`, following this syntax:
    
    .. code-block:: terminal
 
-      ssh <your_username>@ng-<node_type><node_number>
+      ssh <your_username>@ng-<node_name>
 
-   For example, this is the command for a user with the username ``hirop`` and the node name ``CPU``:
+   For example, this is the command for a user with the username ``hirop`` and the node name ``CPU03``:
    
    .. code-block:: terminal
 
       ssh hirop@ng-CPU03
-   
-   In this case, the user was specifically told that ``ng-CPU03`` is the node to use for their computations.
 
 Jump Host Log in Method
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -96,7 +94,7 @@ Command-line SSH Clients
 
 SSH is a client-server architecture that provides a secure channel over an unsecured network. An SSH client is a program for securely logging in to and executing commands on a remote machine. SSH encrypts the data sent over an open network, such as the internet, so that it can't be read by others.
 
-Several SSH-based clients are available for accessing Nightingale. The client you use will depend on your workstation’s operating system.
+Several SSH clients are available for accessing Nightingale. The client you use will depend on your workstation’s operating system.
 
 Microsoft Windows
 ~~~~~~~~~~~~~~~~~~~
@@ -113,7 +111,7 @@ Mac OS X comes with a built-in open-source version of SSH called OpenSSH; access
 Linux
 ~~~~~~~
 
-The Linux operating system has SSH built into it, use the Linux terminal application to connect via SSH. 
+Linux has SSH built into it, use the Linux terminal application to connect via SSH. 
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Linux.
 
 .. _access_vpn:
@@ -121,20 +119,18 @@ The Linux operating system has SSH built into it, use the Linux terminal applica
 Access Nightingale using a VPN
 -----------------------------------
 
-If you log in to Nightingale from the University of Illinois campus, you don't need to use a VPN. To access Nightingale off campus, you will first need to set up and activate a VPN. A VPN sends your network traffic over an encrypted channel to a server on a different network, making your traffic originate within that other network. In this case, traffic will effectively originate inside of the University of Illinois, which adds an additional level of security and protection for your connection.  
-
-There are two VPN services that will allow you to log in to Nightingale off campus. The first is the University of Illinois VPN, which members of UIUC campus should use by default. The other is the NCSA VPN, which is available for Nightingale users not directly associated with UIUC. 
-
-If you have trouble setting up or using either of these VPNs, or have questions, please :ref:`submit a support request <help>`.  
-
 .. note::
 
-   If your login freezes when you try to log in to Nightingale, this may be your problem.  Please try one of these VPN methods.  
+   If your login freezes when you try to log in to Nightingale, this may be your problem. Please try one of these VPN methods.  
+
+To access Nightingale off campus, you first need to set up and activate either the University of Illinois VPN or the NCSA VPN.
+
+If you log in to Nightingale from the University of Illinois campus, you don't need to use a VPN. 
 
 University of Illinois VPN
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will need to authenticate to the VPN service itself using your University NetID, password, and two-factor authentication (2FA).  
+If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will authenticate to the VPN service itself using your University NetID, password, and two-factor authentication (2FA).  
 
 NCSA VPN
 ~~~~~~~~~
@@ -147,7 +143,7 @@ Connect with Terminal, SSH, and XQuartz (for Mac OS users)
 One-time X Window Software Install
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you want to use an application from Nightingale and have its windows on your own computer, before logging in, install XQuartz on your Mac OS system. You can `download XQuartz here <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
+If you want to use an application from Nightingale and have its windows on your own computer, before you log in, `download and install XQuartz <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
 
 One-time SSH Configuration 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -181,7 +177,7 @@ One-time SSH Configuration
        ^G Get Help   ^O WriteOut   ^R Read File  ^Y Prev Pg    ^K Cut Text   ^C Cur Pos    
        ^X Exit       ^J Justify    ^W Where is   ^V Next Pg    ^U UnCut Text ^T To Spell   
 
-   The editor allows you to edit a configuration file that sets up connections to the outside world, so you don't have to type as much all the time. 
+   This editor allows you to edit a configuration file that sets up connections to the outside world, so you don't have to type as much all the time. 
 
 #. Copy and paste the following configuration file code block into your terminal. Before you run it, you will modify the code in the next steps. 
 
@@ -203,7 +199,7 @@ One-time SSH Configuration
 
    a. Replace ``YOUR_USERNAME`` with your NCSA identity username. 
 
-   b. If you have an interactive node assigned to you, you can add another copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your login node.  
+   b. If you have an interactive node assigned to you, you can add second copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your interactive node.  
 
    For example, a user with username ``hirop`` and the assigned interactive node ``ng-gpu-x07`` would have the following configuration file:  
 
@@ -269,16 +265,16 @@ Connect with MobaXterm (for Windows users)
 --------------------------------------------
 
 You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
-MobaXterm enables an SSH connection and provides other useful utilities you can use when communicating with a cluster, such as file transfer and editing.
+MobaXterm enables an SSH connection and provides other useful utilities, such as file transfer and editing.
 
-Use the following steps to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly more complicated than other HPC clusters. The difference involves adding the SSH connection to the secure bastion node; this is described in Steps 5 and 6 of the one-time setup instructions.
+Use the following steps to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly different than other HPC clusters. The difference involves adding the SSH connection to the secure bastion node; this is described in Steps 5 and 6 of the one-time setup instructions.
 
-One-time setup
+One-time Setup
 ~~~~~~~~~~~~~~~ 
 
-#. `Download MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_ and install it on your Windows workstation. 
+#. `Download and install MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_. 
 
-   You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges to install the Installer edition. 
+   You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges on your machine to install the Installer edition. 
    The Portable edition does not require admin privileges, to use it **extract** the downloaded zip file and click **mobaxterm.exe**.
 
 #. Launch the MobaXterm application and click **Session** in the upper left to start an SSH session.
@@ -330,7 +326,7 @@ One-time setup
 Log in to Nightingale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale:
+After the preceding one-time setup is complete, follow these steps each time you want to log in to Nightingale:
 
 #. Open **MobaXterm**. 
 

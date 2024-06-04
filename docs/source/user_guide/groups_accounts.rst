@@ -51,29 +51,27 @@ To get a user login account to access the Nightingale system, it is *your* respo
 Get Added to a Project Group (for Non-PIs)
 ---------------------------------------------
 
-Create an NCSA Identity
-~~~~~~~~~~~~~~~~~~~~~~~~~
+#. **Create an NCSA Identity**
 
-To request access to a Nightingale project group, you must have an NCSA identity. 
+   To request access to a Nightingale project group, you must have an NCSA identity. 
 
-To create one, go to the `NCSA identity Nightingale invite <https://go.ncsa.illinois.edu/ngale_identity>`_ and click **Register New User and Join**.  
-You will also enroll in `NCSA's Duo multi-factor authentication <https://go.ncsa.illinois.edu/2fa>`_, which is required to log in to Nightingale. This is separate from the University of Illinois Duo. 
+   To create one, go to the `NCSA identity Nightingale invite <https://go.ncsa.illinois.edu/ngale_identity>`_ and click **Register New User and Join**.  
+   You will also enroll in `NCSA's Duo multi-factor authentication <https://go.ncsa.illinois.edu/2fa>`_, which is required to log in to Nightingale. This is separate from the University of Illinois Duo. 
 
-.. note::
-   When you enroll in NCSA Duo, create and save two backup codes in case you lose your Duo device.  
+   .. note::
+      When you enroll in NCSA Duo, create and save two backup codes in case you lose your Duo device.  
    
-If you already have an NCSA identity and don't know your password, go to `NCSA Identity and Access Management <https://identity.ncsa.illinois.edu/>`_ and click **Reset**.
+   If you already have an NCSA identity and don't know your password, go to `NCSA Identity and Access Management <https://identity.ncsa.illinois.edu/>`_ and click **Reset**.
 
-Get a User Login Account
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#. **Get a User Login Account**
 
-After your PI has a project group set up on Nightingale, there is an approval process to add new users to the system. To start the process, :ref:`submit a support request <help>`.
+   After your PI has a project group set up on Nightingale, there is an approval process to add new users to the system. To start the process, :ref:`submit a support request <help>`.
 
-To get a user login account to access the Nightingale system, it is *your* responsibility to:
+   To get a user login account to access the Nightingale system, it is *your* responsibility to:
 
-  - Become part of the NCSA HIPAA Covered Entity. This will involve completing training specific to the type of data that you will be handling on Nightingale. You may need to submit your training certificate to a web form to become part of the covered entity.
+     - Become part of the NCSA HIPAA Covered Entity. This will involve completing training specific to the type of data that you will be handling on Nightingale. You may need to submit your training certificate to a web form to become part of the covered entity.
 
-  - Make sure all devices that you will log in to Nightingale from have an encrypted hard drive.
+     - Make sure all devices that you will log in to Nightingale from have an encrypted hard drive.
 
 Account Administration
 ------------------------

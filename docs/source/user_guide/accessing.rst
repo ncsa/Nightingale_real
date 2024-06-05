@@ -3,7 +3,7 @@
 Log in to Nightingale
 ==========================
 
-After you have an :ref:`account on Nightingale <allocations>`, log in to the system using an SSH (Secure Shell) client on your local desktop or laptop. 
+After you have an :ref:`account on Nightingale <allocations>`, log in to the system using an Secure Shell (SSH) client on your local desktop or laptop. 
 Because of the added security for Nightingale, you will first log in to Nightingale's secure node and then log in to a general access login node or, for groups that have them, a specialized interactive node.
 
 .. _node_hostnames:
@@ -40,7 +40,7 @@ Specialized Interactive Node Hostname
    - Your PI can tell you if your allocation has a specialized interactive node and if so, its hostname.
    - All Nightingale users have access to the general access login nodes (ng-login01 and ng-login02). These nodes are a shared resource for all system users, limit your use of them to editing, compiling, and building your programs.
 
-General Log in Process
+General Login Process
 ------------------------
 
 To log in to Nightingale, establish an SSH connection to the secure node and then establish an SSH connection to your login or interactive node. These are the steps:
@@ -53,7 +53,7 @@ To log in to Nightingale, establish an SSH connection to the secure node and the
       ssh <your_username>@ngale-bastion-1.ncsa.illinois.edu
 
 #. Enter your NCSA username and password. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
-#. Enter ``1`` to send a push to the NCSA Duo app on your phone.
+#. Enter ``1`` to send a push to the Duo app on your phone.
 #. Approve the push request on your phone.
 
    After you approve the push, you will be at a prompt on the ``ngale-bastion-1`` node that will look similar to:
@@ -74,7 +74,7 @@ To log in to Nightingale, establish an SSH connection to the secure node and the
 
       ssh hirop@ng-CPU03
 
-Jump Host Log in Method
+Jump Host Login Method
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can combine the secure and login node ``ssh`` commands into one by specifying the bastion host as a *jump host*. The jump host is used to connect to your destination node without needing to execute the ``ssh`` command twice. 

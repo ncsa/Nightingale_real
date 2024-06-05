@@ -27,7 +27,7 @@ As the PI, your user login account will be the first login account attached to t
 
 #. After your project group is created.
 
-   After your project group is created, Nightingale administrators will create your data storage directories and project group name. Your group will also be assigned a shared or exclusive *interactive node* to log in to and, if you have batch system access, a *charge account* to assign your jobs to. These will be communicated to you via email. 
+   Nightingale administrators will create your data storage directories and project group name. Your group will also be assigned a shared or exclusive *interactive node* to log in to and, if you have batch system access, a *charge account* to assign your jobs to. These will be communicated to you via email. 
 
 #. Get a user login account.
 

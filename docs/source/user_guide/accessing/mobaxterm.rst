@@ -1,10 +1,9 @@
 Connect with MobaXterm (for Microsoft Windows)
 ================================================
-
-You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
+ 
 MobaXterm enables an SSH connection and provides other useful utilities, such as file transfer and editing.
-      
-Use the following steps to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly different than other HPC clusters. The difference involves adding the SSH connection to the secure node; this is described in Steps 5 and 6 of the one-time setup instructions.
+
+Use the following steps to set up MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly different than other HPC clusters. The difference involves adding the SSH connection to the secure node; this is described in Steps 5 and 6 of the one-time setup instructions.
       
 One-time Setup
 ----------------

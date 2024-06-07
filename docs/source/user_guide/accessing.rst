@@ -249,13 +249,13 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
             
       #. Launch the MobaXterm application and click **Session** in the upper left to start an SSH session.
             
-         .. figure:: ../images/accessing/mobaxterm-terminal-session.png
+         .. figure:: images/accessing/mobaxterm-terminal-session.png
             :alt: MobaXterm initial window with Session button circled.
             :width: 150
             
       #. Select **SSH** from the session types and click **OK**. 
             
-         .. figure:: ../images/accessing/mobaxterm-session-ssh.png
+         .. figure:: images/accessing/mobaxterm-session-ssh.png
             :alt: MobaXterm Session window with SSH button circled.
             :width: 600
             
@@ -265,13 +265,13 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
             
          b. Select the **Specify username** checkbox and enter your NCSA Identity username.
             
-         .. figure:: ../images/accessing/mobaxterm-basic-ssh-username.png
+         .. figure:: images/accessing/mobaxterm-basic-ssh-username.png
             :alt: MobaXterm Session window with Basic SSH Settings filled in.
             :width: 750
             
       #. In the **Network settings** tab, click **SSH gateway (jump host)**.
             
-         .. figure:: ../images/accessing/mobaxterm-network-settings.png
+         .. figure:: images/accessing/mobaxterm-network-settings.png
             :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button highlighted.
             :width: 750
             
@@ -285,7 +285,7 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
             
          You may see a warning message saying that your remote host identification has changed; click **Yes** to continue.
             
-         .. figure:: ../images/accessing/mobaxterm-jump-host-config.png
+         .. figure:: images/accessing/mobaxterm-jump-host-config.png
             :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
             :width: 600
             

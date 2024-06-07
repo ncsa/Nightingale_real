@@ -148,7 +148,7 @@ X Window servers are available for Microsoft Windows, Mac, and Unix/Linux.
 One-Time Setup
 ~~~~~~~~~~~~~~~
 
-Complete these one-time steps to set up the connection.
+Before logging in to Nightingale, complete these one-time steps to set up the connection.
 
 .. tabs::
 

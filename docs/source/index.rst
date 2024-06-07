@@ -40,7 +40,6 @@ Browse NCSA’s `HPC-Moodle <https://www.hpc-training.org>`_ for a full list of 
    user_guide/fee_overview
    user_guide/groups_accounts
    user_guide/accessing
-   user_guide/x-windows/index
    user_guide/file_mgmt
    user_guide/software
    user_guide/programming_environment

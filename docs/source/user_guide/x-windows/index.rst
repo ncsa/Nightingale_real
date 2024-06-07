@@ -7,7 +7,7 @@ The program that runs on your desktop computer is called the *server*.
 X Window servers are available for Microsoft Windows, Apple Mac, and UNIX/Linux.
 
 .. toctree::
-   maxdepth: 1
+   :maxdepth: 1
 
    xquartz
    mobaxterm

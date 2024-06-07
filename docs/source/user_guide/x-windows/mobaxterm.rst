@@ -61,7 +61,7 @@ One-time Setup
 #. A terminal window will be displayed asking for your password; enter your NCSA (Kerberos) password and press **Enter**.
       
 Log in to Nightingale
-========================
+-----------------------
       
 After the preceding one-time setup is complete, follow these steps each time you want to log in to Nightingale:
       

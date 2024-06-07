@@ -137,40 +137,36 @@ NCSA VPN
 
 If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/NetEng/Virtual+Private+Network+%28VPN%29+Service>`_.  
 
-X Server Options for Windows and Mac
--------------------------------------
+Connect with Terminal, SSH, and XQuartz (for Mac OS)
+-----------------------------------------------------
 
-.. tabs::
+One-time X Window Software Install
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   .. tab:: XQuartz (for Mac OS users)
-
-      One-time X Window Software Install
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-      If you want to use an application from Nightingale and have its windows on your own computer, before you log in, `download and install XQuartz <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
+If you want to use an application from Nightingale and have its windows on your own computer, before you log in, `download and install XQuartz <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
       
-      One-time SSH Configuration 
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+One-time SSH Configuration 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       
-      #. Open the **Terminal** application on your Mac. 
+#. Open the **Terminal** application on your Mac. 
       
-      #. Enter the following command into the terminal:
+#. Enter the following command into the terminal:
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            cd ~/.ssh 
+      cd ~/.ssh 
       
-      #. Enter the following command into the terminal:
+#. Enter the following command into the terminal:
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            nano config
+      nano config
       
-         This will bring you into an editor program that looks like this:
+   This will bring you into an editor program that looks like this:
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-             UW PICO 5.09                            File: config                               
+       UW PICO 5.09                            File: config                               
       
       
       
@@ -178,179 +174,180 @@ X Server Options for Windows and Mac
       
       
       
-             ^G Get Help   ^O WriteOut   ^R Read File  ^Y Prev Pg    ^K Cut Text   ^C Cur Pos    
-             ^X Exit       ^J Justify    ^W Where is   ^V Next Pg    ^U UnCut Text ^T To Spell   
+       ^G Get Help   ^O WriteOut   ^R Read File  ^Y Prev Pg    ^K Cut Text   ^C Cur Pos    
+       ^X Exit       ^J Justify    ^W Where is   ^V Next Pg    ^U UnCut Text ^T To Spell   
       
-         This editor allows you to edit a configuration file that sets up connections to the outside world, so you don't have to type as much all the time. 
+   This editor allows you to edit a configuration file that sets up connections to the outside world, so you don't have to type as much all the time. 
       
-      #. Copy and paste the following configuration file code block into your terminal. Before you run it, you will modify the code in the next steps. 
+#. Copy and paste the following configuration file code block into your terminal. Before you run it, you will modify the code in the next steps. 
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            Host ngb1
-              HostName ngale-bastion-1.ncsa.illinois.edu
-              ControlMaster auto
-              ControlPath /tmp/ssh_mux_%h_%p_%r
-              ControlPersist 5h
-              User YOUR_USERNAME
+      Host ngb1
+        HostName ngale-bastion-1.ncsa.illinois.edu
+        ControlMaster auto
+        ControlPath /tmp/ssh_mux_%h_%p_%r
+        ControlPersist 5h
+        User YOUR_USERNAME
       
-            Host ng-login01
-              HostName ng-login01.ngale.internal.ncsa.edu
-              ProxyJump ngb1
-              User YOUR_USERNAME
+      Host ng-login01
+        HostName ng-login01.ngale.internal.ncsa.edu
+        ProxyJump ngb1
+        User YOUR_USERNAME
       
-      #. Use the arrow keys to position your cursor and make the following modifications:
+#. Use the arrow keys to position your cursor and make the following modifications:
       
-         a. Replace ``YOUR_USERNAME`` with your NCSA identity username. 
+   a. Replace ``YOUR_USERNAME`` with your NCSA identity username. 
       
-         b. If you have an interactive node assigned to you, you can add second copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your interactive node.  
+   b. If you have an interactive node assigned to you, you can add second copy of the last stanza of the configuration file; in that stanza, replace ``ng-login01`` with the name of your interactive node.  
       
-         For example, a user with username ``hirop`` and the assigned interactive node ``ng-gpu-x07`` would have the following configuration file:  
+   For example, a user with username ``hirop`` and the assigned interactive node ``ng-gpu-x07`` would have the following configuration file:  
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            Host ngb1
-              HostName ngale-bastion-1.ncsa.illinois.edu
-              ControlMaster auto
-              ControlPath /tmp/ssh_mux_%h_%p_%r
-              ControlPersist 5h
-              User hirop
+      Host ngb1
+        HostName ngale-bastion-1.ncsa.illinois.edu
+        ControlMaster auto
+        ControlPath /tmp/ssh_mux_%h_%p_%r
+        ControlPersist 5h
+        User hirop
       
-            Host ng-login01
-              HostName ng-login01.ngale.internal.ncsa.edu
-              ProxyJump ngb1
-              User hirop
+      Host ng-login01
+        HostName ng-login01.ngale.internal.ncsa.edu
+        ProxyJump ngb1
+        User hirop
             
-            Host ng-gpu-x07
-              HostName ng-gpu-x07.ngale.internal.ncsa.edu
-              ProxyJump ngb1
-              User hirop
+      Host ng-gpu-x07
+        HostName ng-gpu-x07.ngale.internal.ncsa.edu
+        ProxyJump ngb1
+        User hirop
             
-      #. After you finish modifying the file, press **Control+O** to write the file.
-      
-      #. Press **return** (or **Enter**) to confirm the file name. 
-      
-      #. Press **Control+X** to exit the editor and you are back at the prompt.  
+#. After you finish modifying the file, press **Control+O** to write the file.
+     
+#. Press **return** (or **Enter**) to confirm the file name. 
+     
+#. Press **Control+X** to exit the editor and you are back at the prompt.  
             
-      Log in to Nightingale
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+Log in to Nightingale
+~~~~~~~~~~~~~~~~~~~~~~~~~~
             
-      After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale:
+After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale:
       
-      #. Enter the following into the terminal (if you are logging in to an interactive node, replace ``ng-login01`` with the name of that interactive node):
+#. Enter the following into the terminal (if you are logging in to an interactive node, replace ``ng-login01`` with the name of that interactive node):
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            ssh -X ng-login01
+      ssh -X ng-login01
       
-         If you see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?", enter ``yes``.  
+   If you see a message that begins "The authenticity of host...." and ends with "Are you sure you want to continue connecting (yes/no/[fingerprint])?", enter ``yes``.  
       
-      #. Enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
+#. Enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
       
-      #. There will be a Duo prompt asking for a passcode or for "option 1". You may either:
+#. There will be a Duo prompt asking for a passcode or for "option 1". You may either:
       
-         - Enter ``1`` and approve the Duo push notification on your phone.
+   - Enter ``1`` and approve the Duo push notification on your phone.
          
-         Or 
+   Or 
       
-         - Enter a 6-digit passcode from the **NCSA** entry of your Duo app.  
+   - Enter a 6-digit passcode from the **NCSA** entry of your Duo app.  
       
-      #. Again, enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
+#. Again, enter your NCSA (Kerberos) password at the prompt. Note, the terminal will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.  
       
-      #. You should have a prompt that reflects that you are on a Nightingale node. It will include ``@ng-`` and look similar to this example for user ``hirop`` on node ``ng-gpu-m01``: 
+#. You should have a prompt that reflects that you are on a Nightingale node. It will include ``@ng-`` and look similar to this example for user ``hirop`` on node ``ng-gpu-m01``: 
       
-         .. code-block:: terminal
+   .. code-block:: terminal
       
-            [hirop@ng-gpu-m01 ~] $
-      
-         You can load modules, run software, and access your files from here.  
+      [hirop@ng-gpu-m01 ~] $
+     
+   You can load modules, run software, and access your files from here.  
 
-   .. tab:: MobaXterm (for Windows users)
+Connect with MobaXterm (for Microsoft Windows)
+--------------------------------------------------
 
-      You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
-      MobaXterm enables an SSH connection and provides other useful utilities, such as file transfer and editing.
+You can install `MobaXterm <https://mobaxterm.mobatek.net/>`_ on your workstation and use it to connect to Nightingale nodes using SSH. 
+MobaXterm enables an SSH connection and provides other useful utilities, such as file transfer and editing.
       
-      Use the following steps to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly different than other HPC clusters. The difference involves adding the SSH connection to the secure node; this is described in Steps 5 and 6 of the one-time setup instructions.
+Use the following steps to install MobaXterm and connect to Nightingale. Nightingale has extra security to protect the data stored on it, so configuring this connection is slightly different than other HPC clusters. The difference involves adding the SSH connection to the secure node; this is described in Steps 5 and 6 of the one-time setup instructions.
       
-      One-time Setup
-      ~~~~~~~~~~~~~~~ 
+One-time Setup
+~~~~~~~~~~~~~~~ 
       
-      #. `Download and install MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_. 
+#. `Download and install MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_. 
       
-         You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges on your machine to install the Installer edition. 
-         The Portable edition does not require admin privileges, to use it **extract** the downloaded zip file and click **mobaxterm.exe**.
+   You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges on your machine to install the Installer edition. 
+   The Portable edition does not require admin privileges, to use it **extract** the downloaded zip file and click **mobaxterm.exe**.
       
-      #. Launch the MobaXterm application and click **Session** in the upper left to start an SSH session.
+#. Launch the MobaXterm application and click **Session** in the upper left to start an SSH session.
       
-         .. figure:: images/accessing/mobaxterm-terminal-session.png
-            :alt: MobaXterm initial window with Session button circled.
-            :width: 150
+   .. figure:: images/accessing/mobaxterm-terminal-session.png
+      :alt: MobaXterm initial window with Session button circled.
+      :width: 150
       
-      #. Select **SSH** from the session types and click **OK**. 
+#. Select **SSH** from the session types and click **OK**. 
       
-         .. figure:: images/accessing/mobaxterm-session-ssh.png
-            :alt: MobaXterm Session window with SSH button circled.
-            :width: 600
+   .. figure:: images/accessing/mobaxterm-session-ssh.png
+      :alt: MobaXterm Session window with SSH button circled.
+      :width: 600
       
-      #. In the **Basic SSH Settings** tab:
+#. In the **Basic SSH Settings** tab:
       
-         a. In the **Remote host** box, enter the name of the login node you want to access (either a general access or interactive node).
+   a. In the **Remote host** box, enter the name of the login node you want to access (either a general access or interactive node).
       
-         b. Select the **Specify username** checkbox and enter your NCSA Identity username.
+   b. Select the **Specify username** checkbox and enter your NCSA Identity username.
       
-         .. figure:: images/accessing/mobaxterm-basic-ssh-username.png
-            :alt: MobaXterm Session window with Basic SSH Settings filled in.
-            :width: 750
+   .. figure:: images/accessing/mobaxterm-basic-ssh-username.png
+      :alt: MobaXterm Session window with Basic SSH Settings filled in.
+      :width: 750
       
-      #. In the **Network settings** tab, click **SSH gateway (jump host)**.
+#. In the **Network settings** tab, click **SSH gateway (jump host)**.
       
-         .. figure:: images/accessing/mobaxterm-network-settings.png
-            :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button highlighted.
-            :width: 750
+   .. figure:: images/accessing/mobaxterm-network-settings.png
+      :alt: MobaXterm Session window with showing Network settings tab clicked and SSH gateway jump host button highlighted.
+      :width: 750
       
-      #. In the **jump hosts configuration** window:
+#. In the **jump hosts configuration** window:
       
-         a. In the **Gateway host** box, enter ``ngale-bastion-1.ncsa.illinois.edu``. 
+   a. In the **Gateway host** box, enter ``ngale-bastion-1.ncsa.illinois.edu``. 
       
-         b. In the **Username** box, enter your NCSA identity username. 
+   b. In the **Username** box, enter your NCSA identity username. 
       
-         c. Click **OK**. 
+   c. Click **OK**. 
       
-         You may see a warning message saying that your remote host identification has changed; click **Yes** to continue.
+   You may see a warning message saying that your remote host identification has changed; click **Yes** to continue.
       
-         .. figure:: images/accessing/mobaxterm-jump-host-config.png
-            :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
-            :width: 600
+   .. figure:: images/accessing/mobaxterm-jump-host-config.png
+      :alt: MobaXterm Session window with showing values for the SSH gateway jump host filled in.
+      :width: 600
       
-      #. You should now be back in the **Session settings** window. Click **OK** to initiate your SSH connection. 
+#. You should now be back in the **Session settings** window. Click **OK** to initiate your SSH connection. 
       
-      #. A terminal window will be displayed asking for your password; enter your NCSA (Kerberos) password and press **Enter**.
+#. A terminal window will be displayed asking for your password; enter your NCSA (Kerberos) password and press **Enter**.
       
-      Log in to Nightingale
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+Log in to Nightingale
+~~~~~~~~~~~~~~~~~~~~~~~~~~
       
-      After the preceding one-time setup is complete, follow these steps each time you want to log in to Nightingale:
+After the preceding one-time setup is complete, follow these steps each time you want to log in to Nightingale:
       
-      #. Open **MobaXterm**. 
+#. Open **MobaXterm**. 
       
-      #. In the left bar, there is a list of **User sessions**, each one is a node that you have configured for logging in. 
+#. In the left bar, there is a list of **User sessions**, each one is a node that you have configured for logging in. 
       
-         Right-click on the Nightingale node you want to log in to and select **execute**. 
+   Right-click on the Nightingale node you want to log in to and select **execute**. 
       
-      #. A window will pop up asking for your password. Enter your NCSA (Kerberos) password and press **Enter** or click **OK**.
+#. A window will pop up asking for your password. Enter your NCSA (Kerberos) password and press **Enter** or click **OK**.
       
-      #. A second window will pop up asking for your 2FA code. 
+#. A second window will pop up asking for your 2FA code. 
       
-         a. On your phone, open the **Duo app**.
+   a. On your phone, open the **Duo app**.
       
-         b. Select the **NCSA** entry (not the *University of Illinois* entry).
+   b. Select the **NCSA** entry (not the *University of Illinois* entry).
       
-         c. Enter the 6-digit passcode displayed in the Duo app into the pop-up window.  
+   c. Enter the 6-digit passcode displayed in the Duo app into the pop-up window.  
       
-      #. A black window without a prompt will appear. **You may need to wait 30 seconds or a minute here.** 
+#. A black window without a prompt will appear. **You may need to wait 30 seconds or a minute here.** 
       
-         When it asks for your password, enter your NCSA (Kerberos) password. Note, the window will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
+   When it asks for your password, enter your NCSA (Kerberos) password. Note, the window will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
       
-      #. You are now ready to work. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale.  
+#. You are now ready to work. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale.  
 
 |

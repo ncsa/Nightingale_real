@@ -1,25 +1,14 @@
 Connect with Terminal, SSH, and XQuartz (for Mac OS)
 ======================================================
 
-To set up XQuartz for Mac OS:
-
-  #. :ref:`Download and install XQuartz <one-time-xquartz>`.
-  #. :ref:`Complete one-time SSH configuration <one-time-ssh>`.
-  #. :ref:`Log in to Nightingale <xquartz-log-in>`.
-
-The following provides step-by-step instructions for this process.
+XQuartz allows you to use an application from Nightingale and have its windows on your own computer, before you log in. Use the following steps to install and set up XQuartz and connect to Nightingale.
 
 .. _one-time-xquartz:
 
-One-time X Window Software Install
-------------------------------------
+One-time Setup
+-----------------
 
-If you want to use an application from Nightingale and have its windows on your own computer, before you log in, `download and install XQuartz <https://www.xquartz.org/>`_. Most Nightingale users will want to do this.  
-
-.. _one-time-ssh:
-      
-One-time SSH Configuration 
-----------------------------
+#. `Download and install XQuartz <https://www.xquartz.org/>`_.
       
 #. Open the **Terminal** application on your Mac. 
       

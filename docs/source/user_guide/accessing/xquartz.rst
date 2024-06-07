@@ -1,7 +1,7 @@
 Connect with Terminal, SSH, and XQuartz (for Mac OS)
 ======================================================
 
-XQuartz allows you to use an application from Nightingale and have its windows on your own computer, before you log in. Use the following steps to install and set up XQuartz and connect to Nightingale.
+XQuartz allows you to use an application from Nightingale and have its windows on your own computer. Use the following steps to set up XQuartz and connect to Nightingale.
 
 .. _one-time-xquartz:
 

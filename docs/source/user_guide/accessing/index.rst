@@ -146,7 +146,7 @@ The program that runs on your desktop computer is called the *server*.
 X Window servers are available for Microsoft Windows, Mac, and Unix/Linux.
 
 One-Time Setup
------------------
+~~~~~~~~~~~~~~~
 
 Complete these one-time steps to set up the connection.
 
@@ -290,7 +290,7 @@ Complete these one-time steps to set up the connection.
       #. A terminal window will be displayed asking for your password; enter your NCSA (Kerberos) password and press **Enter**.
       
 Log in to Nightingale 
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale.
 

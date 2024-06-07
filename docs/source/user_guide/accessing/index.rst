@@ -154,6 +154,8 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
 
    .. group-tab:: XQuartz (Mac OS)
 
+      XQuartz allows you to use an application from Nightingale and have its windows on your own computer.
+
       #. `Download and install XQuartz <https://www.xquartz.org/>`_.
       
       #. Open the **Terminal** application on your Mac. 
@@ -238,6 +240,8 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
 
    .. group-tab:: MobaXterm (Microsoft Windows)
 
+      MobaXterm enables an SSH connection and provides other useful utilities, such as file transfer and editing.
+
       #. `Download and install MobaXterm <https://mobaxterm.mobatek.net/download-home-edition.html>`_. 
       
          You can install either the Portable or Installer edition of MobaXterm. You will need to have admin privileges on your machine to install the Installer edition. 
@@ -292,7 +296,7 @@ Before logging in to Nightingale, complete these one-time steps to set up the co
 Log in to Nightingale 
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-After the preceding one-time steps are complete, follow these steps each time you want to log in to Nightingale.
+After the preceding one-time setup is complete, follow these steps each time you want to log in to Nightingale.
 
 .. tabs::
 

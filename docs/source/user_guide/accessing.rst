@@ -140,9 +140,9 @@ If you don't have a University of Illinois NetID, you will need to use the `NCSA
 X Window Servers
 -------------------
 
-Originally developed for UNIX, the X Window System allows a program on one computer to open windows on another computer’s screen (usually your desktop/laptop computer). 
+Originally developed for Unix, the X Window System allows a program on one computer to open windows on another computer’s screen (usually your desktop/laptop). 
 The program that runs on the Nightingale is called the *client*. 
-The program that runs on your desktop computer is called the *server*. 
+The program that runs on your desktop/laptop computer is called the *server*. 
 X Window servers are available for Microsoft Windows, Mac, and Unix/Linux.
 
 One-Time Setup
@@ -353,12 +353,5 @@ After the preceding one-time setup is complete, follow these steps each time you
          When it asks for your password, enter your NCSA (Kerberos) password. Note, the window will *not* show your password (or placeholder symbols such as asterisks [*]) as you type.
             
       #. You are now ready to work. You should have a prompt at the bottom and a file window on the left showing your directories on Nightingale.  
-
-
-.. toctree::
-   :maxdepth: 1
-
-   xquartz
-   mobaxterm  
 
 |

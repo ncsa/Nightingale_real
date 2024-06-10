@@ -44,7 +44,7 @@ As the PI, your user login account will be the first login account attached to t
 Get Added to a Project Group (for Non-PIs)
 ---------------------------------------------
 
-Follow these steps to join an existing Nightingale project group. If you're not associated with an existing group on the system, follow the :ref:`set-up-project` steps.
+Follow these steps to join an existing Nightingale project group. If you're not associated with a project that has an existing project group on the system, follow the :ref:`set-up-project` steps.
 
 #. Create an NCSA identity.
 

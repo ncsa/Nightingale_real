@@ -89,6 +89,12 @@ For example, user ``test1`` can log in to the Nightingale login node ``astro07``
 
    ssh -J test1@ngale-bastion-1.ncsa.illinois.edu test1@ng-astro07
 
+After you enter the ``ssh`` command:
+
+#. Enter your NCSA (Kerberos) password, when prompted.
+#. Approve the NCSA Duo push on your phone.
+#. Again, enter your NCSA (Kerberos) password, when prompted.
+
 Command-line SSH Clients
 --------------------------
 

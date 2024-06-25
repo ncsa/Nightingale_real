@@ -38,12 +38,13 @@ Browse NCSA’s `HPC-Moodle <https://www.hpc-training.org>`_ for a full list of 
 
    user_guide/architecture
    user_guide/fee_overview
+   user_guide/groups_accounts
    user_guide/accessing
-   user_guide/citizenship
    user_guide/file_mgmt
    user_guide/software
    user_guide/programming_environment
    user_guide/running_jobs
    user_guide/visualization
    user_guide/containers
+   user_guide/citizenship
    user_guide/protected_data

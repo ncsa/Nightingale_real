@@ -6,18 +6,18 @@ Getting Help
 General Resource Support
 ---------------------------
 
-Go to the `NCSA Support Help Center <http://help.ncsa.illinois.edu>`_ for assistance with any questions or issues not answered by the documentation. Powered by Jira Service Manager (JSM), in this new tool you can:
+Go to the `NCSA Help Portal <http://help.ncsa.illinois.edu>`_ for assistance with any questions or issues not answered by the documentation. Powered by Jira Service Manager (JSM), in this new portal you can:
 
 - Search knowledge base articles to resolve common issues faster.
 - Submit help request tickets.
 - Monitor the status of your tickets.
 - Respond to NCSA staff as they work to resolve your tickets.
 
-Refer to the `JSM User Job Aid <https://docs.ncsa.illinois.edu/en/latest/_static/JSMUsersJobAid.pdf>`_ for information on how to navigate the help center.
+Refer to the `JSM User Job Aid <https://docs.ncsa.illinois.edu/en/latest/_static/JSMUsersJobAid.pdf>`_ for information on how to navigate the portal.
 
 .. raw:: html
    
-   <p>The <a href="http://help.ncsa.illinois.edu">NCSA Support Help Center</a> is the preferred method to submit requests. However, if you run into problems using it, you can still email <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a> for support. Expand the following section for guidelines on sending email requests so that NCSA staff can efficiently address them.</p>
+   <p>The <a href="http://help.ncsa.illinois.edu">NCSA Help Portal</a> is the preferred method to submit requests. However, if you run into problems using it, you can still email <a href="mailto:help@ncsa.illinois.edu?subject=Nightingale: ">help@ncsa.illinois.edu</a> for support. Expand the following section for guidelines on sending email requests so that NCSA staff can efficiently address them.</p>
 
 Email Support Request Guidelines
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

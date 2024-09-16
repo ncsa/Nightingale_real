@@ -8,8 +8,8 @@ General Resource Support
 
 Go to the `NCSA Help Portal <http://help.ncsa.illinois.edu>`_ for assistance with any questions or issues not answered by the documentation. Powered by Jira Service Manager (JSM), in this new portal you can:
 
+- Submit support request tickets.
 - Search knowledge base articles to resolve common issues faster.
-- Submit help request tickets.
 - Monitor the status of your tickets.
 - Respond to NCSA staff as they work to resolve your tickets.
 

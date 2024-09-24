@@ -25,7 +25,7 @@ Accessing the Compute Nodes
 
 The *login* node (ng-login01) is a shared resource for all users and login node use should be limited to editing, compiling, and building your programs, and for very short *non-intensive* runs.
 Access *compute* nodes for running your work using *batch* or *interactive* jobs. 
-Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs.  Slurm commands are *only* available, and will only work, on ng-login01.  If your allocation batch access then you can log into the login node.  The `Slurm quick start user guide <https://slurm.schedmd.com/quickstart.html>`_ provides a brief overview of Slurm commands for new users.
+Nightingale uses the `Slurm job control software <https://slurm.schedmd.com/documentation.html>`_ to run jobs.  Slurm commands are *only* available, and will only work, on ng-login01.  If your allocation has batch access, then you can log into the login node.  The `Slurm quick start user guide <https://slurm.schedmd.com/quickstart.html>`_ provides a brief overview of Slurm commands for new users.
 
 .. note::
    To ensure the health of the batch system and scheduler, avoid having more than **1,000 batch jobs** in the queues at any one time.

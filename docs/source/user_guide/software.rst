@@ -385,11 +385,11 @@ Launching a JupyterLab Session
 
 Launch a JupyterLab session in a web browser with the following steps.
 
-#. Log in to ``ng-login01``. (Replace ``username`` with your Nightingale username.)
+#. Log in to ``ng-login01``. (Replace ``username`` with your Nightingale username in **both** places.)
 
    .. code-block:: terminal
 
-      ssh username@ng-login01.ngale.internal.ncsa.edu
+      ssh -J username@ngale-bastion-1.ncsa.illinois.edu username@ng-login01
 
 #. On the login node, run the following commands:
 
@@ -399,17 +399,19 @@ Launch a JupyterLab session in a web browser with the following steps.
 
    .. code-block:: terminal
 
-      ng_jupyter_lab_tunnel.bash 
+      ng_jupyter_lab_tunnel.bash  
 
-#. Leave your first terminal open, and open a **second terminal** on your local machine. 
+   Take note of the URL at the end of the output of the ``.bash`` command, you will use this URL **step 4**.
 
-#. In the second terminal, run the following command and complete the login prompts. (Replace ``username`` with your Nightingale username in **both** places.)
+#. Leave your first terminal open, and open a **second terminal** on your local machine. In the **second terminal**, run the following command and complete the login prompts. (Replace ``username`` with your Nightingale username in **both** places.)
 
    .. code-block:: terminal
 
       ssh -J username@ngale-bastion-1.ncsa.illinois.edu -L 13000:localhost:13000 username@ng-login01.ngale.internal.ncsa.edu
 
-#. Open a web browser on your local machine and paste the URL at the end of the output of ``ng_jupyter_lab_tunnel.bash`` in the **first terminal** and into the web browser.
+   You may get a prompt similar to: "Are you sure you want to continue connecting (yes/no/[fingerprint])?". Respond with ``yes`` and complete any additional password prompts.
+
+#. Open a web browser on your local machine and paste the URL from **step 2** into the web browser.
 
    A JupyterLab session will launch in the web browser.
 

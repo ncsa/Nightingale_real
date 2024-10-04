@@ -378,12 +378,14 @@ You can use the ``library()`` command to view all your user and system-installed
    tools                   Tools for Package Development
    utils                   The R Utils Package
 
+.. _jupyterlab:
+
 Launching a JupyterLab Session
 --------------------------------
 
-Launch a JupyterLab session on Nightingale, in a web browser with the following steps.
+Launch a JupyterLab session in a web browser with the following steps.
 
-#. Log in to ng-login01. (Replace ``username`` with your Nightingale username.)
+#. Log in to ``ng-login01``. (Replace ``username`` with your Nightingale username.)
 
    .. code-block:: terminal
 
@@ -399,7 +401,7 @@ Launch a JupyterLab session on Nightingale, in a web browser with the following 
 
       ng_jupyter_lab_tunnel.bash 
 
-#. Leaving your first terminal open, open a **second terminal** on your local machine. 
+#. Leave your first terminal open, and open a **second terminal** on your local machine. 
 
 #. In the second terminal, run the following command and complete the login prompts. (Replace ``username`` with your Nightingale username in **both** places.)
 

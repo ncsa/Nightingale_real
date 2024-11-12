@@ -349,17 +349,15 @@ See the ``scancel`` man page for other available options.
 
 .. _scrontab:
 
-Recurring Jobs (scrontab)
+scrontab (Recurring Jobs)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use ``scrontab`` to schedule recurring jobs in Slurm, similar to ``crontab`` in Linux. A couple of notes about ``scrontab``:
+Use ``scrontab`` to manage Slurm ``crontab`` files, which allow you to schedule recurring batch jobs. A couple of notes about ``scrontab``:
 
-- The timezone for Slurm on Nightingale is **Central time**.
+- On Nightingale, Slurm is set to the **Central Time Zone (CT)**.
 - Jobs are subject to queueing delays and are not guaranteed to start at the preferred times.
 
-See the `scrontab Slurm documentation <https://slurm.schedmd.com/scrontab.html>`_ or man page (``man scrontab``) for more inforation.
-
-|
+See the `scrontab Slurm documentation <https://slurm.schedmd.com/scrontab.html>`_ or man page (``man scrontab``) for more information.
 
 .. _examples:
 

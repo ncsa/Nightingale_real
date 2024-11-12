@@ -347,6 +347,18 @@ The ``scancel`` command deletes a queued job or kills a running job.
 
 See the ``scancel`` man page for other available options.
 
+.. _scrontab:
+
+scrontab (Recurring Jobs)
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Use ``scrontab`` to manage Slurm ``crontab`` files, which allow you to schedule recurring batch jobs. A couple of notes about ``scrontab``:
+
+- On Nightingale, Slurm is set to the **Central Time Zone (CT)**.
+- Jobs are subject to queueing delays and are not guaranteed to start at the preferred times.
+
+See the `scrontab Slurm documentation <https://slurm.schedmd.com/scrontab.html>`_ or man page (``man scrontab``) for more information.
+
 .. _examples:
 
 Sample Batch Scripts

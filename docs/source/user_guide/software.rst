@@ -24,7 +24,7 @@ Anaconda_                                                                       
 `CUDA <https://docs.nvidia.com/cuda/archive/11.4.2/>`_                           11.4.2
 `GCC <https://gcc.gnu.org/onlinedocs/12.2.0/>`_                                  12.2.0
 `Julia <https://juliahub.com/ui/Packages/General/RegistryCI/4.3.2>`_             4.3.2
-`MATLAB <https://www.mathworks.com/help/?s_tid=gn_supp>`_                        9.7
+`MATLAB <https://www.mathworks.com/help/?s_tid=gn_supp>`_                        24.1
 `Miniconda <https://docs.conda.io/projects/miniconda/en/latest/index.html>`_     2022.05  (Python 3.9.12)
 `R <https://cran.r-project.org/bin/windows/base/old/4.2.0/NEWS.R-4.2.0.html>`_   4.2.0
 ==============================================================================   ========================

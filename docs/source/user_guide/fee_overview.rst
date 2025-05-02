@@ -25,19 +25,19 @@ Interactive Computing
 Batch Computing
 ------------------------
 
-Per core hour used: $0.063
+Per core hour used: Internal: $0.063; external: $.083
 
 Billed monthly for the **prior** month’s use. For consistent billing, users can pay for a set threshold of core hours per month, regardless of whether they use all the core hours they anticipated. 
 
 Storage
 ---------
 
-Per 1 Terabyte allocated: $10.54 per month 
+Per 1 Terabyte allocated: Internal: $75.74 per month; external: $99.75 per month
 
 Database Setup and Management Services
 ---------------------------------------
 
-Per user, as needed: $80.71 per month 
+Per user, as needed: Internal: $244.59 per month; external: $322.12 per month
 
 Services to support data storage and sharing/accessing relational databases on the system. Not all projects require this support. Options for providing “data as a service” to a broad user community are available; :ref:`submit a support request <help>` for details. 
 

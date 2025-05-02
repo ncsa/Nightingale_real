@@ -25,7 +25,7 @@ Interactive Computing
 Batch Computing
 ------------------------
 
-Per core hour used: Internal: $0.063; external: $.083
+Internal: $0.063 per core hour used; external: $.083 per core hour used
 
 Billed monthly for the **prior** month’s use. For consistent billing, users can pay for a set threshold of core hours per month, regardless of whether they use all the core hours they anticipated. 
 

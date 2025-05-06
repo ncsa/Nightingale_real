@@ -45,7 +45,6 @@ General Login Process
 
 To log in to Nightingale, establish an SSH connection to the secure node and then establish an SSH connection to your login or interactive node. These are the steps:
 
-#. If you are not on campus, connect to the University of Illinois VPN or NCSA VPN (see :ref:`access_vpn`).
 #. ``ssh`` to the secure node ``ngale-bastion-1.ncsa.illinois.edu``. (Replace ``<your_username>`` with your NCSA identity username.)
    
    .. code-block:: terminal
@@ -73,6 +72,10 @@ To log in to Nightingale, establish an SSH connection to the secure node and the
    .. code-block:: terminal
 
       ssh hirop@ng-CPU03
+
+.. note::
+
+   - Connecting to Nightingale using the vscode program is not currently supported by the system.
 
 Jump Host Login Method
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,29 +122,6 @@ Linux
 
 Linux has SSH built into it, use the Linux terminal application to connect via SSH. 
 `PuTTY <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`_ is also available for Linux.
-
-.. _access_vpn:
-
-Access Nightingale using a VPN
------------------------------------
-
-.. note::
-
-   If your login freezes when you try to log in to Nightingale, this may be your problem. Please try one of these VPN methods.  
-
-To access Nightingale off campus, you first need to set up and activate either the University of Illinois VPN or the NCSA VPN.
-
-If you log in to Nightingale from the University of Illinois campus, you don't need to use a VPN. 
-
-University of Illinois VPN
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-If you are a member of the University of Illinois, you can use the `University of Illinois VPN service <https://answers.uillinois.edu/illinois/98773>`_.  You will authenticate to the VPN service itself using your University NetID, password, and two-factor authentication (2FA).  
-
-NCSA VPN
-~~~~~~~~~
-
-If you don't have a University of Illinois NetID, you will need to use the `NCSA VPN <https://wiki.ncsa.illinois.edu/display/NetEng/Virtual+Private+Network+%28VPN%29+Service>`_.  
 
 X Window Servers
 -------------------
